@@ -1,5 +1,11 @@
 ---
 title: "Bowen's Website"
+author: : "Bowen de Gouw"
+date: "`r Sys.Date()`"
+format: 
+html:
+    theme: journal
+    toc: true
 ---
 
 This is a Quarto website.
