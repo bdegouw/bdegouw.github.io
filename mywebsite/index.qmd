@@ -1,6 +1,6 @@
 ---
 title: "Bowen's Website"
-author: : "Bowen de Gouw"
+author: "Bowen de Gouw"
 date: "`r Sys.Date()`"
 format: 
 html:
