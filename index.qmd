@@ -13,3 +13,10 @@ Welcome to my Quarto website.
 My Portfolio Website. 
 This is repository is designed to demonstrate my learnings from AD688. Thank you for taking the time to look at my new website!
 
+
+```markdown
+```python 
+x = 3
+y = 7
+x + y 
+
