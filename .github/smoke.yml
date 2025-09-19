@@ -1,0 +1,11 @@
+name: Smoke
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Actions are working!"
