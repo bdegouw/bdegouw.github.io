@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Welcome to My Website",
     "section": "",
-    "text": "Hello, World!\nWelcome to my Quarto website.\nMy Portfolio Website. This is repository is designed to demonstrate my learnings from AD688. Thank you for taking the time to look at my new website!\nmarkdownpython x = 3 y = 7 x + y"
+    "text": "Hello, World!\nWelcome to my Quarto website.\nMy Portfolio Website. This is repository is designed to demonstrate my learnings from AD688. Thank you for taking the time to look at my new website!\nx = 3 y = 7 x + y"
   },
   {
     "objectID": "about.html",
