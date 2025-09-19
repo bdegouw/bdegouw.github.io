@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 permissions:
-  contents: write   # needed to push to gh-pages
+  contents: write   
 
 concurrency:
   group: "quarto-publish"
