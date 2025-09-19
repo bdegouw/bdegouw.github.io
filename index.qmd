@@ -17,5 +17,5 @@ This is repository is designed to demonstrate my learnings from AD688. Thank you
 ```{python}
 x = 3
 y = 7
-x + y
-
+print(x + y)
+```
