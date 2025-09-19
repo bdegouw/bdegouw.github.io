@@ -17,6 +17,6 @@ This is repository is designed to demonstrate my learnings from AD688. Thank you
 ```{python}
 x = 3
 y = 7
-print(x + y)
+x + y
+print("this shows that python is working!")
 ```
-
