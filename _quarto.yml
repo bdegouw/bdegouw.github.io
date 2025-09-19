@@ -3,6 +3,7 @@ project:
 
 website:
   title: "bdegouw.github.io"
+  site-url: https://bdegouw.github.io/
   navbar:
     left:
       - href: index.qmd
