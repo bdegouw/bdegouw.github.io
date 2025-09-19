@@ -1,7 +1,7 @@
 ---
 title: "Welcome to My Website"
 author: "Bowen de Gouw"
-date: "`r Sys.Date()`"
+date: today
 format:
   html:
     theme: journal
@@ -18,7 +18,9 @@ This is repository is designed to demonstrate my learnings from AD688. Thank you
 x = 3
 y = 7
 x + y
-print("this shows that python is working!")
-```
 
-Hello Testing to see if this works!
+
+print("this shows that python is working!")
+
+print(WEBSITE IS WORKING!)
+```
