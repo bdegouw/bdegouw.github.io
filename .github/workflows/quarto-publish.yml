@@ -1,50 +1,29 @@
-name: Quarto Publish
+ on:
+   push:
+     branches: main
 
-on:
-  push:
-    branches: [ main ]
+ name: Quarto Publish
 
-permissions:
-  contents: write   
+ jobs:
+   build-deploy:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Check out repository
+         uses: actions/checkout@v4
 
-concurrency:
-  group: "quarto-publish"
-  cancel-in-progress: true
+       - name: Set up Quarto
+         uses: quarto-dev/quarto-actions/setup@v2
 
-jobs:
-  build-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
+       - name: Install Python dependencies
+         uses: actions/setup-python@v5
+         with:
+           python-version: '3.12'
+       - run: pip install -r requirements.txt
 
-     
-      - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
-        with:
-          version: "1.5.57"   
-
-      
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-
-      - name: Create venv & install deps
-        run: |
-          python -m venv .venv
-          source .venv/bin/activate
-          python -m pip install -U pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-          pip install jupyter ipykernel
-          python -m ipykernel install --user --name "ci-py312"
-
-      
-      - name: Render and Publish
-        uses: quarto-dev/quarto-actions/publish@v2
-        with:
-          target: gh-pages
+       - name: Render and Publish
+         uses: quarto-dev/quarto-actions/publish@v2
+         with:
+           target: gh-pages
+         env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          QUARTO_PYTHON: ${{ github.workspace }}/.venv/bin/python
