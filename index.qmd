@@ -8,10 +8,12 @@ format:
     toc: true
 ---
 # Hello, World!  
-Welcome to my Quarto website.  
 
-My Portfolio Website. 
-This is repository is designed to demonstrate my learnings from AD688. Thank you for taking the time to look at my new website!
+Bowen de Gouw's Portfolio Website
+
+This is repository is designed to demonstrate my learnings from AD688. Thank you for taking the time to look at my work.
+
+Below is an example of a python script
 
 ```{python}
 x = 3
@@ -24,5 +26,3 @@ print("this shows that python is working!")
 print("WEBSITE IS WORKING!")
 ```
 
-# 
-This is another test
