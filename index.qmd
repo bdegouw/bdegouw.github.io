@@ -18,11 +18,8 @@ Below is an example of a python script
 ```{python}
 x = 3
 y = 7
-x + y
+print('the answer for the equation will be printed beneath this message')
+print(x + y)
 
-
-print("this shows that python is working!")
-
-print("WEBSITE IS WORKING!")
 ```
 

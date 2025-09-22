@@ -2,8 +2,6 @@
 title: "About"
 ---
 
-About this site: It is a section of my class, AD688 (Cloud Analytics) for my MSc at Boston University. 
+This website has been created for my class, AD688 (Cloud Analytics), which is towards my MSc in Applied Business Analytics at Boston University. 
 
-This is a test to see that the updates are working!
-
-Again, testing!
+If you would like to contact me, please feel free to email me: bdegouw@bu.edu
