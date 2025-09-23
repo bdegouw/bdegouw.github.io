@@ -9,6 +9,17 @@ on:
 permissions:
   contents: write  
 
+<<<<<<< HEAD
+       - name: Render and Publish
+         uses: quarto-dev/quarto-actions/publish@v2
+         with:
+           target: gh-pages
+           env:
+             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+             
+
+       
+=======
 
 concurrency:
   group: "quarto-publish"
