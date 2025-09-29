@@ -1,16 +1,16 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome to My Website",
-    "section": "",
-    "text": "Hello, World!\nBowen de Gouw’s Portfolio Website\nThis is repository is designed to demonstrate my learnings from AD688. Thank you for taking the time to look at my work.\nBelow is an example of a python script\n\nx = 3\ny = 7\nprint('the answer for the equation will be printed beneath this message')\nprint(x + y)\n\nthe answer for the equation will be printed beneath this message\n10"
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
     "text": "This website has been created for my class, AD688 (Cloud Analytics), which is towards my MSc in Applied Business Analytics at Boston University.\nIf you would like to contact me, please feel free to email me: bdegouw@bu.edu"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to My Website",
+    "section": "",
+    "text": "Hello, Welcome to my Website!\nBowen de Gouw’s Portfolio Website\nThis is repository is designed to demonstrate my learnings from AD688.\nThank you for taking the time to look at my work.\nBelow is an example of a python script\n\nx = 3\ny = 7\nprint('the answer for the equation will be printed beneath this message')\nprint(x + y)\n\n\nprint('this is an example of me using the website editing function through an EC2')\n\nthe answer for the equation will be printed beneath this message\n10\nthis is an example of me using the website editing function through an EC2"
   }
 ]
