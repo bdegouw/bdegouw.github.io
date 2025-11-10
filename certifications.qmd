@@ -8,7 +8,6 @@ format:
     smooth-scroll: true
 ---
 
-## 🎓 Certifications
 Below are verified certifications that reflect my passion for applying technology and data to real-world business challenges.
 
 ---

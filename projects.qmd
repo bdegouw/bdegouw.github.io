@@ -1,5 +1,5 @@
 ---
-title: "Additional"
+title: "Academic Projects"
 ---
 
 This page demonstrates meaningful Projects I have done. 

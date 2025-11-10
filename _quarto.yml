@@ -12,12 +12,12 @@ website:
         text: Professional Summary
       - href: projects.qmd
         text: Projects
-      - href: contact.qmd
-        text: Contact Me
       - href: certifications.qmd
         text: Certifications
       - href: blog.qmd
         text: Blog
+      - href: contact.qmd
+        text: Contact Me
 
 
 format:
