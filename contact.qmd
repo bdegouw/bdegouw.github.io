@@ -1,5 +1,6 @@
 ---
 title: "Contact Me"
+toc: false
 ---
 Thank you for taking the time to visit my website! 
 
