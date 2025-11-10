@@ -1,1 +1,29 @@
 /* css styles */
+
+/* Light blue navbar background */
+.navbar {
+  background-color: #60a5fa; /* light blue */
+}
+
+/* Navbar text and links */
+.navbar-nav .nav-link {
+  color: white !important;
+  font-weight: 500;
+}
+
+/* Hover color */
+.navbar-nav .nav-link:hover {
+  color: #e0f2fe !important; /* very light blue hover */
+}
+
+/* Active link highlight */
+.navbar-nav .nav-link.active {
+  color: #1e3a8a !important; /* darker blue for active link */
+  border-bottom: 2px solid #1e3a8a;
+}
+
+/* Site title (brand) */
+.navbar-brand {
+  color: white !important;
+  font-weight: bold;
+}
