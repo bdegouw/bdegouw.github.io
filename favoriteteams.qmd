@@ -15,7 +15,7 @@ toc: false
   <p><strong>NFL:</strong> New England Patriots 🏈</p>
   <p><strong>NHL:</strong> Boston Bruins 🏒</p>
   <p><strong>NBA:</strong> Boston Celtics 🏀</p>
-  <p><strong>CFB:</strong> Texas Longhorns 🧡</p>
+  <p><strong>CFB:</strong> Texas Longhorns 🤘</p>
   <p><strong>MLB:</strong> Boston Red Sox ⚾️</p>
 </div>
 
