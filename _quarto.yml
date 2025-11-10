@@ -12,7 +12,6 @@ website:
         text: About
       - href: Additional.qmd
       - text: Additional
-      - additional.qmd
 
 format:
   html:
