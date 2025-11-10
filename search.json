@@ -23,8 +23,29 @@
   {
     "objectID": "contact.html",
     "href": "contact.html",
-    "title": "Contact",
+    "title": "Contact Me",
     "section": "",
-    "text": "Thank you for taking the time to visit my website!\nIf you’d like to reach out to me, please contact me on one of my platforms below…\n\n# Email\nYou can reach me at bdegouw@bu.edu\n\n\nLinkedIn\nConnect me with on LinkedIn linkedin.com/in/bowen-de-gouw/\n\n\n\nLocation\nI am based in Boston, MA."
+    "text": "Thank you for taking the time to visit my website!\nIf you’d like to reach out to me, please contact me on one of my platforms below…"
+  },
+  {
+    "objectID": "contact.html#email",
+    "href": "contact.html#email",
+    "title": "Contact Me",
+    "section": "Email",
+    "text": "Email\nYou can reach me at bdegouw@bu.edu"
+  },
+  {
+    "objectID": "contact.html#linkedin",
+    "href": "contact.html#linkedin",
+    "title": "Contact Me",
+    "section": "LinkedIn",
+    "text": "LinkedIn\nConnect me with on LinkedIn linkedin.com/in/bowen-de-gouw/"
+  },
+  {
+    "objectID": "contact.html#location",
+    "href": "contact.html#location",
+    "title": "Contact Me",
+    "section": "Location",
+    "text": "Location\nI am based in Boston, MA."
   }
 ]
