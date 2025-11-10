@@ -2,4 +2,6 @@
 title: "Additional"
 ---
 
-This page has been added to show additional work that I do. It is also can example of creating an additional page to my website.
+This page demonstrates meaningful Projects I have done. 
+
+Please check them out!
