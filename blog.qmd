@@ -6,3 +6,8 @@ toc: false
 Here is where I intend to publish my Blog Posts.
 
 I hope you enjoy them!
+
+---
+<div style="text-align: center; font-style: italic;">
+**[LinkedIn](https://www.linkedin.com/in/bowen-de-gouw) - [Github](github.com/bdegouw) - [Email](mailto:bdegouw@bu.edu)**
+</div>

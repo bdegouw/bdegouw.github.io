@@ -10,12 +10,6 @@ format:
     linkcolor: "#004aad"
 ---
 
-## 🧠 About Me
-I’m **Bowen de Gouw**, a dual-degree student at **Boston University**, pursuing a **Master of Science in Applied Business Analytics (MET, expected May 2026)** and a **Bachelor of Science in Business Administration (Questrom, May 2025)**.  
-I combine analytical insight, business acumen, and leadership experience to drive strategic growth, operational efficiency, and data-informed decision-making.
-
----
-
 ## 💼 Professional Experience
 
 ### Consulting Intern — *Recombinators, Inc. 5000 Company*  
@@ -46,21 +40,6 @@ I combine analytical insight, business acumen, and leadership experience to driv
 - Collaborated with a nine-person team to develop a go-to-market strategy for a sports start-up.  
 - Supervised analytics and operations: market sizing, supply chain design, and risk modeling.  
 - Delivered weekly presentations and refined final investor pitch through iterative feedback.  
-
----
-
-## 🏆 Leadership & Activities
-
-### Division I Student-Athlete & Team Captain — *Boston University Men’s Rowing*  
-**Sep 2021 – June 2025**  
-- Directed team culture, athlete development, and performance initiatives.  
-- Competed in **four NCAA National Championships**, contributing to consistent top-10 finishes.  
-- Selected for the prestigious **Bloom Family Leadership Academy (3-year cohort)** recognizing top student-athlete leaders.
-
-### Lead Teaching Assistant — *SI340: Family Business Management*  
-**Jan 2024 – Dec 2024**  
-- Supported instruction for 40 students across two weekly sessions.  
-- Facilitated discussions, graded assignments, and provided academic mentorship.  
 
 ---
 
