@@ -39,7 +39,5 @@ As a STEM-designated course, my focus will be on applying my undergraduate Busin
 
 ---
 <div style="text-align: center; font-style: italic;">
-Based in Boston, MA 
-
 [LinkedIn](https://www.linkedin.com/in/bowen-de-gouw) - [Github](github.com/bdegouw) - [Email](mailto:bdegouw@bu.edu)
 </div>

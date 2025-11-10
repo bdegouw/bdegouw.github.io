@@ -67,6 +67,7 @@ I combine analytical insight, business acumen, and leadership experience to driv
 ## 🧰 Skills & Tools
 **Technical:** Python • SQL • R (RStudio) • Power BI • Excel • Google Analytics  
 
-**Contact:** [bdegouw@bu.edu](mailto:bdegouw@bu.edu) · [LinkedIn](https://www.linkedin.com/in/bowen-de-gouw)
-
 ---
+<div style="text-align: center; font-style: italic;">
+[LinkedIn](https://www.linkedin.com/in/bowen-de-gouw) - [Github](github.com/bdegouw) - [Email](mailto:bdegouw@bu.edu)
+</div>

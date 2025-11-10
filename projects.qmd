@@ -5,3 +5,8 @@ title: "Additional"
 This page demonstrates meaningful Projects I have done. 
 
 Please check them out!
+
+---
+<div style="text-align: center; font-style: italic;">
+[LinkedIn](https://www.linkedin.com/in/bowen-de-gouw) - [Github](github.com/bdegouw) - [Email](mailto:bdegouw@bu.edu)
+</div>
