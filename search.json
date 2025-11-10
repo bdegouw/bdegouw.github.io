@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "Welcome to My Website",
     "section": "",
-    "text": "Hello, Welcome to my Website!\nBowen de Gouw’s Portfolio Website\nThis is repository is designed to demonstrate my learnings from AD688.\nThank you for taking the time to look at my work.\nBelow is an example of a python script\n\nx = 3\ny = 7\nprint('the answer for the equation will be printed beneath this message')\nprint(x + y)\n\n\nprint('this is an example of me using the website editing function through an EC2')\n\nthe answer for the equation will be printed beneath this message\n10\nthis is an example of me using the website editing function through an EC2"
+    "text": "Bowen de Gouw’s Portfolio Website"
   },
   {
     "objectID": "additional.html",
