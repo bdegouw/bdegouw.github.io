@@ -1,5 +1,6 @@
 ---
 title: "Welcome to My Website"
+image: 
 format:
   html:
     theme: journal
@@ -7,4 +8,13 @@ format:
 ---
 # Bowen de Gouw's Portfolio Website
 
+# Kia Ora, I am Bowen de Gouw 
+
+I am currently a masters student at Boston University, studying Applied Business Analytics. My focus is on statistical modeling, machine learning, and cloud based tools. 
+
+Previously, I did my undergraduate studies at Boston University's Questrom School of Business where I gained a Bachelor of Science in Business Administration. 
+
+--- 
+Based in Boston, MA 
+[LinkedIn](https://www.linkedin.com/in/bowen-de-gouw) - [Github](github.com/bdegouw) - [Email](mailto:bdegouw@bu.edu)
 
