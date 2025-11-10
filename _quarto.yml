@@ -10,8 +10,11 @@ website:
         text: Home
       - href: about.qmd
         text: About
-      - href: Additional.qmd
-      - text: Additional
+      - href: additional.qmd
+        text: Additional
+      - href: contact.qmd
+        text: Contact
+
 
 format:
   html:
