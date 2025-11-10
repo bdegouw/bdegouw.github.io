@@ -7,6 +7,11 @@ format:
     toc: false
 ---
 
+<div style="text-align: center;">
+<img src="headsht.bfla.jpeg" alt="Bowen de Gouw" width="230" style="border-radius: 50%; margin-bottom: 15px;"/>
+</div>
+
+
 # Kia Ora! I am Bowen de Gouw 
 
 I am currently a masters student at Boston University, studying Applied Business Analytics. My focus is on statistical modeling, machine learning, and cloud based tools. 
