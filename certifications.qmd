@@ -1,0 +1,40 @@
+---
+title: "Certifications"
+toc: false
+format:
+  html:
+    theme: cosmo
+    code-copy: true
+    smooth-scroll: true
+---
+
+## 🎓 Certifications
+I’m committed to continuous learning across cloud computing, analytics, and finance.  
+Below are verified certifications that reflect my passion for applying technology and data to real-world business challenges.
+
+---
+
+### ☁️ **AWS Academy Cloud Foundations**
+**Amazon Web Services (AWS) / Credly • Issued 2024**  
+
+I’m thrilled to announce that I have successfully completed the **AWS Academy Cloud Foundations** training, earning a verified badge from **Amazon Web Services (AWS)**!  
+
+This program provided me with a strong understanding of the **core concepts of cloud computing**, including AWS services, architecture, security, and pricing.  
+It was an incredible learning journey that deepened my skills in **cloud technologies** and gave me a clearer understanding of how they drive **innovation and digital transformation**.  
+
+🔗 [View Verified Badge on Credly](https://www.credly.com/badges/7b4eda94-5426-4bf0-a5f0-896437fc8bb0/public_url){target="_blank"}
+
+---
+
+### 📈 **Bloomberg Market Concepts (BMC)**
+**Bloomberg for Education • Issued 2024**  
+
+An intensive, self-paced certification course that introduces the core pillars of the financial markets — **economics, currencies, fixed income, and equities** — through the **Bloomberg Terminal**.  
+This certification strengthened my financial literacy, market awareness, and analytical capabilities in interpreting financial data and trends.  
+
+🔗 [View Certificate](https://portal.bloombergforeducation.com/certificates/ntxAH5uZCzgu1bSuMKGzmrXW){target="_blank"}
+
+---
+
+## 🧾 Notes
+Additional certifications will be added as I continue expanding my technical and business expertise.
