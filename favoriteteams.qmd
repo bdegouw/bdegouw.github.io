@@ -10,7 +10,7 @@ toc: false
 ---
 
 <div style="text-align: center; font-size: 1.1em; line-height: 1.8;">
-  <p><strong>Rugby:</strong> All Blacks 🌿</p>
+  <p><strong>Rugby:</strong> All Blacks 🇳🇿</p>
   <p><strong>Super Rugby:</strong> Blues 💙</p>
   <p><strong>NFL:</strong> New England Patriots 🏈</p>
   <p><strong>NHL:</strong> Boston Bruins 🏒</p>
