@@ -2,16 +2,16 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "Professional Summary",
     "section": "",
     "text": "This website has been created for my class, AD688 (Cloud Analytics), which is towards my MSc in Applied Business Analytics at Boston University.\nIf you would like to contact me, please feel free to email me: bdegouw@bu.edu"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Bowen de Gouw’s Portfolio Website",
+    "title": "Bowen de Gouw’s Website",
     "section": "",
-    "text": "Kia Ora! I am Bowen de Gouw\nI am currently a masters student at Boston University, studying Applied Business Analytics. My focus is on statistical modeling, machine learning, and cloud based tools.\nPreviously, I did my undergraduate studies at Boston University’s Questrom School of Business where I gained a Bachelor of Science in Business Administration.\n\n\nBased in Boston, MA\nLinkedIn - Github - Email"
+    "text": "Kia Ora! I am Bowen de Gouw\nI am currently a masters student at Boston University, studying Applied Business Analytics. My focus is on statistical modeling, machine learning, and cloud based tools.\nPreviously, I did my undergraduate studies at Boston University’s Questrom School of Business where I gained a Bachelor of Science in Business Administration.\n\n{fig-alt=“Graduation Photo” width =300}\n\n\nBased in Boston, MA\nLinkedIn - Github - Email"
   },
   {
     "objectID": "additional.html",
