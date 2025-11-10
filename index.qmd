@@ -14,7 +14,7 @@ format:
 
 # Kia Ora, Thank you for visting my website!
 
-Kia ora and welcome! I’m Bowen — a lifelong learner, student-athlete, and data-driven problem solver. I was born in the Netherlands, raised in New Zealand, and now call Boston home. My journey across continents has shaped how I think, lead, and connect with others.
+Kia ora and welcome! I’m Bowen — a lifelong learner, student-athlete, and data-driven problem solver. I was born in the Netherlands, raised in New Zealand, and for now call Boston home. My journey across continents has shaped how I think, lead, and connect with others.
 
 Growing up on Auckland's North Shore, I learned to balance curiosity and discipline — two traits that came from equal parts academics and athletics. At Westlake Boys High School, one of New Zealand’s top-performing schools, I discovered my passion for both numbers and teamwork.
 
