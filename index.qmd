@@ -14,6 +14,10 @@ format:
 
 # Kia Ora! I am Bowen de Gouw 
 
+I was originally born in the Netherlands, but grew up in Auckland, New Zealand. At the age of 18 I moved to Boston, MA to take up an Athlethic Scholarship at Boston University, where I was a four year member and team captain of the Men's Rowing Team.
+
+
+
 I am currently a masters student at Boston University, studying Applied Business Analytics. My focus is on statistical modeling, machine learning, and cloud based tools. 
 
 Previously, I did my undergraduate studies at Boston University's Questrom School of Business where I gained a Bachelor of Science in Business Administration. 
@@ -21,7 +25,10 @@ Previously, I did my undergraduate studies at Boston University's Questrom Schoo
 --- 
 
 
-![](gradpic.jpg){fig-cap="Celebrating my Graduation from Boston University's DeWolfe Boathouse, May 2025" fig-align="center" width=400px}
+:::{.quarto-figure-center}
+![Celebrating my Graduation from Boston University's DeWolfe Boathouse, May 2025](gradpic.jpg){width=400px}
+:::
+
 
 
 
