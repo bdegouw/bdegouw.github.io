@@ -3,6 +3,7 @@ project:
 
 website:
   title: "Bowen de Gouw"
+  favicon: bdglogo.png
   site-url: https://bdegouw.github.io/
   navbar:
     left:
