@@ -1,29 +1,10 @@
 ---
 title: "Welcome to My Website"
-author: "Bowen de Gouw"
-date: today
 format:
   html:
     theme: journal
     toc: false
 ---
-# Hello, Welcome to my Website!   
+# Bowen de Gouw's Portfolio Website
 
-Bowen de Gouw's Portfolio Website
-
-This is repository is designed to demonstrate my learnings from AD688. 
-
-Thank you for taking the time to look at my work.
-
-Below is an example of a python script
-
-```{python}
-x = 3
-y = 7
-print('the answer for the equation will be printed beneath this message')
-print(x + y)
-
-
-print('this is an example of me using the website editing function through an EC2')
-```
 
