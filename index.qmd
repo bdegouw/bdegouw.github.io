@@ -14,6 +14,9 @@ I am currently a masters student at Boston University, studying Applied Business
 Previously, I did my undergraduate studies at Boston University's Questrom School of Business where I gained a Bachelor of Science in Business Administration. 
 
 --- 
-Based in Boston, MA 
-[LinkedIn](https://www.linkedin.com/in/bowen-de-gouw) - [Github](github.com/bdegouw) - [Email](mailto:bdegouw@bu.edu)
 
+<div style="text-align: center; font-style: italic;">
+Based in Boston, MA 
+
+[LinkedIn](https://www.linkedin.com/in/bowen-de-gouw) - [Github](github.com/bdegouw) - [Email](mailto:bdegouw@bu.edu)
+</div>
