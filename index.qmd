@@ -1,6 +1,5 @@
 ---
 title: "Welcome to My Website"
-image: 
 format:
   html:
     theme: journal
