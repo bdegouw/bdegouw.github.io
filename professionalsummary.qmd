@@ -1,7 +1,72 @@
 ---
 title: "Professional Summary"
+subtitle: "Business Analytics | Strategy | Leadership"
+format:
+  html:
+    theme: cosmo
+    toc: false
+    smooth-scroll: true
+    code-copy: true
+    linkcolor: "#004aad"
 ---
 
-This website has been created for my class, AD688 (Cloud Analytics), which is towards my MSc in Applied Business Analytics at Boston University. 
+## 🧠 About Me
+I’m **Bowen de Gouw**, a dual-degree student at **Boston University**, pursuing a **Master of Science in Applied Business Analytics (MET, expected May 2026)** and a **Bachelor of Science in Business Administration (Questrom, May 2025)**.  
+I combine analytical insight, business acumen, and leadership experience to drive strategic growth, operational efficiency, and data-informed decision-making.
 
-If you would like to contact me, please feel free to email me: bdegouw@bu.edu
+---
+
+## 💼 Professional Experience
+
+### Consulting Intern — *Recombinators, Inc. 5000 Company*  
+**Remote / Austin, TX | June – August 2024**  
+- Spearheaded development of a business model for a medical clinic start-up in an emerging health sector.  
+- Led six initiatives: stakeholder bios, market research, tech/vendor vetting, financial model updates, and SWOT-based location analysis.  
+- Designed executive slide decks and presented weekly to C-suite stakeholders.  
+- Owned dedicated workstreams, ensuring project alignment and on-time delivery.  
+
+### Business Development Intern — *Bayleys Realty Group (Auckland, New Zealand)*  
+**June – August 2022**  
+- Partnered with Data Insights team to produce Bayleys’ 2022 **Co-Working+ Space Report**.  
+- Transitioned lease data for 200+ commercial properties during major client onboarding.  
+- Conducted nationwide data analysis for commercial and residential portfolios.  
+
+---
+
+## 🎓 Academic Projects
+
+### Associate Consultant (SI360 Team) — *FlyWire*  
+**Boston, MA | Jan – May 2024**  
+- Consulted for a global fintech company specializing in international student payments.  
+- Delivered insights on competitive positioning in China through research and interviews.  
+- Presented findings directly to the **SVP of Strategy & Corporate Development**.  
+
+### Cross-Functional Core — *Questrom School of Business*  
+**Boston, MA | Aug – Dec 2023**  
+- Collaborated with a nine-person team to develop a go-to-market strategy for a sports start-up.  
+- Supervised analytics and operations: market sizing, supply chain design, and risk modeling.  
+- Delivered weekly presentations and refined final investor pitch through iterative feedback.  
+
+---
+
+## 🏆 Leadership & Activities
+
+### Division I Student-Athlete & Team Captain — *Boston University Men’s Rowing*  
+**Sep 2021 – June 2025**  
+- Directed team culture, athlete development, and performance initiatives.  
+- Competed in **four NCAA National Championships**, contributing to consistent top-10 finishes.  
+- Selected for the prestigious **Bloom Family Leadership Academy (3-year cohort)** recognizing top student-athlete leaders.
+
+### Lead Teaching Assistant — *SI340: Family Business Management*  
+**Jan 2024 – Dec 2024**  
+- Supported instruction for 40 students across two weekly sessions.  
+- Facilitated discussions, graded assignments, and provided academic mentorship.  
+
+---
+
+## 🧰 Skills & Tools
+**Technical:** Python • SQL • R (RStudio) • Power BI • Excel • Google Analytics  
+
+**Contact:** [bdegouw@bu.edu](mailto:bdegouw@bu.edu) · [LinkedIn](https://www.linkedin.com/in/bowen-de-gouw)
+
+---

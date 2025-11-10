@@ -10,7 +10,7 @@ website:
         text: Home
       - href: professionalsummary.qmd
         text: Professional Summary
-      - href: additional.qmd
+      - href: projects.qmd
         text: Projects
       - href: contact.qmd
         text: Contact Me
