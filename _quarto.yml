@@ -16,6 +16,8 @@ website:
         text: Contact Me
       - href: certifications.qmd
         text: Certifications
+      - href: blog.qmd
+        text: Blog
 
 
 format:
