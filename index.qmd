@@ -1,13 +1,12 @@
 ---
-title: "Welcome to My Website"
+title: "Bowen de Gouw's Portfolio Website"
 format:
   html:
     theme: journal
     toc: false
 ---
-# Bowen de Gouw's Portfolio Website
 
-# Kia Ora, I am Bowen de Gouw 
+# Kia Ora! I am Bowen de Gouw 
 
 I am currently a masters student at Boston University, studying Applied Business Analytics. My focus is on statistical modeling, machine learning, and cloud based tools. 
 
