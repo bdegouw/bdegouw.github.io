@@ -1,7 +1,6 @@
 ---
 title: "Bowen de Gouw's Website"
-image: 
- - "headshot.bfla.jpeg"
+image: "headshot.bfla.jpeg"
 format:
   html:
     theme: journal
