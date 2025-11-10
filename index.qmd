@@ -34,7 +34,7 @@ As a STEM-designated course, my focus will be on applying my undergraduate Busin
 ---
 
 :::{.quarto-figure-center}
-![Celebrating my Graduation from Boston University's DeWolfe Boathouse, May 2025](trainingimage){width=400px}
+![Preparing for the Inter-Collegiate Rowing Association (IRA) National Championships, May 2025](trainingimage.jpg){width=400px}
 :::
 
 ---
