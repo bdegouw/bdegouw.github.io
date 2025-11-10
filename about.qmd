@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "Professional Summary"
 ---
 
 This website has been created for my class, AD688 (Cloud Analytics), which is towards my MSc in Applied Business Analytics at Boston University. 

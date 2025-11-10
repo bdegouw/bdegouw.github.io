@@ -1,8 +1,8 @@
 ---
-title: "Bowen de Gouw's Portfolio Website"
+title: "Bowen de Gouw's Website"
 image: 
-- "headshot.bfla.jpeg"
-- "gradpic.jpg"
+ - "headshot.bfla.jpeg"
+ - "gradpic.jpg"
 format:
   html:
     theme: journal

@@ -9,11 +9,11 @@ website:
       - href: index.qmd
         text: Home
       - href: about.qmd
-        text: About
+        text: Professional Summary
       - href: additional.qmd
-        text: Additional
+        text: Projects
       - href: contact.qmd
-        text: Contact
+        text: Contact Me
 
 
 format:
