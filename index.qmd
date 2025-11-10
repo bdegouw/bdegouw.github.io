@@ -1,5 +1,4 @@
 ---
-title: "Bowen de Gouw's Website"
 image: "headshot.bfla.jpeg"
 format:
   html:
