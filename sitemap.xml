@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://bdegouw.github.io/about.html</loc>
-    <lastmod>2025-11-10T17:25:49.110Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bdegouw.github.io/index.html</loc>
-    <lastmod>2025-11-10T17:25:49.118Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bdegouw.github.io/additional.html</loc>
-    <lastmod>2025-11-10T17:25:49.110Z</lastmod>
+    <loc>https://bdegouw.github.io/projects.html</loc>
+    <lastmod>2025-11-10T17:27:49.420Z</lastmod>
   </url>
   <url>
     <loc>https://bdegouw.github.io/contact.html</loc>
-    <lastmod>2025-11-10T17:25:49.110Z</lastmod>
+    <lastmod>2025-11-10T17:27:49.412Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bdegouw.github.io/index.html</loc>
+    <lastmod>2025-11-10T17:27:49.420Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bdegouw.github.io/professionalsummary.html</loc>
+    <lastmod>2025-11-10T17:27:49.420Z</lastmod>
   </url>
 </urlset>
