@@ -1,6 +1,7 @@
 ---
 title: "Bowen de Gouw's Portfolio Website"
 image: "headshot.bfla.jpeg"
+image: "gradpic.jpg"
 format:
   html:
     theme: journal
@@ -20,6 +21,12 @@ Previously, I did my undergraduate studies at Boston University's Questrom Schoo
 
 --- 
 
+
+<div style="text-align: center;">
+<img src="gradpic.jpg" alt="Graduation 2025" width="230" style="border-radius: 50%; margin-bottom: 15px;"/>
+</div>
+
+---
 <div style="text-align: center; font-style: italic;">
 Based in Boston, MA 
 
