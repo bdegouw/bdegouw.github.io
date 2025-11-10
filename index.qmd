@@ -1,7 +1,8 @@
 ---
 title: "Bowen de Gouw's Portfolio Website"
-image: "headshot.bfla.jpeg"
-image: "gradpic.jpg"
+image: 
+- "headshot.bfla.jpeg"
+- "gradpic.jpg"
 format:
   html:
     theme: journal
