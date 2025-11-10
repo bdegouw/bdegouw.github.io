@@ -18,7 +18,8 @@ website:
         text: Blog
       - href: contact.qmd
         text: Contact Me
-
+search: false
+page-navigation: true
 
 format:
   html:
