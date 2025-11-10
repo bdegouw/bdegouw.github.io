@@ -33,6 +33,11 @@ As a STEM-designated course, my focus will be on applying my undergraduate Busin
 
 ---
 
+:::{.quarto-figure-center}
+![Celebrating my Graduation from Boston University's DeWolfe Boathouse, May 2025](trainingimage){width=400px}
+:::
+
+---
 <div style="text-align: center; font-style: italic;">
 Based in Boston, MA 
 
