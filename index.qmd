@@ -21,7 +21,9 @@ Previously, I did my undergraduate studies at Boston University's Questrom Schoo
 --- 
 
 
-![](gradpic.jpg){fig-alt="Graduation Photo" width =300}
+![](gradpic.jpg){fig-cap="Celebrating my Graduation from Boston University's DeWolfe Boathouse, May 2025" fig-align="center" width=400px}
+
+
 
 ---
 <div style="text-align: center; font-style: italic;">
