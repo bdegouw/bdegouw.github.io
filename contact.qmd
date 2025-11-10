@@ -1,27 +1,26 @@
 ---
-title: "Contact"
+title: "Contact Me"
 ---
-
 Thank you for taking the time to visit my website! 
 
 If you'd like to reach out to me, please contact me on one of my platforms below...
 
 ---
 
- # Email
- 
+## Email
+
  You can reach me at 
  **[bdegouw@bu.edu](mailto:bdegouw@bu.edu)**
 
 ---
 
-# LinkedIn
+## LinkedIn
 
 Connect me with on LinkedIn
 [linkedin.com/in/bowen-de-gouw/](https://www.linkedin.com/in/bowen-de-gouw)
 
 ---
 
-# Location
+## Location
 
 I am based in Boston, MA.
