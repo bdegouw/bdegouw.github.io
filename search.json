@@ -7,6 +7,13 @@
     "text": "This website has been created for my class, AD688 (Cloud Analytics), which is towards my MSc in Applied Business Analytics at Boston University.\nIf you would like to contact me, please feel free to email me: bdegouw@bu.edu"
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to My Website",
+    "section": "",
+    "text": "Hello, Welcome to my Website!\nBowen de Gouw’s Portfolio Website\nThis is repository is designed to demonstrate my learnings from AD688.\nThank you for taking the time to look at my work.\nBelow is an example of a python script\n\nx = 3\ny = 7\nprint('the answer for the equation will be printed beneath this message')\nprint(x + y)\n\n\nprint('this is an example of me using the website editing function through an EC2')\n\nthe answer for the equation will be printed beneath this message\n10\nthis is an example of me using the website editing function through an EC2"
+  },
+  {
     "objectID": "additional.html",
     "href": "additional.html",
     "title": "Additional",
@@ -14,10 +21,10 @@
     "text": "This page has been added to show additional work that I do. It is also can example of creating an additional page to my website."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome to My Website",
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
     "section": "",
-    "text": "Hello, Welcome to my Website!\nBowen de Gouw’s Portfolio Website\nThis is repository is designed to demonstrate my learnings from AD688.\nThank you for taking the time to look at my work.\nBelow is an example of a python script\n\nx = 3\ny = 7\nprint('the answer for the equation will be printed beneath this message')\nprint(x + y)\n\n\nprint('this is an example of me using the website editing function through an EC2')\n\nthe answer for the equation will be printed beneath this message\n10\nthis is an example of me using the website editing function through an EC2"
+    "text": "Contact me\nThank you for taking the time to visit my website!\nIf you’d like to reach out to me, please contact me on one of my platforms below…\n\n# Email You can reach me at bdegouw@bu.edu\n\n\n\nLinkedIn\nConnect me with on LinkedIn linkedin.com/in/bowen-de-gouw/\n\n\n\nLocation\nI am based in Boston, MA."
   }
 ]
