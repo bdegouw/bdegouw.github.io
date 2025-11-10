@@ -2,26 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://bdegouw.github.io/projects.html</loc>
-    <lastmod>2025-11-10T18:55:28.710Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bdegouw.github.io/professionalsummary.html</loc>
-    <lastmod>2025-11-10T18:55:28.710Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bdegouw.github.io/contact.html</loc>
-    <lastmod>2025-11-10T18:55:28.702Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bdegouw.github.io/index.html</loc>
-    <lastmod>2025-11-10T18:55:28.710Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bdegouw.github.io/blog.html</loc>
-    <lastmod>2025-11-10T18:55:28.702Z</lastmod>
+    <lastmod>2025-11-10T18:59:19.575Z</lastmod>
   </url>
   <url>
     <loc>https://bdegouw.github.io/certifications.html</loc>
-    <lastmod>2025-11-10T18:55:28.702Z</lastmod>
+    <lastmod>2025-11-10T18:59:19.567Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bdegouw.github.io/blog.html</loc>
+    <lastmod>2025-11-10T18:59:19.567Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bdegouw.github.io/index.html</loc>
+    <lastmod>2025-11-10T18:59:19.575Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bdegouw.github.io/contact.html</loc>
+    <lastmod>2025-11-10T18:59:19.567Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bdegouw.github.io/professionalsummary.html</loc>
+    <lastmod>2025-11-10T18:59:19.575Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bdegouw.github.io/favoriteteams.html</loc>
+    <lastmod>2025-11-10T18:59:19.567Z</lastmod>
   </url>
 </urlset>
