@@ -4,7 +4,7 @@ title: "Academic Projects and Coursework"
 
 # Relevant Coursework: 
 
-Graduate Level
+**Graduate Level**
 
 AD571: Business Analytics Foundations
 
@@ -18,7 +18,7 @@ AD599: Python & SQL Business Analytics
 
 AD688: Cloud Analytics for Business
 
-Undergraduate Level
+**Undergraduate Level**
 
 QST-MO420: People Analytics
 
