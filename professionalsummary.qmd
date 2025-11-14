@@ -16,6 +16,9 @@ format:
   <h3>{{< meta subtitle >}}</h3>
 </div>
 
+[📄 View My Resume (PDF)](bdegouwresume.pdf){target="_blank"}
+
+
 
 ## 💼 Professional Experience
 
