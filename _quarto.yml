@@ -11,8 +11,13 @@ website:
         text: Home
       - href: professionalsummary.qmd
         text: Professional Summary
+
       - href: projects.qmd
         text: Projects
+        menu:
+          - href: example1drop.qmd
+            text: Example 1
+
       - href: certifications.qmd
         text: Certifications
       - href: blog.qmd
