@@ -4,7 +4,7 @@
     "href": "example1drop.html",
     "title": "Example 1",
     "section": "",
-    "text": "EXAMPLE 1\nThis is a test dropdownpage"
+    "text": "EXAMPLE 1\nAcademic Projects: HERE"
   },
   {
     "objectID": "professionalsummary.html",
@@ -44,9 +44,9 @@
   {
     "objectID": "classes.html",
     "href": "classes.html",
-    "title": "Academic Coursework",
+    "title": "Relevant Academic Coursework",
     "section": "",
-    "text": "Relevant Coursework:\nGraduate Level\nAD571: Business Analytics Foundations\nAD632: Financial Concepts\nAD715: Quantitative and Qualitative Decision Making\nAD654: Marketing Analytics\nAD599: Python & SQL Business Analytics\nAD688: Cloud Analytics for Business\nUndergraduate Level\nQST-MO420: People Analytics\nQST-MK442: Digital Marketing Analytics\nQST-BA305: Business Decision Making with Data\nQST-IS465: Managing Data Resources"
+    "text": "Graduate Level\nAD571: Business Analytics Foundations\nAD632: Financial Concepts\nAD715: Quantitative and Qualitative Decision Making\nAD654: Marketing Analytics\nAD599: Python & SQL Business Analytics\nAD688: Cloud Analytics for Business\nUndergraduate Level\nQST-MO420: People Analytics\nQST-MK442: Digital Marketing Analytics\nQST-BA305: Business Decision Making with Data\nQST-IS465: Managing Data Resources"
   },
   {
     "objectID": "index.html",
