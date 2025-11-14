@@ -4,7 +4,7 @@ project:
 website:
   title: "Bowen de Gouw"
   favicon: bdglogo.png
-  site-url: https://bdegouw.github.io/
+  site-url: "https://bdegouw.github.io/"
   navbar:
     left:
       - href: home.qmd
@@ -21,8 +21,8 @@ website:
         text: Favorites
       - href: contact.qmd
         text: Contact Me
-search: false
-page-navigation: true
+  search: false
+  page-navigation: true
 
 format:
   html:
@@ -31,6 +31,3 @@ format:
       - brand
     css: styles.css
     toc: true
-
-
-
