@@ -1,5 +1,5 @@
 ---
-title: "Academic Projects and Coursework"
+title: "Academic Coursework"
 toc: false
 ---
 
