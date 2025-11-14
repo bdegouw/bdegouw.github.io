@@ -12,8 +12,8 @@ website:
       - href: professionalsummary.qmd
         text: Professional Summary
 
-      - href: projects.qmd
-        text: Projects
+      - text: Projects
+        href: projects.qmd
         menu:
           - href: example1drop.qmd
             text: Example 1
