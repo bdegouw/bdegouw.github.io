@@ -3,5 +3,4 @@ title: "Example 1"
 toc: false
 ---
 # EXAMPLE 1
-
-This is a test dropdownpage
+ Academic Projects: HERE

@@ -1,9 +1,7 @@
 ---
-title: "Academic Coursework"
+title: "Relevant Academic Coursework"
 toc: false
 ---
-
-# Relevant Coursework: 
 
 **Graduate Level**
 
