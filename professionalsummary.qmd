@@ -10,6 +10,12 @@ format:
     linkcolor: "#004aad"
 ---
 
+<div style="text-align:center; margin-top: 30px;">
+  <h1>{{< meta title >}}</h1>
+  <h3>{{< meta subtitle >}}</h3>
+</div>
+
+
 ## 💼 Professional Experience
 
 ### Consulting Intern — *Recombinators, Inc. 5000 Company*  
