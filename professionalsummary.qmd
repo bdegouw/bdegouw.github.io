@@ -8,8 +8,9 @@ format:
     smooth-scroll: true
     code-copy: true
 ---
+**Please Click the link Below to View my Resume:**
 
-[📄 View My Resume (PDF)](BowendeGouwResume.pdf){target="_blank"}
+[📄 Bowen de Gouw - Resume (PDF)](BowendeGouwResume.pdf){target="_blank"}
 
 
 
