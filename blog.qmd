@@ -3,6 +3,8 @@ title: "Blog Posts"
 toc: false
 ---
 
+My goal for the spring semester is to publish some blog posts here on my personal website. Stay posted for what's to come!
+
 <div style="text-align: center; padding: 40px; background-color: #e0f2fe; border-radius: 10px; margin: 20px 0;">
   <h2 style="color:#1e3a8a;">🚧 Blog Section In Progress 🚧</h2>
   <p style="font-size: 1.1em; color:#1e40af;">

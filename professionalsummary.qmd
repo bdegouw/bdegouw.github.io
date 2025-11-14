@@ -1,6 +1,5 @@
 ---
 title: "Professional Summary"
-subtitle: "Business Analytics | Strategy | Leadership"
 title-block: false
 format:
   html:
@@ -8,15 +7,9 @@ format:
     toc: false
     smooth-scroll: true
     code-copy: true
-    linkcolor: "#004aad"
 ---
 
-<div style="text-align:center; margin-top: 30px;">
-  <h1>{{< meta title >}}</h1>
-  <h3>{{< meta subtitle >}}</h3>
-</div>
-
-[📄 View My Resume (PDF)](bdegouwresume.pdf){target="_blank"}
+[📄 View My Resume (PDF)](BowendeGouwResume.pdf){target="_blank"}
 
 
 
