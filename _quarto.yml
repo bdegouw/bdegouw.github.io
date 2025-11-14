@@ -13,7 +13,7 @@ website:
         text: Professional Summary
       - text: Academics
         menu:
-          - text: Course Overview
+          - text: Relevant Academic Coursework
             href: classes.qmd
           - text: Example 1
             href: example1drop.qmd
