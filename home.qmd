@@ -26,6 +26,27 @@ After graduation, I wanted to sharpen my technical toolkit and bridge the gap be
 My goal is to use these tools to make data more human — helping organizations uncover insights that improve performance, experience, and impact.
 
 --- 
+# Get to know me!
+
+<div style="text-align: center; margin-top: 30px;">
+  <h2 style="color:#1e3a8a;">🏆 My Favorite Teams</h2>
+</div>
+
+---
+
+<div style="text-align: center; font-size: 1.1em; line-height: 1.8;">
+  <p><strong>Rugby:</strong> All Blacks 🇳🇿</p>
+  <p><strong>Super Rugby:</strong> Blues 💙</p>
+  <p><strong>NFL:</strong> New England Patriots 🏈</p>
+  <p><strong>NHL:</strong> Boston Bruins 🏒</p>
+  <p><strong>NBA:</strong> Boston Celtics 🏀</p>
+  <p><strong>CFB:</strong> Texas Longhorns 🤘</p>
+  <p><strong>MLB:</strong> Boston Red Sox ⚾️</p>
+</div>
+
+---
+
+# Photo Gallery
 
 :::{.quarto-figure-center}
 ![Celebrating my Graduation from Boston University's DeWolfe Boathouse, May 2025](gradpic.jpg){width=400px}
@@ -38,6 +59,7 @@ My goal is to use these tools to make data more human — helping organizations 
 :::
 
 ---
+
 <div style="text-align: center; font-style: italic;">
 [LinkedIn](https://www.linkedin.com/in/bowen-de-gouw) - [Github](github.com/bdegouw) - [Email](mailto:bdegouw@bu.edu)
 </div>
