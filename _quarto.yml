@@ -17,8 +17,6 @@ website:
         text: Certifications
       - href: blog.qmd
         text: Blog
-      - href: favoriteteams.qmd
-        text: Favorites
       - href: contact.qmd
         text: Contact Me
   search: false

@@ -47,6 +47,11 @@ format:
 **Technical:** Python • SQL • R (RStudio) • Power BI • Excel • Google Analytics  
 
 ---
-<div style="text-align: center; font-style: italic;">
-[LinkedIn](https://www.linkedin.com/in/bowen-de-gouw) - [Github](github.com/bdegouw) - [Email](mailto:bdegouw@bu.edu)
+
+<div style="text-align: center; font-style: italic; margin-top: 40px;">
+  <strong>
+    <a href="https://www.linkedin.com/in/bowen-de-gouw" target="_blank">LinkedIn</a> ·
+    <a href="https://github.com/bdegouw" target="_blank">GitHub</a> ·
+    <a href="mailto:bdegouw@bu.edu">Email</a>
+  </strong>
 </div>
