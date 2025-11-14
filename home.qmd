@@ -29,11 +29,11 @@ My goal is to use these tools to make data more human — helping organizations 
 
 # Get to know me!
 
-<div style="text-align: center; margin-top: 30px;">
-  <h2 style="color:#1e3a8a;">🏆 My Favorite Teams</h2>
-</div>
+1. I am a huge sports fan and since moving to the US my passion for live sports events has flourished. I've been fortunate to watch MLB, NBA, NFL, NHL and CFB games live. 
 
----
+<div style="text-align: center; margin-top: 30px;">
+  <h2 style="color:#000000;">🏆 My Favorite Teams</h2>
+</div>
 
 <div style="text-align: center; font-size: 1.1em; line-height: 1.8;">
   <p><strong>Rugby:</strong> All Blacks 🇳🇿</p>
@@ -44,6 +44,7 @@ My goal is to use these tools to make data more human — helping organizations 
   <p><strong>CFB:</strong> Texas Longhorns 🤘</p>
   <p><strong>MLB:</strong> Boston Red Sox ⚾️</p>
 </div>
+
 
 ---
 
