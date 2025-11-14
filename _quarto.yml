@@ -11,10 +11,10 @@ website:
         text: Home
       - href: professionalsummary.qmd
         text: Professional Summary
-      - text: Projects
+      - text: Academics
         menu:
-          - text: Overview
-            href: projects.qmd
+          - text: Course Overview
+            href: classes.qmd
           - text: Example 1
             href: example1drop.qmd
       - href: certifications.qmd
