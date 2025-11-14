@@ -1,38 +1,10 @@
 [
   {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Academic Projects and Coursework",
+    "objectID": "example1drop.html",
+    "href": "example1drop.html",
+    "title": "Example 1",
     "section": "",
-    "text": "Relevant Coursework:\nGraduate Level\nAD571: Business Analytics Foundations\nAD632: Financial Concepts\nAD715: Quantitative and Qualitative Decision Making\nAD654: Marketing Analytics\nAD599: Python & SQL Business Analytics\nAD688: Cloud Analytics for Business\nUndergraduate Level\nQST-MO420: People Analytics\nQST-MK442: Digital Marketing Analytics\nQST-BA305: Business Decision Making with Data\nQST-IS465: Managing Data Resources"
-  },
-  {
-    "objectID": "certifications.html",
-    "href": "certifications.html",
-    "title": "Certifications",
-    "section": "",
-    "text": "Below are verified certifications that reflect my passion for applying technology and data to real-world business challenges.\n\n\n☁️ AWS Academy Cloud Foundations\nAmazon Web Services (AWS) / Credly • I’m thrilled to announce that I have successfully completed the AWS Academy Cloud Foundations** training, earning a verified badge from Amazon Web Services (AWS)!\nThis program provided me with a strong understanding of the core concepts of cloud computing, including AWS services, architecture, security, and pricing.\nIt was an incredible learning journey that deepened my skills in cloud technologies and gave me a clearer understanding of how they drive innovation and digital transformation.\n🔗 View Verified Badge on Credly\n\n\n\n📈 Bloomberg Market Concepts (BMC)\n**Bloomberg for Education •\nAn intensive, self-paced certification course that introduces the core pillars of the financial markets — economics, currencies, fixed income, and equities — through the Bloomberg Terminal.\nThis certification strengthened my financial literacy, market awareness, and analytical capabilities in interpreting financial data and trends.\n🔗 View Certificate\n\n\n LinkedIn · GitHub · Email"
-  },
-  {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Blog Posts",
-    "section": "",
-    "text": "My goal for the spring semester is to publish some blog posts here on my personal website. Stay posted for what’s to come!\n\n\n🚧 Blog Section In Progress 🚧\n\n\nThis section is under construction — check back soon for upcoming posts!\n\n\n\n\n LinkedIn · GitHub · Email"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "\nBowen de Gouw’s Website\n",
-    "section": "",
-    "text": "Bowen de Gouw’s Website\n\n\n\n\nKia Ora, Thank you for visting my website!\nKia ora and welcome! I’m Bowen — a lifelong learner, student-athlete, and data-driven problem solver. I was born in the Netherlands, raised in New Zealand, and for now call Boston home. My journey across continents has shaped how I think, lead, and connect with others.\nGrowing up on Auckland’s North Shore, I learned to balance curiosity and discipline — two traits that came from equal parts academics and athletics. At Westlake Boys High School, one of New Zealand’s top-performing schools, I discovered my passion for both numbers and teamwork.\nIn my final year of high school, I earned an athletic scholarship to Boston University, joining the Men’s Rowing Team. At 18, I packed my bags and crossed the world, driven by the goal of earning a world-class education and competing at the highest collegiate level.\nFour years later — countless early mornings, races, and study sessions later — I graduated from the Questrom School of Business with a BSBA and a deep appreciation for resilience, leadership, and collaboration.\nAfter graduation, I wanted to sharpen my technical toolkit and bridge the gap between business insight and data analytics. That led me to pursue a Master of Science in Applied Business Analytics (MET, Boston University) — a program designed to explore predictive modeling, data mining, cloud platforms, and machine learning.\nMy goal is to use these tools to make data more human — helping organizations uncover insights that improve performance, experience, and impact.\n\n\n\nGet to know me!\n\nI am a huge sports fan and since moving to the US my passion for live sports events has flourished. I’ve been fortunate to watch MLB, NBA, NFL, NHL and CFB games live.\n\n\n\n🏆 My Favorite Teams\n\n\n\n\nRugby: All Blacks 🇳🇿\n\n\nSuper Rugby: Blues 💙\n\n\nNFL: New England Patriots 🏈\n\n\nNHL: Boston Bruins 🏒\n\n\nNBA: Boston Celtics 🏀\n\n\nCFB: Texas Longhorns 🤘\n\n\nMLB: Boston Red Sox ⚾️\n\n\n\n\n\nPhoto Gallery\n\n\n\n\nCelebrating my Graduation from Boston University’s DeWolfe Boathouse, May 2025\n\n\n\n\n\n\n\n\nPreparing for the Inter-Collegiate Rowing Association (IRA) National Championships, May 2025\n\n\n\n\n\n LinkedIn · GitHub · Email"
-  },
-  {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact Me",
-    "section": "",
-    "text": "Thank you for visiting my website.\nIf you’d like to reach out, I’d be happy to connect through the links below.\n\n\n📧 Email\nbdegouw@bu.edu\n\n\n💼 LinkedIn\nlinkedin.com/in/bowen-de-gouw\n\n\n📍 Location\nBoston, Massachusett, USA\n\n\n LinkedIn · GitHub · Email"
+    "text": "EXAMPLE 1\nThis is a test dropdownpage"
   },
   {
     "objectID": "professionalsummary.html",
@@ -70,10 +42,38 @@
     "text": "🧰 Skills & Tools\nTechnical: Python • SQL • R (RStudio) • Power BI • Excel • Google Analytics\n\n\n LinkedIn · GitHub · Email"
   },
   {
-    "objectID": "example1drop.html",
-    "href": "example1drop.html",
-    "title": "Example 1",
+    "objectID": "classes.html",
+    "href": "classes.html",
+    "title": "Academic Projects and Coursework",
     "section": "",
-    "text": "EXAMPLE 1\nThis is a test dropdownpage"
+    "text": "Relevant Coursework:\nGraduate Level\nAD571: Business Analytics Foundations\nAD632: Financial Concepts\nAD715: Quantitative and Qualitative Decision Making\nAD654: Marketing Analytics\nAD599: Python & SQL Business Analytics\nAD688: Cloud Analytics for Business\nUndergraduate Level\nQST-MO420: People Analytics\nQST-MK442: Digital Marketing Analytics\nQST-BA305: Business Decision Making with Data\nQST-IS465: Managing Data Resources"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "\nBowen de Gouw’s Website\n",
+    "section": "",
+    "text": "Bowen de Gouw’s Website\n\n\n\n\nKia Ora, Thank you for visting my website!\nKia ora and welcome! I’m Bowen — a lifelong learner, student-athlete, and data-driven problem solver. I was born in the Netherlands, raised in New Zealand, and for now call Boston home. My journey across continents has shaped how I think, lead, and connect with others.\nGrowing up on Auckland’s North Shore, I learned to balance curiosity and discipline — two traits that came from equal parts academics and athletics. At Westlake Boys High School, one of New Zealand’s top-performing schools, I discovered my passion for both numbers and teamwork.\nIn my final year of high school, I earned an athletic scholarship to Boston University, joining the Men’s Rowing Team. At 18, I packed my bags and crossed the world, driven by the goal of earning a world-class education and competing at the highest collegiate level.\nFour years later — countless early mornings, races, and study sessions later — I graduated from the Questrom School of Business with a BSBA and a deep appreciation for resilience, leadership, and collaboration.\nAfter graduation, I wanted to sharpen my technical toolkit and bridge the gap between business insight and data analytics. That led me to pursue a Master of Science in Applied Business Analytics (MET, Boston University) — a program designed to explore predictive modeling, data mining, cloud platforms, and machine learning.\nMy goal is to use these tools to make data more human — helping organizations uncover insights that improve performance, experience, and impact.\n\n\n\nGet to know me!\n\nI am a huge sports fan and since moving to the US my passion for live sports events has flourished. I’ve been fortunate to watch MLB, NBA, NFL, NHL and CFB games live.\n\n\n\n🏆 My Favorite Teams\n\n\n\n\nRugby: All Blacks 🇳🇿\n\n\nSuper Rugby: Blues 💙\n\n\nNFL: New England Patriots 🏈\n\n\nNHL: Boston Bruins 🏒\n\n\nNBA: Boston Celtics 🏀\n\n\nCFB: Texas Longhorns 🤘\n\n\nMLB: Boston Red Sox ⚾️\n\n\n\n\n\nPhoto Gallery\n\n\n\n\nCelebrating my Graduation from Boston University’s DeWolfe Boathouse, May 2025\n\n\n\n\n\n\n\n\nPreparing for the Inter-Collegiate Rowing Association (IRA) National Championships, May 2025\n\n\n\n\n\n LinkedIn · GitHub · Email"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact Me",
+    "section": "",
+    "text": "Thank you for visiting my website.\nIf you’d like to reach out, I’d be happy to connect through the links below.\n\n\n📧 Email\nbdegouw@bu.edu\n\n\n💼 LinkedIn\nlinkedin.com/in/bowen-de-gouw\n\n\n📍 Location\nBoston, Massachusett, USA\n\n\n LinkedIn · GitHub · Email"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog Posts",
+    "section": "",
+    "text": "My goal for the spring semester is to publish some blog posts here on my personal website. Stay posted for what’s to come!\n\n\n🚧 Blog Section In Progress 🚧\n\n\nThis section is under construction — check back soon for upcoming posts!\n\n\n\n\n LinkedIn · GitHub · Email"
+  },
+  {
+    "objectID": "certifications.html",
+    "href": "certifications.html",
+    "title": "Certifications",
+    "section": "",
+    "text": "Below are verified certifications that reflect my passion for applying technology and data to real-world business challenges.\n\n\n☁️ AWS Academy Cloud Foundations\nAmazon Web Services (AWS) / Credly • I’m thrilled to announce that I have successfully completed the AWS Academy Cloud Foundations** training, earning a verified badge from Amazon Web Services (AWS)!\nThis program provided me with a strong understanding of the core concepts of cloud computing, including AWS services, architecture, security, and pricing.\nIt was an incredible learning journey that deepened my skills in cloud technologies and gave me a clearer understanding of how they drive innovation and digital transformation.\n🔗 View Verified Badge on Credly\n\n\n\n📈 Bloomberg Market Concepts (BMC)\n**Bloomberg for Education •\nAn intensive, self-paced certification course that introduces the core pillars of the financial markets — economics, currencies, fixed income, and equities — through the Bloomberg Terminal.\nThis certification strengthened my financial literacy, market awareness, and analytical capabilities in interpreting financial data and trends.\n🔗 View Certificate\n\n\n LinkedIn · GitHub · Email"
   }
 ]
