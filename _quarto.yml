@@ -7,7 +7,7 @@ website:
   site-url: "https://bdegouw.github.io/"
   navbar:
     left:
-      - href: home.qmd
+      - href: index.qmd
         text: Home
       - href: professionalsummary.qmd
         text: Professional Summary
