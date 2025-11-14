@@ -1,7 +1,7 @@
 ---
 title: "Professional Summary"
 subtitle: "Business Analytics | Strategy | Leadership"
-title-block-style: none
+title-block: false
 format:
   html:
     theme: cosmo
@@ -10,7 +10,6 @@ format:
     code-copy: true
     linkcolor: "#004aad"
 ---
-
 
 <div style="text-align:center; margin-top: 30px;">
   <h1>{{< meta title >}}</h1>
