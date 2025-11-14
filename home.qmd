@@ -28,7 +28,7 @@ My goal is to use these tools to make data more human — helping organizations 
 --- 
 # Get to know me!
 
-<div style="text-align: center; margin-top: 30px;">
+<div style="text-align: center; margin-top:30px;">
   <h2 style="color:#1e3a8a;">🏆 My Favorite Teams</h2>
 </div>
 
