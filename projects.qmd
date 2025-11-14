@@ -1,5 +1,6 @@
 ---
 title: "Academic Projects and Coursework"
+toc: false
 ---
 
 # Relevant Coursework: 
