@@ -5,34 +5,27 @@ title: "Academic Projects and Coursework"
 # Relevant Coursework: 
 
 Graduate Level
+
 AD571: Business Analytics Foundations
+
 AD632: Financial Concepts
+
 AD715: Quantitative and Qualitative Decision Making
+
 AD654: Marketing Analytics
+
 AD599: Python & SQL Business Analytics
+
 AD688: Cloud Analytics for Business
 
 Undergraduate Level
+
 QST-MO420: People Analytics
+
 QST-MK442: Digital Marketing Analytics
+
 QST-BA305: Business Decision Making with Data
+
 QST-IS465: Managing Data Resources
 
-
-
-<div style="text-align: center; padding: 40px; background-color: #e0f2fe; border-radius: 10px; margin: 20px 0;">
-  <h2 style="color:#1e3a8a;">🚧 Academic Projects In Progress 🚧</h2>
-  <p style="font-size: 1.1em; color:#1e40af;">
-    This section is currently being updated — new projects will be added soon!
-  </p>
-</div>
-
 ---
-
-<div style="text-align: center; font-style: italic; margin-top: 40px;">
-  <strong>
-    <a href="https://www.linkedin.com/in/bowen-de-gouw" target="_blank">LinkedIn</a> ·
-    <a href="https://github.com/bdegouw" target="_blank">GitHub</a> ·
-    <a href="mailto:bdegouw@bu.edu">Email</a>
-  </strong>
-</div>
