@@ -2,8 +2,8 @@ project:
   type: website
 
 website:
-  title: "<img src= 'bdglogo.png' style='height:22px; margin-right:8px;'> Bowen de Gouw"
-  favicon: bdglogo.png
+  title: "<img src= 'photos/bdglogo.png' style='height:22px; margin-right:8px;'> Bowen de Gouw"
+  favicon: photos/bdglogo.png
   site-url: "https://bdegouw.github.io/"
   navbar:
     left:
