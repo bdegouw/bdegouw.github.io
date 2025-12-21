@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ASSIGNMENT 2: MARKET SEGMENTATION &amp; CONJOINT ANALYSIS –  Bowen de Gouw</title>
+<title>Market Segmentation and Conjoint Analysis –  Bowen de Gouw</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -172,7 +172,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">ASSIGNMENT 2: MARKET SEGMENTATION &amp; CONJOINT ANALYSIS</h1>
+<h1 class="title">Market Segmentation and Conjoint Analysis</h1>
 </div>
 
 
@@ -189,32 +189,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div id="cell-1" class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>title: <span class="st">"Market Segmentation and Conjoint Analysis"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Bowen de Gouw U02747415</p>
-<div id="cell-3" class="cell" data-executioninfo="{&quot;elapsed&quot;:35,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412734,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-execution_count="15">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn <span class="im">import</span> preprocessing</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> KMeans</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn <span class="im">import</span> metrics</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.ticker <span class="im">as</span> mtick</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-1" class="cell" data-executioninfo="{&quot;elapsed&quot;:35,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412734,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn <span class="im">import</span> preprocessing</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> KMeans</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn <span class="im">import</span> metrics</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.ticker <span class="im">as</span> mtick</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="part-i-segmentation" class="level1">
 <h1>PART I: SEGMENTATION</h1>
-<div id="cell-5" class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412741,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-execution_count="16">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># A.</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>days25 <span class="op">=</span> pd.read_csv(<span class="st">'days25.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-3" class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412741,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># A.</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>days25 <span class="op">=</span> pd.read_csv(<span class="st">'days25.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-6" class="cell" data-executioninfo="{&quot;elapsed&quot;:47,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412791,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="6d301130-e85b-467b-9804-d4624b7bbb2a" data-execution_count="17">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>days25.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-4" class="cell" data-executioninfo="{&quot;elapsed&quot;:47,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412791,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="6d301130-e85b-467b-9804-d4624b7bbb2a" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>days25.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="17">
 
   <div id="df-7e4b38ac-6ec5-49b1-9e79-66ecf7246132" class="colab-df-container">
@@ -567,8 +561,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-<div id="cell-7" class="cell" data-executioninfo="{&quot;elapsed&quot;:43,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412795,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="f1218842-56c6-442b-90db-7642447b4ebb" data-execution_count="18">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>days25.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-5" class="cell" data-executioninfo="{&quot;elapsed&quot;:43,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412795,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="f1218842-56c6-442b-90db-7642447b4ebb" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>days25.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
 RangeIndex: 99 entries, 0 to 98
@@ -601,9 +595,9 @@ memory usage: 14.8+ KB</code></pre>
 <p><strong>Numerical Variables:</strong> Total Visitors, Passholder Percentage, Days Ticket Sold, Average Ticket Price, Gate Revenue, Food Revenue, Merch Revenue, Arcade Revenue, Total Revenue, Total Labor Hours, International Visitors, Highest Temperature, Per Capita Spend</p>
 <p><strong>Categorical Variables:</strong> Day ID, Day of the Week, Season Week, Holiday, Weather Type, Special Event</p>
 <p>We are unable to use categorcal data unputs in a k-means model as the model is created and relies on Euclidean Distnce, which assumes that the data is continunous and on a meaningful scale so these values can be accurately compared and calculated to form the euclidean distances, and clusters.</p>
-<div id="cell-9" class="cell" data-executioninfo="{&quot;elapsed&quot;:19,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412807,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="5e2b9dea-b678-43ca-e2ad-dac3f2ed5e69" data-execution_count="19">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#B.</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>days25.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-7" class="cell" data-executioninfo="{&quot;elapsed&quot;:19,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412807,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="5e2b9dea-b678-43ca-e2ad-dac3f2ed5e69" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#B.</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>days25.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="19">
 
   <div id="df-6b65b9f7-8ac9-49a8-a434-37b11a4cba1b" class="colab-df-container">
@@ -1005,9 +999,9 @@ memory usage: 14.8+ KB</code></pre>
 </div>
 </div>
 <p>The describe function helps gain a sense of the data as it produces summary statistics that can be used to gain a baseline understanding and analysis of the data. It is important for any analyst to understand the baseline metrics before building any additional models as it gives them a better sense for what the results may produce and to evauate performance/effectiveness. However, it is important to note that it is not always useful - for some variables that are numerical references of categorical variables, making it vital to understand the structure of your data.</p>
-<div id="cell-11" class="cell" data-executioninfo="{&quot;elapsed&quot;:15,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412820,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="86fa2e39-e8c8-42e4-ab24-f8020ca70990" data-execution_count="20">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#C.</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>days25.isnull().<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-9" class="cell" data-executioninfo="{&quot;elapsed&quot;:15,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412820,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="86fa2e39-e8c8-42e4-ab24-f8020ca70990" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#C.</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>days25.isnull().<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="20">
 <div>
 
@@ -1103,8 +1097,8 @@ memory usage: 14.8+ KB</code></pre>
 </div>
 </div>
 <p>There are no missing values in this dataset.</p>
-<div id="cell-13" class="cell" data-executioninfo="{&quot;elapsed&quot;:17,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412892,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="b660fc17-61e9-4256-82d1-50d1e9a15cbf" data-execution_count="21">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>days25.International_Visitors.value_counts().sort_index(ascending<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-11" class="cell" data-executioninfo="{&quot;elapsed&quot;:17,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412892,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="b660fc17-61e9-4256-82d1-50d1e9a15cbf" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>days25.International_Visitors.value_counts().sort_index(ascending<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="21">
 <div>
 
@@ -1172,8 +1166,8 @@ memory usage: 14.8+ KB</code></pre>
 </div><br><label><b>dtype:</b> int64</label>
 </div>
 </div>
-<div id="cell-14" class="cell" data-executioninfo="{&quot;elapsed&quot;:15,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412901,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="09398a2b-9abb-49cd-df9d-83f9fa55f2c7" data-execution_count="22">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>days25.Revenue_Food.value_counts().sort_index(ascending<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-12" class="cell" data-executioninfo="{&quot;elapsed&quot;:15,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412901,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="09398a2b-9abb-49cd-df9d-83f9fa55f2c7" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>days25.Revenue_Food.value_counts().sort_index(ascending<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="22">
 <div>
 
@@ -1241,8 +1235,8 @@ memory usage: 14.8+ KB</code></pre>
 </div><br><label><b>dtype:</b> int64</label>
 </div>
 </div>
-<div id="cell-15" class="cell" data-executioninfo="{&quot;elapsed&quot;:11,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412915,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="81731e44-01c5-4667-a3ea-f1b9e1af7e0b" data-execution_count="23">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>days25.High_Temperature.value_counts().sort_index(ascending<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-13" class="cell" data-executioninfo="{&quot;elapsed&quot;:11,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412915,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="81731e44-01c5-4667-a3ea-f1b9e1af7e0b" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>days25.High_Temperature.value_counts().sort_index(ascending<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="23">
 <div>
 
@@ -1310,8 +1304,8 @@ memory usage: 14.8+ KB</code></pre>
 </div><br><label><b>dtype:</b> int64</label>
 </div>
 </div>
-<div id="cell-16" class="cell" data-executioninfo="{&quot;elapsed&quot;:10,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412931,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="df8df6e3-6719-429f-80bd-795c80f1e465" data-execution_count="24">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>days25.Avg_Ticket_Price.value_counts().sort_index(ascending<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-14" class="cell" data-executioninfo="{&quot;elapsed&quot;:10,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412931,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="df8df6e3-6719-429f-80bd-795c80f1e465" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>days25.Avg_Ticket_Price.value_counts().sort_index(ascending<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="24">
 <div>
 
@@ -1379,8 +1373,8 @@ memory usage: 14.8+ KB</code></pre>
 </div><br><label><b>dtype:</b> int64</label>
 </div>
 </div>
-<div id="cell-17" class="cell" data-executioninfo="{&quot;elapsed&quot;:20,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412957,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="c44ffedf-c056-4991-fba9-ffd513132e9e" data-execution_count="25">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>days25.Total_Visitors.value_counts().sort_index(ascending<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-15" class="cell" data-executioninfo="{&quot;elapsed&quot;:20,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412957,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="c44ffedf-c056-4991-fba9-ffd513132e9e" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>days25.Total_Visitors.value_counts().sort_index(ascending<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="25">
 <div>
 
@@ -1466,10 +1460,10 @@ memory usage: 14.8+ KB</code></pre>
 <li>Total Visitors = -50. Total visitors cannot be a negative number.</li>
 </ul>
 <p>Replacement Method: Use the average for the day of the week. This is because day of the week that will have impact on the total visitors and therefore is a reliable imputation method.</p>
-<div id="cell-19" class="cell" data-executioninfo="{&quot;elapsed&quot;:25,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412972,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="651ebafc-8b58-4af5-a070-d490735d7ef1" data-execution_count="26">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>days25[days25[<span class="st">'International_Visitors'</span>] <span class="op">&lt;</span> <span class="dv">0</span>]</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Day ID = 51</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-17" class="cell" data-executioninfo="{&quot;elapsed&quot;:25,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412972,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="651ebafc-8b58-4af5-a070-d490735d7ef1" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>days25[days25[<span class="st">'International_Visitors'</span>] <span class="op">&lt;</span> <span class="dv">0</span>]</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Day ID = 51</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="26">
 
   <div id="df-396ee098-0f8f-4aab-a23a-0f100a654166" class="colab-df-container">
@@ -1610,16 +1604,16 @@ memory usage: 14.8+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-20" class="cell" data-executioninfo="{&quot;elapsed&quot;:72,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413040,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="6c3bf8e2-3517-46f8-ee5e-c5b2e6b6249d" data-execution_count="27">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>mean_international_visitors_by_day <span class="op">=</span> days25.groupby(<span class="st">'Day_of_Week'</span>)[<span class="st">'International_Visitors'</span>].mean()</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>row_to_replace <span class="op">=</span> days25[days25[<span class="st">'International_Visitors'</span>] <span class="op">&lt;</span> <span class="dv">0</span>]</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> row_to_replace.empty:</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    day_of_week_to_replace <span class="op">=</span> row_to_replace[<span class="st">'Day_of_Week'</span>].iloc[<span class="dv">0</span>]</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    mean_for_day <span class="op">=</span> mean_international_visitors_by_day[day_of_week_to_replace]</span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    days25.loc[days25[<span class="st">'International_Visitors'</span>] <span class="op">&lt;</span> <span class="dv">0</span>, <span class="st">'International_Visitors'</span>] <span class="op">=</span> mean_for_day</span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>display(days25.loc[days25[<span class="st">'Day_ID'</span>] <span class="op">==</span> <span class="dv">51</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-18" class="cell" data-executioninfo="{&quot;elapsed&quot;:72,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413040,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="6c3bf8e2-3517-46f8-ee5e-c5b2e6b6249d" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>mean_international_visitors_by_day <span class="op">=</span> days25.groupby(<span class="st">'Day_of_Week'</span>)[<span class="st">'International_Visitors'</span>].mean()</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>row_to_replace <span class="op">=</span> days25[days25[<span class="st">'International_Visitors'</span>] <span class="op">&lt;</span> <span class="dv">0</span>]</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> row_to_replace.empty:</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    day_of_week_to_replace <span class="op">=</span> row_to_replace[<span class="st">'Day_of_Week'</span>].iloc[<span class="dv">0</span>]</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    mean_for_day <span class="op">=</span> mean_international_visitors_by_day[day_of_week_to_replace]</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    days25.loc[days25[<span class="st">'International_Visitors'</span>] <span class="op">&lt;</span> <span class="dv">0</span>, <span class="st">'International_Visitors'</span>] <span class="op">=</span> mean_for_day</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>display(days25.loc[days25[<span class="st">'Day_ID'</span>] <span class="op">==</span> <span class="dv">51</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
   <div id="df-7b0f2011-fdcb-4533-b4a1-21cb34e53a14" class="colab-df-container">
@@ -1760,8 +1754,8 @@ memory usage: 14.8+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-21" class="cell" data-executioninfo="{&quot;elapsed&quot;:15,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413060,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="9a6a3a54-a164-47e4-e329-8d06b9b90320" data-execution_count="28">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>days25[days25[<span class="st">'Revenue_Food'</span>] <span class="op">&gt;</span> <span class="dv">900000</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-19" class="cell" data-executioninfo="{&quot;elapsed&quot;:15,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413060,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="9a6a3a54-a164-47e4-e329-8d06b9b90320" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>days25[days25[<span class="st">'Revenue_Food'</span>] <span class="op">&gt;</span> <span class="dv">900000</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="28">
 
   <div id="df-8dd6e500-7c7a-41ab-b513-1da9b4afc69b" class="colab-df-container">
@@ -1902,14 +1896,14 @@ memory usage: 14.8+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-22" class="cell" data-executioninfo="{&quot;elapsed&quot;:20,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413084,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="a3f5f4c7-8275-4dcf-8032-760aebc9cb96" data-execution_count="29">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>day_30_row <span class="op">=</span> days25.loc[days25[<span class="st">'Day_ID'</span>] <span class="op">==</span> <span class="dv">31</span>]</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>calculated_food_revenue <span class="op">=</span> day_30_row[<span class="st">'Total_Revenue'</span>] <span class="op">-</span> (day_30_row[<span class="st">'Gate_Revenue'</span>] <span class="op">+</span> day_30_row[<span class="st">'Revenue_Merch'</span>] <span class="op">+</span> day_30_row[<span class="st">'Revenue_Arcade'</span>])</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>days25.loc[days25[<span class="st">'Day_ID'</span>] <span class="op">==</span> <span class="dv">31</span>, <span class="st">'Revenue_Food'</span>] <span class="op">=</span> calculated_food_revenue.iloc[<span class="dv">0</span>]</span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>display(days25.loc[days25[<span class="st">'Day_ID'</span>] <span class="op">==</span> <span class="dv">31</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-20" class="cell" data-executioninfo="{&quot;elapsed&quot;:20,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413084,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="a3f5f4c7-8275-4dcf-8032-760aebc9cb96" data-execution_count="29">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>day_30_row <span class="op">=</span> days25.loc[days25[<span class="st">'Day_ID'</span>] <span class="op">==</span> <span class="dv">31</span>]</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>calculated_food_revenue <span class="op">=</span> day_30_row[<span class="st">'Total_Revenue'</span>] <span class="op">-</span> (day_30_row[<span class="st">'Gate_Revenue'</span>] <span class="op">+</span> day_30_row[<span class="st">'Revenue_Merch'</span>] <span class="op">+</span> day_30_row[<span class="st">'Revenue_Arcade'</span>])</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>days25.loc[days25[<span class="st">'Day_ID'</span>] <span class="op">==</span> <span class="dv">31</span>, <span class="st">'Revenue_Food'</span>] <span class="op">=</span> calculated_food_revenue.iloc[<span class="dv">0</span>]</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>display(days25.loc[days25[<span class="st">'Day_ID'</span>] <span class="op">==</span> <span class="dv">31</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
   <div id="df-9fbad21f-563f-42ee-a7b7-13405edda6a1" class="colab-df-container">
@@ -2050,8 +2044,8 @@ memory usage: 14.8+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-23" class="cell" data-executioninfo="{&quot;elapsed&quot;:24,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413101,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="a585f5e9-6887-4e00-fe4f-b54aaed49292" data-execution_count="30">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>days25[days25[<span class="st">'High_Temperature'</span>] <span class="op">==</span> <span class="dv">200</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-21" class="cell" data-executioninfo="{&quot;elapsed&quot;:24,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413101,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="a585f5e9-6887-4e00-fe4f-b54aaed49292" data-execution_count="30">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>days25[days25[<span class="st">'High_Temperature'</span>] <span class="op">==</span> <span class="dv">200</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="30">
 
   <div id="df-5711a506-cbb7-40b2-b052-300351b7d75c" class="colab-df-container">
@@ -2192,11 +2186,11 @@ memory usage: 14.8+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-24" class="cell" data-executioninfo="{&quot;elapsed&quot;:12,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413116,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="697ee3d5-0d9a-4953-9e27-dc21878ebbc2" data-execution_count="31">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>days25[days25[<span class="st">'High_Temperature'</span>] <span class="op">==</span> <span class="dv">200</span>]</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>average_temperature <span class="op">=</span> days25[<span class="st">'High_Temperature'</span>].mean()</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>days25.loc[days25[<span class="st">'High_Temperature'</span>] <span class="op">==</span> <span class="dv">200</span>, <span class="st">'High_Temperature'</span>] <span class="op">=</span> average_temperature</span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>display(days25[days25[<span class="st">'Day_ID'</span>] <span class="op">==</span> <span class="dv">65</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-22" class="cell" data-executioninfo="{&quot;elapsed&quot;:12,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413116,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="697ee3d5-0d9a-4953-9e27-dc21878ebbc2" data-execution_count="31">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>days25[days25[<span class="st">'High_Temperature'</span>] <span class="op">==</span> <span class="dv">200</span>]</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>average_temperature <span class="op">=</span> days25[<span class="st">'High_Temperature'</span>].mean()</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>days25.loc[days25[<span class="st">'High_Temperature'</span>] <span class="op">==</span> <span class="dv">200</span>, <span class="st">'High_Temperature'</span>] <span class="op">=</span> average_temperature</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>display(days25[days25[<span class="st">'Day_ID'</span>] <span class="op">==</span> <span class="dv">65</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
   <div id="df-d0ba37d0-0a68-4600-ba48-4c6dd6026dd5" class="colab-df-container">
@@ -2337,8 +2331,8 @@ memory usage: 14.8+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-25" class="cell" data-executioninfo="{&quot;elapsed&quot;:82,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413205,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="15afdd5b-b3f3-4101-f426-864a919f6753" data-execution_count="32">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>days25[days25[<span class="st">'Total_Visitors'</span>] <span class="op">&lt;</span> <span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-23" class="cell" data-executioninfo="{&quot;elapsed&quot;:82,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413205,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="15afdd5b-b3f3-4101-f426-864a919f6753" data-execution_count="32">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>days25[days25[<span class="st">'Total_Visitors'</span>] <span class="op">&lt;</span> <span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="32">
 
   <div id="df-a8435e11-62da-48be-9557-f2f0d98163a2" class="colab-df-container">
@@ -2479,17 +2473,17 @@ memory usage: 14.8+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-26" class="cell" data-executioninfo="{&quot;elapsed&quot;:34,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413244,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="7d47422d-d2cb-4ba5-e9e7-819269679be5" data-execution_count="33">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>days25[days25[<span class="st">'Avg_Ticket_Price'</span>] <span class="op">&lt;</span> <span class="dv">0</span>]</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>mean_avg_ticket_price_by_day <span class="op">=</span> days25.groupby(<span class="st">'Day_of_Week'</span>)[<span class="st">'Avg_Ticket_Price'</span>].mean()</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>row_to_replace_price <span class="op">=</span> days25[days25[<span class="st">'Avg_Ticket_Price'</span>] <span class="op">&lt;</span> <span class="dv">0</span>]</span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> row_to_replace_price.empty:</span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    day_of_week_to_replace_price <span class="op">=</span> row_to_replace_price[<span class="st">'Day_of_Week'</span>].iloc[<span class="dv">0</span>]</span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    mean_for_day_price <span class="op">=</span> mean_avg_ticket_price_by_day[day_of_week_to_replace_price]</span>
-<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    days25.loc[days25[<span class="st">'Avg_Ticket_Price'</span>] <span class="op">&lt;</span> <span class="dv">0</span>, <span class="st">'Avg_Ticket_Price'</span>] <span class="op">=</span> mean_for_day_price</span>
-<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>display(days25[days25[<span class="st">'Day_ID'</span>] <span class="op">==</span> <span class="dv">60</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-24" class="cell" data-executioninfo="{&quot;elapsed&quot;:34,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413244,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="7d47422d-d2cb-4ba5-e9e7-819269679be5" data-execution_count="33">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>days25[days25[<span class="st">'Avg_Ticket_Price'</span>] <span class="op">&lt;</span> <span class="dv">0</span>]</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>mean_avg_ticket_price_by_day <span class="op">=</span> days25.groupby(<span class="st">'Day_of_Week'</span>)[<span class="st">'Avg_Ticket_Price'</span>].mean()</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>row_to_replace_price <span class="op">=</span> days25[days25[<span class="st">'Avg_Ticket_Price'</span>] <span class="op">&lt;</span> <span class="dv">0</span>]</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> row_to_replace_price.empty:</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>    day_of_week_to_replace_price <span class="op">=</span> row_to_replace_price[<span class="st">'Day_of_Week'</span>].iloc[<span class="dv">0</span>]</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>    mean_for_day_price <span class="op">=</span> mean_avg_ticket_price_by_day[day_of_week_to_replace_price]</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>    days25.loc[days25[<span class="st">'Avg_Ticket_Price'</span>] <span class="op">&lt;</span> <span class="dv">0</span>, <span class="st">'Avg_Ticket_Price'</span>] <span class="op">=</span> mean_for_day_price</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>display(days25[days25[<span class="st">'Day_ID'</span>] <span class="op">==</span> <span class="dv">60</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
   <div id="df-df67c3ac-4a79-46e8-a986-29619e2748ad" class="colab-df-container">
@@ -2630,8 +2624,8 @@ memory usage: 14.8+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-27" class="cell" data-executioninfo="{&quot;elapsed&quot;:28,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413279,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="d7ba3413-a984-46ec-cc08-522260313b17" data-execution_count="34">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>days25[days25[<span class="st">'Total_Visitors'</span>] <span class="op">&lt;</span> <span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-25" class="cell" data-executioninfo="{&quot;elapsed&quot;:28,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413279,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="d7ba3413-a984-46ec-cc08-522260313b17" data-execution_count="34">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>days25[days25[<span class="st">'Total_Visitors'</span>] <span class="op">&lt;</span> <span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="34">
 
   <div id="df-ed1748c2-9d64-4903-b4e0-530b69fa3723" class="colab-df-container">
@@ -2772,17 +2766,17 @@ memory usage: 14.8+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-28" class="cell" data-executioninfo="{&quot;elapsed&quot;:112,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413396,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="3de2b35d-fb76-4392-e0ce-7b8c5d046438" data-execution_count="35">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>days25[days25[<span class="st">'Total_Visitors'</span>] <span class="op">&lt;</span> <span class="dv">0</span>]</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>mean_total_visitors_by_day <span class="op">=</span> days25.groupby(<span class="st">'Day_of_Week'</span>)[<span class="st">'Total_Visitors'</span>].mean()</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>row_to_replace_visitors <span class="op">=</span> days25[days25[<span class="st">'Total_Visitors'</span>] <span class="op">&lt;</span> <span class="dv">0</span>]</span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> row_to_replace_visitors.empty:</span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>    day_of_week_to_replace_visitors <span class="op">=</span> row_to_replace_visitors[<span class="st">'Day_of_Week'</span>].iloc[<span class="dv">0</span>]</span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>    mean_for_day_visitors <span class="op">=</span> mean_total_visitors_by_day[day_of_week_to_replace_visitors]</span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>    days25.loc[days25[<span class="st">'Total_Visitors'</span>] <span class="op">&lt;</span> <span class="dv">0</span>, <span class="st">'Total_Visitors'</span>] <span class="op">=</span> mean_for_day_visitors</span>
-<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>display(days25[days25[<span class="st">'Day_ID'</span>] <span class="op">==</span> <span class="dv">6</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-26" class="cell" data-executioninfo="{&quot;elapsed&quot;:112,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413396,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="3de2b35d-fb76-4392-e0ce-7b8c5d046438" data-execution_count="35">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>days25[days25[<span class="st">'Total_Visitors'</span>] <span class="op">&lt;</span> <span class="dv">0</span>]</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>mean_total_visitors_by_day <span class="op">=</span> days25.groupby(<span class="st">'Day_of_Week'</span>)[<span class="st">'Total_Visitors'</span>].mean()</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>row_to_replace_visitors <span class="op">=</span> days25[days25[<span class="st">'Total_Visitors'</span>] <span class="op">&lt;</span> <span class="dv">0</span>]</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> row_to_replace_visitors.empty:</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>    day_of_week_to_replace_visitors <span class="op">=</span> row_to_replace_visitors[<span class="st">'Day_of_Week'</span>].iloc[<span class="dv">0</span>]</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>    mean_for_day_visitors <span class="op">=</span> mean_total_visitors_by_day[day_of_week_to_replace_visitors]</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>    days25.loc[days25[<span class="st">'Total_Visitors'</span>] <span class="op">&lt;</span> <span class="dv">0</span>, <span class="st">'Total_Visitors'</span>] <span class="op">=</span> mean_for_day_visitors</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>display(days25[days25[<span class="st">'Day_ID'</span>] <span class="op">==</span> <span class="dv">6</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>/tmp/ipython-input-1173429361.py:8: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value '1430.7857142857142' has dtype incompatible with int64, please explicitly cast to a compatible dtype first.
   days25.loc[days25['Total_Visitors'] &lt; 0, 'Total_Visitors'] = mean_for_day_visitors</code></pre>
@@ -2927,11 +2921,11 @@ memory usage: 14.8+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-29" class="cell" data-executioninfo="{&quot;elapsed&quot;:15,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413402,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-execution_count="36">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>days25_cleaned <span class="op">=</span> days25.copy()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-27" class="cell" data-executioninfo="{&quot;elapsed&quot;:15,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413402,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-execution_count="36">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>days25_cleaned <span class="op">=</span> days25.copy()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-30" class="cell" data-executioninfo="{&quot;elapsed&quot;:20,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413426,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="1c89b711-c649-4584-d1c7-6d4a4d934a4b" data-execution_count="37">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>days25_cleaned.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-28" class="cell" data-executioninfo="{&quot;elapsed&quot;:20,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413426,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="1c89b711-c649-4584-d1c7-6d4a4d934a4b" data-execution_count="37">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>days25_cleaned.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="37">
 
   <div id="df-f8cfc281-64c6-4e8b-a279-70c1c7ab08c2" class="colab-df-container">
@@ -3343,15 +3337,15 @@ memory usage: 14.8+ KB</code></pre>
 <li>International Visitors: This variables will show us the trends of International Visitors, and in what manner they tend to visit lobsterland. It will also help with finding ways to continue to enhance their experience.</li>
 <li>High Temperature: This variable will show us the trends of how the peak temperature will influence the the other variables, and help with clustering the impact of the weather.</li>
 </ol>
-<div id="cell-32" class="cell" data-executioninfo="{&quot;elapsed&quot;:20,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413455,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-execution_count="38">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>days25_cluster <span class="op">=</span> days25_cleaned[[<span class="st">'Day_Tickets_Sold'</span>, <span class="st">'Gate_Revenue'</span>, <span class="st">'Total_Revenue'</span>, <span class="st">'International_Visitors'</span>, <span class="st">'High_Temperature'</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-30" class="cell" data-executioninfo="{&quot;elapsed&quot;:20,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413455,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-execution_count="38">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>days25_cluster <span class="op">=</span> days25_cleaned[[<span class="st">'Day_Tickets_Sold'</span>, <span class="st">'Gate_Revenue'</span>, <span class="st">'Total_Revenue'</span>, <span class="st">'International_Visitors'</span>, <span class="st">'High_Temperature'</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-33" class="cell" data-executioninfo="{&quot;elapsed&quot;:75,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413526,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="fdff6faa-e9c3-449b-e0a5-f24ac3e970ec" data-execution_count="39">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co">#E.</span></span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>zscore <span class="op">=</span> preprocessing.StandardScaler()</span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>days25_normalized <span class="op">=</span> zscore.fit_transform(days25_cluster)</span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>days25_normalized <span class="op">=</span> pd.DataFrame(days25_normalized, columns<span class="op">=</span>days25_cluster.columns)</span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>(<span class="bu">round</span>(days25_normalized.describe(),))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-31" class="cell" data-executioninfo="{&quot;elapsed&quot;:75,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413526,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="fdff6faa-e9c3-449b-e0a5-f24ac3e970ec" data-execution_count="39">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co">#E.</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>zscore <span class="op">=</span> preprocessing.StandardScaler()</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>days25_normalized <span class="op">=</span> zscore.fit_transform(days25_cluster)</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>days25_normalized <span class="op">=</span> pd.DataFrame(days25_normalized, columns<span class="op">=</span>days25_cluster.columns)</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>(<span class="bu">round</span>(days25_normalized.describe(),))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="39">
 
   <div id="df-553fa536-46a1-4e0c-91cf-e0ae118126bb" class="colab-df-container">
@@ -3645,8 +3639,8 @@ memory usage: 14.8+ KB</code></pre>
 </div>
 </div>
 <p>Yes, the variables need to be scaled as they are all measured on different scales and range drastically. Scaling them means we are able to compare them fairly and produce a Kmeans cluster that produce actionable insight.</p>
-<div id="cell-35" class="cell" data-executioninfo="{&quot;elapsed&quot;:15,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413548,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="32aeb162-3f42-4a60-ff26-c5ecee30887a" data-execution_count="40">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>days25_normalized.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-33" class="cell" data-executioninfo="{&quot;elapsed&quot;:15,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413548,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="32aeb162-3f42-4a60-ff26-c5ecee30887a" data-execution_count="40">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>days25_normalized.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="40">
 
   <div id="df-8f1e4bff-0cb8-4895-b0fc-702011021315" class="colab-df-container">
@@ -3915,36 +3909,36 @@ memory usage: 14.8+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-36" class="cell" data-executioninfo="{&quot;elapsed&quot;:161,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413716,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="ea6626f1-74b6-4a70-ddab-8c1e37f64772" data-execution_count="41">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># F.</span></span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>sse <span class="op">=</span> {}</span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">10</span>):</span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>  kmeans <span class="op">=</span> KMeans(n_clusters<span class="op">=</span>k, random_state <span class="op">=</span> <span class="dv">654</span>)</span>
-<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>  kmeans.fit(days25_normalized)</span>
-<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>  sse[k] <span class="op">=</span> kmeans.inertia_</span>
-<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>  plt.title(<span class="st">'The Elbow Method'</span>)</span>
-<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>  plt.xlabel(<span class="st">'k'</span>)</span>
-<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>  plt.ylabel(<span class="st">'SSE'</span>)</span>
-<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>  sns.pointplot(x<span class="op">=</span><span class="bu">list</span>(sse.keys()), y<span class="op">=</span><span class="bu">list</span>(sse.values()))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-34" class="cell" data-executioninfo="{&quot;elapsed&quot;:161,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413716,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="ea6626f1-74b6-4a70-ddab-8c1e37f64772" data-execution_count="41">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># F.</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>sse <span class="op">=</span> {}</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">10</span>):</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>  kmeans <span class="op">=</span> KMeans(n_clusters<span class="op">=</span>k, random_state <span class="op">=</span> <span class="dv">654</span>)</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>  kmeans.fit(days25_normalized)</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>  sse[k] <span class="op">=</span> kmeans.inertia_</span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>  plt.title(<span class="st">'The Elbow Method'</span>)</span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>  plt.xlabel(<span class="st">'k'</span>)</span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>  plt.ylabel(<span class="st">'SSE'</span>)</span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>  sns.pointplot(x<span class="op">=</span><span class="bu">list</span>(sse.keys()), y<span class="op">=</span><span class="bu">list</span>(sse.values()))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="AD654_Assignment2_BdeGouw_files/figure-html/cell-29-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="AD654_Assignment2_BdeGouw_files/figure-html/cell-28-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>As a result of this Elbow plot and additional anaysis - I will use 5 Clusters.</p>
-<div id="cell-38" class="cell" data-executioninfo="{&quot;elapsed&quot;:21,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413724,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-execution_count="42">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co">#G.</span></span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>kmeans <span class="op">=</span> KMeans(n_clusters<span class="op">=</span><span class="dv">5</span>, random_state<span class="op">=</span><span class="dv">654</span>)</span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>kmeans.fit(days25_normalized)</span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>cluster_labels <span class="op">=</span> kmeans.labels_</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-36" class="cell" data-executioninfo="{&quot;elapsed&quot;:21,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413724,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-execution_count="42">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co">#G.</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>kmeans <span class="op">=</span> KMeans(n_clusters<span class="op">=</span><span class="dv">5</span>, random_state<span class="op">=</span><span class="dv">654</span>)</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>kmeans.fit(days25_normalized)</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>cluster_labels <span class="op">=</span> kmeans.labels_</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-39" class="cell" data-executioninfo="{&quot;elapsed&quot;:38,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413751,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="1b83a562-a581-438f-990a-82a83957821d" data-execution_count="43">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co">#H.</span></span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>days25_k5 <span class="op">=</span> days25_normalized.assign(Cluster <span class="op">=</span> cluster_labels)</span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>days25_k5.groupby([<span class="st">'Cluster'</span>]).mean().<span class="bu">round</span>(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-37" class="cell" data-executioninfo="{&quot;elapsed&quot;:38,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413751,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="1b83a562-a581-438f-990a-82a83957821d" data-execution_count="43">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co">#H.</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>days25_k5 <span class="op">=</span> days25_normalized.assign(Cluster <span class="op">=</span> cluster_labels)</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>days25_k5.groupby([<span class="st">'Cluster'</span>]).mean().<span class="bu">round</span>(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="43">
 
   <div id="df-96f4ee78-311b-453c-89a5-ec1b1be4b27e" class="colab-df-container">
@@ -4221,13 +4215,27 @@ memory usage: 14.8+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-40" class="cell" data-executioninfo="{&quot;elapsed&quot;:74,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413831,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="78d81912-d58a-4561-a205-402d0c6579f8" data-execution_count="44">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co">#I.</span></span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(data<span class="op">=</span> days25_k5, x<span class="op">=</span> <span class="st">'Day_Tickets_Sold'</span>, y <span class="op">=</span> <span class="st">'Total_Revenue'</span>, hue <span class="op">=</span> <span class="st">'Cluster'</span>, palette<span class="op">=</span><span class="st">'tab10'</span>)</span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Scatter Plot of Day Tickets Sold vs. Total Revenue by Cluster'</span>)</span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Day Tickets Sold (Z-score)'</span>)</span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Total Revenue (Z-score)'</span>)</span>
-<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-38" class="cell" data-executioninfo="{&quot;elapsed&quot;:74,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413831,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="78d81912-d58a-4561-a205-402d0c6579f8" data-execution_count="44">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co">#I.</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(data<span class="op">=</span> days25_k5, x<span class="op">=</span> <span class="st">'Day_Tickets_Sold'</span>, y <span class="op">=</span> <span class="st">'Total_Revenue'</span>, hue <span class="op">=</span> <span class="st">'Cluster'</span>, palette<span class="op">=</span><span class="st">'tab10'</span>)</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Scatter Plot of Day Tickets Sold vs. Total Revenue by Cluster'</span>)</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Day Tickets Sold (Z-score)'</span>)</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Total Revenue (Z-score)'</span>)</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="AD654_Assignment2_BdeGouw_files/figure-html/cell-31-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="cell-39" class="cell" data-executioninfo="{&quot;elapsed&quot;:190,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703414027,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="6196583d-8e0c-4ce0-f9d6-0c35a49365a3" data-execution_count="45">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(data <span class="op">=</span> days25_k5, x <span class="op">=</span> <span class="st">'Day_Tickets_Sold'</span>, y <span class="op">=</span> <span class="st">'Gate_Revenue'</span>, hue <span class="op">=</span> <span class="st">'Cluster'</span>, palette<span class="op">=</span><span class="st">'tab10'</span>)</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Scatter Plot of Day Tickets Sold vs. Gate Revenue by Cluster'</span>)</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Day Tickets Sold (Z-score)'</span>)</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Gate Revenue (Z-score)'</span>)</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -4236,11 +4244,11 @@ memory usage: 14.8+ KB</code></pre>
 </div>
 </div>
 </div>
-<div id="cell-41" class="cell" data-executioninfo="{&quot;elapsed&quot;:190,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703414027,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="6196583d-8e0c-4ce0-f9d6-0c35a49365a3" data-execution_count="45">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(data <span class="op">=</span> days25_k5, x <span class="op">=</span> <span class="st">'Day_Tickets_Sold'</span>, y <span class="op">=</span> <span class="st">'Gate_Revenue'</span>, hue <span class="op">=</span> <span class="st">'Cluster'</span>, palette<span class="op">=</span><span class="st">'tab10'</span>)</span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Scatter Plot of Day Tickets Sold vs. Gate Revenue by Cluster'</span>)</span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Day Tickets Sold (Z-score)'</span>)</span>
-<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Gate Revenue (Z-score)'</span>)</span>
+<div id="cell-40" class="cell" data-executioninfo="{&quot;elapsed&quot;:442,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703414475,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="7f1b7281-d984-4b44-ecc8-870da30f15e2" data-execution_count="46">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>sns.barplot(data <span class="op">=</span> days25_k5, x<span class="op">=</span><span class="st">'Cluster'</span>, y<span class="op">=</span><span class="st">'Day_Tickets_Sold'</span>)</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Average Day Tickets Sold per Cluster'</span>)</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Cluster'</span>)</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Average Day Tickets Sold (Z-score)'</span>)</span>
 <span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
@@ -4250,49 +4258,35 @@ memory usage: 14.8+ KB</code></pre>
 </div>
 </div>
 </div>
-<div id="cell-42" class="cell" data-executioninfo="{&quot;elapsed&quot;:442,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703414475,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="7f1b7281-d984-4b44-ecc8-870da30f15e2" data-execution_count="46">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>sns.barplot(data <span class="op">=</span> days25_k5, x<span class="op">=</span><span class="st">'Cluster'</span>, y<span class="op">=</span><span class="st">'Day_Tickets_Sold'</span>)</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Average Day Tickets Sold per Cluster'</span>)</span>
+<div id="cell-41" class="cell" data-executioninfo="{&quot;elapsed&quot;:249,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703414731,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="8103ca4a-6349-4f44-d334-b8df63ee710e" data-execution_count="47">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>sns.barplot(data <span class="op">=</span> days25_k5, x <span class="op">=</span> <span class="st">'Cluster'</span>, y<span class="op">=</span> <span class="st">'International_Visitors'</span>)</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Average International Visitors per Cluster'</span>)</span>
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Cluster'</span>)</span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Average Day Tickets Sold (Z-score)'</span>)</span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="AD654_Assignment2_BdeGouw_files/figure-html/cell-34-output-1.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-<div id="cell-43" class="cell" data-executioninfo="{&quot;elapsed&quot;:249,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703414731,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="8103ca4a-6349-4f44-d334-b8df63ee710e" data-execution_count="47">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>sns.barplot(data <span class="op">=</span> days25_k5, x <span class="op">=</span> <span class="st">'Cluster'</span>, y<span class="op">=</span> <span class="st">'International_Visitors'</span>)</span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Average International Visitors per Cluster'</span>)</span>
-<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Cluster'</span>)</span>
-<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Average International Visitors (Z-score)'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Average International Visitors (Z-score)'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="47">
 <pre><code>Text(0, 0.5, 'Average International Visitors (Z-score)')</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="AD654_Assignment2_BdeGouw_files/figure-html/cell-35-output-2.png" class="img-fluid figure-img"></p>
+<p><img src="AD654_Assignment2_BdeGouw_files/figure-html/cell-34-output-2.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
-<div id="cell-44" class="cell" data-executioninfo="{&quot;elapsed&quot;:79,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703414816,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="ca8d4af6-30ea-4ff0-d6df-91179d1f6af2" data-execution_count="48">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># J.</span></span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>cluster_names <span class="op">=</span> {</span>
-<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>    <span class="dv">0</span>: <span class="st">"Tourist Heavy, Low Revenue Days"</span>,</span>
-<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>    <span class="dv">1</span>: <span class="st">"Peak Performance Days"</span>,</span>
-<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>    <span class="dv">2</span>: <span class="st">"Slump Days"</span>,</span>
-<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>    <span class="dv">3</span>: <span class="st">"Lukewarm, Local Days"</span>,</span>
-<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>    <span class="dv">4</span>: <span class="st">"Hot Weather Boost Days"</span></span>
-<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a>days25_k5[<span class="st">'Cluster_Name'</span>] <span class="op">=</span> days25_k5[<span class="st">'Cluster'</span>].<span class="bu">map</span>(cluster_names)</span>
-<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-12"><a href="#cb38-12" aria-hidden="true" tabindex="-1"></a>display(days25_k5.groupby([<span class="st">'Cluster_Name'</span>]).mean().<span class="bu">round</span>(<span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-42" class="cell" data-executioninfo="{&quot;elapsed&quot;:79,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703414816,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="ca8d4af6-30ea-4ff0-d6df-91179d1f6af2" data-execution_count="48">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># J.</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>cluster_names <span class="op">=</span> {</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>    <span class="dv">0</span>: <span class="st">"Tourist Heavy, Low Revenue Days"</span>,</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>    <span class="dv">1</span>: <span class="st">"Peak Performance Days"</span>,</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>    <span class="dv">2</span>: <span class="st">"Slump Days"</span>,</span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>    <span class="dv">3</span>: <span class="st">"Lukewarm, Local Days"</span>,</span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>    <span class="dv">4</span>: <span class="st">"Hot Weather Boost Days"</span></span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a>days25_k5[<span class="st">'Cluster_Name'</span>] <span class="op">=</span> days25_k5[<span class="st">'Cluster'</span>].<span class="bu">map</span>(cluster_names)</span>
+<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a>display(days25_k5.groupby([<span class="st">'Cluster_Name'</span>]).mean().<span class="bu">round</span>(<span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
   <div id="df-2fe3296e-02dc-4e91-b13c-7d573b812589" class="colab-df-container">
@@ -4597,12 +4591,12 @@ memory usage: 14.8+ KB</code></pre>
 </section>
 <section id="part-ii-conjoint-analysis-with-a-linear-model" class="level1">
 <h1>PART II: CONJOINT ANALYSIS WITH A LINEAR MODEL</h1>
-<div id="cell-49" class="cell" data-executioninfo="{&quot;elapsed&quot;:141,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703414964,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-execution_count="49">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># A.</span></span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>nightshow <span class="op">=</span> pd.read_csv(<span class="st">'night_show.csv'</span>, keep_default_na<span class="op">=</span><span class="va">False</span>, na_values<span class="op">=</span>[])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-47" class="cell" data-executioninfo="{&quot;elapsed&quot;:141,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703414964,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-execution_count="49">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># A.</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>nightshow <span class="op">=</span> pd.read_csv(<span class="st">'night_show.csv'</span>, keep_default_na<span class="op">=</span><span class="va">False</span>, na_values<span class="op">=</span>[])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-50" class="cell" data-executioninfo="{&quot;elapsed&quot;:251,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415221,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="833a365e-8264-4788-c001-1b04739b6e67" data-execution_count="50">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>nightshow.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-48" class="cell" data-executioninfo="{&quot;elapsed&quot;:251,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415221,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="833a365e-8264-4788-c001-1b04739b6e67" data-execution_count="50">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>nightshow.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="50">
 
   <div id="df-030b6aa1-f970-402a-b09e-c0e72fa76ddb" class="colab-df-container">
@@ -4913,8 +4907,8 @@ memory usage: 14.8+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-51" class="cell" data-executioninfo="{&quot;elapsed&quot;:64,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415278,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="b3fd2b2b-dbfc-4730-c49b-180035da5bed" data-execution_count="51">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>nightshow.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-49" class="cell" data-executioninfo="{&quot;elapsed&quot;:64,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415278,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="b3fd2b2b-dbfc-4730-c49b-180035da5bed" data-execution_count="51">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>nightshow.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="51">
 
   <div id="df-8e0299e8-da5e-463a-8422-348fc9c74930" class="colab-df-container">
@@ -5207,8 +5201,8 @@ memory usage: 14.8+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-52" class="cell" data-executioninfo="{&quot;elapsed&quot;:76,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415356,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="7f2d1cb4-4ec5-4ff5-c420-4f1547666f77" data-execution_count="52">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>nightshow.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-50" class="cell" data-executioninfo="{&quot;elapsed&quot;:76,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415356,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="7f2d1cb4-4ec5-4ff5-c420-4f1547666f77" data-execution_count="52">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>nightshow.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
 RangeIndex: 73728 entries, 0 to 73727
@@ -5236,8 +5230,8 @@ memory usage: 6.8+ MB</code></pre>
 </ol>
 <p>Numerical: Ratings</p>
 <p>Categorical: Bundle ID, Headliner, Music Atmosphere, Show Length, Peak Decibel Level, Crowding Index, Viewing Zone, Dining Bundle, Re-Entry, Live Host, Charity Tie In</p>
-<div id="cell-54" class="cell" data-executioninfo="{&quot;elapsed&quot;:44,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415404,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="f2a995b4-79dd-4901-f3d3-ce1cfefce832" data-execution_count="53">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>nightshow.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-52" class="cell" data-executioninfo="{&quot;elapsed&quot;:44,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415404,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="f2a995b4-79dd-4901-f3d3-ce1cfefce832" data-execution_count="53">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>nightshow.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="53">
 <pre><code>Index(['bundleID', 'headliner', 'music_atmosphere', 'show_length',
        'peak_dB_Level', 'crowding_index', 'viewing_zone', 'dining_bundle',
@@ -5245,19 +5239,19 @@ memory usage: 6.8+ MB</code></pre>
       dtype='object')</code></pre>
 </div>
 </div>
-<div id="cell-55" class="cell" data-executioninfo="{&quot;elapsed&quot;:81,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415488,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-execution_count="54">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># C.</span></span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>nightshow2 <span class="op">=</span> pd.get_dummies(nightshow, drop_first<span class="op">=</span><span class="va">True</span>, columns <span class="op">=</span> [<span class="st">'headliner'</span>, <span class="st">'music_atmosphere'</span>, <span class="st">'show_length'</span>,</span>
-<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>       <span class="st">'peak_dB_Level'</span>, <span class="st">'crowding_index'</span>, <span class="st">'viewing_zone'</span>, <span class="st">'dining_bundle'</span>,</span>
-<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>       <span class="st">'re_entry'</span>, <span class="st">'live_host'</span>, <span class="st">'charity_tie_in'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-53" class="cell" data-executioninfo="{&quot;elapsed&quot;:81,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415488,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-execution_count="54">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># C.</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>nightshow2 <span class="op">=</span> pd.get_dummies(nightshow, drop_first<span class="op">=</span><span class="va">True</span>, columns <span class="op">=</span> [<span class="st">'headliner'</span>, <span class="st">'music_atmosphere'</span>, <span class="st">'show_length'</span>,</span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>       <span class="st">'peak_dB_Level'</span>, <span class="st">'crowding_index'</span>, <span class="st">'viewing_zone'</span>, <span class="st">'dining_bundle'</span>,</span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>       <span class="st">'re_entry'</span>, <span class="st">'live_host'</span>, <span class="st">'charity_tie_in'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The numeric input variables should be be dummified as they are actually a categorical representation of an option. The numbers represent a set grouping of an option rather than a continous numeric input, therefore they can be dummified for us to product a logistic regression model.</p>
 <ol start="4" type="A">
 <li></li>
 </ol>
 <p>If we were to just rank the bundles by average rating, we would not be able to see the difference between the different options within each column on the overall rating. The bundle rating also just shows the rating from one consumers bundle which does not provide any statistical significance. However, the conjoint analysis model allows us to look at each variable, and its different options within that to assess its impact on the consumers rating by accounting for all of the consumers bundle ratings. If we simply ranked the bundles, we would only be able to see the grouped average rating for one consumers opinion, without assessing the indiviual components impact on the average across all consumers. We are able to extract a deeper level of insight on a highly specific level as it relates to each variable, and the differing options provided to the visitors at lobsterland. It allows us to take a large dataset from all consumers, and generate insights across them all to find patterns and trends through our offerings.</p>
-<div id="cell-58" class="cell" data-executioninfo="{&quot;elapsed&quot;:56,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415548,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="3f1d8d3d-de4f-473c-80f7-84b366dca008" data-execution_count="55">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>nightshow2.head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-56" class="cell" data-executioninfo="{&quot;elapsed&quot;:56,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415548,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="3f1d8d3d-de4f-473c-80f7-84b366dca008" data-execution_count="55">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>nightshow2.head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="55">
 
   <div id="df-91c99c66-95f3-4959-b124-c7271c450b57" class="colab-df-container">
@@ -5743,8 +5737,8 @@ memory usage: 6.8+ MB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-59" class="cell" data-executioninfo="{&quot;elapsed&quot;:69,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415622,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="879accd3-20c2-42b4-cf25-6653e3e54d8d" data-execution_count="56">
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>nightshow2.sort_values(by <span class="op">=</span> <span class="st">'ratings'</span>, ascending<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-57" class="cell" data-executioninfo="{&quot;elapsed&quot;:69,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415622,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="879accd3-20c2-42b4-cf25-6653e3e54d8d" data-execution_count="56">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>nightshow2.sort_values(by <span class="op">=</span> <span class="st">'ratings'</span>, ascending<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="56">
 
   <div id="df-9db952b1-834c-4ad8-921b-27d7356e3bfe" class="colab-df-container">
@@ -6254,8 +6248,8 @@ memory usage: 6.8+ MB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-60" class="cell" data-executioninfo="{&quot;elapsed&quot;:31,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415649,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="37e821c6-26b6-4edc-e1ed-3d5f451d897a" data-execution_count="57">
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>nightshow2.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-58" class="cell" data-executioninfo="{&quot;elapsed&quot;:31,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415649,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="37e821c6-26b6-4edc-e1ed-3d5f451d897a" data-execution_count="57">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>nightshow2.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="57">
 <pre><code>Index(['bundleID', 'ratings', 'headliner_Drone Light Show',
        'headliner_Fireworks', 'headliner_Live Musical',
@@ -6270,21 +6264,21 @@ memory usage: 6.8+ MB</code></pre>
       dtype='object')</code></pre>
 </div>
 </div>
-<div id="cell-61" class="cell" data-executioninfo="{&quot;elapsed&quot;:159,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415812,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="17632e0c-48a8-4641-ce48-bc606e934aed" data-execution_count="58">
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># E.</span></span>
-<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> nightshow2[[<span class="st">'headliner_Drone Light Show'</span>,</span>
-<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>       <span class="st">'headliner_Fireworks'</span>, <span class="st">'headliner_Live Musical'</span>,</span>
-<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>       <span class="st">'music_atmosphere_Pop Soundtrack'</span>, <span class="st">'show_length_70'</span>, <span class="st">'show_length_110'</span>,</span>
-<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>       <span class="st">'show_length_150'</span>, <span class="st">'peak_dB_Level_85'</span>, <span class="st">'peak_dB_Level_105'</span>,</span>
-<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a>       <span class="st">'crowding_index_60'</span>, <span class="st">'crowding_index_80'</span>, <span class="st">'crowding_index_100'</span>,</span>
-<span id="cb51-7"><a href="#cb51-7" aria-hidden="true" tabindex="-1"></a>       <span class="st">'viewing_zone_boardwalk'</span>, <span class="st">'viewing_zone_castle_courtyard'</span>,</span>
-<span id="cb51-8"><a href="#cb51-8" aria-hidden="true" tabindex="-1"></a>       <span class="st">'viewing_zone_front plaza'</span>, <span class="st">'dining_bundle_dessert_party'</span>,</span>
-<span id="cb51-9"><a href="#cb51-9" aria-hidden="true" tabindex="-1"></a>       <span class="st">'dining_bundle_meal_package'</span>, <span class="st">'dining_bundle_snack_voucher'</span>,</span>
-<span id="cb51-10"><a href="#cb51-10" aria-hidden="true" tabindex="-1"></a>       <span class="st">'re_entry_One'</span>, <span class="st">'re_entry_Unlimited'</span>, <span class="st">'live_host_Yes'</span>,<span class="st">'charity_tie_in_Yes'</span>  ]]</span>
-<span id="cb51-11"><a href="#cb51-11" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> nightshow2[<span class="st">'ratings'</span>]</span>
-<span id="cb51-12"><a href="#cb51-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb51-13"><a href="#cb51-13" aria-hidden="true" tabindex="-1"></a>regressor <span class="op">=</span> LinearRegression()</span>
-<span id="cb51-14"><a href="#cb51-14" aria-hidden="true" tabindex="-1"></a>regressor.fit(X,y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-59" class="cell" data-executioninfo="{&quot;elapsed&quot;:159,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415812,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="17632e0c-48a8-4641-ce48-bc606e934aed" data-execution_count="58">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co"># E.</span></span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> nightshow2[[<span class="st">'headliner_Drone Light Show'</span>,</span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>       <span class="st">'headliner_Fireworks'</span>, <span class="st">'headliner_Live Musical'</span>,</span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>       <span class="st">'music_atmosphere_Pop Soundtrack'</span>, <span class="st">'show_length_70'</span>, <span class="st">'show_length_110'</span>,</span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a>       <span class="st">'show_length_150'</span>, <span class="st">'peak_dB_Level_85'</span>, <span class="st">'peak_dB_Level_105'</span>,</span>
+<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a>       <span class="st">'crowding_index_60'</span>, <span class="st">'crowding_index_80'</span>, <span class="st">'crowding_index_100'</span>,</span>
+<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a>       <span class="st">'viewing_zone_boardwalk'</span>, <span class="st">'viewing_zone_castle_courtyard'</span>,</span>
+<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a>       <span class="st">'viewing_zone_front plaza'</span>, <span class="st">'dining_bundle_dessert_party'</span>,</span>
+<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a>       <span class="st">'dining_bundle_meal_package'</span>, <span class="st">'dining_bundle_snack_voucher'</span>,</span>
+<span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a>       <span class="st">'re_entry_One'</span>, <span class="st">'re_entry_Unlimited'</span>, <span class="st">'live_host_Yes'</span>,<span class="st">'charity_tie_in_Yes'</span>  ]]</span>
+<span id="cb50-11"><a href="#cb50-11" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> nightshow2[<span class="st">'ratings'</span>]</span>
+<span id="cb50-12"><a href="#cb50-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-13"><a href="#cb50-13" aria-hidden="true" tabindex="-1"></a>regressor <span class="op">=</span> LinearRegression()</span>
+<span id="cb50-14"><a href="#cb50-14" aria-hidden="true" tabindex="-1"></a>regressor.fit(X,y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="58">
 <style>#sk-container-id-1 {
   /* Definition of color scheme common for light and dark mode */
@@ -6704,17 +6698,17 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </a></style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LinearRegression()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" checked=""><label for="sk-estimator-id-1" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>LinearRegression</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.linear_model.LinearRegression.html">?<span>Documentation for LinearRegression</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted"><pre>LinearRegression()</pre></div> </div></div></div></div>
 </div>
 </div>
-<div id="cell-62" class="cell" data-executioninfo="{&quot;elapsed&quot;:30,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415847,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="2a7ed669-6267-445d-9ad3-be33302995e1" data-execution_count="59">
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>regressor.intercept_</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-60" class="cell" data-executioninfo="{&quot;elapsed&quot;:30,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415847,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="2a7ed669-6267-445d-9ad3-be33302995e1" data-execution_count="59">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>regressor.intercept_</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="59">
 <pre><code>np.float64(4.953266755574281)</code></pre>
 </div>
 </div>
-<div id="cell-63" class="cell" data-executioninfo="{&quot;elapsed&quot;:54,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415907,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="5435a507-6cbd-4971-98b2-8da8eb1c11e6" data-execution_count="60">
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co"># F.</span></span>
-<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>nightshow2_coef <span class="op">=</span> pd.DataFrame(regressor.coef_, X.columns, columns<span class="op">=</span>[<span class="st">'Coefficient'</span>])</span>
-<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>nightshow2_coef</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-61" class="cell" data-executioninfo="{&quot;elapsed&quot;:54,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415907,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="5435a507-6cbd-4971-98b2-8da8eb1c11e6" data-execution_count="60">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># F.</span></span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>nightshow2_coef <span class="op">=</span> pd.DataFrame(regressor.coef_, X.columns, columns<span class="op">=</span>[<span class="st">'Coefficient'</span>])</span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>nightshow2_coef</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="60">
 
   <div id="df-5efa81af-4cf0-4d7e-ac99-615c66254417" class="colab-df-container">

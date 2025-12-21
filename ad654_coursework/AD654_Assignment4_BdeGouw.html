@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Packages –  Bowen de Gouw</title>
+<title>Classification Models –  Bowen de Gouw</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -160,7 +160,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#a." id="toc-a." class="nav-link active" data-scroll-target="#a.">A.</a></li>
+  <li><a href="#packages" id="toc-packages" class="nav-link active" data-scroll-target="#packages">Packages</a></li>
+  <li><a href="#a." id="toc-a." class="nav-link" data-scroll-target="#a.">A.</a></li>
   <li><a href="#b." id="toc-b." class="nav-link" data-scroll-target="#b.">B.</a></li>
   <li><a href="#c." id="toc-c." class="nav-link" data-scroll-target="#c.">C.</a></li>
   <li><a href="#d." id="toc-d." class="nav-link" data-scroll-target="#d.">D.</a></li>
@@ -198,7 +199,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Packages</h1>
+<h1 class="title">Classification Models</h1>
 </div>
 
 
@@ -215,33 +216,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div id="cell-1" class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>title: <span class="st">"Classification Models"</span> </span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="packages" class="level1">
+<h1>Packages</h1>
+<div id="cell-2" class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> mean_squared_error, r2_score</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LogisticRegression</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> confusion_matrix, accuracy_score, precision_score, recall_score, f1_score, balanced_accuracy_score</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> classification_report</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-3" class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> mean_squared_error, r2_score</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LogisticRegression</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> confusion_matrix, accuracy_score, precision_score, recall_score, f1_score, balanced_accuracy_score</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> classification_report</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+</section>
 <section id="a." class="level1">
 <h1>A.</h1>
-<div id="cell-5" class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'lobsterland_passholders_dataset_25.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-4" class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'lobsterland_passholders_dataset_25.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-6" class="cell" data-executioninfo="{&quot;elapsed&quot;:113,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718986376,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="7e721525-a14d-4318-81e1-e453cc7a6cca">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df.head(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-5" class="cell" data-executioninfo="{&quot;elapsed&quot;:113,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718986376,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="7e721525-a14d-4318-81e1-e453cc7a6cca">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df.head(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 
   <div id="df-884276de-5176-4231-9253-d79da39f27fa" class="colab-df-container">
@@ -555,8 +554,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="b." class="level1">
 <h1>B.</h1>
-<div id="cell-8" class="cell" data-executioninfo="{&quot;elapsed&quot;:126,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718986505,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="33e36f42-5f92-44d8-a3b1-784877385d25">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-7" class="cell" data-executioninfo="{&quot;elapsed&quot;:126,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718986505,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="33e36f42-5f92-44d8-a3b1-784877385d25">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
 RangeIndex: 1000 entries, 0 to 999
@@ -584,8 +583,8 @@ memory usage: 93.9+ KB</code></pre>
 </section>
 <section id="c." class="level1">
 <h1>C.</h1>
-<div id="cell-11" class="cell" data-executioninfo="{&quot;elapsed&quot;:9,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718986517,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="6d800982-9e5e-43dd-ec81-3cbd99766ae6">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Renewed_Pass'</span>].value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-10" class="cell" data-executioninfo="{&quot;elapsed&quot;:9,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718986517,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="6d800982-9e5e-43dd-ec81-3cbd99766ae6">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Renewed_Pass'</span>].value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <div>
 
@@ -621,8 +620,8 @@ memory usage: 93.9+ KB</code></pre>
 </section>
 <section id="d." class="level1">
 <h1>D.</h1>
-<div id="cell-14" class="cell" data-executioninfo="{&quot;elapsed&quot;:69,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718986590,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="0c4a3a11-00aa-4100-8636-0afce9a2798a">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df.isnull().<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-13" class="cell" data-executioninfo="{&quot;elapsed&quot;:69,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718986590,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="0c4a3a11-00aa-4100-8636-0afce9a2798a">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df.isnull().<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <div>
 
@@ -690,14 +689,14 @@ memory usage: 93.9+ KB</code></pre>
 </div>
 </div>
 <p>The only variables with missing values is the Dinning Plan. It is missing 333 data points.</p>
-<div id="cell-16" class="cell" data-executioninfo="{&quot;elapsed&quot;:38,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718986634,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="4a85e67a-bff1-49f8-ca38-84b9385c71e9">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Dining_Plan'</span>].isnull().<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-15" class="cell" data-executioninfo="{&quot;elapsed&quot;:38,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718986634,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="4a85e67a-bff1-49f8-ca38-84b9385c71e9">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Dining_Plan'</span>].isnull().<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <pre><code>np.int64(333)</code></pre>
 </div>
 </div>
-<div id="cell-17" class="cell" data-executioninfo="{&quot;elapsed&quot;:8,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718986644,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="5bee22ad-7de7-4210-c6d8-303faccd8c1b">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Dining_Plan'</span>].head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-16" class="cell" data-executioninfo="{&quot;elapsed&quot;:8,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718986644,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="5bee22ad-7de7-4210-c6d8-303faccd8c1b">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Dining_Plan'</span>].head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="8">
 <div>
 
@@ -757,9 +756,9 @@ memory usage: 93.9+ KB</code></pre>
 </div>
 </div>
 <p>The definition for the variable Dining Plan shows that their should be two options - either None or Upgraded. The missing values are the values that have been left blank, when they should have been entered as ‘No Upgrade’. Below I will convert the missing values (333) to say ‘No Upgrade’ to update and complete the data.</p>
-<div id="cell-19" class="cell" data-executioninfo="{&quot;elapsed&quot;:85,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718986734,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="18ba56c0-5063-4400-a0d3-a087ddd79213">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Dining_Plan'</span>] <span class="op">=</span> df[<span class="st">'Dining_Plan'</span>].fillna(<span class="st">'No Upgrade'</span>)</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Dining_Plan'</span>].value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-18" class="cell" data-executioninfo="{&quot;elapsed&quot;:85,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718986734,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="18ba56c0-5063-4400-a0d3-a087ddd79213">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Dining_Plan'</span>] <span class="op">=</span> df[<span class="st">'Dining_Plan'</span>].fillna(<span class="st">'No Upgrade'</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Dining_Plan'</span>].value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
 <div>
 
@@ -791,8 +790,8 @@ memory usage: 93.9+ KB</code></pre>
 </div>
 </div>
 <p>I chose this course of action as it was best to rename the missing values with a name to complete the data. This will make the data easier to handle when we run models later in the analysis. The data was supposed to be labeled as none, but was instead left blank, so completing them with the correct label is the best course of action.</p>
-<div id="cell-21" class="cell" data-executioninfo="{&quot;elapsed&quot;:25,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718986753,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="55381a9e-40cd-47e0-ce93-4f72c4d893b4">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Dining_Plan'</span>].isnull().<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-20" class="cell" data-executioninfo="{&quot;elapsed&quot;:25,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718986753,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="55381a9e-40cd-47e0-ce93-4f72c4d893b4">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Dining_Plan'</span>].isnull().<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
 <pre><code>np.int64(0)</code></pre>
 </div>
@@ -800,8 +799,8 @@ memory usage: 93.9+ KB</code></pre>
 </section>
 <section id="e." class="level1">
 <h1>E.</h1>
-<div id="cell-23" class="cell" data-executioninfo="{&quot;elapsed&quot;:114,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718986869,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="6671e53e-2590-4838-fe9c-906a62df0723">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>df.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-22" class="cell" data-executioninfo="{&quot;elapsed&quot;:114,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718986869,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="6671e53e-2590-4838-fe9c-906a62df0723">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>df.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="11">
 
   <div id="df-7b62afef-ef55-4d58-be65-c2f2776f80f2" class="colab-df-container">
@@ -1130,9 +1129,9 @@ memory usage: 93.9+ KB</code></pre>
 <li>Negative Email Engagement Score &amp; Email Engagement Score above 100</li>
 </ul>
 <p>Having both a negative engagement score and an engagement score that exceeds 100 are impossible values as the emailed engagement score is on a set scale between 0-100. The best course of action is to adjust these values with the average email enagement scores.</p>
-<div id="cell-25" class="cell" data-executioninfo="{&quot;elapsed&quot;:188,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718987049,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="dd1166d1-c071-4edc-a68f-b3428833ff80">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>negative_spend_values <span class="op">=</span> df[df[<span class="st">'Total_Spend_2024'</span>] <span class="op">&lt;</span> <span class="dv">0</span>]</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>display(negative_spend_values)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-24" class="cell" data-executioninfo="{&quot;elapsed&quot;:188,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718987049,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="dd1166d1-c071-4edc-a68f-b3428833ff80">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>negative_spend_values <span class="op">=</span> df[df[<span class="st">'Total_Spend_2024'</span>] <span class="op">&lt;</span> <span class="dv">0</span>]</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>display(negative_spend_values)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
   <div id="df-ca74af15-6ffe-4ec5-8ec3-3bf23a8d320c" class="colab-df-container">
@@ -1585,9 +1584,9 @@ memory usage: 93.9+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-26" class="cell" data-executioninfo="{&quot;elapsed&quot;:173,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718987224,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="076e5f95-06f7-4cf0-fbf9-71b6f601e774">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>negative_email_engagement_values <span class="op">=</span> df[df[<span class="st">'Email_Engagement_Score'</span>] <span class="op">&lt;</span> <span class="dv">0</span>]</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>display(negative_email_engagement_values)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-25" class="cell" data-executioninfo="{&quot;elapsed&quot;:173,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718987224,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="076e5f95-06f7-4cf0-fbf9-71b6f601e774">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>negative_email_engagement_values <span class="op">=</span> df[df[<span class="st">'Email_Engagement_Score'</span>] <span class="op">&lt;</span> <span class="dv">0</span>]</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>display(negative_email_engagement_values)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
   <div id="df-9bda0178-4087-4065-a9b6-48eba819f853" class="colab-df-container">
@@ -1766,9 +1765,9 @@ memory usage: 93.9+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-27" class="cell" data-executioninfo="{&quot;elapsed&quot;:97,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718987327,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="2ee0601f-2145-4deb-d3f9-80b0533348d4">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>email_engagement_above_100 <span class="op">=</span> df[df[<span class="st">'Email_Engagement_Score'</span>] <span class="op">&gt;</span> <span class="dv">100</span>]</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>display(email_engagement_above_100)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-26" class="cell" data-executioninfo="{&quot;elapsed&quot;:97,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718987327,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="2ee0601f-2145-4deb-d3f9-80b0533348d4">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>email_engagement_above_100 <span class="op">=</span> df[df[<span class="st">'Email_Engagement_Score'</span>] <span class="op">&gt;</span> <span class="dv">100</span>]</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>display(email_engagement_above_100)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
   <div id="df-8af2bf39-af55-4aef-8456-ebd1ef55de9b" class="colab-df-container">
@@ -2101,13 +2100,13 @@ memory usage: 93.9+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-28" class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[df[<span class="st">'Total_Spend_2024'</span>] <span class="op">&gt;=</span> <span class="dv">0</span>]</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[(df[<span class="st">'Email_Engagement_Score'</span>] <span class="op">&gt;=</span> <span class="dv">0</span>) <span class="op">&amp;</span> (df[<span class="st">'Email_Engagement_Score'</span>] <span class="op">&lt;=</span> <span class="dv">100</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-27" class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[df[<span class="st">'Total_Spend_2024'</span>] <span class="op">&gt;=</span> <span class="dv">0</span>]</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[(df[<span class="st">'Email_Engagement_Score'</span>] <span class="op">&gt;=</span> <span class="dv">0</span>) <span class="op">&amp;</span> (df[<span class="st">'Email_Engagement_Score'</span>] <span class="op">&lt;=</span> <span class="dv">100</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-29" class="cell" data-executioninfo="{&quot;elapsed&quot;:87,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718987525,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="5853bd97-8e5d-4d14-edf9-edcb3b0d2b0d">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>df.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-28" class="cell" data-executioninfo="{&quot;elapsed&quot;:87,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718987525,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="5853bd97-8e5d-4d14-edf9-edcb3b0d2b0d">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>df.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="16">
 
   <div id="df-6320435c-34e7-4228-a2d5-32287c30e34e" class="colab-df-container">
@@ -2431,8 +2430,8 @@ memory usage: 93.9+ KB</code></pre>
 </section>
 <section id="f." class="level1">
 <h1>F.</h1>
-<div id="cell-32" class="cell" data-executioninfo="{&quot;elapsed&quot;:83,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718987614,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="6667a7b6-474a-4309-b94e-ad8199015fb7">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>df.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-31" class="cell" data-executioninfo="{&quot;elapsed&quot;:83,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718987614,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="6667a7b6-474a-4309-b94e-ad8199015fb7">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>df.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="17">
 <pre><code>Index(['Age', 'Previous_Visits', 'Total_Spend_2024', 'Feedback_Score',
        'Gold_Zone_Visits', 'Email_Engagement_Score',
@@ -2441,12 +2440,12 @@ memory usage: 93.9+ KB</code></pre>
       dtype='object')</code></pre>
 </div>
 </div>
-<div id="cell-33" class="cell" data-executioninfo="{&quot;elapsed&quot;:123,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718987741,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="ba1a509f-04e3-4719-8b55-49c61f0fae37">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>df_numeric <span class="op">=</span> df[[<span class="st">'Age'</span>, <span class="st">'Previous_Visits'</span>, <span class="st">'Total_Spend_2024'</span>, <span class="st">'Feedback_Score'</span>,</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Gold_Zone_Visits'</span>, <span class="st">'Email_Engagement_Score'</span>,</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Distance_From_Park_Miles'</span>]]</span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>correlation_matrix <span class="op">=</span> df_numeric.corr()</span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>correlation_matrix</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-32" class="cell" data-executioninfo="{&quot;elapsed&quot;:123,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718987741,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="ba1a509f-04e3-4719-8b55-49c61f0fae37">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>df_numeric <span class="op">=</span> df[[<span class="st">'Age'</span>, <span class="st">'Previous_Visits'</span>, <span class="st">'Total_Spend_2024'</span>, <span class="st">'Feedback_Score'</span>,</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Gold_Zone_Visits'</span>, <span class="st">'Email_Engagement_Score'</span>,</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Distance_From_Park_Miles'</span>]]</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>correlation_matrix <span class="op">=</span> df_numeric.corr()</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>correlation_matrix</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="18">
 
   <div id="df-8e3df258-a04e-4ed3-9c5f-ff46a95c994b" class="colab-df-container">
@@ -2799,16 +2798,16 @@ memory usage: 93.9+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-34" class="cell" data-executioninfo="{&quot;elapsed&quot;:1801,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718989533,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="25a71fbb-eb30-4e3e-e032-8aa7c091cb3d">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>correlation_map <span class="op">=</span> sns.heatmap(correlation_matrix, annot<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(correlation_map)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-33" class="cell" data-executioninfo="{&quot;elapsed&quot;:1801,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718989533,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="25a71fbb-eb30-4e3e-e032-8aa7c091cb3d">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>correlation_map <span class="op">=</span> sns.heatmap(correlation_matrix, annot<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(correlation_map)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Axes(0.125,0.11;0.62x0.77)</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="AD654_Assignment4_BdeGouw_files/figure-html/cell-21-output-2.png" class="img-fluid figure-img"></p>
+<p><img src="AD654_Assignment4_BdeGouw_files/figure-html/cell-20-output-2.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -2817,17 +2816,17 @@ memory usage: 93.9+ KB</code></pre>
 </section>
 <section id="g." class="level1">
 <h1>G.</h1>
-<div id="cell-37" class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>df_dummies <span class="op">=</span> pd.get_dummies(df,columns<span class="op">=</span>[<span class="st">'Home_State'</span>, <span class="st">'Preferred_Attraction'</span>, <span class="st">'Referral_Source'</span>, <span class="st">'Dining_Plan'</span>],drop_first<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-36" class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>df_dummies <span class="op">=</span> pd.get_dummies(df,columns<span class="op">=</span>[<span class="st">'Home_State'</span>, <span class="st">'Preferred_Attraction'</span>, <span class="st">'Referral_Source'</span>, <span class="st">'Dining_Plan'</span>],drop_first<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-38" class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>df_dummies <span class="op">=</span> df_dummies.astype(<span class="bu">int</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-37" class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>df_dummies <span class="op">=</span> df_dummies.astype(<span class="bu">int</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="h." class="level1">
 <h1>H.</h1>
-<div id="cell-40" class="cell" data-executioninfo="{&quot;elapsed&quot;:26,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718989640,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="7496e5ff-8b47-47f9-d79d-7e5a15516bb9">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>df_dummies.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-39" class="cell" data-executioninfo="{&quot;elapsed&quot;:26,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718989640,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="7496e5ff-8b47-47f9-d79d-7e5a15516bb9">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>df_dummies.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="22">
 <pre><code>Index(['Age', 'Previous_Visits', 'Total_Spend_2024', 'Feedback_Score',
        'Gold_Zone_Visits', 'Email_Engagement_Score',
@@ -2839,21 +2838,21 @@ memory usage: 93.9+ KB</code></pre>
       dtype='object')</code></pre>
 </div>
 </div>
+<div id="cell-40" class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>X<span class="op">=</span>df_dummies[[<span class="st">'Age'</span>, <span class="st">'Previous_Visits'</span>, <span class="st">'Total_Spend_2024'</span>, <span class="st">'Feedback_Score'</span>,</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Gold_Zone_Visits'</span>, <span class="st">'Email_Engagement_Score'</span>,</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Distance_From_Park_Miles'</span>, <span class="st">'Home_State_ME'</span>,</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Home_State_NH'</span>, <span class="st">'Home_State_NJ'</span>, <span class="st">'Home_State_NY'</span>, <span class="st">'Home_State_VT'</span>,</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Preferred_Attraction_Other'</span>, <span class="st">'Preferred_Attraction_Thrill'</span>,</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Referral_Source_Friend'</span>, <span class="st">'Referral_Source_Social Media'</span>,</span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Dining_Plan_Upgraded'</span>]]</span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>y<span class="op">=</span>df_dummies[<span class="st">'Renewed_Pass'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <div id="cell-41" class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>X<span class="op">=</span>df_dummies[[<span class="st">'Age'</span>, <span class="st">'Previous_Visits'</span>, <span class="st">'Total_Spend_2024'</span>, <span class="st">'Feedback_Score'</span>,</span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Gold_Zone_Visits'</span>, <span class="st">'Email_Engagement_Score'</span>,</span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Distance_From_Park_Miles'</span>, <span class="st">'Home_State_ME'</span>,</span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Home_State_NH'</span>, <span class="st">'Home_State_NJ'</span>, <span class="st">'Home_State_NY'</span>, <span class="st">'Home_State_VT'</span>,</span>
-<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Preferred_Attraction_Other'</span>, <span class="st">'Preferred_Attraction_Thrill'</span>,</span>
-<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Referral_Source_Friend'</span>, <span class="st">'Referral_Source_Social Media'</span>,</span>
-<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Dining_Plan_Upgraded'</span>]]</span>
-<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>y<span class="op">=</span>df_dummies[<span class="st">'Renewed_Pass'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X, y, test_size<span class="op">=</span><span class="fl">0.4</span>, random_state<span class="op">=</span><span class="dv">54</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-42" class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X, y, test_size<span class="op">=</span><span class="fl">0.4</span>, random_state<span class="op">=</span><span class="dv">54</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="cell-43" class="cell" data-executioninfo="{&quot;elapsed&quot;:98,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718989801,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="1c468a7e-674b-4d21-80e1-55bfc6902658">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>X_train.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-42" class="cell" data-executioninfo="{&quot;elapsed&quot;:98,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718989801,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="1c468a7e-674b-4d21-80e1-55bfc6902658">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>X_train.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="25">
 
   <div id="df-2aa8c316-7694-41de-9853-7e0a552d6e05" class="colab-df-container">
@@ -3195,9 +3194,9 @@ memory usage: 93.9+ KB</code></pre>
 </div>
 </div>
 <p>I chose to use 54, which corresponds to my parents home address, where I grew up.</p>
-<div id="cell-45" class="cell" data-executioninfo="{&quot;elapsed&quot;:81,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718989886,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="77c619cc-aeb3-43b6-cf36-6fe8267c80f4">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(X_train.shape, X_test.shape, <span class="bu">type</span>(X_train), <span class="bu">type</span>(X_test))</span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(y_train.shape, y_test.shape, <span class="bu">type</span>(y_train), <span class="bu">type</span>(y_test))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-44" class="cell" data-executioninfo="{&quot;elapsed&quot;:81,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718989886,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="77c619cc-aeb3-43b6-cf36-6fe8267c80f4">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(X_train.shape, X_test.shape, <span class="bu">type</span>(X_train), <span class="bu">type</span>(X_test))</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(y_train.shape, y_test.shape, <span class="bu">type</span>(y_train), <span class="bu">type</span>(y_test))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(591, 17) (394, 17) &lt;class 'pandas.core.frame.DataFrame'&gt; &lt;class 'pandas.core.frame.DataFrame'&gt;
 (591,) (394,) &lt;class 'pandas.core.series.Series'&gt; &lt;class 'pandas.core.series.Series'&gt;</code></pre>
@@ -3206,9 +3205,9 @@ memory usage: 93.9+ KB</code></pre>
 </section>
 <section id="i." class="level1">
 <h1>I.</h1>
-<div id="cell-47" class="cell" data-executioninfo="{&quot;elapsed&quot;:66,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718989955,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="72d9d589-32d8-4633-9a2e-4d59687b288e">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>compare_means <span class="op">=</span> df_dummies.groupby(<span class="st">'Renewed_Pass'</span>).mean()</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>display(compare_means)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-46" class="cell" data-executioninfo="{&quot;elapsed&quot;:66,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718989955,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="72d9d589-32d8-4633-9a2e-4d59687b288e">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>compare_means <span class="op">=</span> df_dummies.groupby(<span class="st">'Renewed_Pass'</span>).mean()</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>display(compare_means)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
   <div id="df-48b5e0ca-254c-4f51-8cf1-4c8a2641f0d4" class="colab-df-container">
@@ -3573,10 +3572,10 @@ memory usage: 93.9+ KB</code></pre>
 </section>
 <section id="j." class="level1">
 <h1>J.</h1>
-<div id="cell-50" class="cell" data-executioninfo="{&quot;elapsed&quot;:119,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718990083,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="d5cd7c3b-fefe-42dc-8456-93e559f3c685">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>logit_model1 <span class="op">=</span> sm.Logit(y_train, sm.add_constant(X_train))</span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>iteration1 <span class="op">=</span> logit_model1.fit()</span>
-<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(iteration1.summary())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-49" class="cell" data-executioninfo="{&quot;elapsed&quot;:119,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718990083,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="d5cd7c3b-fefe-42dc-8456-93e559f3c685">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>logit_model1 <span class="op">=</span> sm.Logit(y_train, sm.add_constant(X_train))</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>iteration1 <span class="op">=</span> logit_model1.fit()</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(iteration1.summary())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Optimization terminated successfully.
          Current function value: 0.650635
@@ -3624,16 +3623,16 @@ Dining_Plan_Upgraded             0.0512      0.187      0.274      0.784      -0
 <section id="iteration-2" class="level1">
 <h1>Iteration #2</h1>
 <p>#L.</p>
-<div id="cell-55" class="cell">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>x2_train <span class="op">=</span> X_train[[<span class="st">'Previous_Visits'</span>, <span class="st">'Home_State_ME'</span>, <span class="st">'Home_State_NH'</span>, <span class="st">'Home_State_NJ'</span>, <span class="st">'Home_State_NY'</span>, <span class="st">'Home_State_VT'</span>, <span class="st">'Referral_Source_Friend'</span>, <span class="st">'Referral_Source_Social Media'</span>]]</span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>x2_test <span class="op">=</span> X_test[[<span class="st">'Previous_Visits'</span>, <span class="st">'Home_State_ME'</span>, <span class="st">'Home_State_NH'</span>, <span class="st">'Home_State_NJ'</span>, <span class="st">'Home_State_NY'</span>, <span class="st">'Home_State_VT'</span>, <span class="st">'Referral_Source_Friend'</span>, <span class="st">'Referral_Source_Social Media'</span>]]</span>
-<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>y2_train <span class="op">=</span> y_train</span>
-<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>y2_test <span class="op">=</span> y_test</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-54" class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>x2_train <span class="op">=</span> X_train[[<span class="st">'Previous_Visits'</span>, <span class="st">'Home_State_ME'</span>, <span class="st">'Home_State_NH'</span>, <span class="st">'Home_State_NJ'</span>, <span class="st">'Home_State_NY'</span>, <span class="st">'Home_State_VT'</span>, <span class="st">'Referral_Source_Friend'</span>, <span class="st">'Referral_Source_Social Media'</span>]]</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>x2_test <span class="op">=</span> X_test[[<span class="st">'Previous_Visits'</span>, <span class="st">'Home_State_ME'</span>, <span class="st">'Home_State_NH'</span>, <span class="st">'Home_State_NJ'</span>, <span class="st">'Home_State_NY'</span>, <span class="st">'Home_State_VT'</span>, <span class="st">'Referral_Source_Friend'</span>, <span class="st">'Referral_Source_Social Media'</span>]]</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>y2_train <span class="op">=</span> y_train</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>y2_test <span class="op">=</span> y_test</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-56" class="cell" data-executioninfo="{&quot;elapsed&quot;:23,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718990164,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="81804a25-20af-4e1a-f7e7-045ae5335db8">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>logit_model2 <span class="op">=</span> sm.Logit(y_train, sm.add_constant(x2_train))</span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>iteration2 <span class="op">=</span> logit_model2.fit()</span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(iteration2.summary())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-55" class="cell" data-executioninfo="{&quot;elapsed&quot;:23,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718990164,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="81804a25-20af-4e1a-f7e7-045ae5335db8">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>logit_model2 <span class="op">=</span> sm.Logit(y_train, sm.add_constant(x2_train))</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>iteration2 <span class="op">=</span> logit_model2.fit()</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(iteration2.summary())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Optimization terminated successfully.
          Current function value: 0.657363
@@ -3665,15 +3664,15 @@ Referral_Source_Social Media     0.1470      0.222      0.662      0.508      -0
 </section>
 <section id="m." class="level1">
 <h1>M.</h1>
-<div id="cell-58" class="cell">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>x3_train <span class="op">=</span> X_train[[<span class="st">'Previous_Visits'</span>, <span class="st">'Home_State_ME'</span>, <span class="st">'Home_State_NH'</span>, <span class="st">'Home_State_NJ'</span>, <span class="st">'Home_State_NY'</span>, <span class="st">'Home_State_VT'</span>, <span class="st">'Referral_Source_Friend'</span>, <span class="st">'Referral_Source_Social Media'</span>]]</span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>x3_test <span class="op">=</span> X_test[[<span class="st">'Previous_Visits'</span>, <span class="st">'Home_State_ME'</span>, <span class="st">'Home_State_NH'</span>, <span class="st">'Home_State_NJ'</span>, <span class="st">'Home_State_NY'</span>, <span class="st">'Home_State_VT'</span>, <span class="st">'Referral_Source_Friend'</span>, <span class="st">'Referral_Source_Social Media'</span>]]</span>
-<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>y3_train <span class="op">=</span> y_train</span>
-<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>y3_test <span class="op">=</span> y_test</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-57" class="cell">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>x3_train <span class="op">=</span> X_train[[<span class="st">'Previous_Visits'</span>, <span class="st">'Home_State_ME'</span>, <span class="st">'Home_State_NH'</span>, <span class="st">'Home_State_NJ'</span>, <span class="st">'Home_State_NY'</span>, <span class="st">'Home_State_VT'</span>, <span class="st">'Referral_Source_Friend'</span>, <span class="st">'Referral_Source_Social Media'</span>]]</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>x3_test <span class="op">=</span> X_test[[<span class="st">'Previous_Visits'</span>, <span class="st">'Home_State_ME'</span>, <span class="st">'Home_State_NH'</span>, <span class="st">'Home_State_NJ'</span>, <span class="st">'Home_State_NY'</span>, <span class="st">'Home_State_VT'</span>, <span class="st">'Referral_Source_Friend'</span>, <span class="st">'Referral_Source_Social Media'</span>]]</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>y3_train <span class="op">=</span> y_train</span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>y3_test <span class="op">=</span> y_test</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-59" class="cell" data-executioninfo="{&quot;elapsed&quot;:237,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718990471,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="04c73a17-08b3-465b-afd0-de0569889ee7">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>logmodel3 <span class="op">=</span> LogisticRegression(max_iter<span class="op">=</span><span class="dv">1000</span>, solver<span class="op">=</span><span class="st">'lbfgs'</span>, class_weight <span class="op">=</span> <span class="st">'balanced'</span>)</span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>logmodel3.fit(x3_train, y3_train)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-58" class="cell" data-executioninfo="{&quot;elapsed&quot;:237,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718990471,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="04c73a17-08b3-465b-afd0-de0569889ee7">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>logmodel3 <span class="op">=</span> LogisticRegression(max_iter<span class="op">=</span><span class="dv">1000</span>, solver<span class="op">=</span><span class="st">'lbfgs'</span>, class_weight <span class="op">=</span> <span class="st">'balanced'</span>)</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>logmodel3.fit(x3_train, y3_train)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="32">
 <style>#sk-container-id-1 {
   /* Definition of color scheme common for light and dark mode */
@@ -4093,17 +4092,17 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </a></style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LogisticRegression(class_weight='balanced', max_iter=1000)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" checked=""><label for="sk-estimator-id-1" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>LogisticRegression</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.linear_model.LogisticRegression.html">?<span>Documentation for LogisticRegression</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted"><pre>LogisticRegression(class_weight='balanced', max_iter=1000)</pre></div> </div></div></div></div>
 </div>
 </div>
-<div id="cell-60" class="cell">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>y3_pred <span class="op">=</span> logmodel3.predict(x3_test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-59" class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>y3_pred <span class="op">=</span> logmodel3.predict(x3_test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-61" class="cell" data-executioninfo="{&quot;elapsed&quot;:21,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718990488,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="d7ec09d8-1257-4e2b-dffe-bc4476d9b475">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>coef_tbl <span class="op">=</span> pd.DataFrame({</span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Variable"</span>: x3_train.columns,</span>
-<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Coef (log-odds)"</span>: logmodel3.coef_[<span class="dv">0</span>],</span>
-<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Odds Ratio"</span>: np.exp(logmodel3.coef_[<span class="dv">0</span>])</span>
-<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>}).sort_values(<span class="st">"Odds Ratio"</span>)</span>
-<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(coef_tbl)</span>
-<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Intercept:"</span>, logmodel3.intercept_[<span class="dv">0</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-60" class="cell" data-executioninfo="{&quot;elapsed&quot;:21,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718990488,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="d7ec09d8-1257-4e2b-dffe-bc4476d9b475">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>coef_tbl <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Variable"</span>: x3_train.columns,</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Coef (log-odds)"</span>: logmodel3.coef_[<span class="dv">0</span>],</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Odds Ratio"</span>: np.exp(logmodel3.coef_[<span class="dv">0</span>])</span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>}).sort_values(<span class="st">"Odds Ratio"</span>)</span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(coef_tbl)</span>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Intercept:"</span>, logmodel3.intercept_[<span class="dv">0</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                       Variable  Coef (log-odds)  Odds Ratio
 5                 Home_State_VT        -0.642933    0.525748
@@ -4120,27 +4119,27 @@ Intercept: -0.01590355779114381</code></pre>
 </section>
 <section id="n." class="level1">
 <h1>N.</h1>
+<div id="cell-62" class="cell">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>cm <span class="op">=</span> confusion_matrix(y3_test, y3_pred)</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>TN, FP, FN, TP <span class="op">=</span> cm.ravel()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <div id="cell-63" class="cell">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>cm <span class="op">=</span> confusion_matrix(y3_test, y3_pred)</span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>TN, FP, FN, TP <span class="op">=</span> cm.ravel()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>accuracy <span class="op">=</span> accuracy_score(y3_test, y3_pred)</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>sensitivity <span class="op">=</span> recall_score(y3_test, y3_pred)</span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>specificity <span class="op">=</span> TN <span class="op">/</span> (TN <span class="op">+</span> FP)</span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>precision <span class="op">=</span> precision_score(y3_test, y3_pred)</span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a>balanced_acc <span class="op">=</span> balanced_accuracy_score(y3_test, y3_pred)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-64" class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>accuracy <span class="op">=</span> accuracy_score(y3_test, y3_pred)</span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>sensitivity <span class="op">=</span> recall_score(y3_test, y3_pred)</span>
-<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>specificity <span class="op">=</span> TN <span class="op">/</span> (TN <span class="op">+</span> FP)</span>
-<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>precision <span class="op">=</span> precision_score(y3_test, y3_pred)</span>
-<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>balanced_acc <span class="op">=</span> balanced_accuracy_score(y3_test, y3_pred)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="cell-65" class="cell" data-executioninfo="{&quot;elapsed&quot;:75,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718990577,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="408dd58b-7eab-4c06-97d6-5a542495d2fe">
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Confusion Matrix:</span><span class="ch">\n</span><span class="sc">{</span>cm<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-64" class="cell" data-executioninfo="{&quot;elapsed&quot;:75,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718990577,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="408dd58b-7eab-4c06-97d6-5a542495d2fe">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Confusion Matrix:</span><span class="ch">\n</span><span class="sc">{</span>cm<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Confusion Matrix:
 [[ 83  90]
  [ 84 137]]</code></pre>
 </div>
 </div>
-<div id="cell-66" class="cell" data-executioninfo="{&quot;elapsed&quot;:18,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718990597,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="a9f387a2-52e2-46e4-aeea-f0b5a204e7b5">
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Classification report:</span><span class="ch">\n</span><span class="st">"</span>, classification_report(y3_test, y3_pred, digits<span class="op">=</span><span class="dv">3</span>, zero_division<span class="op">=</span><span class="dv">0</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-65" class="cell" data-executioninfo="{&quot;elapsed&quot;:18,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718990597,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="a9f387a2-52e2-46e4-aeea-f0b5a204e7b5">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Classification report:</span><span class="ch">\n</span><span class="st">"</span>, classification_report(y3_test, y3_pred, digits<span class="op">=</span><span class="dv">3</span>, zero_division<span class="op">=</span><span class="dv">0</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Classification report:
@@ -4155,12 +4154,12 @@ weighted avg      0.557     0.558     0.557       394
 </code></pre>
 </div>
 </div>
-<div id="cell-67" class="cell" data-executioninfo="{&quot;elapsed&quot;:38,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718990638,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="5a8d3296-2df5-4690-b6bb-65bcc130d072">
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Accuracy: </span><span class="sc">{</span>accuracy<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
-<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Sensitivity (Recall): </span><span class="sc">{</span>sensitivity<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
-<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Specificity: </span><span class="sc">{</span>specificity<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
-<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Precision: </span><span class="sc">{</span>precision<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
-<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Balanced Accuracy: </span><span class="sc">{</span>balanced_acc<span class="sc">:.3f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-66" class="cell" data-executioninfo="{&quot;elapsed&quot;:38,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718990638,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="5a8d3296-2df5-4690-b6bb-65bcc130d072">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Accuracy: </span><span class="sc">{</span>accuracy<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Sensitivity (Recall): </span><span class="sc">{</span>sensitivity<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Specificity: </span><span class="sc">{</span>specificity<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Precision: </span><span class="sc">{</span>precision<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Balanced Accuracy: </span><span class="sc">{</span>balanced_acc<span class="sc">:.3f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Accuracy: 0.558
 Sensitivity (Recall): 0.620
@@ -4172,9 +4171,9 @@ Balanced Accuracy: 0.550</code></pre>
 </section>
 <section id="o." class="level1">
 <h1>O.</h1>
-<div id="cell-69" class="cell" data-executioninfo="{&quot;elapsed&quot;:23,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718990641,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="be6e7e51-696c-4778-aca7-e6ea799d1264">
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>naive_rate <span class="op">=</span> y3_test.value_counts(normalize<span class="op">=</span><span class="va">True</span>).<span class="bu">max</span>()</span>
-<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Naive (Baseline) Accuracy Rate: </span><span class="sc">{</span>naive_rate<span class="sc">:.3f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-68" class="cell" data-executioninfo="{&quot;elapsed&quot;:23,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718990641,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="be6e7e51-696c-4778-aca7-e6ea799d1264">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>naive_rate <span class="op">=</span> y3_test.value_counts(normalize<span class="op">=</span><span class="va">True</span>).<span class="bu">max</span>()</span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Naive (Baseline) Accuracy Rate: </span><span class="sc">{</span>naive_rate<span class="sc">:.3f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Naive (Baseline) Accuracy Rate: 0.561</code></pre>
 </div>
@@ -4183,11 +4182,11 @@ Balanced Accuracy: 0.550</code></pre>
 </section>
 <section id="p." class="level1">
 <h1>P.</h1>
-<div id="cell-72" class="cell" data-executioninfo="{&quot;elapsed&quot;:72,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718990714,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="6e2ad24f-c84a-4651-af43-ebf26dcf6fa9">
-<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>train_pred <span class="op">=</span> logmodel3.predict(x3_train)</span>
-<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>train_accuracy <span class="op">=</span> accuracy_score(y3_train, train_pred)</span>
-<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Training Accuracy: </span><span class="sc">{</span>train_accuracy<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
-<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Test Accuracy: </span><span class="sc">{</span>accuracy<span class="sc">:.3f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-71" class="cell" data-executioninfo="{&quot;elapsed&quot;:72,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718990714,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="6e2ad24f-c84a-4651-af43-ebf26dcf6fa9">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>train_pred <span class="op">=</span> logmodel3.predict(x3_train)</span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>train_accuracy <span class="op">=</span> accuracy_score(y3_train, train_pred)</span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Training Accuracy: </span><span class="sc">{</span>train_accuracy<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Test Accuracy: </span><span class="sc">{</span>accuracy<span class="sc">:.3f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Training Accuracy: 0.597
 Test Accuracy: 0.558</code></pre>
@@ -4198,25 +4197,25 @@ Test Accuracy: 0.558</code></pre>
 </section>
 <section id="q." class="level1">
 <h1>Q.</h1>
-<div id="cell-75" class="cell">
-<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>passholder_bob <span class="op">=</span> pd.DataFrame({</span>
-<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Previous_Visits'</span>: [<span class="dv">10</span>],</span>
-<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Home_State_ME'</span>: [<span class="dv">0</span>],</span>
-<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Home_State_NH'</span>: [<span class="dv">0</span>],</span>
-<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Home_State_NJ'</span>: [<span class="dv">0</span>],</span>
-<span id="cb58-6"><a href="#cb58-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Home_State_NY'</span>: [<span class="dv">1</span>],</span>
-<span id="cb58-7"><a href="#cb58-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Home_State_VT'</span>: [<span class="dv">0</span>],</span>
-<span id="cb58-8"><a href="#cb58-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Referral_Source_Friend'</span>: [<span class="dv">0</span>],</span>
-<span id="cb58-9"><a href="#cb58-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Referral_Source_Social Media'</span>: [<span class="dv">1</span>],</span>
-<span id="cb58-10"><a href="#cb58-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Previous_Visits'</span>: [<span class="dv">10</span>]</span>
-<span id="cb58-11"><a href="#cb58-11" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-74" class="cell">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>passholder_bob <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Previous_Visits'</span>: [<span class="dv">10</span>],</span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Home_State_ME'</span>: [<span class="dv">0</span>],</span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Home_State_NH'</span>: [<span class="dv">0</span>],</span>
+<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Home_State_NJ'</span>: [<span class="dv">0</span>],</span>
+<span id="cb57-6"><a href="#cb57-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Home_State_NY'</span>: [<span class="dv">1</span>],</span>
+<span id="cb57-7"><a href="#cb57-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Home_State_VT'</span>: [<span class="dv">0</span>],</span>
+<span id="cb57-8"><a href="#cb57-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Referral_Source_Friend'</span>: [<span class="dv">0</span>],</span>
+<span id="cb57-9"><a href="#cb57-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Referral_Source_Social Media'</span>: [<span class="dv">1</span>],</span>
+<span id="cb57-10"><a href="#cb57-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Previous_Visits'</span>: [<span class="dv">10</span>]</span>
+<span id="cb57-11"><a href="#cb57-11" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-76" class="cell" data-executioninfo="{&quot;elapsed&quot;:31,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718990763,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="4982fc62-4f69-4586-aa54-35dad63ee937">
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>pred_class <span class="op">=</span> logmodel3.predict(passholder_bob)[<span class="dv">0</span>]</span>
-<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>pred_prob <span class="op">=</span> logmodel3.predict_proba(passholder_bob)[<span class="dv">0</span>, <span class="dv">1</span>]</span>
-<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Predicted class:"</span>, pred_class)</span>
-<span id="cb59-5"><a href="#cb59-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Predicted probability of renewal:"</span>, <span class="bu">round</span>(pred_prob, <span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-75" class="cell" data-executioninfo="{&quot;elapsed&quot;:31,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718990763,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="4982fc62-4f69-4586-aa54-35dad63ee937">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>pred_class <span class="op">=</span> logmodel3.predict(passholder_bob)[<span class="dv">0</span>]</span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>pred_prob <span class="op">=</span> logmodel3.predict_proba(passholder_bob)[<span class="dv">0</span>, <span class="dv">1</span>]</span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Predicted class:"</span>, pred_class)</span>
+<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Predicted probability of renewal:"</span>, <span class="bu">round</span>(pred_prob, <span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Predicted class: 1
 Predicted probability of renewal: 0.689</code></pre>
@@ -4227,34 +4226,34 @@ Predicted probability of renewal: 0.689</code></pre>
 <section id="r." class="level1">
 <h1>R.</h1>
 <p>It is important to only used values that fall within the range of the dataset, as that is what has been used to build the model. When the input values fall outside of the range, the model is forced to extrapolate, and assumes that the same relationship continues beyond the observed data, which in turn produces extreme or unrealistic probabilites.</p>
+<div id="cell-78" class="cell">
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>num_cols <span class="op">=</span> [<span class="st">'Age'</span>,<span class="st">'Previous_Visits'</span>,<span class="st">'Total_Spend_2024'</span>,<span class="st">'Feedback_Score'</span>,</span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>            <span class="st">'Gold_Zone_Visits'</span>,<span class="st">'Email_Engagement_Score'</span>,<span class="st">'Distance_From_Park_Miles'</span>]</span>
+<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-4"><a href="#cb60-4" aria-hidden="true" tabindex="-1"></a>logmodel4_num <span class="op">=</span> LogisticRegression(max_iter<span class="op">=</span><span class="dv">1000</span>, solver<span class="op">=</span><span class="st">'lbfgs'</span>)</span>
+<span id="cb60-5"><a href="#cb60-5" aria-hidden="true" tabindex="-1"></a>logmodel4_num.fit(X_train[num_cols], y_train)</span>
+<span id="cb60-6"><a href="#cb60-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-7"><a href="#cb60-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-8"><a href="#cb60-8" aria-hidden="true" tabindex="-1"></a>mins <span class="op">=</span> X_train[num_cols].<span class="bu">min</span>()</span>
+<span id="cb60-9"><a href="#cb60-9" aria-hidden="true" tabindex="-1"></a>maxs <span class="op">=</span> X_train[num_cols].<span class="bu">max</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <div id="cell-79" class="cell">
-<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>num_cols <span class="op">=</span> [<span class="st">'Age'</span>,<span class="st">'Previous_Visits'</span>,<span class="st">'Total_Spend_2024'</span>,<span class="st">'Feedback_Score'</span>,</span>
-<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>            <span class="st">'Gold_Zone_Visits'</span>,<span class="st">'Email_Engagement_Score'</span>,<span class="st">'Distance_From_Park_Miles'</span>]</span>
-<span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb61-4"><a href="#cb61-4" aria-hidden="true" tabindex="-1"></a>logmodel4_num <span class="op">=</span> LogisticRegression(max_iter<span class="op">=</span><span class="dv">1000</span>, solver<span class="op">=</span><span class="st">'lbfgs'</span>)</span>
-<span id="cb61-5"><a href="#cb61-5" aria-hidden="true" tabindex="-1"></a>logmodel4_num.fit(X_train[num_cols], y_train)</span>
-<span id="cb61-6"><a href="#cb61-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb61-7"><a href="#cb61-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb61-8"><a href="#cb61-8" aria-hidden="true" tabindex="-1"></a>mins <span class="op">=</span> X_train[num_cols].<span class="bu">min</span>()</span>
-<span id="cb61-9"><a href="#cb61-9" aria-hidden="true" tabindex="-1"></a>maxs <span class="op">=</span> X_train[num_cols].<span class="bu">max</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>passholder_jim <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Age'</span>: [<span class="dv">150</span>],</span>
+<span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Previous_Visits'</span>: [<span class="dv">100</span>],</span>
+<span id="cb61-4"><a href="#cb61-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Total_Spend_2024'</span>: [<span class="dv">2000</span>],</span>
+<span id="cb61-5"><a href="#cb61-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Feedback_Score'</span>: [<span class="dv">10</span>],</span>
+<span id="cb61-6"><a href="#cb61-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Gold_Zone_Visits'</span>: [<span class="dv">25</span>],</span>
+<span id="cb61-7"><a href="#cb61-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Email_Engagement_Score'</span>: [<span class="dv">200</span>],</span>
+<span id="cb61-8"><a href="#cb61-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Distance_From_Park_Miles'</span>: [<span class="dv">500</span>]</span>
+<span id="cb61-9"><a href="#cb61-9" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-80" class="cell">
-<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>passholder_jim <span class="op">=</span> pd.DataFrame({</span>
-<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Age'</span>: [<span class="dv">150</span>],</span>
-<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Previous_Visits'</span>: [<span class="dv">100</span>],</span>
-<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Total_Spend_2024'</span>: [<span class="dv">2000</span>],</span>
-<span id="cb62-5"><a href="#cb62-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Feedback_Score'</span>: [<span class="dv">10</span>],</span>
-<span id="cb62-6"><a href="#cb62-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Gold_Zone_Visits'</span>: [<span class="dv">25</span>],</span>
-<span id="cb62-7"><a href="#cb62-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Email_Engagement_Score'</span>: [<span class="dv">200</span>],</span>
-<span id="cb62-8"><a href="#cb62-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Distance_From_Park_Miles'</span>: [<span class="dv">500</span>]</span>
-<span id="cb62-9"><a href="#cb62-9" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="cell-81" class="cell" data-executioninfo="{&quot;elapsed&quot;:69,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718991147,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="53833cbd-e992-4550-fe79-d7151ffe63d9">
-<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>pred_prob <span class="op">=</span> logmodel4_num.predict_proba(passholder_jim)[<span class="dv">0</span>, <span class="dv">1</span>]</span>
-<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a>pred_class <span class="op">=</span> logmodel4_num.predict(passholder_jim)[<span class="dv">0</span>]</span>
-<span id="cb63-3"><a href="#cb63-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb63-4"><a href="#cb63-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Predicted Class:"</span>, pred_class)</span>
-<span id="cb63-5"><a href="#cb63-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Predicted Probability of Renewal:"</span>, <span class="bu">round</span>(pred_prob, <span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-80" class="cell" data-executioninfo="{&quot;elapsed&quot;:69,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718991147,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="53833cbd-e992-4550-fe79-d7151ffe63d9">
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>pred_prob <span class="op">=</span> logmodel4_num.predict_proba(passholder_jim)[<span class="dv">0</span>, <span class="dv">1</span>]</span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>pred_class <span class="op">=</span> logmodel4_num.predict(passholder_jim)[<span class="dv">0</span>]</span>
+<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Predicted Class:"</span>, pred_class)</span>
+<span id="cb62-5"><a href="#cb62-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Predicted Probability of Renewal:"</span>, <span class="bu">round</span>(pred_prob, <span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Predicted Class: 1
 Predicted Probability of Renewal: 1.0</code></pre>
@@ -4267,12 +4266,12 @@ Predicted Probability of Renewal: 1.0</code></pre>
 </section>
 <section id="s." class="level1">
 <h1>S.</h1>
-<div id="cell-85" class="cell">
-<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>df2 <span class="op">=</span> pd.read_csv(<span class="st">'lobsterland_passholders_dataset_25.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-84" class="cell">
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>df2 <span class="op">=</span> pd.read_csv(<span class="st">'lobsterland_passholders_dataset_25.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-86" class="cell" data-executioninfo="{&quot;elapsed&quot;:69,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718991233,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="68add9c5-d810-4b81-c804-655784a0d31f">
-<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>df2[<span class="st">'Dining_Plan'</span>] <span class="op">=</span> df2[<span class="st">'Dining_Plan'</span>].fillna(<span class="st">'No Upgrade'</span>)</span>
-<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a>df2[<span class="st">'Dining_Plan'</span>].value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-85" class="cell" data-executioninfo="{&quot;elapsed&quot;:69,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718991233,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="68add9c5-d810-4b81-c804-655784a0d31f">
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>df2[<span class="st">'Dining_Plan'</span>] <span class="op">=</span> df2[<span class="st">'Dining_Plan'</span>].fillna(<span class="st">'No Upgrade'</span>)</span>
+<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a>df2[<span class="st">'Dining_Plan'</span>].value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="48">
 <div>
 
@@ -4303,12 +4302,12 @@ Predicted Probability of Renewal: 1.0</code></pre>
 </div><br><label><b>dtype:</b> int64</label>
 </div>
 </div>
-<div id="cell-87" class="cell">
-<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>df2 <span class="op">=</span> df2[df2[<span class="st">'Total_Spend_2024'</span>] <span class="op">&gt;=</span> <span class="dv">0</span>]</span>
-<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a>df2 <span class="op">=</span> df2[(df2[<span class="st">'Email_Engagement_Score'</span>] <span class="op">&gt;=</span> <span class="dv">0</span>) <span class="op">&amp;</span> (df2[<span class="st">'Email_Engagement_Score'</span>] <span class="op">&lt;=</span> <span class="dv">100</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-86" class="cell">
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>df2 <span class="op">=</span> df2[df2[<span class="st">'Total_Spend_2024'</span>] <span class="op">&gt;=</span> <span class="dv">0</span>]</span>
+<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a>df2 <span class="op">=</span> df2[(df2[<span class="st">'Email_Engagement_Score'</span>] <span class="op">&gt;=</span> <span class="dv">0</span>) <span class="op">&amp;</span> (df2[<span class="st">'Email_Engagement_Score'</span>] <span class="op">&lt;=</span> <span class="dv">100</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-88" class="cell" data-executioninfo="{&quot;elapsed&quot;:93,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718991355,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="1c0dc058-bf40-4147-dc37-a426a1c26221">
-<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>df2.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-87" class="cell" data-executioninfo="{&quot;elapsed&quot;:93,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718991355,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="1c0dc058-bf40-4147-dc37-a426a1c26221">
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>df2.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="50">
 
   <div id="df-9b70ed07-bad1-497c-9e52-1d19fe171ba2" class="colab-df-container">
@@ -4622,11 +4621,11 @@ Predicted Probability of Renewal: 1.0</code></pre>
 </section>
 <section id="t." class="level1">
 <h1>T.</h1>
-<div id="cell-90" class="cell">
-<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>df2_dummies <span class="op">=</span> pd.get_dummies(df2,columns<span class="op">=</span>[<span class="st">'Home_State'</span>, <span class="st">'Preferred_Attraction'</span>, <span class="st">'Referral_Source'</span>, <span class="st">'Dining_Plan'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-89" class="cell">
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>df2_dummies <span class="op">=</span> pd.get_dummies(df2,columns<span class="op">=</span>[<span class="st">'Home_State'</span>, <span class="st">'Preferred_Attraction'</span>, <span class="st">'Referral_Source'</span>, <span class="st">'Dining_Plan'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-91" class="cell" data-executioninfo="{&quot;elapsed&quot;:29,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718991399,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="51e839d9-1e06-4e6d-d69f-648eecc21275">
-<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>df2_dummies.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-90" class="cell" data-executioninfo="{&quot;elapsed&quot;:29,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718991399,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="51e839d9-1e06-4e6d-d69f-648eecc21275">
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>df2_dummies.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="52">
 <pre><code>Index(['Age', 'Previous_Visits', 'Total_Spend_2024', 'Feedback_Score',
        'Gold_Zone_Visits', 'Email_Engagement_Score',
@@ -4640,25 +4639,25 @@ Predicted Probability of Renewal: 1.0</code></pre>
       dtype='object')</code></pre>
 </div>
 </div>
-<div id="cell-92" class="cell">
-<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>X_tree<span class="op">=</span>df2_dummies[[<span class="st">'Age'</span>, <span class="st">'Previous_Visits'</span>, <span class="st">'Total_Spend_2024'</span>, <span class="st">'Feedback_Score'</span>,</span>
-<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Gold_Zone_Visits'</span>, <span class="st">'Email_Engagement_Score'</span>,</span>
-<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Distance_From_Park_Miles'</span>, <span class="st">'Home_State_MA'</span>,</span>
-<span id="cb72-4"><a href="#cb72-4" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Home_State_ME'</span>, <span class="st">'Home_State_NH'</span>, <span class="st">'Home_State_NJ'</span>, <span class="st">'Home_State_NY'</span>,</span>
-<span id="cb72-5"><a href="#cb72-5" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Home_State_VT'</span>, <span class="st">'Preferred_Attraction_Entertainment'</span>,</span>
-<span id="cb72-6"><a href="#cb72-6" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Preferred_Attraction_Other'</span>, <span class="st">'Preferred_Attraction_Thrill'</span>,</span>
-<span id="cb72-7"><a href="#cb72-7" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Referral_Source_Ad/Other'</span>, <span class="st">'Referral_Source_Friend'</span>,</span>
-<span id="cb72-8"><a href="#cb72-8" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Referral_Source_Social Media'</span>, <span class="st">'Dining_Plan_Upgraded'</span>]]</span>
-<span id="cb72-9"><a href="#cb72-9" aria-hidden="true" tabindex="-1"></a>y_tree<span class="op">=</span>df2_dummies[<span class="st">'Renewed_Pass'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-91" class="cell">
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>X_tree<span class="op">=</span>df2_dummies[[<span class="st">'Age'</span>, <span class="st">'Previous_Visits'</span>, <span class="st">'Total_Spend_2024'</span>, <span class="st">'Feedback_Score'</span>,</span>
+<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Gold_Zone_Visits'</span>, <span class="st">'Email_Engagement_Score'</span>,</span>
+<span id="cb71-3"><a href="#cb71-3" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Distance_From_Park_Miles'</span>, <span class="st">'Home_State_MA'</span>,</span>
+<span id="cb71-4"><a href="#cb71-4" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Home_State_ME'</span>, <span class="st">'Home_State_NH'</span>, <span class="st">'Home_State_NJ'</span>, <span class="st">'Home_State_NY'</span>,</span>
+<span id="cb71-5"><a href="#cb71-5" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Home_State_VT'</span>, <span class="st">'Preferred_Attraction_Entertainment'</span>,</span>
+<span id="cb71-6"><a href="#cb71-6" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Preferred_Attraction_Other'</span>, <span class="st">'Preferred_Attraction_Thrill'</span>,</span>
+<span id="cb71-7"><a href="#cb71-7" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Referral_Source_Ad/Other'</span>, <span class="st">'Referral_Source_Friend'</span>,</span>
+<span id="cb71-8"><a href="#cb71-8" aria-hidden="true" tabindex="-1"></a>       <span class="st">'Referral_Source_Social Media'</span>, <span class="st">'Dining_Plan_Upgraded'</span>]]</span>
+<span id="cb71-9"><a href="#cb71-9" aria-hidden="true" tabindex="-1"></a>y_tree<span class="op">=</span>df2_dummies[<span class="st">'Renewed_Pass'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="u." class="level1">
 <h1>U.</h1>
-<div id="cell-94" class="cell">
-<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a>X_train_tree, X_test_tree, y_train_tree, y_test_tree <span class="op">=</span> train_test_split(X_tree, y_tree, test_size<span class="op">=</span><span class="fl">0.4</span>, random_state<span class="op">=</span><span class="dv">54</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-93" class="cell">
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>X_train_tree, X_test_tree, y_train_tree, y_test_tree <span class="op">=</span> train_test_split(X_tree, y_tree, test_size<span class="op">=</span><span class="fl">0.4</span>, random_state<span class="op">=</span><span class="dv">54</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-95" class="cell" data-executioninfo="{&quot;elapsed&quot;:78,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762720532085,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="6789cd25-17b5-490b-ad35-f4f0742dcba4">
-<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a>y_train_tree.value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-94" class="cell" data-executioninfo="{&quot;elapsed&quot;:78,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762720532085,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="6789cd25-17b5-490b-ad35-f4f0742dcba4">
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a>y_train_tree.value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="73">
 <div>
 
@@ -4689,8 +4688,8 @@ Predicted Probability of Renewal: 1.0</code></pre>
 </div><br><label><b>dtype:</b> int64</label>
 </div>
 </div>
-<div id="cell-96" class="cell" data-executioninfo="{&quot;elapsed&quot;:14,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718991530,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="c43845e9-2009-4e8f-d5fe-32693d602d2b">
-<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a>y_train_tree.value_counts(normalize<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-95" class="cell" data-executioninfo="{&quot;elapsed&quot;:14,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762718991530,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="c43845e9-2009-4e8f-d5fe-32693d602d2b">
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a>y_train_tree.value_counts(normalize<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="56">
 <div>
 
@@ -4724,30 +4723,30 @@ Predicted Probability of Renewal: 1.0</code></pre>
 </section>
 <section id="v." class="level1">
 <h1>V.</h1>
+<div id="cell-97" class="cell">
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> RandomForestClassifier</span>
+<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a>clf<span class="op">=</span>RandomForestClassifier()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <div id="cell-98" class="cell">
-<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> RandomForestClassifier</span>
-<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a>clf<span class="op">=</span>RandomForestClassifier()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a>param_grid <span class="op">=</span> {</span>
+<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">'n_estimators'</span>: [<span class="dv">50</span>,<span class="dv">100</span>,<span class="dv">150</span>],</span>
+<span id="cb76-3"><a href="#cb76-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">'max_depth'</span>: [<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>],</span>
+<span id="cb76-4"><a href="#cb76-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">'max_features'</span>: [<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>],</span>
+<span id="cb76-5"><a href="#cb76-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">'min_samples_split'</span>: [<span class="dv">2</span>, <span class="dv">4</span>,<span class="dv">6</span>],</span>
+<span id="cb76-6"><a href="#cb76-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-99" class="cell">
-<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a>param_grid <span class="op">=</span> {</span>
-<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">'n_estimators'</span>: [<span class="dv">50</span>,<span class="dv">100</span>,<span class="dv">150</span>],</span>
-<span id="cb77-3"><a href="#cb77-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">'max_depth'</span>: [<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>],</span>
-<span id="cb77-4"><a href="#cb77-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">'max_features'</span>: [<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>],</span>
-<span id="cb77-5"><a href="#cb77-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">'min_samples_split'</span>: [<span class="dv">2</span>, <span class="dv">4</span>,<span class="dv">6</span>],</span>
-<span id="cb77-6"><a href="#cb77-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="cell-100" class="cell" data-executioninfo="{&quot;elapsed&quot;:96638,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762719089085,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="31a20184-7b3e-40c5-b55b-fae7e6e7c8f4">
-<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> GridSearchCV</span>
-<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a>grid_search <span class="op">=</span> GridSearchCV(estimator<span class="op">=</span>clf, param_grid<span class="op">=</span>param_grid, cv<span class="op">=</span><span class="dv">5</span>)</span>
-<span id="cb78-3"><a href="#cb78-3" aria-hidden="true" tabindex="-1"></a>grid_search.fit(X_train_tree, y_train_tree)</span>
-<span id="cb78-4"><a href="#cb78-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(grid_search.best_params_)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-99" class="cell" data-executioninfo="{&quot;elapsed&quot;:96638,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762719089085,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="31a20184-7b3e-40c5-b55b-fae7e6e7c8f4">
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> GridSearchCV</span>
+<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a>grid_search <span class="op">=</span> GridSearchCV(estimator<span class="op">=</span>clf, param_grid<span class="op">=</span>param_grid, cv<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb77-3"><a href="#cb77-3" aria-hidden="true" tabindex="-1"></a>grid_search.fit(X_train_tree, y_train_tree)</span>
+<span id="cb77-4"><a href="#cb77-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(grid_search.best_params_)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>{'max_depth': 4, 'max_features': 3, 'min_samples_split': 4, 'n_estimators': 50}</code></pre>
 </div>
 </div>
-<div id="cell-101" class="cell" data-executioninfo="{&quot;elapsed&quot;:199,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762719089291,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="c13406ac-070d-459c-e5db-30ddaaa42eb6">
-<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a>clf<span class="op">=</span>RandomForestClassifier(max_depth<span class="op">=</span><span class="dv">4</span>, max_features<span class="op">=</span><span class="dv">4</span>, min_samples_split<span class="op">=</span><span class="dv">4</span>, n_estimators<span class="op">=</span><span class="dv">100</span>)</span>
-<span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a>clf.fit(X_train_tree, y_train_tree)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-100" class="cell" data-executioninfo="{&quot;elapsed&quot;:199,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762719089291,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="c13406ac-070d-459c-e5db-30ddaaa42eb6">
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a>clf<span class="op">=</span>RandomForestClassifier(max_depth<span class="op">=</span><span class="dv">4</span>, max_features<span class="op">=</span><span class="dv">4</span>, min_samples_split<span class="op">=</span><span class="dv">4</span>, n_estimators<span class="op">=</span><span class="dv">100</span>)</span>
+<span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a>clf.fit(X_train_tree, y_train_tree)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="60">
 <style>#sk-container-id-2 {
   /* Definition of color scheme common for light and dark mode */
@@ -5170,13 +5169,13 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </section>
 <section id="w." class="level1">
 <h1>W.</h1>
-<div id="cell-103" class="cell" data-executioninfo="{&quot;elapsed&quot;:86,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762719143356,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="5c2cf492-603a-48a2-cc58-c004cde14fbc">
-<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a>feature_imp_df <span class="op">=</span> pd.DataFrame(</span>
-<span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">list</span>(<span class="bu">zip</span>(X_train_tree.columns, clf.feature_importances_)),</span>
-<span id="cb81-3"><a href="#cb81-3" aria-hidden="true" tabindex="-1"></a>    columns<span class="op">=</span>[<span class="st">'Feature'</span>, <span class="st">'Importance'</span>]</span>
-<span id="cb81-4"><a href="#cb81-4" aria-hidden="true" tabindex="-1"></a>).sort_values(by<span class="op">=</span><span class="st">'Importance'</span>, ascending<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb81-5"><a href="#cb81-5" aria-hidden="true" tabindex="-1"></a>feature_imp_df[<span class="st">'Importance'</span>] <span class="op">=</span> feature_imp_df[<span class="st">'Importance'</span>].<span class="bu">round</span>(<span class="dv">4</span>)</span>
-<span id="cb81-6"><a href="#cb81-6" aria-hidden="true" tabindex="-1"></a>feature_imp_df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-102" class="cell" data-executioninfo="{&quot;elapsed&quot;:86,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762719143356,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="5c2cf492-603a-48a2-cc58-c004cde14fbc">
+<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a>feature_imp_df <span class="op">=</span> pd.DataFrame(</span>
+<span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">list</span>(<span class="bu">zip</span>(X_train_tree.columns, clf.feature_importances_)),</span>
+<span id="cb80-3"><a href="#cb80-3" aria-hidden="true" tabindex="-1"></a>    columns<span class="op">=</span>[<span class="st">'Feature'</span>, <span class="st">'Importance'</span>]</span>
+<span id="cb80-4"><a href="#cb80-4" aria-hidden="true" tabindex="-1"></a>).sort_values(by<span class="op">=</span><span class="st">'Importance'</span>, ascending<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb80-5"><a href="#cb80-5" aria-hidden="true" tabindex="-1"></a>feature_imp_df[<span class="st">'Importance'</span>] <span class="op">=</span> feature_imp_df[<span class="st">'Importance'</span>].<span class="bu">round</span>(<span class="dv">4</span>)</span>
+<span id="cb80-6"><a href="#cb80-6" aria-hidden="true" tabindex="-1"></a>feature_imp_df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="68">
 
   <div id="df-0563f48a-8d64-4397-9fe5-262924cd0da2" class="colab-df-container">
@@ -5558,32 +5557,32 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </section>
 <section id="x." class="level1">
 <h1>X.</h1>
-<div id="cell-106" class="cell">
-<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a>y_pred_tree <span class="op">=</span> clf.predict(X_test_tree)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-105" class="cell">
+<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a>y_pred_tree <span class="op">=</span> clf.predict(X_test_tree)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-107" class="cell" data-executioninfo="{&quot;elapsed&quot;:25,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762719089484,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="49177306-422c-4a29-a756-225741546ed1">
-<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a>cm <span class="op">=</span> confusion_matrix(y_test_tree, y_pred_tree)</span>
-<span id="cb83-2"><a href="#cb83-2" aria-hidden="true" tabindex="-1"></a>TN, FP, FN, TP <span class="op">=</span> cm.ravel()</span>
-<span id="cb83-3"><a href="#cb83-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Confusion Matrix:</span><span class="ch">\n</span><span class="sc">{</span>cm<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-106" class="cell" data-executioninfo="{&quot;elapsed&quot;:25,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762719089484,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="49177306-422c-4a29-a756-225741546ed1">
+<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a>cm <span class="op">=</span> confusion_matrix(y_test_tree, y_pred_tree)</span>
+<span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a>TN, FP, FN, TP <span class="op">=</span> cm.ravel()</span>
+<span id="cb82-3"><a href="#cb82-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Confusion Matrix:</span><span class="ch">\n</span><span class="sc">{</span>cm<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Confusion Matrix:
 [[ 11 162]
  [  8 213]]</code></pre>
 </div>
 </div>
-<div id="cell-108" class="cell" data-executioninfo="{&quot;elapsed&quot;:16,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762719089504,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="c0428285-abd8-4571-8809-a26803cf1cf9">
-<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a>accuracy <span class="op">=</span> accuracy_score(y_test_tree, y_pred_tree)</span>
-<span id="cb85-2"><a href="#cb85-2" aria-hidden="true" tabindex="-1"></a>sensitivity <span class="op">=</span> recall_score(y_test_tree, y_pred_tree)</span>
-<span id="cb85-3"><a href="#cb85-3" aria-hidden="true" tabindex="-1"></a>specificity <span class="op">=</span> TN <span class="op">/</span> (TN <span class="op">+</span> FP)</span>
-<span id="cb85-4"><a href="#cb85-4" aria-hidden="true" tabindex="-1"></a>precision <span class="op">=</span> precision_score(y_test_tree, y_pred_tree)</span>
-<span id="cb85-5"><a href="#cb85-5" aria-hidden="true" tabindex="-1"></a>balanced_acc <span class="op">=</span> balanced_accuracy_score(y_test_tree, y_pred_tree)</span>
-<span id="cb85-6"><a href="#cb85-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb85-7"><a href="#cb85-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb85-8"><a href="#cb85-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Accuracy: </span><span class="sc">{</span>accuracy<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
-<span id="cb85-9"><a href="#cb85-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Sensitivity (Recall): </span><span class="sc">{</span>sensitivity<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
-<span id="cb85-10"><a href="#cb85-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Specificity: </span><span class="sc">{</span>specificity<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
-<span id="cb85-11"><a href="#cb85-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Precision: </span><span class="sc">{</span>precision<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
-<span id="cb85-12"><a href="#cb85-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Balanced Accuracy: </span><span class="sc">{</span>balanced_acc<span class="sc">:.3f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-107" class="cell" data-executioninfo="{&quot;elapsed&quot;:16,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762719089504,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="c0428285-abd8-4571-8809-a26803cf1cf9">
+<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a>accuracy <span class="op">=</span> accuracy_score(y_test_tree, y_pred_tree)</span>
+<span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a>sensitivity <span class="op">=</span> recall_score(y_test_tree, y_pred_tree)</span>
+<span id="cb84-3"><a href="#cb84-3" aria-hidden="true" tabindex="-1"></a>specificity <span class="op">=</span> TN <span class="op">/</span> (TN <span class="op">+</span> FP)</span>
+<span id="cb84-4"><a href="#cb84-4" aria-hidden="true" tabindex="-1"></a>precision <span class="op">=</span> precision_score(y_test_tree, y_pred_tree)</span>
+<span id="cb84-5"><a href="#cb84-5" aria-hidden="true" tabindex="-1"></a>balanced_acc <span class="op">=</span> balanced_accuracy_score(y_test_tree, y_pred_tree)</span>
+<span id="cb84-6"><a href="#cb84-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb84-7"><a href="#cb84-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb84-8"><a href="#cb84-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Accuracy: </span><span class="sc">{</span>accuracy<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
+<span id="cb84-9"><a href="#cb84-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Sensitivity (Recall): </span><span class="sc">{</span>sensitivity<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
+<span id="cb84-10"><a href="#cb84-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Specificity: </span><span class="sc">{</span>specificity<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
+<span id="cb84-11"><a href="#cb84-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Precision: </span><span class="sc">{</span>precision<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
+<span id="cb84-12"><a href="#cb84-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Balanced Accuracy: </span><span class="sc">{</span>balanced_acc<span class="sc">:.3f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Accuracy: 0.569
 Sensitivity (Recall): 0.964
@@ -5595,17 +5594,17 @@ Balanced Accuracy: 0.514</code></pre>
 </section>
 <section id="y." class="level1">
 <h1>Y.</h1>
-<div id="cell-110" class="cell" data-executioninfo="{&quot;elapsed&quot;:67,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762719089575,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="73d3bfa5-bdda-4065-f0b0-0eb5ed70162f">
-<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a>y_train_pred <span class="op">=</span> clf.predict(X_train_tree)</span>
-<span id="cb87-2"><a href="#cb87-2" aria-hidden="true" tabindex="-1"></a>y_test_pred  <span class="op">=</span> clf.predict(X_test_tree)</span>
-<span id="cb87-3"><a href="#cb87-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb87-4"><a href="#cb87-4" aria-hidden="true" tabindex="-1"></a>train_acc <span class="op">=</span> accuracy_score(y_train_tree, y_train_pred)</span>
-<span id="cb87-5"><a href="#cb87-5" aria-hidden="true" tabindex="-1"></a>test_acc  <span class="op">=</span> accuracy_score(y_test_tree, y_test_pred)</span>
-<span id="cb87-6"><a href="#cb87-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb87-7"><a href="#cb87-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb87-8"><a href="#cb87-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Training Accuracy: </span><span class="sc">{</span>train_acc<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
-<span id="cb87-9"><a href="#cb87-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Test Accuracy: </span><span class="sc">{</span>test_acc<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
-<span id="cb87-10"><a href="#cb87-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Difference: </span><span class="sc">{</span>train_acc <span class="op">-</span> test_acc<span class="sc">:.3f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-109" class="cell" data-executioninfo="{&quot;elapsed&quot;:67,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762719089575,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="73d3bfa5-bdda-4065-f0b0-0eb5ed70162f">
+<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a>y_train_pred <span class="op">=</span> clf.predict(X_train_tree)</span>
+<span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a>y_test_pred  <span class="op">=</span> clf.predict(X_test_tree)</span>
+<span id="cb86-3"><a href="#cb86-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb86-4"><a href="#cb86-4" aria-hidden="true" tabindex="-1"></a>train_acc <span class="op">=</span> accuracy_score(y_train_tree, y_train_pred)</span>
+<span id="cb86-5"><a href="#cb86-5" aria-hidden="true" tabindex="-1"></a>test_acc  <span class="op">=</span> accuracy_score(y_test_tree, y_test_pred)</span>
+<span id="cb86-6"><a href="#cb86-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb86-7"><a href="#cb86-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb86-8"><a href="#cb86-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Training Accuracy: </span><span class="sc">{</span>train_acc<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
+<span id="cb86-9"><a href="#cb86-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Test Accuracy: </span><span class="sc">{</span>test_acc<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
+<span id="cb86-10"><a href="#cb86-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Difference: </span><span class="sc">{</span>train_acc <span class="op">-</span> test_acc<span class="sc">:.3f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Training Accuracy: 0.660
 Test Accuracy: 0.569
@@ -5616,16 +5615,16 @@ Difference: 0.091</code></pre>
 </section>
 <section id="z." class="level1">
 <h1>Z.</h1>
-<div id="cell-113" class="cell">
-<div class="sourceCode cell-code" id="cb89"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a>jim_rf <span class="op">=</span> passholder_jim.reindex(columns<span class="op">=</span>X_train_tree.columns, fill_value<span class="op">=</span><span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-112" class="cell">
+<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a>jim_rf <span class="op">=</span> passholder_jim.reindex(columns<span class="op">=</span>X_train_tree.columns, fill_value<span class="op">=</span><span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-114" class="cell" data-executioninfo="{&quot;elapsed&quot;:92,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762719253973,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="72263bd3-9533-4c4a-95dd-bcfcbd1cab9b">
-<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a>rf_pred_class <span class="op">=</span> clf.predict(jim_rf)[<span class="dv">0</span>]</span>
-<span id="cb90-2"><a href="#cb90-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb90-3"><a href="#cb90-3" aria-hidden="true" tabindex="-1"></a>rf_pred_prob <span class="op">=</span> clf.predict_proba(jim_rf)[<span class="dv">0</span>, <span class="dv">1</span>]</span>
-<span id="cb90-4"><a href="#cb90-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb90-5"><a href="#cb90-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Random Forest Predicted Class:"</span>, rf_pred_class)</span>
-<span id="cb90-6"><a href="#cb90-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Predicted Probability of Renewal:"</span>, <span class="bu">round</span>(rf_pred_prob, <span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-113" class="cell" data-executioninfo="{&quot;elapsed&quot;:92,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1762719253973,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="72263bd3-9533-4c4a-95dd-bcfcbd1cab9b">
+<div class="sourceCode cell-code" id="cb89"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a>rf_pred_class <span class="op">=</span> clf.predict(jim_rf)[<span class="dv">0</span>]</span>
+<span id="cb89-2"><a href="#cb89-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb89-3"><a href="#cb89-3" aria-hidden="true" tabindex="-1"></a>rf_pred_prob <span class="op">=</span> clf.predict_proba(jim_rf)[<span class="dv">0</span>, <span class="dv">1</span>]</span>
+<span id="cb89-4"><a href="#cb89-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb89-5"><a href="#cb89-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Random Forest Predicted Class:"</span>, rf_pred_class)</span>
+<span id="cb89-6"><a href="#cb89-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Predicted Probability of Renewal:"</span>, <span class="bu">round</span>(rf_pred_prob, <span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Random Forest Predicted Class: 1
 Predicted Probability of Renewal: 0.523</code></pre>
