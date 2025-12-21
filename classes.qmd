@@ -1,5 +1,5 @@
 ---
-title: "Relevant Academic Coursework"
+title: "Academic Coursework"
 toc: false
 ---
 

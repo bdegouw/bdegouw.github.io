@@ -1,6 +1,7 @@
 ---
-title: "Example 1"
-toc: false
+title: "Academic Coursework"
+listing:
+  contents: coursework
+  type: grid # or 'table' for a clean list
+  categories: true
 ---
-# EXAMPLE 1
- Academic Projects: HERE
