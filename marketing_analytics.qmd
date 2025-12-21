@@ -3,4 +3,5 @@ title: "Marketing Analytics Assignments"
 listing:
   contents: ad654_coursework
   type: grid
+  fields: [title, image]
 ---
