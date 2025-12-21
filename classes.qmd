@@ -5,17 +5,17 @@ toc: false
 
 **Graduate Level**
 
-AD571: Business Analytics Foundations
+MET-AD571: Business Analytics Foundations
 
-AD632: Financial Concepts
+MET-AD632: Financial Concepts
 
-AD715: Quantitative and Qualitative Decision Making
+MET-AD715: Quantitative and Qualitative Decision Making
 
-AD654: Marketing Analytics
+MET-AD654: Marketing Analytics
 
-AD599: Python & SQL Business Analytics
+MET-AD599: Python & SQL Business Analytics
 
-AD688: Cloud Analytics for Business
+MET-AD688: Cloud Analytics for Business
 
 **Undergraduate Level**
 
