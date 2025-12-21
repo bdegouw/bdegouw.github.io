@@ -13,7 +13,7 @@ website:
         text: Professional Summary
       - text: Academics
         menu:
-          - text: Relevant Academic Coursework
+          - text: Academic Coursework
             href: classes.qmd
           - text: Marketing Analytics
             href: marketing_analytics.qmd
