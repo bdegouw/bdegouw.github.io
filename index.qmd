@@ -1,5 +1,5 @@
 ---
-image: "headshot.bfla.jpeg"
+image: "photos/headshot.bfla.jpeg"
 format:
   html:
     theme: journal
@@ -8,7 +8,7 @@ format:
 
 <div style="text-align: center; margin-top: 30px;">
   <h1>Bowen de Gouw's Website</h1>
-  <img src="headshot.bfla.jpeg" alt="Bowen de Gouw" style="width:180px; border-radius: 50%; margin-top:15px;">
+  <img src="photos/headshot.bfla.jpeg" alt="Bowen de Gouw" style="width:180px; border-radius: 50%; margin-top:15px;">
 </div>
 
 # Kia Ora, Thank you for visting my website!
@@ -51,13 +51,13 @@ My goal is to use these tools to make data more human — helping organizations 
 # Photo Gallery
 
 :::{.quarto-figure-center}
-![Celebrating my Graduation from Boston University's DeWolfe Boathouse, May 2025](gradpic.jpg){width=400px}
+![Celebrating my Graduation from Boston University's DeWolfe Boathouse, May 2025](photos/gradpic.jpg){width=400px}
 :::
 
 ---
 
 :::{.quarto-figure-center}
-![Preparing for the Inter-Collegiate Rowing Association (IRA) National Championships, May 2025](trainingimage.jpg){width=400px}
+![Preparing for the Inter-Collegiate Rowing Association (IRA) National Championships, May 2025](photos/trainingimage.jpg){width=400px}
 :::
 
 ---

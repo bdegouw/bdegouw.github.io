@@ -10,7 +10,7 @@ format:
 ---
 **Please Click the link Below to View my Resume:**
 
-[📄 Bowen de Gouw - Resume (PDF)](BowendeGouwResume.pdf){target="_blank"}
+[📄 Bowen de Gouw - Resume (PDF)](documents/BowendeGouwResume.pdf){target="_blank"}
 
 
 ## BELOW IS A DEMO OF WHAT I AM PLANNING TO BUILD
