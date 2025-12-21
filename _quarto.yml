@@ -15,8 +15,8 @@ website:
         menu:
           - text: Relevant Academic Coursework
             href: classes.qmd
-          - text: Example 1
-            href: example1drop.qmd
+          - text: Marketing Analytics
+            href: marketing_analytics.qmd
       - href: certifications.qmd
         text: Certifications
       - href: blog.qmd

@@ -1,7 +1,0 @@
----
-title: "Academic Coursework"
-listing:
-  contents: coursework
-  type: grid # or 'table' for a clean list
-  categories: true
----
