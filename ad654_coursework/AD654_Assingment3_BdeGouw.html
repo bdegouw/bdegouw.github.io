@@ -155,8 +155,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#ab-testing" id="toc-ab-testing" class="nav-link active" data-scroll-target="#ab-testing">A/B Testing</a></li>
+  <li><a href="#chi-square-test" id="toc-chi-square-test" class="nav-link" data-scroll-target="#chi-square-test">Chi Square Test</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -202,10 +209,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsmodels.stats.proportion <span class="im">import</span> proportions_ztest</span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-2" class="cell" data-execution_count="44">
+<section id="ab-testing" class="level1">
+<h1>A/B Testing</h1>
+<div id="cell-3" class="cell" data-execution_count="44">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>lobster <span class="op">=</span> pd.read_csv(<span class="st">'lobster_run.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-3" class="cell" data-outputid="0e36ca89-8fbf-4857-8998-a9c0d0e76f55" data-execution_count="45">
+<div id="cell-4" class="cell" data-outputid="0e36ca89-8fbf-4857-8998-a9c0d0e76f55" data-execution_count="45">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>lobster.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
@@ -223,7 +232,7 @@ dtypes: bool(2), float64(1), int64(2), object(1)
 memory usage: 2.9+ MB</code></pre>
 </div>
 </div>
-<div id="cell-4" class="cell" data-outputid="33ce54e2-00af-4b2a-c5f1-1521bdabf5d2" data-execution_count="46">
+<div id="cell-5" class="cell" data-outputid="33ce54e2-00af-4b2a-c5f1-1521bdabf5d2" data-execution_count="46">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>lobster.head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="46">
 
@@ -544,7 +553,7 @@ memory usage: 2.9+ MB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-5" class="cell" data-outputid="6c1ac869-93e1-41c3-9723-e81106fc40f2" data-execution_count="47">
+<div id="cell-6" class="cell" data-outputid="6c1ac869-93e1-41c3-9723-e81106fc40f2" data-execution_count="47">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>sns.histplot(lobster[<span class="st">'user_spend'</span>], bins <span class="op">=</span> <span class="dv">30</span>)</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>plt.title (<span class="st">"Distirbution of User Spend"</span>)</span>
@@ -560,7 +569,7 @@ memory usage: 2.9+ MB</code></pre>
 </div>
 </div>
 <p>This plot of the user spend looks to have a reasonably normal distribution, ranging from around $5 to $25 dollars. The peak of users typically spend around $15 dollars, with the middle 50% between $12 and $18.</p>
-<div id="cell-7" class="cell" data-outputid="4cae854e-c4bd-4af3-eb18-c3276f9410d4" data-execution_count="48">
+<div id="cell-8" class="cell" data-outputid="4cae854e-c4bd-4af3-eb18-c3276f9410d4" data-execution_count="48">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>sns.histplot(data<span class="op">=</span>lobster, x<span class="op">=</span><span class="st">'user_spend'</span>, bins <span class="op">=</span> <span class="dv">30</span>, hue <span class="op">=</span> <span class="st">'version'</span>)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>plt.title (<span class="st">"Distirbution of User Spend"</span>)</span>
@@ -578,7 +587,7 @@ memory usage: 2.9+ MB</code></pre>
 <p>When adding the version as the a hue addition to the graph, we can see the that both sections have very similar distributions. The mains differences come through the bulk of the user spends between $12 - $18, where the north atlantic has slightly higher counts for various spend levels within that range. The only sections where the gulf of main has a higher count is around $22 for user spend.</p>
 <p>H0/Null Hypothesis: The user spend variable follows a normal distribution.</p>
 <p>H1/Alternative Hypothesis: The user spend variable does not follow a normal distribution.</p>
-<div id="cell-10" class="cell" data-outputid="d2869333-8118-4a36-d5a8-df0cc858e3a4" data-execution_count="49">
+<div id="cell-11" class="cell" data-outputid="d2869333-8118-4a36-d5a8-df0cc858e3a4" data-execution_count="49">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>shapiro_test <span class="op">=</span> shapiro(lobster[<span class="st">'user_spend'</span>])</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Shapiro-Wilk test statistic: </span><span class="sc">{</span>shapiro_test<span class="sc">.</span>statistic<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Shapiro-Wilk test p-value: </span><span class="sc">{</span>shapiro_test<span class="sc">.</span>pvalue<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -591,7 +600,7 @@ Shapiro-Wilk test p-value: 0.9323343930781162</code></pre>
   res = hypotest_fun_out(*samples, **kwds)</code></pre>
 </div>
 </div>
-<div id="cell-11" class="cell" data-outputid="b5a9e010-7782-4841-980c-125d44a8173a" data-execution_count="50">
+<div id="cell-12" class="cell" data-outputid="b5a9e010-7782-4841-980c-125d44a8173a" data-execution_count="50">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Random Sample with only 5000 datapoints, using shapiro</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>lobster_sample <span class="op">=</span> lobster.sample(n<span class="op">=</span><span class="dv">5000</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>shapiro_test_sample <span class="op">=</span> shapiro(lobster_sample[<span class="st">'user_spend'</span>])</span>
@@ -607,7 +616,7 @@ Shapiro-Wilk test p-value (sample): 0.3910419076137391</code></pre>
 <p>I decided to do a shaprio normal distribution test with 5000 datapoints as the output said that the output may not be accurate for sample sizes greater than 5000.</p>
 <p>H0/Null Hypothesis: There is no difference in difference in the means user spending between the Gulf of Maine and North Atlantic versions.</p>
 <p>H1/Alternative Hypothesis: There is a difference in meaan user spending between the Gulf of Maine and North Atlantic versions.</p>
-<div id="cell-15" class="cell" data-outputid="eb4b72a0-2a0f-4160-8e8e-589ca90d5537" data-execution_count="51">
+<div id="cell-16" class="cell" data-outputid="eb4b72a0-2a0f-4160-8e8e-589ca90d5537" data-execution_count="51">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>gulf_of_maine_spend <span class="op">=</span> lobster[lobster[<span class="st">'version'</span>] <span class="op">==</span> <span class="st">'Gulf of Maine'</span>][<span class="st">'user_spend'</span>]</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>north_atlantic_spend <span class="op">=</span> lobster[lobster[<span class="st">'version'</span>] <span class="op">==</span> <span class="st">'North Atlantic'</span>][<span class="st">'user_spend'</span>]</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -621,7 +630,7 @@ T-test p-value: 0.11241777327832332</code></pre>
 </div>
 </div>
 <p>Based on these results and a significance level of 0.05, we fail to reject the null hypothesis. There is no significant evidence that demonstrates that the mean user spend variable is different between the Gulf of Maine and North Atlantic versions.</p>
-<div id="cell-17" class="cell" data-outputid="d2ec7741-a6ee-463f-a847-23bea098a963" data-execution_count="52">
+<div id="cell-18" class="cell" data-outputid="d2ec7741-a6ee-463f-a847-23bea098a963" data-execution_count="52">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>sumstat_version <span class="op">=</span> lobster.groupby(<span class="st">'version'</span>)[<span class="st">'user_spend'</span>].describe()</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>display(sumstat_version)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -944,11 +953,11 @@ T-test p-value: 0.11241777327832332</code></pre>
 <p>Based on these summary statistics, it is fair to infer that the version is not impacting user behavior.</p>
 <p>H0/Null Hypothesis: The 1-day retention rate for users of the Gulf of Maine version is equal to the 1-day retention rate for users of the North Atlantic version.</p>
 <p>H1/Alternative Hypothesis: There is a significant difference between the 1-day retention rate for users in the Gulf of Maine version and those in the North Atlantic version.</p>
-<div id="cell-20" class="cell" data-execution_count="53">
+<div id="cell-21" class="cell" data-execution_count="53">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>gulfofmaine <span class="op">=</span> lobster[lobster[<span class="st">'version'</span>] <span class="op">==</span> <span class="st">'Gulf of Maine'</span>]</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>northatlantic  <span class="op">=</span> lobster[lobster[<span class="st">'version'</span>] <span class="op">==</span> <span class="st">'North Atlantic'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-21" class="cell" data-outputid="54d4d505-c018-4a24-b6ed-e5a727dcd76d" data-execution_count="54">
+<div id="cell-22" class="cell" data-outputid="54d4d505-c018-4a24-b6ed-e5a727dcd76d" data-execution_count="54">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>gulf_of_maine_retention_1_count <span class="op">=</span> gulfofmaine[<span class="st">'retention_1'</span>].<span class="bu">sum</span>()</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>north_atlantic_retention_1_count <span class="op">=</span> northatlantic[<span class="st">'retention_1'</span>].<span class="bu">sum</span>()</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -959,7 +968,7 @@ T-test p-value: 0.11241777327832332</code></pre>
 Number of users in North Atlantic with retention_1: 20119</code></pre>
 </div>
 </div>
-<div id="cell-22" class="cell" data-outputid="942e758d-d18d-4c38-af23-d3cb7c4cd137" data-execution_count="55">
+<div id="cell-23" class="cell" data-outputid="942e758d-d18d-4c38-af23-d3cb7c4cd137" data-execution_count="55">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>gulf_of_maine_retention_1_rate <span class="op">=</span> (gulfofmaine[<span class="st">'retention_1'</span>].<span class="bu">sum</span>() <span class="op">/</span> <span class="bu">len</span>(gulfofmaine)) <span class="op">*</span> <span class="dv">100</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>north_atlantic_retention_1_rate <span class="op">=</span> (northatlantic[<span class="st">'retention_1'</span>].<span class="bu">sum</span>() <span class="op">/</span> <span class="bu">len</span>(northatlantic)) <span class="op">*</span> <span class="dv">100</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -970,7 +979,7 @@ Number of users in North Atlantic with retention_1: 20119</code></pre>
 Day 1 Retention Rate for North Atlantic: 44.23%</code></pre>
 </div>
 </div>
-<div id="cell-23" class="cell" data-outputid="f9659949-5ce4-4ba0-f0b4-297aa0d7cad0" data-execution_count="56">
+<div id="cell-24" class="cell" data-outputid="f9659949-5ce4-4ba0-f0b4-297aa0d7cad0" data-execution_count="56">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>totalgulf <span class="op">=</span> <span class="bu">len</span>(gulfofmaine)</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>totalatlantic <span class="op">=</span> <span class="bu">len</span>(northatlantic)</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>day1gulf <span class="op">=</span> gulf_of_maine_retention_1_count</span>
@@ -985,7 +994,7 @@ Day 1 Retention Rate for North Atlantic: 44.23%</code></pre>
 </div>
 </div>
 <p>The expected number of users from the Gulf of Maine version who stayed for 1 day is 19,900. I arrived at this value by calculating the overall retention rate from both versions and then multiplying it by the total number of Gulf of Maine users. This expected value represents the number of users we would anticipate being retained under the null hypothesis, where the version has no effect on 1-day retention.</p>
-<div id="cell-25" class="cell" data-outputid="d6a020c5-4f89-4807-defc-7d244ec954f7" data-execution_count="57">
+<div id="cell-26" class="cell" data-outputid="d6a020c5-4f89-4807-defc-7d244ec954f7" data-execution_count="57">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>overall_retention_1_rate <span class="op">=</span> lobster[<span class="st">'retention_1'</span>].mean()</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>z_statistic, p_value <span class="op">=</span> proportions_ztest(gulf_of_maine_retention_1_count, totalgulf, value<span class="op">=</span>overall_retention_1_rate)</span>
@@ -1001,7 +1010,7 @@ Binomial Z-test p-value for Gulf of Maine retention_1: 0.20543002478527195</code
 <p>This indicates that there is no statistically significant difference between the Gulf of Maine version’s day-1 retention rate and the overall average retention rate.</p>
 <p>H0/Null Hypothesis: The 7-day retention rate for users of the Gulf of Maine version is equal to the 7-day retention rate for users of the North Atlantic version.</p>
 <p>H1/Alternative Hypothesis: There is a significant difference between the 7-day retention rate for users in the Gulf of Maine version and those in the North Atlantic version.</p>
-<div id="cell-28" class="cell" data-outputid="6bf06091-5825-4500-bb41-13a39bf1b587" data-execution_count="58">
+<div id="cell-29" class="cell" data-outputid="6bf06091-5825-4500-bb41-13a39bf1b587" data-execution_count="58">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>gulf_of_maine_retention_7_count <span class="op">=</span> gulfofmaine[<span class="st">'retention_7'</span>].<span class="bu">sum</span>()</span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>north_atlantic_retention_7_count <span class="op">=</span> northatlantic[<span class="st">'retention_7'</span>].<span class="bu">sum</span>()</span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1012,7 +1021,7 @@ Binomial Z-test p-value for Gulf of Maine retention_1: 0.20543002478527195</code
 Number of users in North Atlantic with retention_7: 8279</code></pre>
 </div>
 </div>
-<div id="cell-29" class="cell" data-outputid="d1c47eb5-4f3a-44ed-d107-c9a6a2dc240c" data-execution_count="59">
+<div id="cell-30" class="cell" data-outputid="d1c47eb5-4f3a-44ed-d107-c9a6a2dc240c" data-execution_count="59">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>gulf_of_maine_retention_1_rate <span class="op">=</span> (gulfofmaine[<span class="st">'retention_7'</span>].<span class="bu">sum</span>() <span class="op">/</span> <span class="bu">len</span>(gulfofmaine)) <span class="op">*</span> <span class="dv">100</span></span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>north_atlantic_retention_1_rate <span class="op">=</span> (northatlantic[<span class="st">'retention_7'</span>].<span class="bu">sum</span>() <span class="op">/</span> <span class="bu">len</span>(northatlantic)) <span class="op">*</span> <span class="dv">100</span></span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1023,7 +1032,7 @@ Number of users in North Atlantic with retention_7: 8279</code></pre>
 Day 7 Retention Rate for North Atlantic: 18.20%</code></pre>
 </div>
 </div>
-<div id="cell-30" class="cell" data-outputid="4dde1a8b-e1e1-437d-c237-668cc69bc7ba" data-execution_count="60">
+<div id="cell-31" class="cell" data-outputid="4dde1a8b-e1e1-437d-c237-668cc69bc7ba" data-execution_count="60">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>totalgulf <span class="op">=</span> <span class="bu">len</span>(gulfofmaine)</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>totalatlantic <span class="op">=</span> <span class="bu">len</span>(northatlantic)</span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>day7gulf <span class="op">=</span> gulf_of_maine_retention_7_count</span>
@@ -1038,7 +1047,7 @@ Day 7 Retention Rate for North Atlantic: 18.20%</code></pre>
 </div>
 </div>
 <p>The expected number of users from the Gulf of Maine version who stayed for 7 days is 8,437. I arrived at this value by calculating the overall retention rate from both versions and then multiplying it by the total number of Gulf of Maine users. This expected value represents the number of users we would anticipate being retained under the null hypothesis, where the version has no effect on 7-day retention.</p>
-<div id="cell-32" class="cell" data-outputid="538fc0b4-d755-4d93-8f26-03611194b5af" data-execution_count="61">
+<div id="cell-33" class="cell" data-outputid="538fc0b4-d755-4d93-8f26-03611194b5af" data-execution_count="61">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>overall_retention_7_rate <span class="op">=</span> lobster[<span class="st">'retention_7'</span>].mean()</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>z_statistic, p_value <span class="op">=</span> proportions_ztest(gulf_of_maine_retention_7_count, totalgulf, value<span class="op">=</span>overall_retention_7_rate)</span>
@@ -1052,7 +1061,7 @@ Binomial Z-test p-value for Gulf of Maine retention_7: 0.0002520885313901679</co
 </div>
 <p>Since the p-value (0.00025) is less than the significance level (α = 0.05), we reject the null hypothesis.</p>
 <p>This indicates that there is a statistically significant difference between the Gulf of Maine version’s 7-day retention rate and the overall average retention rate.</p>
-<div id="cell-34" class="cell" data-outputid="fc60708b-9477-4adb-d927-6c1081005426" data-execution_count="62">
+<div id="cell-35" class="cell" data-outputid="fc60708b-9477-4adb-d927-6c1081005426" data-execution_count="62">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>avg_rounds_by_version <span class="op">=</span> lobster.groupby(<span class="st">'version'</span>)[<span class="st">'sum_gamerounds'</span>].mean()</span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Average game rounds by version:"</span>)</span>
@@ -1188,7 +1197,7 @@ Average game rounds by version and Day 7 retention:</code></pre>
 </div><br><label><b>dtype:</b> float64</label>
 </div>
 </div>
-<div id="cell-35" class="cell" data-outputid="6a39dde4-47c1-489f-bed6-d409c984ab47" data-execution_count="63">
+<div id="cell-36" class="cell" data-outputid="6a39dde4-47c1-489f-bed6-d409c984ab47" data-execution_count="63">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Summary statistics for sum_gamerounds by version:"</span>)</span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>display(lobster.groupby(<span class="st">'version'</span>)[<span class="st">'sum_gamerounds'</span>].describe())</span>
 <span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -2051,7 +2060,7 @@ Summary statistics for sum_gamerounds by version and Day 7 retention:</code></pr
   </div>
 </div>
 </div>
-<div id="cell-36" class="cell" data-outputid="ee9c4e41-f426-466c-8484-312546cd710c" data-execution_count="64">
+<div id="cell-37" class="cell" data-outputid="ee9c4e41-f426-466c-8484-312546cd710c" data-execution_count="64">
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>mean_spend_by_version <span class="op">=</span> lobster.groupby(<span class="st">'version'</span>)[<span class="st">'user_spend'</span>].mean()</span>
 <span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Mean user spend by version:"</span>)</span>
 <span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>display(mean_spend_by_version)</span>
@@ -2190,6 +2199,9 @@ Mean user spend by version and Day 7 retention:</code></pre>
 <p>From these results, we can see that for the users that are only retained for one day, the version makes little difference of their retention rate. This is may be because of their gaming habits or interest in gaming generally being lower, therefore they are less likely to be retained regardless, and version makes little difference. However, for those users who are more interested in gaming and take it more seriously/have more passiom, the version makes a bigger difference and therefore they are retained for longer on the version the deem to be better, creating the statistical difference between the 7 day retention for the two versions.</p>
 <p>Based on some simple analysis of the mean spending breakdown by versions, and then by retention levels within the versions, there did not seem to be any significant difference between the spending levels. However, to compliment this analysis, I looked into the sum of game rounds per version, and rentention groups, and found something interesting. For the users who were retained for 7 days on the north atlantic version, they were playing sigificantly more rounds of the game, than those of the gulf of maine version. This is a baseline analysis and would require further examination to fully understand, but it does pose some interesting questions, despite having a lower retention rate. This may be beacuase the users play the game at a higher rate for the first 7 days, and then stop enjoying the game and therefore stop playing.</p>
 <p>Additional information that could be used to understand the results in context could include any additional payment options within the apps, the format of the game (ex. how is it played? is the users progress saved in one of the versions of the game? are there rewards for continuing to play over continous periods of time?), and the overall gaming quality/level of performance of the app. These additional pieces of information would help drive further insight into the users behvaviors and or why they interact differently for the 7 day retention between versions.</p>
+</section>
+<section id="chi-square-test" class="level1">
+<h1>Chi Square Test</h1>
 <p>H0/Null Hypothesis: The observed distribution of visitor preferences matches the expected distribution given by park management. (30% Roller Coasters, 25% Water Rides, 15% for Restaurant, Exhibit and Shop)</p>
 <p>H1/Alternative: The observed distribution of visitor preferences does not match the expected distribution.</p>
 <p>Under the Null Hypothesis, the expected number of respondents are as follows:</p>
@@ -2198,7 +2210,7 @@ Mean user spend by version and Day 7 retention:</code></pre>
 <p>Restaurant: 75</p>
 <p>Marine Life: 75</p>
 <p>Merchandise Shop: 75</p>
-<div id="cell-39" class="cell" data-outputid="37dbcf6c-0ece-4848-bd51-4714931a7022" data-execution_count="65">
+<div id="cell-41" class="cell" data-outputid="37dbcf6c-0ece-4848-bd51-4714931a7022" data-execution_count="65">
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>expected_frequencies <span class="op">=</span> {</span>
 <span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Roller Coaster'</span>: <span class="fl">150.0</span>,</span>
 <span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Water Rides'</span>: <span class="fl">125.0</span>,</span>
@@ -2211,7 +2223,7 @@ Mean user spend by version and Day 7 retention:</code></pre>
 <pre><code>{'Roller Coaster': 150.0, 'Water Rides': 125.0, 'Restaurant': 75.0, 'Marine Life': 75.0, 'Merchandise Shop': 75.0}</code></pre>
 </div>
 </div>
-<div id="cell-40" class="cell" data-outputid="2bc0a367-4a67-42a4-e13c-9e7de163aef0" data-execution_count="66">
+<div id="cell-42" class="cell" data-outputid="2bc0a367-4a67-42a4-e13c-9e7de163aef0" data-execution_count="66">
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>observed_frequencies <span class="op">=</span> np.array([<span class="dv">150</span>, <span class="dv">120</span>, <span class="dv">90</span>, <span class="dv">80</span>, <span class="dv">60</span>])</span>
 <span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>total_observations <span class="op">=</span> np.<span class="bu">sum</span>(observed_frequencies)</span>
 <span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -2233,7 +2245,7 @@ P-value: 0.16270219326739285</code></pre>
 </div>
 <p>Since the p-value (0.1627) is greater than the significance level (α = 0.05), we fail to reject the null hypothesis.</p>
 <p>There is no statistically significant difference between the observed distribution of visitor preferences and the expected distribution proposed by park management.</p>
-<div id="cell-42" class="cell" data-outputid="0ea231de-09ef-4ef8-9533-cf2bcacb9989" data-execution_count="67">
+<div id="cell-44" class="cell" data-outputid="0ea231de-09ef-4ef8-9533-cf2bcacb9989" data-execution_count="67">
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">150</span> <span class="op">-</span> <span class="dv">150</span>)<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">150</span> <span class="op">+</span> (<span class="dv">120</span> <span class="op">-</span> <span class="dv">125</span>)<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">125</span> <span class="op">+</span> (<span class="dv">90</span> <span class="op">-</span> <span class="dv">75</span>)<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">75</span> <span class="op">+</span> (<span class="dv">80</span> <span class="op">-</span> <span class="dv">75</span>)<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">75</span> <span class="op">+</span> (<span class="dv">60</span> <span class="op">-</span> <span class="dv">75</span>)<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">75</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="67">
 <pre><code>6.533333333333333</code></pre>
@@ -2241,6 +2253,7 @@ P-value: 0.16270219326739285</code></pre>
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

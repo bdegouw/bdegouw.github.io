@@ -155,8 +155,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#segmentation" id="toc-segmentation" class="nav-link active" data-scroll-target="#segmentation">Segmentation</a></li>
+  <li><a href="#conjoint-analysis" id="toc-conjoint-analysis" class="nav-link" data-scroll-target="#conjoint-analysis">Conjoint Analysis</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -192,11 +199,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.ticker <span class="im">as</span> mtick</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-2" class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412741,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}">
+<section id="segmentation" class="level1">
+<h1>Segmentation</h1>
+<div id="cell-3" class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412741,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>days25 <span class="op">=</span> pd.read_csv(<span class="st">'days25.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-3" class="cell" data-executioninfo="{&quot;elapsed&quot;:47,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412791,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="6d301130-e85b-467b-9804-d4624b7bbb2a" data-execution_count="17">
+<div id="cell-4" class="cell" data-executioninfo="{&quot;elapsed&quot;:47,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412791,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="6d301130-e85b-467b-9804-d4624b7bbb2a" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>days25.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="17">
 
@@ -550,7 +559,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-<div id="cell-4" class="cell" data-executioninfo="{&quot;elapsed&quot;:43,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412795,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="f1218842-56c6-442b-90db-7642447b4ebb" data-execution_count="18">
+<div id="cell-5" class="cell" data-executioninfo="{&quot;elapsed&quot;:43,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412795,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="f1218842-56c6-442b-90db-7642447b4ebb" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>days25.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
@@ -584,7 +593,7 @@ memory usage: 14.8+ KB</code></pre>
 <p><strong>Numerical Variables:</strong> Total Visitors, Passholder Percentage, Days Ticket Sold, Average Ticket Price, Gate Revenue, Food Revenue, Merch Revenue, Arcade Revenue, Total Revenue, Total Labor Hours, International Visitors, Highest Temperature, Per Capita Spend</p>
 <p><strong>Categorical Variables:</strong> Day ID, Day of the Week, Season Week, Holiday, Weather Type, Special Event</p>
 <p>We are unable to use categorcal data unputs in a k-means model as the model is created and relies on Euclidean Distnce, which assumes that the data is continunous and on a meaningful scale so these values can be accurately compared and calculated to form the euclidean distances, and clusters.</p>
-<div id="cell-6" class="cell" data-executioninfo="{&quot;elapsed&quot;:19,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412807,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="5e2b9dea-b678-43ca-e2ad-dac3f2ed5e69">
+<div id="cell-7" class="cell" data-executioninfo="{&quot;elapsed&quot;:19,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412807,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="5e2b9dea-b678-43ca-e2ad-dac3f2ed5e69">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>days25.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="19">
 
@@ -987,7 +996,7 @@ memory usage: 14.8+ KB</code></pre>
 </div>
 </div>
 <p>The describe function helps gain a sense of the data as it produces summary statistics that can be used to gain a baseline understanding and analysis of the data. It is important for any analyst to understand the baseline metrics before building any additional models as it gives them a better sense for what the results may produce and to evauate performance/effectiveness. However, it is important to note that it is not always useful - for some variables that are numerical references of categorical variables, making it vital to understand the structure of your data.</p>
-<div id="cell-8" class="cell" data-executioninfo="{&quot;elapsed&quot;:15,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412820,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="86fa2e39-e8c8-42e4-ab24-f8020ca70990">
+<div id="cell-9" class="cell" data-executioninfo="{&quot;elapsed&quot;:15,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412820,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="86fa2e39-e8c8-42e4-ab24-f8020ca70990">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>days25.isnull().<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="20">
@@ -1085,7 +1094,7 @@ memory usage: 14.8+ KB</code></pre>
 </div>
 </div>
 <p>There are no missing values in this dataset.</p>
-<div id="cell-10" class="cell" data-executioninfo="{&quot;elapsed&quot;:17,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412892,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="b660fc17-61e9-4256-82d1-50d1e9a15cbf" data-execution_count="21">
+<div id="cell-11" class="cell" data-executioninfo="{&quot;elapsed&quot;:17,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412892,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="b660fc17-61e9-4256-82d1-50d1e9a15cbf" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>days25.International_Visitors.value_counts().sort_index(ascending<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="21">
 <div>
@@ -1154,7 +1163,7 @@ memory usage: 14.8+ KB</code></pre>
 </div><br><label><b>dtype:</b> int64</label>
 </div>
 </div>
-<div id="cell-11" class="cell" data-executioninfo="{&quot;elapsed&quot;:15,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412901,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="09398a2b-9abb-49cd-df9d-83f9fa55f2c7" data-execution_count="22">
+<div id="cell-12" class="cell" data-executioninfo="{&quot;elapsed&quot;:15,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412901,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="09398a2b-9abb-49cd-df9d-83f9fa55f2c7" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>days25.Revenue_Food.value_counts().sort_index(ascending<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="22">
 <div>
@@ -1223,7 +1232,7 @@ memory usage: 14.8+ KB</code></pre>
 </div><br><label><b>dtype:</b> int64</label>
 </div>
 </div>
-<div id="cell-12" class="cell" data-executioninfo="{&quot;elapsed&quot;:11,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412915,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="81731e44-01c5-4667-a3ea-f1b9e1af7e0b" data-execution_count="23">
+<div id="cell-13" class="cell" data-executioninfo="{&quot;elapsed&quot;:11,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412915,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="81731e44-01c5-4667-a3ea-f1b9e1af7e0b" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>days25.High_Temperature.value_counts().sort_index(ascending<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="23">
 <div>
@@ -1292,7 +1301,7 @@ memory usage: 14.8+ KB</code></pre>
 </div><br><label><b>dtype:</b> int64</label>
 </div>
 </div>
-<div id="cell-13" class="cell" data-executioninfo="{&quot;elapsed&quot;:10,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412931,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="df8df6e3-6719-429f-80bd-795c80f1e465" data-execution_count="24">
+<div id="cell-14" class="cell" data-executioninfo="{&quot;elapsed&quot;:10,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412931,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="df8df6e3-6719-429f-80bd-795c80f1e465" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>days25.Avg_Ticket_Price.value_counts().sort_index(ascending<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="24">
 <div>
@@ -1361,7 +1370,7 @@ memory usage: 14.8+ KB</code></pre>
 </div><br><label><b>dtype:</b> int64</label>
 </div>
 </div>
-<div id="cell-14" class="cell" data-executioninfo="{&quot;elapsed&quot;:20,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412957,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="c44ffedf-c056-4991-fba9-ffd513132e9e" data-execution_count="25">
+<div id="cell-15" class="cell" data-executioninfo="{&quot;elapsed&quot;:20,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412957,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="c44ffedf-c056-4991-fba9-ffd513132e9e" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>days25.Total_Visitors.value_counts().sort_index(ascending<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="25">
 <div>
@@ -1448,7 +1457,7 @@ memory usage: 14.8+ KB</code></pre>
 <li>Total Visitors = -50. Total visitors cannot be a negative number.</li>
 </ul>
 <p>Replacement Method: Use the average for the day of the week. This is because day of the week that will have impact on the total visitors and therefore is a reliable imputation method.</p>
-<div id="cell-16" class="cell" data-executioninfo="{&quot;elapsed&quot;:25,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412972,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="651ebafc-8b58-4af5-a070-d490735d7ef1">
+<div id="cell-17" class="cell" data-executioninfo="{&quot;elapsed&quot;:25,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703412972,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="651ebafc-8b58-4af5-a070-d490735d7ef1">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>days25[days25[<span class="st">'International_Visitors'</span>] <span class="op">&lt;</span> <span class="dv">0</span>]</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Day ID = 51</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1592,7 +1601,7 @@ memory usage: 14.8+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-17" class="cell" data-executioninfo="{&quot;elapsed&quot;:72,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413040,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="6c3bf8e2-3517-46f8-ee5e-c5b2e6b6249d" data-execution_count="27">
+<div id="cell-18" class="cell" data-executioninfo="{&quot;elapsed&quot;:72,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413040,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="6c3bf8e2-3517-46f8-ee5e-c5b2e6b6249d" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>mean_international_visitors_by_day <span class="op">=</span> days25.groupby(<span class="st">'Day_of_Week'</span>)[<span class="st">'International_Visitors'</span>].mean()</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>row_to_replace <span class="op">=</span> days25[days25[<span class="st">'International_Visitors'</span>] <span class="op">&lt;</span> <span class="dv">0</span>]</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1742,7 +1751,7 @@ memory usage: 14.8+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-18" class="cell" data-executioninfo="{&quot;elapsed&quot;:15,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413060,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="9a6a3a54-a164-47e4-e329-8d06b9b90320" data-execution_count="28">
+<div id="cell-19" class="cell" data-executioninfo="{&quot;elapsed&quot;:15,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413060,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="9a6a3a54-a164-47e4-e329-8d06b9b90320" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>days25[days25[<span class="st">'Revenue_Food'</span>] <span class="op">&gt;</span> <span class="dv">900000</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="28">
 
@@ -1884,7 +1893,7 @@ memory usage: 14.8+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-19" class="cell" data-executioninfo="{&quot;elapsed&quot;:20,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413084,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="a3f5f4c7-8275-4dcf-8032-760aebc9cb96" data-execution_count="29">
+<div id="cell-20" class="cell" data-executioninfo="{&quot;elapsed&quot;:20,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413084,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="a3f5f4c7-8275-4dcf-8032-760aebc9cb96" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>day_30_row <span class="op">=</span> days25.loc[days25[<span class="st">'Day_ID'</span>] <span class="op">==</span> <span class="dv">31</span>]</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>calculated_food_revenue <span class="op">=</span> day_30_row[<span class="st">'Total_Revenue'</span>] <span class="op">-</span> (day_30_row[<span class="st">'Gate_Revenue'</span>] <span class="op">+</span> day_30_row[<span class="st">'Revenue_Merch'</span>] <span class="op">+</span> day_30_row[<span class="st">'Revenue_Arcade'</span>])</span>
@@ -2032,7 +2041,7 @@ memory usage: 14.8+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-20" class="cell" data-executioninfo="{&quot;elapsed&quot;:24,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413101,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="a585f5e9-6887-4e00-fe4f-b54aaed49292" data-execution_count="30">
+<div id="cell-21" class="cell" data-executioninfo="{&quot;elapsed&quot;:24,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413101,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="a585f5e9-6887-4e00-fe4f-b54aaed49292" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>days25[days25[<span class="st">'High_Temperature'</span>] <span class="op">==</span> <span class="dv">200</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="30">
 
@@ -2174,7 +2183,7 @@ memory usage: 14.8+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-21" class="cell" data-executioninfo="{&quot;elapsed&quot;:12,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413116,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="697ee3d5-0d9a-4953-9e27-dc21878ebbc2" data-execution_count="31">
+<div id="cell-22" class="cell" data-executioninfo="{&quot;elapsed&quot;:12,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413116,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="697ee3d5-0d9a-4953-9e27-dc21878ebbc2" data-execution_count="31">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>days25[days25[<span class="st">'High_Temperature'</span>] <span class="op">==</span> <span class="dv">200</span>]</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>average_temperature <span class="op">=</span> days25[<span class="st">'High_Temperature'</span>].mean()</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>days25.loc[days25[<span class="st">'High_Temperature'</span>] <span class="op">==</span> <span class="dv">200</span>, <span class="st">'High_Temperature'</span>] <span class="op">=</span> average_temperature</span>
@@ -2319,7 +2328,7 @@ memory usage: 14.8+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-22" class="cell" data-executioninfo="{&quot;elapsed&quot;:82,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413205,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="15afdd5b-b3f3-4101-f426-864a919f6753" data-execution_count="32">
+<div id="cell-23" class="cell" data-executioninfo="{&quot;elapsed&quot;:82,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413205,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="15afdd5b-b3f3-4101-f426-864a919f6753" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>days25[days25[<span class="st">'Total_Visitors'</span>] <span class="op">&lt;</span> <span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="32">
 
@@ -2461,7 +2470,7 @@ memory usage: 14.8+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-23" class="cell" data-executioninfo="{&quot;elapsed&quot;:34,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413244,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="7d47422d-d2cb-4ba5-e9e7-819269679be5" data-execution_count="33">
+<div id="cell-24" class="cell" data-executioninfo="{&quot;elapsed&quot;:34,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413244,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="7d47422d-d2cb-4ba5-e9e7-819269679be5" data-execution_count="33">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>days25[days25[<span class="st">'Avg_Ticket_Price'</span>] <span class="op">&lt;</span> <span class="dv">0</span>]</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>mean_avg_ticket_price_by_day <span class="op">=</span> days25.groupby(<span class="st">'Day_of_Week'</span>)[<span class="st">'Avg_Ticket_Price'</span>].mean()</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>row_to_replace_price <span class="op">=</span> days25[days25[<span class="st">'Avg_Ticket_Price'</span>] <span class="op">&lt;</span> <span class="dv">0</span>]</span>
@@ -2612,7 +2621,7 @@ memory usage: 14.8+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-24" class="cell" data-executioninfo="{&quot;elapsed&quot;:28,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413279,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="d7ba3413-a984-46ec-cc08-522260313b17" data-execution_count="34">
+<div id="cell-25" class="cell" data-executioninfo="{&quot;elapsed&quot;:28,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413279,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="d7ba3413-a984-46ec-cc08-522260313b17" data-execution_count="34">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>days25[days25[<span class="st">'Total_Visitors'</span>] <span class="op">&lt;</span> <span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="34">
 
@@ -2754,7 +2763,7 @@ memory usage: 14.8+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-25" class="cell" data-executioninfo="{&quot;elapsed&quot;:112,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413396,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="3de2b35d-fb76-4392-e0ce-7b8c5d046438" data-execution_count="35">
+<div id="cell-26" class="cell" data-executioninfo="{&quot;elapsed&quot;:112,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413396,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="3de2b35d-fb76-4392-e0ce-7b8c5d046438" data-execution_count="35">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>days25[days25[<span class="st">'Total_Visitors'</span>] <span class="op">&lt;</span> <span class="dv">0</span>]</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>mean_total_visitors_by_day <span class="op">=</span> days25.groupby(<span class="st">'Day_of_Week'</span>)[<span class="st">'Total_Visitors'</span>].mean()</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>row_to_replace_visitors <span class="op">=</span> days25[days25[<span class="st">'Total_Visitors'</span>] <span class="op">&lt;</span> <span class="dv">0</span>]</span>
@@ -2909,10 +2918,10 @@ memory usage: 14.8+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-26" class="cell" data-executioninfo="{&quot;elapsed&quot;:15,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413402,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-execution_count="36">
+<div id="cell-27" class="cell" data-executioninfo="{&quot;elapsed&quot;:15,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413402,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-execution_count="36">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>days25_cleaned <span class="op">=</span> days25.copy()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-27" class="cell" data-executioninfo="{&quot;elapsed&quot;:20,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413426,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="1c89b711-c649-4584-d1c7-6d4a4d934a4b" data-execution_count="37">
+<div id="cell-28" class="cell" data-executioninfo="{&quot;elapsed&quot;:20,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413426,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="1c89b711-c649-4584-d1c7-6d4a4d934a4b" data-execution_count="37">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>days25_cleaned.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="37">
 
@@ -3322,10 +3331,10 @@ memory usage: 14.8+ KB</code></pre>
 <li>International Visitors: This variables will show us the trends of International Visitors, and in what manner they tend to visit lobsterland. It will also help with finding ways to continue to enhance their experience.</li>
 <li>High Temperature: This variable will show us the trends of how the peak temperature will influence the the other variables, and help with clustering the impact of the weather.</li>
 </ol>
-<div id="cell-29" class="cell" data-executioninfo="{&quot;elapsed&quot;:20,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413455,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-execution_count="38">
+<div id="cell-30" class="cell" data-executioninfo="{&quot;elapsed&quot;:20,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413455,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-execution_count="38">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>days25_cluster <span class="op">=</span> days25_cleaned[[<span class="st">'Day_Tickets_Sold'</span>, <span class="st">'Gate_Revenue'</span>, <span class="st">'Total_Revenue'</span>, <span class="st">'International_Visitors'</span>, <span class="st">'High_Temperature'</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-30" class="cell" data-executioninfo="{&quot;elapsed&quot;:75,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413526,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="fdff6faa-e9c3-449b-e0a5-f24ac3e970ec">
+<div id="cell-31" class="cell" data-executioninfo="{&quot;elapsed&quot;:75,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413526,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="fdff6faa-e9c3-449b-e0a5-f24ac3e970ec">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>zscore <span class="op">=</span> preprocessing.StandardScaler()</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>days25_normalized <span class="op">=</span> zscore.fit_transform(days25_cluster)</span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>days25_normalized <span class="op">=</span> pd.DataFrame(days25_normalized, columns<span class="op">=</span>days25_cluster.columns)</span>
@@ -3623,7 +3632,7 @@ memory usage: 14.8+ KB</code></pre>
 </div>
 </div>
 <p>Yes, the variables need to be scaled as they are all measured on different scales and range drastically. Scaling them means we are able to compare them fairly and produce a Kmeans cluster that produce actionable insight.</p>
-<div id="cell-32" class="cell" data-executioninfo="{&quot;elapsed&quot;:15,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413548,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="32aeb162-3f42-4a60-ff26-c5ecee30887a" data-execution_count="40">
+<div id="cell-33" class="cell" data-executioninfo="{&quot;elapsed&quot;:15,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413548,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="32aeb162-3f42-4a60-ff26-c5ecee30887a" data-execution_count="40">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>days25_normalized.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="40">
 
@@ -3893,7 +3902,7 @@ memory usage: 14.8+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-33" class="cell" data-executioninfo="{&quot;elapsed&quot;:161,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413716,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="ea6626f1-74b6-4a70-ddab-8c1e37f64772">
+<div id="cell-34" class="cell" data-executioninfo="{&quot;elapsed&quot;:161,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413716,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="ea6626f1-74b6-4a70-ddab-8c1e37f64772">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>sse <span class="op">=</span> {}</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">10</span>):</span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>  kmeans <span class="op">=</span> KMeans(n_clusters<span class="op">=</span>k, random_state <span class="op">=</span> <span class="dv">654</span>)</span>
@@ -3912,13 +3921,13 @@ memory usage: 14.8+ KB</code></pre>
 </div>
 </div>
 <p>As a result of this Elbow plot and additional anaysis - I will use 5 Clusters.</p>
-<div id="cell-35" class="cell" data-executioninfo="{&quot;elapsed&quot;:21,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413724,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}">
+<div id="cell-36" class="cell" data-executioninfo="{&quot;elapsed&quot;:21,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413724,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>kmeans <span class="op">=</span> KMeans(n_clusters<span class="op">=</span><span class="dv">5</span>, random_state<span class="op">=</span><span class="dv">654</span>)</span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>kmeans.fit(days25_normalized)</span>
 <span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>cluster_labels <span class="op">=</span> kmeans.labels_</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-36" class="cell" data-executioninfo="{&quot;elapsed&quot;:38,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413751,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="1b83a562-a581-438f-990a-82a83957821d">
+<div id="cell-37" class="cell" data-executioninfo="{&quot;elapsed&quot;:38,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413751,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="1b83a562-a581-438f-990a-82a83957821d">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>days25_k5 <span class="op">=</span> days25_normalized.assign(Cluster <span class="op">=</span> cluster_labels)</span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>days25_k5.groupby([<span class="st">'Cluster'</span>]).mean().<span class="bu">round</span>(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -4198,7 +4207,7 @@ memory usage: 14.8+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-37" class="cell" data-executioninfo="{&quot;elapsed&quot;:74,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413831,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="78d81912-d58a-4561-a205-402d0c6579f8">
+<div id="cell-38" class="cell" data-executioninfo="{&quot;elapsed&quot;:74,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703413831,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="78d81912-d58a-4561-a205-402d0c6579f8">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(data<span class="op">=</span> days25_k5, x<span class="op">=</span> <span class="st">'Day_Tickets_Sold'</span>, y <span class="op">=</span> <span class="st">'Total_Revenue'</span>, hue <span class="op">=</span> <span class="st">'Cluster'</span>, palette<span class="op">=</span><span class="st">'tab10'</span>)</span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Scatter Plot of Day Tickets Sold vs. Total Revenue by Cluster'</span>)</span>
@@ -4213,7 +4222,7 @@ memory usage: 14.8+ KB</code></pre>
 </div>
 </div>
 </div>
-<div id="cell-38" class="cell" data-executioninfo="{&quot;elapsed&quot;:190,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703414027,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="6196583d-8e0c-4ce0-f9d6-0c35a49365a3" data-execution_count="45">
+<div id="cell-39" class="cell" data-executioninfo="{&quot;elapsed&quot;:190,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703414027,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="6196583d-8e0c-4ce0-f9d6-0c35a49365a3" data-execution_count="45">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(data <span class="op">=</span> days25_k5, x <span class="op">=</span> <span class="st">'Day_Tickets_Sold'</span>, y <span class="op">=</span> <span class="st">'Gate_Revenue'</span>, hue <span class="op">=</span> <span class="st">'Cluster'</span>, palette<span class="op">=</span><span class="st">'tab10'</span>)</span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Scatter Plot of Day Tickets Sold vs. Gate Revenue by Cluster'</span>)</span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Day Tickets Sold (Z-score)'</span>)</span>
@@ -4227,7 +4236,7 @@ memory usage: 14.8+ KB</code></pre>
 </div>
 </div>
 </div>
-<div id="cell-39" class="cell" data-executioninfo="{&quot;elapsed&quot;:442,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703414475,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="7f1b7281-d984-4b44-ecc8-870da30f15e2" data-execution_count="46">
+<div id="cell-40" class="cell" data-executioninfo="{&quot;elapsed&quot;:442,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703414475,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="7f1b7281-d984-4b44-ecc8-870da30f15e2" data-execution_count="46">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>sns.barplot(data <span class="op">=</span> days25_k5, x<span class="op">=</span><span class="st">'Cluster'</span>, y<span class="op">=</span><span class="st">'Day_Tickets_Sold'</span>)</span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Average Day Tickets Sold per Cluster'</span>)</span>
 <span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Cluster'</span>)</span>
@@ -4241,7 +4250,7 @@ memory usage: 14.8+ KB</code></pre>
 </div>
 </div>
 </div>
-<div id="cell-40" class="cell" data-executioninfo="{&quot;elapsed&quot;:249,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703414731,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="8103ca4a-6349-4f44-d334-b8df63ee710e">
+<div id="cell-41" class="cell" data-executioninfo="{&quot;elapsed&quot;:249,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703414731,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="8103ca4a-6349-4f44-d334-b8df63ee710e">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>sns.barplot(data <span class="op">=</span> days25_k5, x <span class="op">=</span> <span class="st">'Cluster'</span>, y<span class="op">=</span> <span class="st">'International_Visitors'</span>)</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Average International Visitors per Cluster'</span>)</span>
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Cluster'</span>)</span>
@@ -4257,7 +4266,7 @@ memory usage: 14.8+ KB</code></pre>
 </div>
 </div>
 </div>
-<div id="cell-41" class="cell" data-executioninfo="{&quot;elapsed&quot;:79,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703414816,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="ca8d4af6-30ea-4ff0-d6df-91179d1f6af2">
+<div id="cell-42" class="cell" data-executioninfo="{&quot;elapsed&quot;:79,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703414816,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="ca8d4af6-30ea-4ff0-d6df-91179d1f6af2">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>cluster_names <span class="op">=</span> {</span>
 <span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>    <span class="dv">0</span>: <span class="st">"Tourist Heavy, Low Revenue Days"</span>,</span>
@@ -4565,10 +4574,13 @@ memory usage: 14.8+ KB</code></pre>
 <p>“Hot Weather Boost Days”: This cluster would be good to target young adults who are looking for a fun summer day out - either as an escape from the working week or college students looking for a fun day to enjoy their holidays. Targeting young adults who are seeking a summer day makes sense as they are likely looking to make the most of the summer weather as they dont get the chance to enjoy the weather during the regular working/school days. They could target this segment with a young adults beer garden, where visitors can buy tickets to the beer garden with drinks included, as well as the regular park. The beer garden could include a local dj or music artist to increase the “summer day vibes”.</p>
 <p>Lobsterland can use the model to support their overall performance during the season. The model demonstrated the two successful days as “Peak Performance Days”and “Hot Weather Days”, which on the whole are already very successful and are less of a concern to the management. Although there is an opportunity to continue to target or use mass marketing approaches, these are implemented to ensure that the days remain to be successful. In this instance, management can leverage the information to predict these days by increasing staffing and ensuring that their in-park operations and supply of food, beverages and merch is going to meet the increased demand that can be expected during these days. Having this information of the higher peforming, busier days is crucial as they can plan and prepare in adavance to ensure the customer experience is still as high as on a quieter day, where the operations may be under less stress. These days may also require additional security to ensure safety for all the visitors, which would need to be planned for in adavance. Additionally, for the “Hot Weather Boost Days”, they can prepare additional areas for their visitors to cool down, and get out of the heat. For example, they could set up some cooling stations with fans and mist to ensure that everyone stays safe from the sun and still has a great time.</p>
 <p>Alternatively, the clustering showed that there were three clusters of days that were either at average or underperforming. “Lukewarm Local Days”, “Slump Days”, and “Tourist-Heavy, Low Revenue Days”. In these instances, lobsterland can focus on using the previously mentioned, specialized targeting approaches to increase ticket sales and improve revenues. Once these targeting strategies have been implemented, they can continue to follow these metrics to see any improvements in their performance. They would likely need to implement additional tracking methods such as customer surveys or use digital marketing analytics to track improvements. However, on days that they are more confident about being quieter - like the “Slump Days”, with less visitors, they can reduce their staffing as they will likely require less staff to implement all of the operations in lobsterland that day. They would be able to make their operations more efficient across the these days as a result, reducing their costs for the day which may lead to increased profit margins. They can also leverage their employees skillset or comfortability working with international visitors (ex. employees who are bilingual) to ensure they are meeting the needs of the international visitors. Additionally, they could leverage data insights from their food and merch sales to see which products are most favorable with international visitors to ensure they are fully-stocked and adjust prices accordingly.</p>
-<div id="cell-45" class="cell" data-executioninfo="{&quot;elapsed&quot;:141,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703414964,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}">
+</section>
+<section id="conjoint-analysis" class="level1">
+<h1>Conjoint Analysis</h1>
+<div id="cell-47" class="cell" data-executioninfo="{&quot;elapsed&quot;:141,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703414964,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>nightshow <span class="op">=</span> pd.read_csv(<span class="st">'night_show.csv'</span>, keep_default_na<span class="op">=</span><span class="va">False</span>, na_values<span class="op">=</span>[])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-46" class="cell" data-executioninfo="{&quot;elapsed&quot;:251,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415221,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="833a365e-8264-4788-c001-1b04739b6e67" data-execution_count="50">
+<div id="cell-48" class="cell" data-executioninfo="{&quot;elapsed&quot;:251,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415221,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="833a365e-8264-4788-c001-1b04739b6e67" data-execution_count="50">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>nightshow.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="50">
 
@@ -4880,7 +4892,7 @@ memory usage: 14.8+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-47" class="cell" data-executioninfo="{&quot;elapsed&quot;:64,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415278,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="b3fd2b2b-dbfc-4730-c49b-180035da5bed" data-execution_count="51">
+<div id="cell-49" class="cell" data-executioninfo="{&quot;elapsed&quot;:64,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415278,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="b3fd2b2b-dbfc-4730-c49b-180035da5bed" data-execution_count="51">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>nightshow.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="51">
 
@@ -5174,7 +5186,7 @@ memory usage: 14.8+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-48" class="cell" data-executioninfo="{&quot;elapsed&quot;:76,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415356,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="7f2d1cb4-4ec5-4ff5-c420-4f1547666f77" data-execution_count="52">
+<div id="cell-50" class="cell" data-executioninfo="{&quot;elapsed&quot;:76,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415356,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="7f2d1cb4-4ec5-4ff5-c420-4f1547666f77" data-execution_count="52">
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>nightshow.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
@@ -5200,7 +5212,7 @@ memory usage: 6.8+ MB</code></pre>
 </div>
 <p>Numerical: Ratings</p>
 <p>Categorical: Bundle ID, Headliner, Music Atmosphere, Show Length, Peak Decibel Level, Crowding Index, Viewing Zone, Dining Bundle, Re-Entry, Live Host, Charity Tie In</p>
-<div id="cell-50" class="cell" data-executioninfo="{&quot;elapsed&quot;:44,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415404,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="f2a995b4-79dd-4901-f3d3-ce1cfefce832" data-execution_count="53">
+<div id="cell-52" class="cell" data-executioninfo="{&quot;elapsed&quot;:44,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415404,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="f2a995b4-79dd-4901-f3d3-ce1cfefce832" data-execution_count="53">
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>nightshow.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="53">
 <pre><code>Index(['bundleID', 'headliner', 'music_atmosphere', 'show_length',
@@ -5209,7 +5221,7 @@ memory usage: 6.8+ MB</code></pre>
       dtype='object')</code></pre>
 </div>
 </div>
-<div id="cell-51" class="cell" data-executioninfo="{&quot;elapsed&quot;:81,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415488,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}">
+<div id="cell-53" class="cell" data-executioninfo="{&quot;elapsed&quot;:81,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415488,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}">
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>nightshow2 <span class="op">=</span> pd.get_dummies(nightshow, drop_first<span class="op">=</span><span class="va">True</span>, columns <span class="op">=</span> [<span class="st">'headliner'</span>, <span class="st">'music_atmosphere'</span>, <span class="st">'show_length'</span>,</span>
 <span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>       <span class="st">'peak_dB_Level'</span>, <span class="st">'crowding_index'</span>, <span class="st">'viewing_zone'</span>, <span class="st">'dining_bundle'</span>,</span>
@@ -5217,7 +5229,7 @@ memory usage: 6.8+ MB</code></pre>
 </div>
 <p>The numeric input variables should be be dummified as they are actually a categorical representation of an option. The numbers represent a set grouping of an option rather than a continous numeric input, therefore they can be dummified for us to product a logistic regression model.</p>
 <p>If we were to just rank the bundles by average rating, we would not be able to see the difference between the different options within each column on the overall rating. The bundle rating also just shows the rating from one consumers bundle which does not provide any statistical significance. However, the conjoint analysis model allows us to look at each variable, and its different options within that to assess its impact on the consumers rating by accounting for all of the consumers bundle ratings. If we simply ranked the bundles, we would only be able to see the grouped average rating for one consumers opinion, without assessing the indiviual components impact on the average across all consumers. We are able to extract a deeper level of insight on a highly specific level as it relates to each variable, and the differing options provided to the visitors at lobsterland. It allows us to take a large dataset from all consumers, and generate insights across them all to find patterns and trends through our offerings.</p>
-<div id="cell-54" class="cell" data-executioninfo="{&quot;elapsed&quot;:56,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415548,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="3f1d8d3d-de4f-473c-80f7-84b366dca008" data-execution_count="55">
+<div id="cell-56" class="cell" data-executioninfo="{&quot;elapsed&quot;:56,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415548,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="3f1d8d3d-de4f-473c-80f7-84b366dca008" data-execution_count="55">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>nightshow2.head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="55">
 
@@ -5704,7 +5716,7 @@ memory usage: 6.8+ MB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-55" class="cell" data-executioninfo="{&quot;elapsed&quot;:69,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415622,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="879accd3-20c2-42b4-cf25-6653e3e54d8d" data-execution_count="56">
+<div id="cell-57" class="cell" data-executioninfo="{&quot;elapsed&quot;:69,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415622,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="879accd3-20c2-42b4-cf25-6653e3e54d8d" data-execution_count="56">
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>nightshow2.sort_values(by <span class="op">=</span> <span class="st">'ratings'</span>, ascending<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="56">
 
@@ -6215,7 +6227,7 @@ memory usage: 6.8+ MB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-56" class="cell" data-executioninfo="{&quot;elapsed&quot;:31,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415649,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="37e821c6-26b6-4edc-e1ed-3d5f451d897a" data-execution_count="57">
+<div id="cell-58" class="cell" data-executioninfo="{&quot;elapsed&quot;:31,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415649,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="37e821c6-26b6-4edc-e1ed-3d5f451d897a" data-execution_count="57">
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>nightshow2.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="57">
 <pre><code>Index(['bundleID', 'ratings', 'headliner_Drone Light Show',
@@ -6231,7 +6243,7 @@ memory usage: 6.8+ MB</code></pre>
       dtype='object')</code></pre>
 </div>
 </div>
-<div id="cell-57" class="cell" data-executioninfo="{&quot;elapsed&quot;:159,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415812,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="17632e0c-48a8-4641-ce48-bc606e934aed">
+<div id="cell-59" class="cell" data-executioninfo="{&quot;elapsed&quot;:159,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415812,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="17632e0c-48a8-4641-ce48-bc606e934aed">
 <div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> nightshow2[[<span class="st">'headliner_Drone Light Show'</span>,</span>
 <span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>       <span class="st">'headliner_Fireworks'</span>, <span class="st">'headliner_Live Musical'</span>,</span>
 <span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>       <span class="st">'music_atmosphere_Pop Soundtrack'</span>, <span class="st">'show_length_70'</span>, <span class="st">'show_length_110'</span>,</span>
@@ -6664,13 +6676,13 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </a></style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LinearRegression()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" checked=""><label for="sk-estimator-id-1" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>LinearRegression</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.linear_model.LinearRegression.html">?<span>Documentation for LinearRegression</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted"><pre>LinearRegression()</pre></div> </div></div></div></div>
 </div>
 </div>
-<div id="cell-58" class="cell" data-executioninfo="{&quot;elapsed&quot;:30,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415847,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="2a7ed669-6267-445d-9ad3-be33302995e1" data-execution_count="59">
+<div id="cell-60" class="cell" data-executioninfo="{&quot;elapsed&quot;:30,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415847,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="2a7ed669-6267-445d-9ad3-be33302995e1" data-execution_count="59">
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>regressor.intercept_</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="59">
 <pre><code>np.float64(4.953266755574281)</code></pre>
 </div>
 </div>
-<div id="cell-59" class="cell" data-executioninfo="{&quot;elapsed&quot;:54,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415907,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="5435a507-6cbd-4971-98b2-8da8eb1c11e6">
+<div id="cell-61" class="cell" data-executioninfo="{&quot;elapsed&quot;:54,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1759703415907,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:240}" data-outputid="5435a507-6cbd-4971-98b2-8da8eb1c11e6">
 <div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>nightshow2_coef <span class="op">=</span> pd.DataFrame(regressor.coef_, X.columns, columns<span class="op">=</span>[<span class="st">'Coefficient'</span>])</span>
 <span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>nightshow2_coef</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="60">
@@ -7042,6 +7054,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <p>Additionally, the coefficients showed that out of all the viewing zones, the visitors clearly preferred any option other than the sandy beach, with all other viewing zones increasing the average rating. This may be because the visitors have a worse view of the event from the beach, or because they prefer to stay away from the sand when they are visiting lobsterland. For the dinning bundles, we can see that out of all the options, none of them lead to either a noticable increase or decrease in the average rating. This may be because the visitors are less focused on the food and beverages available when they are coming for the night show, as they have already eaten before attending. Finally, the charity tie-in can cause a small increase in the average rating by 0.24. This shows that visitors like the addition of the charity tie-in, but it does not drastiically change their experience of visiting the night show.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -160,7 +160,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#part-ii-marketing-mix-modeling-with-an-interaction-term" id="toc-part-ii-marketing-mix-modeling-with-an-interaction-term" class="nav-link active" data-scroll-target="#part-ii-marketing-mix-modeling-with-an-interaction-term">Part II: Marketing Mix Modeling with an Interaction Term</a></li>
+  <li><a href="#working-with-time-series-data" id="toc-working-with-time-series-data" class="nav-link active" data-scroll-target="#working-with-time-series-data">Working with Time Series Data</a></li>
+  <li><a href="#marketing-mix-modeling-with-an-interaction-term" id="toc-marketing-mix-modeling-with-an-interaction-term" class="nav-link" data-scroll-target="#marketing-mix-modeling-with-an-interaction-term">Marketing Mix Modeling with an Interaction Term</a></li>
   </ul>
 </nav>
     </div>
@@ -193,9 +194,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.formula.api <span class="im">as</span> smf</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<section id="working-with-time-series-data" class="level1">
+<h1>Working with Time Series Data</h1>
 <p>The company I picked is “The a2 Milk Company Limited ADR”, with the ticker ACOPY. I chose this company as they are an NZ company who sell a specific type of a2 protein milk that I used to purchase when I was living in NZ.</p>
 <p>Download ACOPY data from Nasdaq website</p>
-<div id="cell-4" class="cell" data-executioninfo="{&quot;elapsed&quot;:118,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927428243,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="c358c891-d068-48b5-eecc-4a1ac9b37128" data-execution_count="2">
+<div id="cell-5" class="cell" data-executioninfo="{&quot;elapsed&quot;:118,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927428243,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="c358c891-d068-48b5-eecc-4a1ac9b37128" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>a2data <span class="op">=</span> pd.read_csv(<span class="st">'HistoricalData_1763422872044.csv'</span>, index_col<span class="op">=</span><span class="st">'Date'</span>, parse_dates<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>a2data <span class="op">=</span> a2data.rename(columns<span class="op">=</span>{<span class="st">'Close/Last'</span>: <span class="st">'Close'</span>})</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>a2data.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -475,7 +478,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-<div id="cell-5" class="cell" data-executioninfo="{&quot;elapsed&quot;:13,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927428292,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="a1854233-4b7b-4972-96f3-465cb6e9f233" data-execution_count="3">
+<div id="cell-6" class="cell" data-executioninfo="{&quot;elapsed&quot;:13,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927428292,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="a1854233-4b7b-4972-96f3-465cb6e9f233" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>a2data.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
@@ -493,7 +496,7 @@ memory usage: 11.7+ KB</code></pre>
 </div>
 </div>
 <p>Yes, the dataframe is indexed by time values, as the info output above demonstrates that the data has 249 date entries between 2025-11-14 and 2024-11-18.</p>
-<div id="cell-7" class="cell" data-executioninfo="{&quot;elapsed&quot;:532,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927428826,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="3dec34c9-06e4-4925-9c6c-ddf48ebf0550" data-execution_count="4">
+<div id="cell-8" class="cell" data-executioninfo="{&quot;elapsed&quot;:532,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927428826,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="3dec34c9-06e4-4925-9c6c-ddf48ebf0550" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>stockvolume <span class="op">=</span> a2data.plot()</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>stockvolume.set_title(<span class="st">'Stock Volume Over Time'</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>stockvolume.set_xlabel(<span class="st">'Date'</span>)</span>
@@ -508,7 +511,7 @@ memory usage: 11.7+ KB</code></pre>
 </div>
 </div>
 <p>This graph is attempting to show the volume that the company produced over the given period of time. It is a difficult graph to interpret because there are gaps between segements of the data, making it difficult to interpret the output.It would be easier to understand if the data was complete so that we could see one continuous line of the data.</p>
-<div id="cell-9" class="cell" data-executioninfo="{&quot;elapsed&quot;:384,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927429216,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="fd4253c1-cc50-43a5-83de-1238ca367f57" data-execution_count="5">
+<div id="cell-10" class="cell" data-executioninfo="{&quot;elapsed&quot;:384,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927429216,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="fd4253c1-cc50-43a5-83de-1238ca367f57" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>a2data[<span class="st">'Close'</span>] <span class="op">=</span> a2data[<span class="st">'Close'</span>].replace(<span class="st">'[$,]'</span>, <span class="st">''</span>, regex<span class="op">=</span><span class="va">True</span>).astype(<span class="bu">float</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>a2data[<span class="st">'Close'</span>].plot()</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Close Price Over Time'</span>)</span>
@@ -525,7 +528,7 @@ memory usage: 11.7+ KB</code></pre>
 </div>
 <p>From this graph we can see the closing price plotted on the y-axis and the date plotted on the x-axis. The data shows a general upward trend in the closing price where it began at $3.0 in November 2024, and current closes at around $6.0 in November 2024. The data fluctuates over this period of time, but there are two notable increases in price between march and april 2025, from $3.50 to $5.50. Another large increase occurs from september to october 2025 where the price went from $5.00 to $6.00.</p>
 <p>This graph is much easier to interpret because the data is complete, meaning we can see one continuous line from throughout the 12 month period, allowing us to analyze the overall trend and any major changes that occur.</p>
-<div id="cell-11" class="cell" data-executioninfo="{&quot;elapsed&quot;:61,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927888727,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="fa55c46a-fe98-4926-f346-2d82d0a5489b" data-execution_count="30">
+<div id="cell-12" class="cell" data-executioninfo="{&quot;elapsed&quot;:61,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927888727,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="fa55c46a-fe98-4926-f346-2d82d0a5489b" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>average_close_price <span class="op">=</span> a2data[<span class="st">'Close'</span>].mean()</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>a2data[<span class="st">'Close'</span>].plot(label<span class="op">=</span><span class="st">'Close Price'</span>)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -544,7 +547,7 @@ memory usage: 11.7+ KB</code></pre>
 </div>
 </div>
 <p>This horizontal line showing the average price allows us to see the period of time within the last 12 months where the closing period was below and above average. This base line average price line indicates how the a close price at any given time throughout the last 12 months compares with the average, indicating its performance.</p>
-<div id="cell-13" class="cell" data-executioninfo="{&quot;elapsed&quot;:107,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927429815,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="21f61d61-452f-466d-b5b8-0a6f99c9361e" data-execution_count="7">
+<div id="cell-14" class="cell" data-executioninfo="{&quot;elapsed&quot;:107,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927429815,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="21f61d61-452f-466d-b5b8-0a6f99c9361e" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>a2data[<span class="st">'daily_change'</span>] <span class="op">=</span> a2data[<span class="st">'Close'</span>].diff()</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>a2data.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
@@ -830,7 +833,7 @@ memory usage: 11.7+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-14" class="cell" data-executioninfo="{&quot;elapsed&quot;:298,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763929561386,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="71c4f642-18d2-42b7-dac1-c98e038f9c74" data-execution_count="33">
+<div id="cell-15" class="cell" data-executioninfo="{&quot;elapsed&quot;:298,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763929561386,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="71c4f642-18d2-42b7-dac1-c98e038f9c74" data-execution_count="33">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>a2data[<span class="st">'daily_change'</span>].plot(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Daily Change in Close Price Over Time'</span>)</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Date'</span>)</span>
@@ -847,7 +850,7 @@ memory usage: 11.7+ KB</code></pre>
 </div>
 <p>This graph allows us to see the daily flucations to gain an understanding of the magnitude and direction for the changes in price each day, which is not as clearly understood in the closing price over time plot. The original plot shows the price and trends over time, while this plot with the daily change focuses purely on volatility of the price.</p>
 <p>The periods that showed the most volatility and prominent price changes were between March-April 2025. During this period there are daily price changes ranging from either -0.50 and +0.80 each respective day. This corresponds with a major upward trend in the closing price. A similar trend occurs between September-October 2025, where there is another increase in the daily closing price, but the changes here only range from -0.4 to +0.4. Additionally, there are also periods where the change is close to or exacty 0. This occurs in December - January 2025 and July - August 2025. These time periods represent times of stability and low price movement</p>
-<div id="cell-16" class="cell" data-executioninfo="{&quot;elapsed&quot;:593,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927430459,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="baa32793-cc6c-424d-d8e8-93898d50d6ba" data-execution_count="8">
+<div id="cell-17" class="cell" data-executioninfo="{&quot;elapsed&quot;:593,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927430459,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="baa32793-cc6c-424d-d8e8-93898d50d6ba" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>a2data <span class="op">=</span> a2data.sort_index()</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>plt <span class="op">=</span> a2data.loc[<span class="st">'2024-11-20'</span>:<span class="st">'2024-12-20'</span>, <span class="st">'Close'</span>].plot()</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>plt.set_title(<span class="st">'Daily Close Price from 2024-11-20 to 2024-12-20'</span>)</span>
@@ -865,7 +868,7 @@ memory usage: 11.7+ KB</code></pre>
 </div>
 </div>
 <p>This plot gives a micro view at the closing price for on a daily level, for the specified timeframe. This allows us to see minor changes that occur day-to-day that we were not able to closely analyze on the previous graph. Throughout this month, we can see that on a daily level, the biggest change in the closing price was about $0.30, with the entire month fluctuating between just below $3.20 and $3.70. Based on this snapshot, and the other graph, there is no clear movements or trends that would seem unusual.</p>
-<div id="cell-18" class="cell" data-executioninfo="{&quot;elapsed&quot;:601,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927431107,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="05ecfa0c-f408-4b6c-eed8-8af9ce5467bf" data-execution_count="9">
+<div id="cell-19" class="cell" data-executioninfo="{&quot;elapsed&quot;:601,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927431107,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="05ecfa0c-f408-4b6c-eed8-8af9ce5467bf" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>a2data <span class="op">=</span> a2data.sort_index()</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>plt <span class="op">=</span> a2data.loc[<span class="st">'2024-11-20'</span>:<span class="st">'2024-12-20'</span>, <span class="st">'Close'</span>].plot(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>), color<span class="op">=</span><span class="st">'green'</span>, style<span class="op">=</span><span class="st">'--'</span>)</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>plt.set_title(<span class="st">'Daily Close Price from 2024-11-20 to 2024-12-20'</span>)</span>
@@ -882,7 +885,7 @@ memory usage: 11.7+ KB</code></pre>
 </div>
 </div>
 </div>
-<div id="cell-19" class="cell" data-executioninfo="{&quot;elapsed&quot;:131,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927431245,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="c287aa4d-93dc-40a8-c3b2-5284d67c4ab2" data-execution_count="10">
+<div id="cell-20" class="cell" data-executioninfo="{&quot;elapsed&quot;:131,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927431245,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="c287aa4d-93dc-40a8-c3b2-5284d67c4ab2" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>a2data[<span class="st">'MA_20'</span>] <span class="op">=</span> a2data[<span class="st">'Close'</span>].rolling(window<span class="op">=</span><span class="dv">20</span>).mean()</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>a2data.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
@@ -1175,7 +1178,7 @@ memory usage: 11.7+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-20" class="cell" data-executioninfo="{&quot;elapsed&quot;:425,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927431701,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="9c1fdbb7-dcc7-481d-d882-ff3cdcdfd732" data-execution_count="11">
+<div id="cell-21" class="cell" data-executioninfo="{&quot;elapsed&quot;:425,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927431701,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="9c1fdbb7-dcc7-481d-d882-ff3cdcdfd732" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> a2data[[<span class="st">'Close'</span>, <span class="st">'MA_20'</span>]].plot(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">'Daily Close Price vs. 20-Period Moving Average'</span>)</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'Date'</span>)</span>
@@ -1191,7 +1194,7 @@ memory usage: 11.7+ KB</code></pre>
 </div>
 </div>
 </div>
-<div id="cell-21" class="cell" data-executioninfo="{&quot;elapsed&quot;:82,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927431787,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="2f34d348-4f24-4160-a94a-1a4492b08235" data-execution_count="12">
+<div id="cell-22" class="cell" data-executioninfo="{&quot;elapsed&quot;:82,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927431787,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="2f34d348-4f24-4160-a94a-1a4492b08235" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>a2data[<span class="st">'MA_75'</span>] <span class="op">=</span> a2data[<span class="st">'Close'</span>].rolling(window<span class="op">=</span><span class="dv">75</span>).mean()</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>a2data.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="12">
@@ -1491,7 +1494,7 @@ memory usage: 11.7+ KB</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-22" class="cell" data-executioninfo="{&quot;elapsed&quot;:452,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927432244,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="7eb1dbe1-1f52-4ff2-d867-9b325a6804f8" data-execution_count="13">
+<div id="cell-23" class="cell" data-executioninfo="{&quot;elapsed&quot;:452,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927432244,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="7eb1dbe1-1f52-4ff2-d867-9b325a6804f8" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>a2data[[<span class="st">'Close'</span>, <span class="st">'MA_75'</span>]].plot(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Daily Close Price vs. 20-Period Moving Average'</span>)</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Date'</span>)</span>
@@ -1510,7 +1513,7 @@ memory usage: 11.7+ KB</code></pre>
 <p>The two plots demonstrates differences based on the time frames on the moving averages. The 20-day moving average is a more short-term (less than a month), meaning it will be more responsive to the recent price changes and will generally track closer of the actual data points. The 75-day moving average is a more medium-term (closer to 3 months), meaning that it is less responsive to recent price changes and will plot a smoother trend. This is reflected in the plots above, with the 20-day moving average following more closely, reflecting a higher sensitivity to the datas changes, whereas the 75-day moving average plots closer to a trend line, reflecting lower sensitvity and filtering out major noise.</p>
 <p>The 20-day average will reflect a quicker indication of changes due to its higher sensitivity, meaning it will be better at identifying short-term trends. However, it is prone to outliers or standalone values adding noise and false indications to its trends, meaning it is less reliable for long-term decisions.</p>
 <p>The 75-day average will do the opposite, as it filters out the noise providing more reliable signals of trend changes making it useful for strategic decision making. However, due to its longer lead time and lower sensitvity, it can be delayed to reflect significant changes, meaning it is less useful for short-term trading decisions.</p>
-<div id="cell-24" class="cell" data-executioninfo="{&quot;elapsed&quot;:815,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927433094,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="ec6a6b84-1fd9-4780-d6ff-e9019948be23" data-execution_count="14">
+<div id="cell-25" class="cell" data-executioninfo="{&quot;elapsed&quot;:815,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927433094,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="ec6a6b84-1fd9-4780-d6ff-e9019948be23" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>a2data[<span class="st">'MA_20_std'</span>] <span class="op">=</span> a2data[<span class="st">'Close'</span>].rolling(window<span class="op">=</span><span class="dv">50</span>).std()</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>a2data[<span class="st">'MA_20_std'</span>].plot(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'20-Period Rolling Standard Deviation of Close Price'</span>)</span>
@@ -1527,7 +1530,7 @@ memory usage: 11.7+ KB</code></pre>
 </div>
 </div>
 <p>The rolling standard deviation plot is produced over a 50-day moving average. From the graph, we can see there are two significant peaks where the standard deviation is large relative to the other data. Firstly, between march 2025 and june 2025, we can see the standard deviation grow from just over 0.1 to 0.8, before settling back down to 0.3. The standard deviation floats between 0.3 and just below 0.2 until september 2025, where it increases to just over 0.5 in between september and october, until it decreases back down to below 0.2 in november 2025. This shows that in the last 12 months, based on the 50-day moving averages there are two clear windows of deviation in the closing price. This is significant becauses the trend remains clear over this 50-day period.</p>
-<div id="cell-26" class="cell" data-executioninfo="{&quot;elapsed&quot;:24,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927433124,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="b2b981c9-48ca-4a3f-ef54-453b78046ac7" data-execution_count="15">
+<div id="cell-27" class="cell" data-executioninfo="{&quot;elapsed&quot;:24,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927433124,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="b2b981c9-48ca-4a3f-ef54-453b78046ac7" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>a2data_quarterly_mean <span class="op">=</span> a2data[<span class="st">'Close'</span>].resample(<span class="st">'QE'</span>).mean()</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Quarterly Mean Close Prices:"</span>)</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a2data_quarterly_mean.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1542,7 +1545,7 @@ Date
 Freq: QE-DEC, Name: Close, dtype: float64</code></pre>
 </div>
 </div>
-<div id="cell-27" class="cell" data-executioninfo="{&quot;elapsed&quot;:416,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927433545,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="e921ab1e-2e55-4f03-93c3-6ea35a6bf7f7" data-execution_count="16">
+<div id="cell-28" class="cell" data-executioninfo="{&quot;elapsed&quot;:416,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927433545,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="e921ab1e-2e55-4f03-93c3-6ea35a6bf7f7" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>a2data_quarterly_mean.plot(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Quarterly Mean Close Prices'</span>)</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Date'</span>)</span>
@@ -1558,9 +1561,10 @@ Freq: QE-DEC, Name: Close, dtype: float64</code></pre>
 </div>
 </div>
 <p>An example of why someone might want to resample a time series data is in people analytics. People analytics is a function of analytics in business where they look at the compensation, performance and productivity of their employees. A specific example of how a resample might be used is to look at their employees average productivity, tracked by their hours worked (not a perfect measure, but reflects the idea). A company might want to look back over the past 10 years of data, but resample it to quarters from weeks to see the trends of what quarters their employees are working more as a starting point for further analysis. By adjusting the time frame thery are able to either get a macro or micro view on the variable they are plotting over time.</p>
-<section id="part-ii-marketing-mix-modeling-with-an-interaction-term" class="level2">
-<h2 class="anchored" data-anchor-id="part-ii-marketing-mix-modeling-with-an-interaction-term">Part II: Marketing Mix Modeling with an Interaction Term</h2>
-<div id="cell-30" class="cell" data-executioninfo="{&quot;elapsed&quot;:37,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927433627,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="a2e81fab-a27c-4d25-b9ca-d2222e41126c" data-execution_count="17">
+</section>
+<section id="marketing-mix-modeling-with-an-interaction-term" class="level1">
+<h1>Marketing Mix Modeling with an Interaction Term</h1>
+<div id="cell-31" class="cell" data-executioninfo="{&quot;elapsed&quot;:37,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927433627,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="a2e81fab-a27c-4d25-b9ca-d2222e41126c" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>lobstermarketing <span class="op">=</span> pd.read_csv(<span class="st">'marketing_campaign_lobster.csv'</span>)</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>lobstermarketing.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="17">
@@ -1825,7 +1829,7 @@ Freq: QE-DEC, Name: Close, dtype: float64</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-31" class="cell" data-executioninfo="{&quot;elapsed&quot;:37,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927433715,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="ad391548-a0ba-48fd-b94e-43c10b428260" data-execution_count="18">
+<div id="cell-32" class="cell" data-executioninfo="{&quot;elapsed&quot;:37,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927433715,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="ad391548-a0ba-48fd-b94e-43c10b428260" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>lobstermarketing[<span class="st">'total_spending'</span>] <span class="op">=</span> lobstermarketing[<span class="st">'influencer_spend'</span>] <span class="op">+</span> lobstermarketing[<span class="st">'email_spend'</span>] <span class="op">+</span> lobstermarketing[<span class="st">'radio_spend'</span>]</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>lobstermarketing.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="18">
@@ -2096,7 +2100,7 @@ Freq: QE-DEC, Name: Close, dtype: float64</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-32" class="cell" data-executioninfo="{&quot;elapsed&quot;:95,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927433814,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="46449da2-5aeb-4c09-c458-fc787c0e53b9" data-execution_count="19">
+<div id="cell-33" class="cell" data-executioninfo="{&quot;elapsed&quot;:95,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927433814,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="46449da2-5aeb-4c09-c458-fc787c0e53b9" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>lobstermarketing.corr()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="19">
 
@@ -2368,7 +2372,7 @@ Freq: QE-DEC, Name: Close, dtype: float64</code></pre>
 </div>
 <p>The correlation between the total spending and conversions is 0.88, reflecting a strong positive correlation - meaning that as the total spending increases, so does the conversions.</p>
 <p>However, we cannot conclude that more ad spending will lead to more conversions, as total spends is a sum of the 3 different types. This means that different functions of the spending will influence the conversions. For example, the influencer and email spend have higher correlation with conversions with 0.76 and 0.59 respectively, while radio spend only has a correlation of 0.15.</p>
-<div id="cell-34" class="cell" data-executioninfo="{&quot;elapsed&quot;:46,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927433863,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="9739e6e4-3936-405b-ee17-8eb9da010db0" data-execution_count="20">
+<div id="cell-35" class="cell" data-executioninfo="{&quot;elapsed&quot;:46,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927433863,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="9739e6e4-3936-405b-ee17-8eb9da010db0" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>lobstermarketing[[<span class="st">'email_spend'</span>, <span class="st">'radio_spend'</span>, <span class="st">'influencer_spend'</span>]].corr()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="20">
 
@@ -2615,7 +2619,7 @@ Freq: QE-DEC, Name: Close, dtype: float64</code></pre>
 </div>
 </div>
 <p>Based on the correlations between the individual spending categories, there are no correlations between these variables that would stop us from using them together in a linear model.</p>
-<div id="cell-36" class="cell" data-executioninfo="{&quot;elapsed&quot;:1314,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927435181,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="c4b50644-66a6-4cf3-a1b2-ce822f4f4e61" data-execution_count="21">
+<div id="cell-37" class="cell" data-executioninfo="{&quot;elapsed&quot;:1314,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927435181,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="c4b50644-66a6-4cf3-a1b2-ce822f4f4e61" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>model_formula <span class="op">=</span> <span class="st">'conversions ~ influencer_spend + email_spend + radio_spend'</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> smf.ols(formula<span class="op">=</span>model_formula, data<span class="op">=</span>lobstermarketing)</span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> model.fit()</span>
@@ -2652,10 +2656,10 @@ Notes:
 </div>
 <p>The p-value of the F-statistic is 1.80e-78, which is a very small numbers. Based on statistical significance, this is a very low p-value which would be less than the typical beta threshold of 0.05 for the F-statistic. This mns that the predictive variables of each type of ad spend do a better job at predicting the conversions than could be done elsewise.</p>
 <p>On an individual level, the influencer and email spends both have p-values shown as 0.000, meaning that they are also below the typical 0.05 beta threshold. This means that these values are statistically significant and are good predictors of the conversions. However, radio spend has a p-value of 0.430, which is above the 0.05 threshold, meaning that it is not a great predictor of the conversions.</p>
-<div id="cell-38" class="cell" data-executioninfo="{&quot;elapsed&quot;:55,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927435239,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-execution_count="22">
+<div id="cell-39" class="cell" data-executioninfo="{&quot;elapsed&quot;:55,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927435239,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>lobstermarketing[<span class="st">'email_spend_group'</span>] <span class="op">=</span> pd.qcut(lobstermarketing[<span class="st">'email_spend'</span>], q<span class="op">=</span><span class="dv">3</span>, labels<span class="op">=</span>[<span class="st">'low'</span>, <span class="st">'medium'</span>, <span class="st">'high'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-39" class="cell" data-executioninfo="{&quot;elapsed&quot;:40,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927435284,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="707c28e5-a41f-41de-984f-9130d05d825f" data-execution_count="23">
+<div id="cell-40" class="cell" data-executioninfo="{&quot;elapsed&quot;:40,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927435284,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="707c28e5-a41f-41de-984f-9130d05d825f" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>lobstermarketing.head(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="23">
 
@@ -2931,7 +2935,7 @@ Notes:
   </div>
 </div>
 </div>
-<div id="cell-40" class="cell" data-executioninfo="{&quot;elapsed&quot;:3737,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927439025,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="54a4ab57-d216-4b85-f199-9384e99dba9d" data-execution_count="24">
+<div id="cell-41" class="cell" data-executioninfo="{&quot;elapsed&quot;:3737,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927439025,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="54a4ab57-d216-4b85-f199-9384e99dba9d" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>sns.lmplot(</span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>lobstermarketing,</span>
@@ -2958,10 +2962,10 @@ Notes:
 </div>
 </div>
 <p>The different slopes show the impact that the email spend has on the conversion. Each line reflects the impact that the varying levels of email spend has on the conversions. High spend has the steepest curve, medium has a moderate curve and the low spend has a very steady curve. These demonstrate visual evidence suggesting a clear interaction and influence of the email spend. The lines would present closer to horizontal if there was no interaction, which would show that the higher spend does not influence the conversions.</p>
-<div id="cell-42" class="cell" data-executioninfo="{&quot;elapsed&quot;:4,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927439034,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-execution_count="25">
+<div id="cell-43" class="cell" data-executioninfo="{&quot;elapsed&quot;:4,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927439034,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>lobstermarketing[<span class="st">'interaction'</span>] <span class="op">=</span> lobstermarketing[<span class="st">'influencer_spend'</span>] <span class="op">*</span> lobstermarketing[<span class="st">'email_spend'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-43" class="cell" data-executioninfo="{&quot;elapsed&quot;:62,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927439100,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="5fa82501-dcb6-41a7-872a-47f2fac0563d" data-execution_count="26">
+<div id="cell-44" class="cell" data-executioninfo="{&quot;elapsed&quot;:62,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927439100,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="5fa82501-dcb6-41a7-872a-47f2fac0563d" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>lobstermarketing.head(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="26">
 
@@ -3243,7 +3247,7 @@ Notes:
   </div>
 </div>
 </div>
-<div id="cell-44" class="cell" data-executioninfo="{&quot;elapsed&quot;:43,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927439149,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="1f6eb1dd-8ed5-4746-c787-7e037b3c6f3c" data-execution_count="27">
+<div id="cell-45" class="cell" data-executioninfo="{&quot;elapsed&quot;:43,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927439149,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="1f6eb1dd-8ed5-4746-c787-7e037b3c6f3c" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>model_formula2 <span class="op">=</span> <span class="st">'conversions ~ influencer_spend + email_spend + interaction'</span></span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>model2 <span class="op">=</span> smf.ols(formula<span class="op">=</span>model_formula2, data<span class="op">=</span>lobstermarketing)</span>
 <span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>results2 <span class="op">=</span> model2.fit()</span>
@@ -3281,7 +3285,7 @@ strong multicollinearity or other numerical problems.</code></pre>
 </div>
 </div>
 <p>The p-values for these predictors are all below the 0.05 threshold, meaning they all hold statistical significance towards this model.</p>
-<div id="cell-46" class="cell" data-executioninfo="{&quot;elapsed&quot;:75,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763928409659,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="e17607c6-80a5-4287-f12d-b477f518d8bd" data-execution_count="32">
+<div id="cell-47" class="cell" data-executioninfo="{&quot;elapsed&quot;:75,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763928409659,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="e17607c6-80a5-4287-f12d-b477f518d8bd" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>model_formula3 <span class="op">=</span> <span class="st">'conversions ~ influencer_spend + email_spend'</span></span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>model3 <span class="op">=</span> smf.ols(formula<span class="op">=</span>model_formula3, data<span class="op">=</span>lobstermarketing)</span>
 <span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>results3 <span class="op">=</span> model3.fit()</span>
@@ -3316,7 +3320,7 @@ Notes:
 </div>
 </div>
 <p>The r-squared value for the model with the interaction variables is 0.954, which is higher than the r-squared value in the model that did not have the interaction variable which is 0.902. This suggests that the inclusion of the interaction term explains more of the data as it explains a larger percentage of variation in the dependent variable. However, with a r-squared of 0.902, this is already a high-performing model, which maY mean the inclusion of the interaction variable leads to overfitting of the data to the model.</p>
-<div id="cell-48" class="cell" data-executioninfo="{&quot;elapsed&quot;:15,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927439230,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="e244f516-cd11-4ec7-f071-4c99789e91b3" data-execution_count="29">
+<div id="cell-49" class="cell" data-executioninfo="{&quot;elapsed&quot;:15,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1763927439230,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="e244f516-cd11-4ec7-f071-4c99789e91b3" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>prediction_df <span class="op">=</span> pd.DataFrame({</span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'influencer_spend'</span>: [<span class="dv">100</span>],</span>
 <span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'email_spend'</span>: [<span class="dv">50</span>]</span>
