@@ -5,3 +5,7 @@ listing:
   type: grid
   fields: [title, image]
 ---
+
+This page contains my assignments for the Marketing Analytics course (AD654) at Boston University. The assignments cover various topics in marketing analytics, including regression analysis, segmentation, conjoint analysis, A/B testing, and time series analysis.
+
+---
