@@ -36,12 +36,12 @@ My goal is to use these tools to make data more human — helping organizations 
 </div>
 
 <div style="text-align: center; font-size: 1.1em; line-height: 1.8;">
-  <p><strong>Rugby:</strong> All Blacks 🏉</p>
-  <p><strong>Super Rugby:</strong> Auckland Blues 💙</p>
-  <p><strong>NFL:</strong> New England Patriots 🏈</p>
+  <p><strong>Rugby:</strong> All Blacks ⚫🏉</p>
+  <p><strong>Super Rugby:</strong> Auckland Blues 💙🏉</p>
+  <p><strong>NFL:</strong> New England Patriots 🏈🔴🔵⚪</p>
   <p><strong>NHL:</strong> Boston Bruins 🏒🐻</p>
   <p><strong>NBA:</strong> Boston Celtics ☘️🏀</p>
-  <p><strong>MLB:</strong> Boston Red Sox ⚾️</p>
+  <p><strong>MLB:</strong> Boston Red Sox 🅱️⚾️</p>
 </div>
 
 ---
@@ -63,20 +63,6 @@ My goal is to use these tools to make data more human — helping organizations 
 ---
 
 5.
-
----
-
-# Photo Gallery
-
-:::{.quarto-figure-center}
-![Celebrating my Graduation from Boston University's DeWolfe Boathouse, May 2025](photos/gradpic.jpg){width=400px}
-:::
-
----
-
-:::{.quarto-figure-center}
-![Preparing for the Inter-Collegiate Rowing Association (IRA) National Championships, May 2025](photos/trainingimage.jpg){width=400px}
-:::
 
 ---
 
