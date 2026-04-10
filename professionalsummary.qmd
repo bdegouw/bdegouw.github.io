@@ -9,46 +9,26 @@ format:
     code-copy: true
 ---
 
-[Bowen de Gouw - Resume (PDF)](documents/BdeGouw_Resume.pdf){target="_blank"}
+<div style="text-align: center; margin-bottom: 20px;">
+  <a href="documents/BdeGouw_Resume.pdf" target="_blank" download>
+    Bowen de Gouw - Resume (PDF)
+  </a>
+</div>
 
-
-## BELOW IS A DEMO OF WHAT I AM PLANNING TO BUILD
-
-## 💼 Professional Experience
-
-### Consulting Intern — *Recombinators, Inc. 5000 Company*  
-**Remote / Austin, TX | June – August 2024**  
-- Spearheaded development of a business model for a medical clinic start-up in an emerging health sector.  
-- Led six initiatives: stakeholder bios, market research, tech/vendor vetting, financial model updates, and SWOT-based location analysis.  
-- Designed executive slide decks and presented weekly to C-suite stakeholders.  
-- Owned dedicated workstreams, ensuring project alignment and on-time delivery.  
-
-### Business Development Intern — *Bayleys Realty Group (Auckland, New Zealand)*  
-**June – August 2022**  
-- Partnered with Data Insights team to produce Bayleys’ 2022 **Co-Working+ Space Report**.  
-- Transitioned lease data for 200+ commercial properties during major client onboarding.  
-- Conducted nationwide data analysis for commercial and residential portfolios.  
-
----
-
-## 🎓 Academic Projects
-
-### Associate Consultant (SI360 Team) — *FlyWire*  
-**Boston, MA | Jan – May 2024**  
-- Consulted for a global fintech company specializing in international student payments.  
-- Delivered insights on competitive positioning in China through research and interviews.  
-- Presented findings directly to the **SVP of Strategy & Corporate Development**.  
-
-### Cross-Functional Core — *Questrom School of Business*  
-**Boston, MA | Aug – Dec 2023**  
-- Collaborated with a nine-person team to develop a go-to-market strategy for a sports start-up.  
-- Supervised analytics and operations: market sizing, supply chain design, and risk modeling.  
-- Delivered weekly presentations and refined final investor pitch through iterative feedback.  
-
----
-
-## 🧰 Skills & Tools
-**Technical:** Python • SQL • R (RStudio) • Power BI • Excel • Google Analytics  
+<object
+  data="documents/BdeGouw_Resume.pdf"
+  type="application/pdf"
+  width="100%"
+  height="1000px"
+  style="border: 1px solid #ddd; border-radius: 8px;"
+>
+  <p>
+    Your browser can’t display the PDF inline.
+    <a href="documents/BdeGouw_Resume.pdf" target="_blank" download>
+      Download the resume here.
+    </a>
+  </p>
+</object>
 
 ---
 
