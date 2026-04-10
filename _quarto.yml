@@ -19,6 +19,8 @@ website:
             href: marketing_analytics.qmd
       - href: blog.qmd
         text: Blog
+      - href: gallery.qmd
+        text: Photo Gallery
       - href: contact.qmd
         text: Contact Me
   search: false
