@@ -7,67 +7,44 @@ format:
     toc: false
     smooth-scroll: true
     code-copy: true
-    page-layout: full
 ---
 
 <style>
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
-body {
-  margin: 0;
-}
-
-main.content {
-  max-width: 100% !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-.quarto-title-block {
-  display: none !important;
-}
-
-.resume-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+.resume-link {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .resume-frame {
-  flex: 1;
   width: 100%;
-  min-height: 90vh;
+  height: 1000px;
   border: none;
-}
-
-.contact-footer {
-  text-align: center;
-  padding: 16px;
-  font-style: italic;
-  border-top: 1px solid #ddd;
-  background-color: #fff;
-}
-
-.contact-footer a {
-  text-decoration: none;
+  border-radius: 8px;
 }
 </style>
 
-<div class="resume-container">
-  <iframe
-    src="documents/BdeGouw_Resume.pdf"
-    class="resume-frame">
-  </iframe>
+<a
+  href="documents/BdeGouw_Resume.pdf"
+  class="resume-link"
+  target="_blank"
+  download>
+  Download Resume (PDF)
+</a>
 
-  <div class="contact-footer">
-    <strong>
-      <a href="https://www.linkedin.com/in/bowen-de-gouw" target="_blank">LinkedIn</a> ·
-      <a href="https://github.com/bdegouw" target="_blank">GitHub</a> ·
-      <a href="mailto:bdegouw@bu.edu">bdegouw@bu.edu</a>
-    </strong>
-  </div>
+<iframe
+  src="documents/BdeGouw_Resume.pdf#page=1&navpanes=0&toolbar=0&scrollbar=0"
+  class="resume-frame">
+</iframe>
+
+---
+
+<div style="text-align: center; font-style: italic; margin-top: 40px;">
+  <strong>
+    <a href="https://www.linkedin.com/in/bowen-de-gouw" target="_blank">LinkedIn</a> ·
+    <a href="https://github.com/bdegouw" target="_blank">GitHub</a> ·
+    <a href="mailto:bdegouw@bu.edu">bdegouw@bu.edu</a>
+  </strong>
 </div>
