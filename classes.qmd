@@ -17,6 +17,10 @@ MET-AD599: Python & SQL Business Analytics
 
 MET-AD688: Cloud Analytics for Business
 
+MET-AD561: Financial Analytics
+
+MET-AD616: Enterprise Risk Analytics
+
 **Undergraduate Level**
 
 QST-MO420: People Analytics
