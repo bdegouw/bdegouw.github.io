@@ -7,35 +7,67 @@ format:
     toc: false
     smooth-scroll: true
     code-copy: true
+    page-layout: full
 ---
 
-<div style="text-align: center; margin-bottom: 20px;">
-  <a href="documents/BdeGouw_Resume.pdf" target="_blank" download>
-    Bowen de Gouw - Resume (PDF)
-  </a>
-</div>
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
 
-<object
-  data="documents/BdeGouw_Resume.pdf"
-  type="application/pdf"
-  width="100%"
-  height="1000px"
-  style="border: 1px solid #ddd; border-radius: 8px;"
->
-  <p>
-    Your browser can’t display the PDF inline.
-    <a href="documents/BdeGouw_Resume.pdf" target="_blank" download>
-      Download the resume here.
-    </a>
-  </p>
-</object>
+body {
+  margin: 0;
+}
 
----
+main.content {
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
 
-<div style="text-align: center; font-style: italic; margin-top: 40px;">
-  <strong>
-    <a href="https://www.linkedin.com/in/bowen-de-gouw" target="_blank">LinkedIn</a> ·
-    <a href="https://github.com/bdegouw" target="_blank">GitHub</a> ·
-    <a href="mailto:bdegouw@bu.edu">Email</a>
-  </strong>
+.quarto-title-block {
+  display: none !important;
+}
+
+.resume-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.resume-frame {
+  flex: 1;
+  width: 100%;
+  min-height: 90vh;
+  border: none;
+}
+
+.contact-footer {
+  text-align: center;
+  padding: 16px;
+  font-style: italic;
+  border-top: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.contact-footer a {
+  text-decoration: none;
+}
+</style>
+
+<div class="resume-container">
+  <iframe
+    src="documents/BdeGouw_Resume.pdf"
+    class="resume-frame">
+  </iframe>
+
+  <div class="contact-footer">
+    <strong>
+      <a href="https://www.linkedin.com/in/bowen-de-gouw" target="_blank">LinkedIn</a> ·
+      <a href="https://github.com/bdegouw" target="_blank">GitHub</a> ·
+      <a href="mailto:bdegouw@bu.edu">bdegouw@bu.edu</a>
+    </strong>
+  </div>
 </div>

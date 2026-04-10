@@ -87,5 +87,3 @@ My goal is to use these tools to make data more human — helping organizations 
     <a href="mailto:bdegouw@bu.edu">Email</a>
   </strong>
 </div>
-
----
