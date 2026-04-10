@@ -1,0 +1,10 @@
+---
+title: "Financial Analytics Assignments"
+listing:
+  contents: ad561_coursework
+  type: grid
+  fields: [title, image]
+---
+
+This page contains my assignments for the Financial Analytics course (AD561) at Boston University. 
+---
