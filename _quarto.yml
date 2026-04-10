@@ -17,8 +17,6 @@ website:
             href: classes.qmd
           - text: Marketing Analytics
             href: marketing_analytics.qmd
-      - href: certifications.qmd
-        text: Certifications
       - href: blog.qmd
         text: Blog
       - href: contact.qmd
