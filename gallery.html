@@ -150,38 +150,42 @@ main.content {
 }
 
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 16px;
+  column-count: 2;
+  column-gap: 16px;
   margin-top: 1.5rem;
 }
 
 .gallery-item {
-  position: relative;
+  break-inside: avoid;
+  margin-bottom: 16px;
   overflow: hidden;
   border-radius: 14px;
-  aspect-ratio: 1 / 1;
-  background: #f5f5f5;
 }
 
 .gallery-item img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
+  border-radius: 14px;
   transition: transform 0.35s ease;
 }
 
 .gallery-item:hover img {
-  transform: scale(1.05);
+  transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    column-count: 1;
+  }
 }
 </style>
 <div class="gallery">
 <div class="gallery-item">
-<p><a href="photos/gradpic.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="photos/gradpic.jpg" class="img-fluid"></a></p>
+<p><a href="photos/gradpic.jpg" class="lightbox" data-gallery="gallery"><img src="photos/gradpic.jpg" class="img-fluid"></a></p>
 </div>
 <div class="gallery-item">
-<p><a href="photos/trainingimage.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="photos/trainingimage.jpg" class="img-fluid"></a></p>
+<p><a href="photos/trainingimage.jpg" class="lightbox" data-gallery="gallery"><img src="photos/trainingimage.jpg" class="img-fluid"></a></p>
 </div>
 </div>
 
@@ -609,7 +613,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
