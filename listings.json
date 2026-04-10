@@ -1,9 +1,5 @@
 [
   {
-    "listing": "/financial_analytics.html",
-    "items": []
-  },
-  {
     "listing": "/marketing_analytics.html",
     "items": [
       "/ad654_coursework/AD654_Assignment4_BdeGouw.html",
@@ -12,5 +8,9 @@
       "/ad654_coursework/AD654_Assignment2_BdeGouw.html",
       "/ad654_coursework/AD654_Assingment3_BdeGouw.html"
     ]
+  },
+  {
+    "listing": "/financial_analytics.html",
+    "items": []
   }
 ]
