@@ -13,17 +13,13 @@ format:
 
 # Kia Ora, Thank you for visting my website!
 
-Kia ora and welcome! I’m Bowen — a lifelong learner, student-athlete, and data-driven problem solver. I was born in the Netherlands, raised in New Zealand, and for now call Boston home. My journey across continents has shaped how I think, lead, and connect with others.
+Kia ora and welcome! I’m Bowen de Gouw - a Netherlands born, New Zealand Raised, and US educated graduate student. I am currently pursuing a Master of Science in Business Analytics at Boston Universities Metropolitan College. I will be graduating in May 2026, before emparking on some solo travel to Europe. Following my travels, I will be moving to Sydney, Australia to begin my career in Tech Consulting - focusing on AI & Data.
 
-Growing up on Auckland's North Shore, I learned to balance curiosity and discipline — two traits that came from equal parts academics and athletics. At Westlake Boys High School, one of New Zealand’s top-performing schools, I discovered my passion for both numbers and teamwork.
+My journey to the US started in the fall of 2021 as a result of being recruited as a student-athlete on the Boston Universities Men's Rowing Team. I completed 4 years on the team during my undergraduate studies, competing in 4 IRA national championships. I was fortunate to serve on the teams leadership council for 3 years and was the team captain in my senior year. My time on the team taught me many valuable lessons about teamwork, leadership and resilience. In May 2025, my time in high-perfomance rowing came to an end as I graduated with a Bachelor of Science in Business Administration with a concentration in Business Analytics. 
 
-In my final year of high school, I earned an athletic scholarship to Boston University, joining the Men’s Rowing Team. At 18, I packed my bags and crossed the world, driven by the goal of earning a world-class education and competing at the highest collegiate level.
+Prior to my time in the US, I lived on Auckland's North Shore and attended Westlake Boys High School. My experience at Westlake Boys was incredibly formative, and I am grateful to have attended such a prestigious school with a strong focus on academics, sports and extracurricular activities. I was fortunate to have many hands-on leadership opportunities during my time at Westlake, including being the Head Boy and Rowing Captain in my final year. 
 
-Four years later — countless early mornings, races, and study sessions later — I graduated from the Questrom School of Business with a BSBA and a deep appreciation for resilience, leadership, and collaboration.
-
-After graduation, I wanted to sharpen my technical toolkit and bridge the gap between business insight and data analytics. That led me to pursue a Master of Science in Applied Business Analytics (MET, Boston University) — a program designed to explore predictive modeling, data mining, cloud platforms, and machine learning.
-
-My goal is to use these tools to make data more human — helping organizations uncover insights that improve performance, experience, and impact.
+The aim of this website is to share a bit about myself, my interests, my academic and professional journey. I am passionate about data, technology, and the impact they can have on businesses and society. The use of this website will evolve and change over time, mainly as I learn new skills and ways to leverage the tools available to me. I look forward to sharing it with you!
 
 ---
 
