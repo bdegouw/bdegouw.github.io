@@ -9,8 +9,7 @@ format:
     code-copy: true
 ---
 
-## Download My Resume
-[Bowen de Gouw - Resume (PDF)](documents/BowendeGouwResume.pdf){target="_blank"}
+[Bowen de Gouw - Resume (PDF)](documents/BdeGouw_Resume.pdf){target="_blank"}
 
 
 ## BELOW IS A DEMO OF WHAT I AM PLANNING TO BUILD
