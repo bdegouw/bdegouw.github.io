@@ -3,7 +3,7 @@ title: "Academic Coursework"
 toc: false
 ---
 
-**Graduate Level - MS in Applied Business Analytics**
+**Graduate Level - MS in Applied Business Analytics, Metropolitan College, Boston University**
 
 MET-AD571: Business Analytics Foundations
 
@@ -21,7 +21,7 @@ MET-AD561: Financial Analytics
 
 MET-AD616: Enterprise Risk Analytics
 
-**Undergraduate Level - BS in Business Administration**
+**Undergraduate Level - BS in Business Administration, Questrom School of Business, Boston University**
 
 QST-MO420: People Analytics
 
