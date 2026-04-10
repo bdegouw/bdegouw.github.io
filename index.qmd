@@ -11,8 +11,6 @@ format:
   <img src="photos/headshot.bfla.jpeg" alt="Bowen de Gouw" style="width:180px; border-radius: 50%; margin-top:15px;">
 </div>
 
-# ...existing code...
-
 # Kia Ora, Thank you for visting my website!
 
 Kia ora and welcome! I’m Bowen — a lifelong learner, student-athlete, and data-driven problem solver. I was born in the Netherlands, raised in New Zealand, and for now call Boston home. My journey across continents has shaped how I think, lead, and connect with others.
@@ -46,13 +44,26 @@ My goal is to use these tools to make data more human — helping organizations 
   <p><strong>MLB:</strong> Boston Red Sox ⚾️</p>
 </div>
 
+---
+
 2. I am one of 5 B's in my family. If you spot the number plate '5BEEZ' rolling around Auckland's North Shore, you've likely caught one of the B's. We were lucky enough to reunite last May for my Graduation, see the picture below from DeWolfe Boathouse with Boston's Skyline in the background.
 
 :::{.quarto-figure-center}
 ![(L:R) Breanna, Bart, Bowen, Bronwen & Brodie](photos/5beez.jpeg){width=400px}
 :::
 
-3. 
+---
+
+3. INSERT ANOTHER FUN PIECE OF INFORMATION ABOUT MYSELF 
+
+--- 
+
+4. XYZ
+
+---
+
+5.
+
 ---
 
 # Photo Gallery
@@ -60,7 +71,6 @@ My goal is to use these tools to make data more human — helping organizations 
 :::{.quarto-figure-center}
 ![Celebrating my Graduation from Boston University's DeWolfe Boathouse, May 2025](photos/gradpic.jpg){width=400px}
 :::
-
 
 ---
 
@@ -77,3 +87,5 @@ My goal is to use these tools to make data more human — helping organizations 
     <a href="mailto:bdegouw@bu.edu">Email</a>
   </strong>
 </div>
+
+---
