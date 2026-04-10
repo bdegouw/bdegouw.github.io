@@ -3,7 +3,7 @@ title: "Academic Coursework"
 toc: false
 ---
 
-**Graduate Level**
+**Graduate Level - MS in Applied Business Analytics**
 
 MET-AD571: Business Analytics Foundations
 
@@ -21,7 +21,7 @@ MET-AD561: Financial Analytics
 
 MET-AD616: Enterprise Risk Analytics
 
-**Undergraduate Level**
+**Undergraduate Level - BS in Business Administration**
 
 QST-MO420: People Analytics
 
