@@ -154,7 +154,7 @@ main.content {
 }
 
 .gallery {
-  column-count: 2;
+  column-count: 3;
   column-gap: 16px;
   margin-top: 1.5rem;
 }
@@ -178,6 +178,12 @@ main.content {
   transform: scale(1.03);
 }
 
+@media (max-width: 1000px) {
+  .gallery {
+    column-count: 2;
+  }
+}
+
 @media (max-width: 768px) {
   .gallery {
     column-count: 1;
@@ -186,13 +192,63 @@ main.content {
 </style>
 <div class="gallery">
 <div class="gallery-item">
+<p><a href="photos/IMG_5891.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_5891.jpeg" class="img-fluid"></a></p>
+</div>
+<div class="gallery-item">
 <p><a href="photos/gradpic.jpg" class="lightbox" data-gallery="gallery"><img src="photos/gradpic.jpg" class="img-fluid"></a></p>
+</div>
+<div class="gallery-item">
+<p><a href="photos/IMG_1270.JPG" class="lightbox" data-gallery="gallery"><img src="photos/IMG_1270.JPG" class="img-fluid"></a></p>
+</div>
+<div class="gallery-item">
+<p><a href="photos/5beez.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/5beez.jpeg" class="img-fluid"></a></p>
+</div>
+<div class="gallery-item">
+<p><a href="photos/IMG_1658.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_1658.jpeg" class="img-fluid"></a></p>
+</div>
+<div class="gallery-item">
+<p><a href="photos/IMG_4250.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_4250.jpeg" class="img-fluid"></a></p>
 </div>
 <div class="gallery-item">
 <p><a href="photos/trainingimage.jpg" class="lightbox" data-gallery="gallery"><img src="photos/trainingimage.jpg" class="img-fluid"></a></p>
 </div>
+<div class="gallery-item">
+<p><a href="photos/IMG_1401.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_1401.jpeg" class="img-fluid"></a></p>
 </div>
-<p>hi</p>
+<div class="gallery-item">
+<p><a href="photos/IMG_7505.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_7505.jpeg" class="img-fluid"></a></p>
+</div>
+<div class="gallery-item">
+<p><a href="photos/bdglogo.png" class="lightbox" data-gallery="gallery"><img src="photos/bdglogo.png" class="img-fluid"></a></p>
+</div>
+<div class="gallery-item">
+<p><a href="photos/IMG_0427.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_0427.jpeg" class="img-fluid"></a></p>
+</div>
+<div class="gallery-item">
+<p><a href="photos/IMG_2664.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_2664.jpeg" class="img-fluid"></a></p>
+</div>
+<div class="gallery-item">
+<p><a href="photos/IMG_1292.JPG" class="lightbox" data-gallery="gallery"><img src="photos/IMG_1292.JPG" class="img-fluid"></a></p>
+</div>
+<div class="gallery-item">
+<p><a href="photos/IMG_4725.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_4725.jpeg" class="img-fluid"></a></p>
+</div>
+<div class="gallery-item">
+<p><a href="photos/IMG_1621.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_1621.jpeg" class="img-fluid"></a></p>
+</div>
+<div class="gallery-item">
+<p><a href="photos/IMG_1827.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_1827.jpeg" class="img-fluid"></a></p>
+</div>
+<div class="gallery-item">
+<p><a href="photos/IMG_6677.JPG" class="lightbox" data-gallery="gallery"><img src="photos/IMG_6677.JPG" class="img-fluid"></a></p>
+</div>
+<div class="gallery-item">
+<p><a href="photos/IMG_1657.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_1657.jpeg" class="img-fluid"></a></p>
+</div>
+<div class="gallery-item">
+<p><a href="photos/IMG_0602 (1).jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_0602 (1).jpeg" class="img-fluid"></a></p>
+</div>
+</div>
 
 
 
@@ -618,7 +674,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":false,"descPosition":"bottom","openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
