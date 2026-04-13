@@ -1,0 +1,11 @@
+---
+title: "Contact Me"
+toc: false
+---
+
+This section is to show some of the side projects I've been working on outside of my academic coursework.
+
+1. Wordle Bot 
+https://bdegouw.github.io/wordlebot/
+
+The Wordle Bot is a Python-based tool designed to assist players in solving the popular word puzzle game, Wordle. It uses a combination of natural language processing and strategic algorithms to analyze the game's feedback and suggest optimal guesses. The bot takes into account the letters that have been revealed as correct, incorrect, or misplaced, and generates a list of potential words based on the current state of the game. By leveraging a comprehensive dictionary and advanced filtering techniques, the Wordle Bot aims to enhance players' chances of successfully solving the puzzle within the limited number of attempts.
