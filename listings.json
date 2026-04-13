@@ -1,21 +1,14 @@
 [
   {
+    "listing": "/businessanalytics_foundations.html",
+    "items": []
+  },
+  {
     "listing": "/marketing_analytics.html",
-    "items": [
-      "/ad654_coursework/AD654_Assignment4_BdeGouw.html",
-      "/ad654_coursework/AD654_Assignment1_BdeGouw.html",
-      "/ad654_coursework/AD654_Assignment5_BdeGouw.html",
-      "/ad654_coursework/AD654_Assignment2_BdeGouw.html",
-      "/ad654_coursework/AD654_Assingment3_BdeGouw.html"
-    ]
+    "items": []
   },
   {
     "listing": "/financial_analytics.html",
-    "items": [
-      "/ad561_coursework/AD561_Assignment2_BdeGouw.html",
-      "/ad561_coursework/AD561_Assignment3_BdeGouw.html",
-      "/ad561_coursework/AD561_Assignment4_BdeGouw.html",
-      "/ad561_coursework/AD561_Assignment1_BdeGouw.html"
-    ]
+    "items": []
   }
 ]
