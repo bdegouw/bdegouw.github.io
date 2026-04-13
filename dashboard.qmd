@@ -1,0 +1,97 @@
+---
+title: "SPY Market Dashboard"
+format:
+  html:
+    page-layout: full
+    toc: true
+execute:
+  freeze: auto
+---
+
+## 📦 Load data
+
+```python
+import yfinance as yf
+import pandas as pd
+import plotly.express as px
+
+ticker = "SPY"
+
+df = yf.Ticker(ticker).history(period="1y").reset_index()
+df.head()
+```
+
+---
+
+## 💰 Compute metrics
+
+```python
+latest_price = df["Close"].iloc[-1]
+start_price = df["Close"].iloc[0]
+
+change_pct = ((latest_price - start_price) / start_price) * 100
+
+high_52w = df["Close"].max()
+low_52w = df["Close"].min()
+
+latest_price, change_pct, high_52w, low_52w
+```
+
+---
+
+## 📊 Market Snapshot
+
+### Current Price
+
+```python
+latest_price
+```
+
+### 1Y Return (%)
+
+```python
+change_pct
+```
+
+### 52W High
+
+```python
+high_52w
+```
+
+### 52W Low
+
+```python
+low_52w
+```
+
+---
+
+## 📈 SPY Price Chart (1Y)
+
+```python
+fig = px.line(
+    df,
+    x="Date",
+    y="Close",
+    title="S&P 500 Proxy (SPY) — 1 Year Performance"
+)
+
+fig
+```
+
+---
+
+## 📉 Daily Returns Distribution
+
+```python
+df["Daily Return"] = df["Close"].pct_change()
+
+fig2 = px.histogram(
+    df,
+    x="Daily Return",
+    title="SPY Daily Returns Distribution"
+)
+
+fig2
+```
