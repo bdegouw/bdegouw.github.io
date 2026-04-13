@@ -16,9 +16,7 @@ Please check out our website and research here:
 
 As part of this course, I completed the AWS Cloud Foundations course and received the AWS Cloud Foundations Certification. This certification validates my understanding of cloud computing concepts and AWS services, demonstrating my ability to work with cloud technologies effectively.
 
-<div style="position: relative; width: 100%; padding-top: 56.25%; border-radius: 8px; overflow: hidden;">
-  <iframe
-    src="documents/AWS_Cloud_Foundations.pdf#page=1&view=FitH&navpanes=0&toolbar=0"
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
-  </iframe>
-</div>
+<iframe
+  src="documents/AWS_Cloud_Foundations.pdf"
+  style="width: 100%; height: 650px; border: none; border-radius: 8px;">
+</iframe>
