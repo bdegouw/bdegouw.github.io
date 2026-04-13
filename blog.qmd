@@ -1,6 +1,9 @@
 ---
 title: "Blog Posts"
-toc: false
+listing: 
+  contents: posts
+  sort: "date desc"
+  type: "default"
 ---
 
 My goal for the spring semester is to publish some blog posts here on my personal website. Stay posted for what's to come!
