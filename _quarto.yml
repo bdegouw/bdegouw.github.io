@@ -24,6 +24,8 @@ website:
             href: financial_analytics.qmd
           - text: Cloud Analytics
             href: cloud_analytics.qmd
+          - text: Business Analytics Foundations
+            href: businessanalytics_foundations.qmd
       - href: blog.qmd
         text: Blog
       - href: gallery.qmd
