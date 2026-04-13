@@ -5,12 +5,10 @@ toc: false
 
 ## US Job Market - Analysing AI/Non-AI Job Postings
 
-This was my final Project for the Cloud Analytics Course (AD688) at Boston University. This research was based on the US Job Market and the impact of AI/Machine learning. The project was completed in collaboration with my classmates Feidhelm Joyce & Mahnoor Khalid. 
+This was my final Project for the Cloud Analytics Course (AD688) at Boston University. This research was based on the US Job Market and the impact of AI/Machine learning. The project was completed in collaboration with my classmates [Feidhelm Joyce](https://www.linkedin.com/in/feidhelm-joyce-530442266/?skipRedirect=true) & [Mahnoor Khalid](https://www.linkedin.com/in/mahnoor-k/). 
 
 Please check out our website and research here: 
 [AD688 Job Market Analysis](https://bdegouw.github.io/ad688-group1-job-market-analysis-f25/)
-
-
 
 ## Amazon Web Services (AWS) - Cloud Foundations ☁️
 
