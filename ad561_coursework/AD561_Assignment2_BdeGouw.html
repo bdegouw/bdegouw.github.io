@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ad561_assignment2_bdegouw – &lt;img src= 'photos/bdglogo.png' style='height:22px; margin-right:8px;'&gt; Bowen de Gouw</title>
+<title>Boom Markets - Dotcom &amp; Mortgage Credit –  Bowen de Gouw</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -209,10 +209,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Boom Markets - Dotcom &amp; Mortgage Credit</h1>
+</div>
 
 
 
-<div id="cell-0" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829360566,&quot;user_tz&quot;:300,&quot;elapsed&quot;:41,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;}}" data-execution_count="25">
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div id="cell-1" class="cell" data-executioninfo="{&quot;elapsed&quot;:41,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829360566,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -226,14 +242,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>All numbers are stylized but plausible. Use them to support arguments, not to search for a single “correct” answer.</p>
 <section id="part-a---the-dot-com-boom" class="level1">
 <h1>Part A - The Dot-Com Boom</h1>
-<div id="cell-3" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829361657,&quot;user_tz&quot;:300,&quot;elapsed&quot;:1097,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;}}" data-outputid="87806522-ede0-4828-f4c2-8432467ce786" data-execution_count="26">
+<div id="cell-4" class="cell" data-executioninfo="{&quot;elapsed&quot;:1097,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829361657,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="87806522-ede0-4828-f4c2-8432467ce786" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> drive</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>drive.mount(<span class="st">'/content/drive'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount("/content/drive", force_remount=True).</code></pre>
 </div>
 </div>
-<div id="cell-4" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829361666,&quot;user_tz&quot;:300,&quot;elapsed&quot;:6,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;}}" data-execution_count="27">
+<div id="cell-5" class="cell" data-executioninfo="{&quot;elapsed&quot;:6,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829361666,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>file_path01 <span class="op">=</span> <span class="st">'/content/drive/MyDrive/AD561/Assignments/Assignment 2/dotcom_contemporary_commentary.csv'</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>dotcom_contemporary_commentary<span class="op">=</span> pd.read_csv(file_path01)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -248,7 +264,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="commentary" class="level2">
 <h2 class="anchored" data-anchor-id="commentary">Commentary</h2>
-<div id="cell-6" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829361683,&quot;user_tz&quot;:300,&quot;elapsed&quot;:13,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;}}" data-outputid="a2c1a461-a514-4070-daed-b813328dfbf4" data-execution_count="28">
+<div id="cell-7" class="cell" data-executioninfo="{&quot;elapsed&quot;:13,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829361683,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="a2c1a461-a514-4070-daed-b813328dfbf4" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>pd.set_option(<span class="st">'display.max_colwidth'</span>, <span class="va">None</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>dotcom_contemporary_commentary</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="28">
@@ -448,7 +464,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="firm-fundamentals" class="level2">
 <h2 class="anchored" data-anchor-id="firm-fundamentals">Firm Fundamentals</h2>
-<div id="cell-9" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829361755,&quot;user_tz&quot;:300,&quot;elapsed&quot;:65,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;}}" data-outputid="13121585-883a-41bc-ae0a-f7b2ee545a59" data-execution_count="29">
+<div id="cell-10" class="cell" data-executioninfo="{&quot;elapsed&quot;:65,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829361755,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="13121585-883a-41bc-ae0a-f7b2ee545a59" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>dotcom_firm_fundamentals_1999.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="29">
 
@@ -627,7 +643,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="ipo-vc-timeseries" class="level2">
 <h2 class="anchored" data-anchor-id="ipo-vc-timeseries">IPO VC Timeseries</h2>
-<div id="cell-11" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829361769,&quot;user_tz&quot;:300,&quot;elapsed&quot;:18,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;}}" data-outputid="26ca1812-8032-4cbd-d23e-c0296da47ede" data-execution_count="30">
+<div id="cell-12" class="cell" data-executioninfo="{&quot;elapsed&quot;:18,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829361769,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="26ca1812-8032-4cbd-d23e-c0296da47ede" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>dotcom_ipo_vc_timeseries.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="30">
 
@@ -761,7 +777,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-<div id="cell-12" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829361804,&quot;user_tz&quot;:300,&quot;elapsed&quot;:28,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;}}" data-outputid="5ddeeb3c-5a98-45c9-a7cb-c139b7a6e842" data-execution_count="31">
+<div id="cell-13" class="cell" data-executioninfo="{&quot;elapsed&quot;:28,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829361804,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="5ddeeb3c-5a98-45c9-a7cb-c139b7a6e842" data-execution_count="31">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> dotcom_ipo_vc_timeseries[<span class="st">"tech_ipo_count"</span>]</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Tech IPO Count % Change from Jan 1998 to Dec 1999 is </span><span class="sc">{</span>(s.iloc[<span class="dv">23</span>]<span class="op">-</span>s.iloc[<span class="dv">0</span>])<span class="op">/</span>s<span class="sc">.</span>iloc[<span class="dv">0</span>]<span class="op">*</span><span class="dv">100</span><span class="sc">:.2f}</span><span class="ss">%"</span>)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -775,7 +791,7 @@ VC Inflows % Change from Jan 1998 to Dec 1999 is 342.18%</code></pre>
 </section>
 <section id="market-timeseries" class="level2">
 <h2 class="anchored" data-anchor-id="market-timeseries">Market Timeseries</h2>
-<div id="cell-14" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829361864,&quot;user_tz&quot;:300,&quot;elapsed&quot;:54,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;}}" data-outputid="32eec46d-4e65-4488-d674-124feb04bc36" data-execution_count="32">
+<div id="cell-15" class="cell" data-executioninfo="{&quot;elapsed&quot;:54,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829361864,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="32eec46d-4e65-4488-d674-124feb04bc36" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>dotcom_market_timeseries.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="32">
 
@@ -945,10 +961,10 @@ VC Inflows % Change from Jan 1998 to Dec 1999 is 342.18%</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-15" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829361892,&quot;user_tz&quot;:300,&quot;elapsed&quot;:24,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;}}" data-execution_count="33">
+<div id="cell-16" class="cell" data-executioninfo="{&quot;elapsed&quot;:24,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829361892,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-execution_count="33">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>dotcom_market_timeseries[<span class="st">"month"</span>] <span class="op">=</span> pd.to_datetime(dotcom_market_timeseries[<span class="st">"month"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-16" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829361897,&quot;user_tz&quot;:300,&quot;elapsed&quot;:21,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;}}" data-outputid="cefbaeab-c75d-4f95-f5da-7002e2d02ea3" data-execution_count="34">
+<div id="cell-17" class="cell" data-executioninfo="{&quot;elapsed&quot;:21,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829361897,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="cefbaeab-c75d-4f95-f5da-7002e2d02ea3" data-execution_count="34">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> dotcom_market_timeseries[<span class="st">"nasdaq_index_level"</span>]</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"NASDAQ % Change from Jan 1998 to Dec 1999 is </span><span class="sc">{</span>(s[<span class="dv">23</span>]<span class="op">-</span>s[<span class="dv">0</span>])<span class="op">/</span>s[<span class="dv">0</span>]<span class="op">*</span><span class="dv">100</span><span class="sc">:.2f}</span><span class="ss">%"</span>)</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -976,7 +992,7 @@ Retail Participation % Change from Jan 1998 to Dec 1999 is 116.22%</code></pre>
 </section>
 <section id="a2---evidence" class="level1">
 <h1>A2 - Evidence</h1>
-<div id="cell-20" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829362398,&quot;user_tz&quot;:300,&quot;elapsed&quot;:424,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;}}" data-outputid="ef7eba51-34f5-40d0-8117-cffc8032126b" data-execution_count="35">
+<div id="cell-21" class="cell" data-executioninfo="{&quot;elapsed&quot;:424,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829362398,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="ef7eba51-34f5-40d0-8117-cffc8032126b" data-execution_count="35">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.dates <span class="im">as</span> mdates</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>fig, ax1 <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">5</span>))</span>
@@ -1010,7 +1026,7 @@ Retail Participation % Change from Jan 1998 to Dec 1999 is 116.22%</code></pre>
 </div>
 </div>
 <p>Figure 1 shows the NASDAQ level alongside the medain price-to-sales ratio from 1998 to 2001. Both data points show a sharp increase throughout 1998 &amp; 1999. The NASDAQ increases roughly from 1,849 to 4,561, while the median price-to-sales ratio rises from 7.57 to 20.90. The parallel increase suggests that the appreciation in market value is driven by multiple expansion rather than pure fundamental earnings growth. A key takeaway here is that the valuations rose substantially throughout this period, indicating increasingly optimistic market expectations. Ultimately this supports the underweight reccomendation, with rapidly expanding valuation multiples can signal speculative conditions and elevated downside risk.</p>
-<div id="cell-22" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829362682,&quot;user_tz&quot;:300,&quot;elapsed&quot;:277,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;}}" data-outputid="93106b47-c497-465c-a614-9121c6951331" data-execution_count="36">
+<div id="cell-23" class="cell" data-executioninfo="{&quot;elapsed&quot;:277,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829362682,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="93106b47-c497-465c-a614-9121c6951331" data-execution_count="36">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> dotcom_firm_fundamentals_1999[<span class="st">"net_margin_1999_pct"</span>]</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>mean_val <span class="op">=</span> data.mean()</span>
@@ -1046,7 +1062,7 @@ Retail Participation % Change from Jan 1998 to Dec 1999 is 116.22%</code></pre>
 </div>
 </div>
 <p>Figure 2 shows the distribution of the firm net profits for technology companies in 199. The histogram shows that there is a large share of firms that reported negative probability, with many companies operating at substanital losses, despite there strong revenue growth. The mean net margin is -11.16% and the median is -6.15%, meaning the typical firm is operating as a loss, while only a small portion of the firms display positive net margins. A large concentration fall between 0% and -20%, with the largest skewing to the left with loses exceeding -60%. The key takeaway here is that profitability across the sector was highly uneven and often weak, suggesting that many firms have not yet achieved sustainable business models depsite high growth. This pattern supports the underweight recommendation, as high market valuations combined with widespread profitability indicate a potential disconnect between market prices and underlying fundamentals.</p>
-<div id="cell-24" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829362913,&quot;user_tz&quot;:300,&quot;elapsed&quot;:225,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;}}" data-outputid="a679cf58-d293-49da-9ca5-964953f9c8d7" data-execution_count="37">
+<div id="cell-25" class="cell" data-executioninfo="{&quot;elapsed&quot;:225,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829362913,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="a679cf58-d293-49da-9ca5-964953f9c8d7" data-execution_count="37">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> dotcom_firm_fundamentals_1999[<span class="st">"net_margin_1999_pct"</span>]</span>
@@ -1074,7 +1090,7 @@ Retail Participation % Change from Jan 1998 to Dec 1999 is 116.22%</code></pre>
 </div>
 </div>
 <p>Figure 3 looks at the relationship between the firms profitability and its valuation. The scatterplot compares net profit margins with price-to-sales ratios across technology firms in 1999. While it may be expected that profitable firms will command a higher valuation, the relationship here is actually very weak. The correlation between these two variables is -0.3, indicating that there is only a weak negative relation between the profitability and valuation. Several firms here have large negative margins, yet still trade at incredibly high multiples, with some companies valued significantly above their sales. The main takeaway here is that the valuations appear only loosely tied to tangible profits, suggesting that investor pricing is very much influenced by growth narratives and optimism for the industry. Thi supports the underweight reccomendation with some hesitation on how price-to-sales and the net margin reflect credible value.</p>
-<div id="cell-26" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829363181,&quot;user_tz&quot;:300,&quot;elapsed&quot;:264,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;}}" data-outputid="0b770026-fe50-478a-e181-4530a25020a8" data-execution_count="38">
+<div id="cell-27" class="cell" data-executioninfo="{&quot;elapsed&quot;:264,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829363181,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="0b770026-fe50-478a-e181-4530a25020a8" data-execution_count="38">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>sector_ps <span class="op">=</span> (</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    dotcom_firm_fundamentals_1999</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    .groupby(<span class="st">"sector"</span>)[<span class="st">"annual_cash_burn_mil_usd"</span>]</span>
@@ -1102,7 +1118,7 @@ Retail Participation % Change from Jan 1998 to Dec 1999 is 116.22%</code></pre>
 </div>
 </div>
 <p>Figure 4 shows the averge cash burn across the technology sectiors. Internet/Software firms show the highest average cash burn at approximately $22.5 million per year, with E-commerce close behind at around $19 million. In contrast, the more established sectors such as Telecommunications and Networking are burning substantially less cash, ranging between $6 - $10 million. The most important feature here is that the internet focused companies are showing clear rates of cash spend, while they are operating with ongoing losses. While this is likely tied to their aggressive growth mindset, it shows that perhaps there high cash spend is tied to overconfidence from external funding sources. Strong dependence on capital markets increases their long-term vulnerability if investor sentiment or market conditions change, therefore supporting the underweigh reccomendation.</p>
-<div id="cell-28" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829363234,&quot;user_tz&quot;:300,&quot;elapsed&quot;:48,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;}}" data-outputid="593fe794-63a4-4f62-a771-3377022e0c28" data-execution_count="39">
+<div id="cell-29" class="cell" data-executioninfo="{&quot;elapsed&quot;:48,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829363234,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="593fe794-63a4-4f62-a771-3377022e0c28" data-execution_count="39">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>table1 <span class="op">=</span> (</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    dotcom_firm_fundamentals_1999</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    .groupby(<span class="st">"sector"</span>)</span>
@@ -1362,7 +1378,7 @@ Retail Participation % Change from Jan 1998 to Dec 1999 is 116.22%</code></pre>
 </section>
 <section id="part-b---the-mortgage-credit-boom" class="level1">
 <h1>Part B - The Mortgage Credit Boom</h1>
-<div id="cell-34" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829363279,&quot;user_tz&quot;:300,&quot;elapsed&quot;:10,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;}}" data-execution_count="40">
+<div id="cell-35" class="cell" data-executioninfo="{&quot;elapsed&quot;:10,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829363279,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-execution_count="40">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>file_path05 <span class="op">=</span> <span class="st">'/content/drive/MyDrive/AD561/Assignments/Assignment 2/mbs_deals_2006.csv'</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>mbs_deals_2006<span class="op">=</span> pd.read_csv(file_path05)</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1372,7 +1388,7 @@ Retail Participation % Change from Jan 1998 to Dec 1999 is 116.22%</code></pre>
 <span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>file_path07 <span class="op">=</span> <span class="st">'/content/drive/MyDrive/AD561/Assignments/Assignment 2/mbs_tranche_structure_2006.csv'</span></span>
 <span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>mbs_tranche_structure_2006 <span class="op">=</span> pd.read_csv(file_path07)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-35" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829363345,&quot;user_tz&quot;:300,&quot;elapsed&quot;:61,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;}}" data-outputid="d2e27eab-e9c3-4575-e853-f3a14d4207ad" data-execution_count="41">
+<div id="cell-36" class="cell" data-executioninfo="{&quot;elapsed&quot;:61,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829363345,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="d2e27eab-e9c3-4575-e853-f3a14d4207ad" data-execution_count="41">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>mbs_deals_2006</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="41">
 
@@ -1577,7 +1593,7 @@ Retail Participation % Change from Jan 1998 to Dec 1999 is 116.22%</code></pre>
 <p>Evaluating Borrower Risk: FICO, LTV, Owner Occupancy, Geography</p>
 <p>How Much Protection Exists: Equity %, Mezz %, Attachment %</p>
 <p>Market Belief: Yield</p>
-<div id="cell-37" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829363398,&quot;user_tz&quot;:300,&quot;elapsed&quot;:48,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;}}" data-outputid="855d7465-9207-4f9f-8a62-0ee81fa05bbe" data-execution_count="42">
+<div id="cell-38" class="cell" data-executioninfo="{&quot;elapsed&quot;:48,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829363398,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="855d7465-9207-4f9f-8a62-0ee81fa05bbe" data-execution_count="42">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>mbs_macro_stress_scenarios</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="42">
 
@@ -1759,7 +1775,7 @@ Retail Participation % Change from Jan 1998 to Dec 1999 is 116.22%</code></pre>
   </div>
 </div>
 </div>
-<div id="cell-38" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829363437,&quot;user_tz&quot;:300,&quot;elapsed&quot;:30,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;}}" data-outputid="86d18331-e603-4255-b0cf-141adf879f09" data-execution_count="43">
+<div id="cell-39" class="cell" data-executioninfo="{&quot;elapsed&quot;:30,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1772829363437,&quot;user&quot;:{&quot;displayName&quot;:&quot;Bowen de Gouw&quot;,&quot;userId&quot;:&quot;11585059874772661797&quot;},&quot;user_tz&quot;:300}" data-outputid="86d18331-e603-4255-b0cf-141adf879f09" data-execution_count="43">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>mbs_tranche_structure_2006</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="43">
 

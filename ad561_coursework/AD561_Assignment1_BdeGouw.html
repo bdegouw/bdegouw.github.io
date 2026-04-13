@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Part 0: Conceptual Warm Up –  Bowen de Gouw</title>
+<title>Trading Risk, Leverage and Survival –  Bowen de Gouw</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -172,7 +172,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#part-1-create-your-own-little-market" id="toc-part-1-create-your-own-little-market" class="nav-link active" data-scroll-target="#part-1-create-your-own-little-market">Part 1: Create Your Own Little Market</a></li>
+  <li><a href="#part-0-conceptual-warm-up" id="toc-part-0-conceptual-warm-up" class="nav-link active" data-scroll-target="#part-0-conceptual-warm-up">Part 0: Conceptual Warm Up</a></li>
+  <li><a href="#part-1-create-your-own-little-market" id="toc-part-1-create-your-own-little-market" class="nav-link" data-scroll-target="#part-1-create-your-own-little-market">Part 1: Create Your Own Little Market</a></li>
   <li><a href="#part-2-invent-a-simple-trading-rule" id="toc-part-2-invent-a-simple-trading-rule" class="nav-link" data-scroll-target="#part-2-invent-a-simple-trading-rule">Part 2: Invent a Simple Trading Rule</a></li>
   <li><a href="#part-3-turn-actions-into-money" id="toc-part-3-turn-actions-into-money" class="nav-link" data-scroll-target="#part-3-turn-actions-into-money">Part 3: Turn Actions Into Money</a></li>
   <li><a href="#part-4-add-leverage" id="toc-part-4-add-leverage" class="nav-link" data-scroll-target="#part-4-add-leverage">Part 4: Add Leverage</a></li>
@@ -186,7 +187,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Part 0: Conceptual Warm Up</h1>
+<h1 class="title">Trading Risk, Leverage and Survival</h1>
 </div>
 
 
@@ -208,7 +209,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<section id="part-0-conceptual-warm-up" class="level1">
+<h1>Part 0: Conceptual Warm Up</h1>
 <p>If a strategy is making money 70% of the time, it may seem automatically safe, but this is not necessarily true. A 70% win rate suggests that there is a 30% probability that it is not making money. It may seem logical to choose the strategy because 70% represents a clear majority. However, in a hypothetical example, 70% of the time the strategy may work on a very low-risk basis consistently, where it returns 5% frequently, but when it does not work it may cause a drastic loss, of say -20%. This way of evaluating strategy success is not viable as it does not tell the whole story of risk and analysing the potential upsides and downsides depending on if you are successful or not. Determining whether a strategy is safe depends not only on the frequency of wins, but also on the magnitude of losses, the overall distribution of returns, and the ability to recover from significant losses.</p>
+</section>
 <section id="part-1-create-your-own-little-market" class="level1">
 <h1>Part 1: Create Your Own Little Market</h1>
 <p>Below is the hypothetical code I would have run if I had not had an issue with the seed value…</p>
