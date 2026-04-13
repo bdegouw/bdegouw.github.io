@@ -19,10 +19,14 @@ website:
             href: marketing_analytics.qmd
           - text: Financial Analytics
             href: financial_analytics.qmd
+          - text: Cloud Analytics
+            href: cloud_analytics.qmd
       - href: blog.qmd
         text: Blog
       - href: gallery.qmd
         text: Photo Gallery
+      - href: side_projects.qmd
+        text: Side Projects
       - href: contact.qmd
         text: Contact Me
   search: false
