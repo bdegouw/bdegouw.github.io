@@ -1,0 +1,1584 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>System Fragility and Stress –  Bowen de Gouw</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<link href="../photos/bdglogo.png" rel="icon" type="image/png">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title"><img src="photos/bdglogo.png" style="height:22px; margin-right:8px;"> Bowen de Gouw</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../professionalsummary.html"> 
+<span class="menu-text">Professional Summary</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-academics" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Academics</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-academics">    
+        <li>
+    <a class="dropdown-item" href="../classes.html">
+ <span class="dropdown-text">Academic Coursework</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../marketing_analytics.html">
+ <span class="dropdown-text">Marketing Analytics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../financial_analytics.html">
+ <span class="dropdown-text">Financial Analytics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../cloud_analytics.html">
+ <span class="dropdown-text">Cloud Analytics</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../gallery.html"> 
+<span class="menu-text">Photo Gallery</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../side_projects.html"> 
+<span class="menu-text">Side Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../contact.html"> 
+<span class="menu-text">Contact Me</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#part-0-conceptual-warm-up" id="toc-part-0-conceptual-warm-up" class="nav-link active" data-scroll-target="#part-0-conceptual-warm-up">Part 0: Conceptual Warm-Up</a></li>
+  <li><a href="#part-1-case-setup-and-key-metric" id="toc-part-1-case-setup-and-key-metric" class="nav-link" data-scroll-target="#part-1-case-setup-and-key-metric">Part 1: Case Setup and Key Metric</a></li>
+  <li><a href="#part-2-shock-scenario" id="toc-part-2-shock-scenario" class="nav-link" data-scroll-target="#part-2-shock-scenario">Part 2: Shock Scenario</a></li>
+  <li><a href="#part-3" id="toc-part-3" class="nav-link" data-scroll-target="#part-3">Part 3</a>
+  <ul class="collapse">
+  <li><a href="#stress-map" id="toc-stress-map" class="nav-link" data-scroll-target="#stress-map">Stress Map</a></li>
+  <li><a href="#monte-carlo-simulation" id="toc-monte-carlo-simulation" class="nav-link" data-scroll-target="#monte-carlo-simulation">Monte Carlo Simulation</a></li>
+  </ul></li>
+  <li><a href="#part-4-breaking-point-analysis" id="toc-part-4-breaking-point-analysis" class="nav-link" data-scroll-target="#part-4-breaking-point-analysis">Part 4: Breaking Point Analysis</a></li>
+  <li><a href="#final-section-reflection" id="toc-final-section-reflection" class="nav-link" data-scroll-target="#final-section-reflection">Final Section: Reflection</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">System Fragility and Stress</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div id="cell-1" class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.patches <span class="im">as</span> mpatches</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-2" class="cell" data-outputid="58d693e8-6aa8-4e3d-d075-e05f1e07574a">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> drive</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>drive.mount(<span class="st">'/content/drive'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount("/content/drive", force_remount=True).</code></pre>
+</div>
+</div>
+<div id="cell-3" class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>file_path01 <span class="op">=</span> <span class="st">'/content/drive/MyDrive/AD561/Assignments/Assignment 4/ftx_dataset.csv'</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>ftx_dataset <span class="op">=</span> pd.read_csv(file_path01)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="part-0-conceptual-warm-up" class="level1">
+<h1>Part 0: Conceptual Warm-Up</h1>
+<p>A system can appear stable for an extended period of time for a number of reasons, including long-term stable returns and growth, which can boost customer confidence. However, there can be many flaws including opacity and a liquidity mismatch, where there is a disconnect between the information and confidence of the customers and how the system is using the funds. Ultimately, fragile systems maintain a disconnect between customer expectations and the actual use of their funds, meaning that when sentiment shifts and withdrawal demand surges, the underlying liquidity mismatch is exposed and collapse follows rapidly</p>
+</section>
+<section id="part-1-case-setup-and-key-metric" class="level1">
+<h1>Part 1: Case Setup and Key Metric</h1>
+<div id="cell-7" class="cell" data-outputid="b5a50f36-e716-4a58-c898-cdf3e0e626b6">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>ftx_dataset</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="17">
+
+  <div id="df-6156888d-0f4a-42f4-9755-a5156271e89b" class="colab-df-container">
+    <div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">balance_type</th>
+<th data-quarto-table-cell-role="th">item</th>
+<th data-quarto-table-cell-role="th">amount_usd_bil</th>
+<th data-quarto-table-cell-role="th">liquid_share_pct</th>
+<th data-quarto-table-cell-role="th">stress_haircut_pct</th>
+<th data-quarto-table-cell-role="th">affiliate_linked_flag</th>
+<th data-quarto-table-cell-role="th">usable_for_withdrawals_pct</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>Asset</td>
+<td>Cash_and_stablecoins</td>
+<td>1.8</td>
+<td>100</td>
+<td>0</td>
+<td>0</td>
+<td>100</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>Asset</td>
+<td>Liquid_crypto_BTC_ETH</td>
+<td>2.6</td>
+<td>85</td>
+<td>12</td>
+<td>0</td>
+<td>80</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>Asset</td>
+<td>FTT_and_affiliated_tokens</td>
+<td>3.4</td>
+<td>15</td>
+<td>65</td>
+<td>1</td>
+<td>10</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>Asset</td>
+<td>Loans_to_related_parties</td>
+<td>5.1</td>
+<td>0</td>
+<td>90</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>Asset</td>
+<td>Venture_investments</td>
+<td>2.2</td>
+<td>5</td>
+<td>55</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>Asset</td>
+<td>Real_estate_and_private_assets</td>
+<td>0.7</td>
+<td>0</td>
+<td>50</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>Asset</td>
+<td>Other_crypto_assets</td>
+<td>1.6</td>
+<td>30</td>
+<td>35</td>
+<td>0</td>
+<td>20</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">7</td>
+<td>Liability</td>
+<td>Customer_payables</td>
+<td>8.9</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">8</td>
+<td>Liability</td>
+<td>Secured_borrowing</td>
+<td>1.5</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">9</td>
+<td>Liability</td>
+<td>Other_liabilities</td>
+<td>0.8</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-6156888d-0f4a-42f4-9755-a5156271e89b')" title="Convert this dataframe to an interactive table." style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"></path>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-6156888d-0f4a-42f4-9755-a5156271e89b button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-6156888d-0f4a-42f4-9755-a5156271e89b');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+  <div id="id_96897836-56cf-47b5-8930-8f0be9138bda">
+    <style>
+      .colab-df-generate {
+        background-color: #E8F0FE;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+        fill: #1967D2;
+        height: 32px;
+        padding: 0 0 0 0;
+        width: 32px;
+      }
+
+      .colab-df-generate:hover {
+        background-color: #E2EBFA;
+        box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+        fill: #174EA6;
+      }
+
+      [theme=dark] .colab-df-generate {
+        background-color: #3B4455;
+        fill: #D2E3FC;
+      }
+
+      [theme=dark] .colab-df-generate:hover {
+        background-color: #434B5C;
+        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+        fill: #FFFFFF;
+      }
+    </style>
+    <button class="colab-df-generate" onclick="generateWithVariable('ftx_dataset')" title="Generate code using this dataframe." style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px">
+    <path d="M7,19H8.4L18.45,9,17,7.55,7,17.6ZM5,21V16.75L18.45,3.32a2,2,0,0,1,2.83,0l1.4,1.43a1.91,1.91,0,0,1,.58,1.4,1.91,1.91,0,0,1-.58,1.4L9.25,21ZM18.45,9,17,7.55Zm-12,3A5.31,5.31,0,0,0,4.9,8.1,5.31,5.31,0,0,0,1,6.5,5.31,5.31,0,0,0,4.9,4.9,5.31,5.31,0,0,0,6.5,1,5.31,5.31,0,0,0,8.1,4.9,5.31,5.31,0,0,0,12,6.5,5.46,5.46,0,0,0,6.5,12Z"></path>
+  </svg>
+    </button>
+    <script>
+      (() => {
+      const buttonEl =
+        document.querySelector('#id_96897836-56cf-47b5-8930-8f0be9138bda button.colab-df-generate');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      buttonEl.onclick = () => {
+        google.colab.notebook.generateWithVariable('ftx_dataset');
+      }
+      })();
+    </script>
+  </div>
+
+    </div>
+  </div>
+</div>
+</div>
+<p>Balance Type: Whether something is an Asset (owned) or a Liability (owed)</p>
+<p>Item: The specific Asset or Liability being described</p>
+<p>Amount USD Billions ($): The dollar values in Billions of USD</p>
+<p>Liquid Share %: The percentage of that item that can be quickly converted to cash</p>
+<p>Stress Haircut %: How much value an Asset would lose in a crisis scenario</p>
+<p>Affiliate Linked Flag: A Binary marker indicating if something is tied to Alameda or FTX affiliated entities</p>
+<p>Usable of Withdrawals %: What percentage of that item could actually be used to pay back customers in an event of withdrawal demand</p>
+<div id="cell-9" class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>ftx_dataset[<span class="st">'usable_normal_bil'</span>] <span class="op">=</span> (ftx_dataset[<span class="st">'amount_usd_bil'</span>] <span class="op">*</span> (ftx_dataset[<span class="st">'usable_for_withdrawals_pct'</span>] <span class="op">/</span> <span class="dv">100</span>))</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>ftx_dataset[<span class="st">'usable_stressed_bil'</span>] <span class="op">=</span> (ftx_dataset[<span class="st">'amount_usd_bil'</span>] <span class="op">*</span> (ftx_dataset[<span class="st">'usable_for_withdrawals_pct'</span>] <span class="op">/</span> <span class="dv">100</span>) <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> ftx_dataset[<span class="st">'stress_haircut_pct'</span>] <span class="op">/</span> <span class="dv">100</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-10" class="cell" data-outputid="6c346c9b-664f-4792-cabb-bede0b1122f6">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>ftx_dataset</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="19">
+
+  <div id="df-a28766e7-7697-4646-94d2-2654612a541b" class="colab-df-container">
+    <div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">balance_type</th>
+<th data-quarto-table-cell-role="th">item</th>
+<th data-quarto-table-cell-role="th">amount_usd_bil</th>
+<th data-quarto-table-cell-role="th">liquid_share_pct</th>
+<th data-quarto-table-cell-role="th">stress_haircut_pct</th>
+<th data-quarto-table-cell-role="th">affiliate_linked_flag</th>
+<th data-quarto-table-cell-role="th">usable_for_withdrawals_pct</th>
+<th data-quarto-table-cell-role="th">usable_normal_bil</th>
+<th data-quarto-table-cell-role="th">usable_stressed_bil</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>Asset</td>
+<td>Cash_and_stablecoins</td>
+<td>1.8</td>
+<td>100</td>
+<td>0</td>
+<td>0</td>
+<td>100</td>
+<td>1.80</td>
+<td>1.8000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>Asset</td>
+<td>Liquid_crypto_BTC_ETH</td>
+<td>2.6</td>
+<td>85</td>
+<td>12</td>
+<td>0</td>
+<td>80</td>
+<td>2.08</td>
+<td>1.8304</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>Asset</td>
+<td>FTT_and_affiliated_tokens</td>
+<td>3.4</td>
+<td>15</td>
+<td>65</td>
+<td>1</td>
+<td>10</td>
+<td>0.34</td>
+<td>0.1190</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>Asset</td>
+<td>Loans_to_related_parties</td>
+<td>5.1</td>
+<td>0</td>
+<td>90</td>
+<td>1</td>
+<td>0</td>
+<td>0.00</td>
+<td>0.0000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>Asset</td>
+<td>Venture_investments</td>
+<td>2.2</td>
+<td>5</td>
+<td>55</td>
+<td>0</td>
+<td>0</td>
+<td>0.00</td>
+<td>0.0000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>Asset</td>
+<td>Real_estate_and_private_assets</td>
+<td>0.7</td>
+<td>0</td>
+<td>50</td>
+<td>0</td>
+<td>0</td>
+<td>0.00</td>
+<td>0.0000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>Asset</td>
+<td>Other_crypto_assets</td>
+<td>1.6</td>
+<td>30</td>
+<td>35</td>
+<td>0</td>
+<td>20</td>
+<td>0.32</td>
+<td>0.2080</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">7</td>
+<td>Liability</td>
+<td>Customer_payables</td>
+<td>8.9</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0.00</td>
+<td>0.0000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">8</td>
+<td>Liability</td>
+<td>Secured_borrowing</td>
+<td>1.5</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0.00</td>
+<td>0.0000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">9</td>
+<td>Liability</td>
+<td>Other_liabilities</td>
+<td>0.8</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0.00</td>
+<td>0.0000</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-a28766e7-7697-4646-94d2-2654612a541b')" title="Convert this dataframe to an interactive table." style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"></path>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-a28766e7-7697-4646-94d2-2654612a541b button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-a28766e7-7697-4646-94d2-2654612a541b');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+  <div id="id_56844be6-b09b-4704-9f75-9e05d8b63faf">
+    <style>
+      .colab-df-generate {
+        background-color: #E8F0FE;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+        fill: #1967D2;
+        height: 32px;
+        padding: 0 0 0 0;
+        width: 32px;
+      }
+
+      .colab-df-generate:hover {
+        background-color: #E2EBFA;
+        box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+        fill: #174EA6;
+      }
+
+      [theme=dark] .colab-df-generate {
+        background-color: #3B4455;
+        fill: #D2E3FC;
+      }
+
+      [theme=dark] .colab-df-generate:hover {
+        background-color: #434B5C;
+        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+        fill: #FFFFFF;
+      }
+    </style>
+    <button class="colab-df-generate" onclick="generateWithVariable('ftx_dataset')" title="Generate code using this dataframe." style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px">
+    <path d="M7,19H8.4L18.45,9,17,7.55,7,17.6ZM5,21V16.75L18.45,3.32a2,2,0,0,1,2.83,0l1.4,1.43a1.91,1.91,0,0,1,.58,1.4,1.91,1.91,0,0,1-.58,1.4L9.25,21ZM18.45,9,17,7.55Zm-12,3A5.31,5.31,0,0,0,4.9,8.1,5.31,5.31,0,0,0,1,6.5,5.31,5.31,0,0,0,4.9,4.9,5.31,5.31,0,0,0,6.5,1,5.31,5.31,0,0,0,8.1,4.9,5.31,5.31,0,0,0,12,6.5,5.46,5.46,0,0,0,6.5,12Z"></path>
+  </svg>
+    </button>
+    <script>
+      (() => {
+      const buttonEl =
+        document.querySelector('#id_56844be6-b09b-4704-9f75-9e05d8b63faf button.colab-df-generate');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      buttonEl.onclick = () => {
+        google.colab.notebook.generateWithVariable('ftx_dataset');
+      }
+      })();
+    </script>
+  </div>
+
+    </div>
+  </div>
+</div>
+</div>
+<p>Usable Normal BIL: The dollar value that each asset that could realistically be used to fulfil customer withdrawals under normal market conditions. Calculated by multiplying the asset amount by its usable withdrawal percentage.</p>
+<p>Usable Stressed BIL: The same measure as above, but applied under crisis conditions, where an additional stress haircut is applied to reflect the decline in the asset during the market shock, resulting in a lower recoverable amount.</p>
+<p>As a result of creating these two variables, we are able to compute the Withdrawal Coverage Ratio. The Withdrawal coverage ratio (WCR) is defined as the total usable assets divided by total customer payables. If the WCR is 1.0 or above, it means that the system can fully cover their withdrawal demand. A WCR below 1.0 indicates insolvency, meaning the system cannot meet its obligations to customers. This metric, computed under both normal and stressed conditions allows us to see how fragile the system is when asset values deteriorate.</p>
+<p>I will also be using the coverage gap to explain the dollar shortfall between the total customer payables and the total usable assests. In other words, it shows the amount that FTX would be unable to repay customers if all withdrawals were demanded at once.</p>
+<div id="cell-12" class="cell" data-outputid="6a77fc66-b7e6-4a83-8bc1-593c207d66a8">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>total_usable_normal   <span class="op">=</span> ftx_dataset[ftx_dataset[<span class="st">'balance_type'</span>] <span class="op">==</span> <span class="st">'Asset'</span>][<span class="st">'usable_normal_bil'</span>].<span class="bu">sum</span>()</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>total_usable_stressed <span class="op">=</span> ftx_dataset[ftx_dataset[<span class="st">'balance_type'</span>] <span class="op">==</span> <span class="st">'Asset'</span>][<span class="st">'usable_stressed_bil'</span>].<span class="bu">sum</span>()</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>customer_payables     <span class="op">=</span> ftx_dataset[ftx_dataset[<span class="st">'item'</span>] <span class="op">==</span> <span class="st">'Customer_payables'</span>][<span class="st">'amount_usd_bil'</span>].values[<span class="dv">0</span>]</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>wcr_normal   <span class="op">=</span> total_usable_normal   <span class="op">/</span> customer_payables</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>wcr_stressed <span class="op">=</span> total_usable_stressed <span class="op">/</span> customer_payables</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"="</span> <span class="op">*</span> <span class="dv">50</span>)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"WITHDRAWAL COVERAGE RATIO (WCR)"</span>)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"="</span> <span class="op">*</span> <span class="dv">50</span>)</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Total Customer Payables:        $</span><span class="sc">{</span>customer_payables<span class="sc">:.2f}</span><span class="ss">B"</span>)</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Total Usable Assets (Normal):   $</span><span class="sc">{</span>total_usable_normal<span class="sc">:.2f}</span><span class="ss">B"</span>)</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Total Usable Assets (Stressed): $</span><span class="sc">{</span>total_usable_stressed<span class="sc">:.2f}</span><span class="ss">B"</span>)</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">WCR Normal:   </span><span class="sc">{</span>wcr_normal<span class="sc">:.4f}</span><span class="ss">  </span><span class="sc">{</span><span class="st">'✅ Solvent'</span> <span class="cf">if</span> wcr_normal <span class="op">&gt;=</span> <span class="dv">1</span> <span class="cf">else</span> <span class="st">'❌ Insolvent'</span><span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"WCR Stressed: </span><span class="sc">{</span>wcr_stressed<span class="sc">:.4f}</span><span class="ss">  </span><span class="sc">{</span><span class="st">'✅ Solvent'</span> <span class="cf">if</span> wcr_stressed <span class="op">&gt;=</span> <span class="dv">1</span> <span class="cf">else</span> <span class="st">'❌ Insolvent'</span><span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>==================================================
+WITHDRAWAL COVERAGE RATIO (WCR)
+==================================================
+
+Total Customer Payables:        $8.90B
+Total Usable Assets (Normal):   $4.54B
+Total Usable Assets (Stressed): $3.96B
+
+WCR Normal:   0.5101  ❌ Insolvent
+WCR Stressed: 0.4447  ❌ Insolvent</code></pre>
+</div>
+</div>
+<div id="cell-13" class="cell" data-outputid="88eb1762-cb4f-4769-83df-cb57fb253867">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Coverage Gap (Normal):   $</span><span class="sc">{</span>customer_payables <span class="op">-</span> total_usable_normal<span class="sc">:.2f}</span><span class="ss">B"</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Coverage Gap (Stressed): $</span><span class="sc">{</span>customer_payables <span class="op">-</span> total_usable_stressed<span class="sc">:.2f}</span><span class="ss">B"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Coverage Gap (Normal):   $4.36B
+Coverage Gap (Stressed): $4.94B</code></pre>
+</div>
+</div>
+<p>FTX WCR of 0.51 under normal conditions signals a fragile system, as the firm can only cover roughly half of its $8.09B in customers payables, with just $4.5B in usable assets, leaving a $4.3B gap before any stress is applied. Under the stress conditions, the WCR drops even further to 0.44, with the usable assets falling to $3.96B and the coverage gap increased to $4.94B. Overall, the system looks fragile. The raw data does not immediately reveal how FTX’s total asset figure appears at face value. Assets like FTT tokens ($3.41B) and loans to related parties ($5.10B) together account for over $8.5B on the balance sheet, yet contribute virtually nothing to withdrawal coverage due to their zero usability ratings and affiiliate linkages. Once the constraints are applied, the asset base collapses quickly. The system is not borderline insolvent, it is structurally insolvent by a large margin, and this fragility exists entirely independent of any external shock.</p>
+</section>
+<section id="part-2-shock-scenario" class="level1">
+<h1>Part 2: Shock Scenario</h1>
+<div id="cell-16" class="cell" data-outputid="161f551e-1352-4e89-d39d-6dc6c1a66718">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Shock Parameters ──────────────────────────────────────────</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>withdrawal_shock_pct      <span class="op">=</span> <span class="fl">0.30</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>customer_payables_shocked <span class="op">=</span> customer_payables <span class="op">*</span> (<span class="dv">1</span> <span class="op">+</span> withdrawal_shock_pct)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Recompute WCR Under Shock ─────────────────────────────────</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>wcr_normal_shocked   <span class="op">=</span> total_usable_normal   <span class="op">/</span> customer_payables_shocked</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>wcr_stressed_shocked <span class="op">=</span> total_usable_stressed <span class="op">/</span> customer_payables_shocked</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Coverage Gaps ─────────────────────────────────────────────</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>gap_normal_pre    <span class="op">=</span> customer_payables         <span class="op">-</span> total_usable_normal</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>gap_normal_post   <span class="op">=</span> customer_payables_shocked <span class="op">-</span> total_usable_normal</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>gap_stressed_pre  <span class="op">=</span> customer_payables         <span class="op">-</span> total_usable_stressed</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>gap_stressed_post <span class="op">=</span> customer_payables_shocked <span class="op">-</span> total_usable_stressed</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Output ────────────────────────────────────────────────────</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"="</span> <span class="op">*</span> <span class="dv">55</span>)</span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"PART 2 – SHOCK SCENARIO: 30% WITHDRAWAL INCREASE"</span>)</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"="</span> <span class="op">*</span> <span class="dv">55</span>)</span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="sc">{</span><span class="st">''</span><span class="sc">:30}</span><span class="ss"> </span><span class="sc">{</span><span class="st">'Pre-Shock'</span><span class="sc">:&gt;10}</span><span class="ss"> </span><span class="sc">{</span><span class="st">'Post-Shock'</span><span class="sc">:&gt;10}</span><span class="ss">"</span>)</span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"-"</span> <span class="op">*</span> <span class="dv">55</span>)</span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span><span class="st">'Customer Payables ($B)'</span><span class="sc">:&lt;30}</span><span class="ss"> </span><span class="sc">{</span>customer_payables<span class="sc">:&gt;10.2f}</span><span class="ss"> </span><span class="sc">{</span>customer_payables_shocked<span class="sc">:&gt;10.2f}</span><span class="ss">"</span>)</span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span><span class="st">'WCR (Normal)'</span><span class="sc">:&lt;30}</span><span class="ss"> </span><span class="sc">{</span>wcr_normal<span class="sc">:&gt;10.4f}</span><span class="ss"> </span><span class="sc">{</span>wcr_normal_shocked<span class="sc">:&gt;10.4f}</span><span class="ss">"</span>)</span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span><span class="st">'WCR (Stressed)'</span><span class="sc">:&lt;30}</span><span class="ss"> </span><span class="sc">{</span>wcr_stressed<span class="sc">:&gt;10.4f}</span><span class="ss"> </span><span class="sc">{</span>wcr_stressed_shocked<span class="sc">:&gt;10.4f}</span><span class="ss">"</span>)</span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span><span class="st">'Coverage Gap Normal ($B)'</span><span class="sc">:&lt;30}</span><span class="ss"> </span><span class="sc">{</span>gap_normal_pre<span class="sc">:&gt;10.2f}</span><span class="ss"> </span><span class="sc">{</span>gap_normal_post<span class="sc">:&gt;10.2f}</span><span class="ss">"</span>)</span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span><span class="st">'Coverage Gap Stressed ($B)'</span><span class="sc">:&lt;30}</span><span class="ss"> </span><span class="sc">{</span>gap_stressed_pre<span class="sc">:&gt;10.2f}</span><span class="ss"> </span><span class="sc">{</span>gap_stressed_post<span class="sc">:&gt;10.2f}</span><span class="ss">"</span>)</span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="sc">{</span><span class="st">'Solvency Status'</span><span class="sc">:&lt;30}</span><span class="ss"> </span><span class="sc">{</span><span class="st">'Pre-Shock'</span><span class="sc">:&gt;10}</span><span class="ss"> </span><span class="sc">{</span><span class="st">'Post-Shock'</span><span class="sc">:&gt;10}</span><span class="ss">"</span>)</span>
+<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"-"</span> <span class="op">*</span> <span class="dv">55</span>)</span>
+<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span><span class="st">'WCR (Normal)'</span><span class="sc">:&lt;30}</span><span class="ss"> </span><span class="sc">{</span><span class="st">'❌ Insolvent'</span><span class="sc">:&gt;10}</span><span class="ss"> </span><span class="sc">{</span><span class="st">'❌ Insolvent'</span><span class="sc">:&gt;10}</span><span class="ss">"</span>)</span>
+<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span><span class="st">'WCR (Stressed)'</span><span class="sc">:&lt;30}</span><span class="ss"> </span><span class="sc">{</span><span class="st">'❌ Insolvent'</span><span class="sc">:&gt;10}</span><span class="ss"> </span><span class="sc">{</span><span class="st">'❌ Insolvent'</span><span class="sc">:&gt;10}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>=======================================================
+PART 2 – SHOCK SCENARIO: 30% WITHDRAWAL INCREASE
+=======================================================
+
+                                Pre-Shock Post-Shock
+-------------------------------------------------------
+Customer Payables ($B)               8.90      11.57
+WCR (Normal)                       0.5101     0.3924
+WCR (Stressed)                     0.4447     0.3420
+Coverage Gap Normal ($B)             4.36       7.03
+Coverage Gap Stressed ($B)           4.94       7.61
+
+Solvency Status                 Pre-Shock Post-Shock
+-------------------------------------------------------
+WCR (Normal)                   ❌ Insolvent ❌ Insolvent
+WCR (Stressed)                 ❌ Insolvent ❌ Insolvent</code></pre>
+</div>
+</div>
+<div id="cell-17" class="cell" data-outputid="de1647e2-5187-4a43-e026-eb900193ba2f">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Shared Data ───────────────────────────────────────────────</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>labels   <span class="op">=</span> [<span class="st">'Normal</span><span class="ch">\n</span><span class="st">Pre-Shock'</span>, <span class="st">'Normal</span><span class="ch">\n</span><span class="st">Post-Shock'</span>, <span class="st">'Stressed</span><span class="ch">\n</span><span class="st">Pre-Shock'</span>, <span class="st">'Stressed</span><span class="ch">\n</span><span class="st">Post-Shock'</span>]</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>wcr_vals <span class="op">=</span> [wcr_normal, wcr_normal_shocked, wcr_stressed, wcr_stressed_shocked]</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Shared Color Scheme ───────────────────────────────────────</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>pre_color  <span class="op">=</span> <span class="st">'#5b9bd5'</span>  <span class="co"># Blue – Pre-Shock</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>post_color <span class="op">=</span> <span class="st">'#d9534f'</span>  <span class="co"># Red  – Post-Shock</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>bar_colors <span class="op">=</span> [pre_color, post_color, pre_color, post_color]</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">13</span>, <span class="dv">5</span>))</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Panel 1 – WCR Comparison ──────────────────────────────────</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>ax1.bar(labels, wcr_vals, color<span class="op">=</span>bar_colors, edgecolor<span class="op">=</span><span class="st">'black'</span>, width<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>ax1.axhline(y<span class="op">=</span><span class="fl">1.0</span>, color<span class="op">=</span><span class="st">'green'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, linewidth<span class="op">=</span><span class="fl">1.5</span>, label<span class="op">=</span><span class="st">'Solvency Threshold (1.0)'</span>)</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> bar, val <span class="kw">in</span> <span class="bu">zip</span>(ax1.patches, wcr_vals):</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>    ax1.text(bar.get_x() <span class="op">+</span> bar.get_width() <span class="op">/</span> <span class="dv">2</span>, bar.get_height() <span class="op">+</span> <span class="fl">0.01</span>,</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>             <span class="ss">f'</span><span class="sc">{</span>val<span class="sc">:.4f}</span><span class="ss">'</span>, ha<span class="op">=</span><span class="st">'center'</span>, va<span class="op">=</span><span class="st">'bottom'</span>, fontsize<span class="op">=</span><span class="dv">9</span>)</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">'Withdrawal Coverage Ratio'</span>, fontsize<span class="op">=</span><span class="dv">12</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>ax1.set_ylabel(<span class="st">'WCR'</span>)</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>ax1.set_ylim(<span class="dv">0</span>, <span class="fl">1.3</span>)</span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>pre_patch  <span class="op">=</span> mpatches.Patch(color<span class="op">=</span>pre_color,  label<span class="op">=</span><span class="st">'Pre-Shock'</span>)</span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>post_patch <span class="op">=</span> mpatches.Patch(color<span class="op">=</span>post_color, label<span class="op">=</span><span class="st">'Post-Shock'</span>)</span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>ax1.legend(handles<span class="op">=</span>[pre_patch, post_patch, plt.Line2D([<span class="dv">0</span>], [<span class="dv">0</span>], color<span class="op">=</span><span class="st">'green'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, label<span class="op">=</span><span class="st">'Solvency Threshold (1.0)'</span>)], fontsize<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Panel 2 – Coverage Gap Comparison ────────────────────────</span></span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>gap_labels <span class="op">=</span> [<span class="st">'Normal</span><span class="ch">\n</span><span class="st">Pre-Shock'</span>, <span class="st">'Normal</span><span class="ch">\n</span><span class="st">Post-Shock'</span>, <span class="st">'Stressed</span><span class="ch">\n</span><span class="st">Pre-Shock'</span>, <span class="st">'Stressed</span><span class="ch">\n</span><span class="st">Post-Shock'</span>]</span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a>gap_vals   <span class="op">=</span> [gap_normal_pre, gap_normal_post, gap_stressed_pre, gap_stressed_post]</span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a>ax2.bar(gap_labels, gap_vals, color<span class="op">=</span>bar_colors, edgecolor<span class="op">=</span><span class="st">'black'</span>, width<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> bar, val <span class="kw">in</span> <span class="bu">zip</span>(ax2.patches, gap_vals):</span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>    ax2.text(bar.get_x() <span class="op">+</span> bar.get_width() <span class="op">/</span> <span class="dv">2</span>, bar.get_height() <span class="op">+</span> <span class="fl">0.05</span>,</span>
+<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a>             <span class="ss">f'$</span><span class="sc">{</span>val<span class="sc">:.2f}</span><span class="ss">B'</span>, ha<span class="op">=</span><span class="st">'center'</span>, va<span class="op">=</span><span class="st">'bottom'</span>, fontsize<span class="op">=</span><span class="dv">9</span>)</span>
+<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">'Coverage Gap ($B)'</span>, fontsize<span class="op">=</span><span class="dv">12</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a>ax2.set_ylabel(<span class="st">'USD Billions'</span>)</span>
+<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a>ax2.legend(handles<span class="op">=</span>[pre_patch, post_patch], fontsize<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a>fig.suptitle(<span class="st">'FTX – Pre vs Post Shock Analysis'</span>, fontsize<span class="op">=</span><span class="dv">14</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="AD561_Assignment4_BdeGouw_files/figure-html/cell-11-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The 30% withdrawal surge shock shows that the FTX system deteriorates rapidly rather than gradually. The WCR under normal conditions falls from 0.51 5o 0.39, which the stressed WCR drops from 0.44 to 0.34, showing a meaningful decline across both measures. More notably, the coverage gap widens from $4.36B to $7.03B under normal conditions, and from $4.94B to $7.61B under stress, showing a deterioration of over $2.6B in each case from a single shock.</p>
+<p>The variable that mattered the most was the customer payables. Since usable assets are fixed and cannot be quickly mobilized in response to surging demand, any increase in withdrawl pressure directly and proportionally widens the coverage gap. This exposes a critical strucutural weakness, the asset side of the balance sheet has no flexibility to respond to demand-side shocks.</p>
+<p>The behavior is largely linear within this single shock scenario, as a 30% increase in payables produces a near-proportional decline in WCR. However, I believe that more important non-linear risk occurs under the surface… if a withdrawal surge triggers a loss of confidence, it could cause a cascading run where demand far exceeds 30%, this could rapidly push the WCR towards zero. FTX was already insolvent before the shock and the surge would accelerate the inveitable collapse.</p>
+</section>
+<section id="part-3" class="level1">
+<h1>Part 3</h1>
+<section id="stress-map" class="level2">
+<h2 class="anchored" data-anchor-id="stress-map">Stress Map</h2>
+<div id="cell-21" class="cell" data-outputid="a1ec98ff-9924-450d-cfd6-d90738530f04">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Grid Parameters ───────────────────────────────────────────</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>withdrawal_range <span class="op">=</span> np.linspace(<span class="fl">0.0</span>, <span class="fl">1.0</span>, <span class="dv">50</span>)   <span class="co"># 0% to 100% withdrawal demand</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>haircut_range    <span class="op">=</span> np.linspace(<span class="fl">0.0</span>, <span class="fl">0.8</span>, <span class="dv">50</span>)   <span class="co"># 0% to 80% additional haircut</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co"># ── WCR Function ──────────────────────────────────────────────</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compute_wcr(withdrawal_pct, additional_haircut):</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    adjusted_usable <span class="op">=</span> total_usable_normal <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> additional_haircut)</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>    effective_payables <span class="op">=</span> customer_payables <span class="op">*</span> withdrawal_pct</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> effective_payables <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> np.nan</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> adjusted_usable <span class="op">/</span> effective_payables</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Evaluate Across Grid ──────────────────────────────────────</span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>wcr_grid <span class="op">=</span> np.zeros((<span class="bu">len</span>(haircut_range), <span class="bu">len</span>(withdrawal_range)))</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, haircut <span class="kw">in</span> <span class="bu">enumerate</span>(haircut_range):</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j, withdrawal <span class="kw">in</span> <span class="bu">enumerate</span>(withdrawal_range):</span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>        wcr_grid[i, j] <span class="op">=</span> compute_wcr(withdrawal, haircut)</span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Plot Heatmap ──────────────────────────────────────────────</span></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">7</span>))</span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>sns.heatmap(</span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>    wcr_grid,</span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>    ax<span class="op">=</span>ax,</span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>    cmap<span class="op">=</span><span class="st">'RdYlGn'</span>,</span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a>    center<span class="op">=</span><span class="fl">1.0</span>,</span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a>    vmin<span class="op">=</span><span class="dv">0</span>,</span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a>    vmax<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a>    xticklabels<span class="op">=</span><span class="dv">10</span>,</span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a>    yticklabels<span class="op">=</span><span class="dv">10</span>,</span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a>    cbar_kws<span class="op">=</span>{<span class="st">'label'</span>: <span class="st">'WCR (Red = Insolvent, Green = Solvent)'</span>}</span>
+<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">'Stress Map – WCR Across Withdrawal Demand and Asset Haircut'</span>, fontsize<span class="op">=</span><span class="dv">13</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'Withdrawal Demand (%)'</span>)</span>
+<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'Additional Asset Haircut (%)'</span>)</span>
+<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Format Axis Labels as Percentages ────────────────────────</span></span>
+<span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a>x_ticks <span class="op">=</span> [<span class="ss">f'</span><span class="sc">{</span><span class="bu">int</span>(v<span class="op">*</span><span class="dv">100</span>)<span class="sc">}</span><span class="ss">%'</span> <span class="cf">for</span> v <span class="kw">in</span> withdrawal_range[::<span class="dv">10</span>]]</span>
+<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a>y_ticks <span class="op">=</span> [<span class="ss">f'</span><span class="sc">{</span><span class="bu">int</span>(v<span class="op">*</span><span class="dv">100</span>)<span class="sc">}</span><span class="ss">%'</span> <span class="cf">for</span> v <span class="kw">in</span> haircut_range[::<span class="dv">10</span>]]</span>
+<span id="cb15-43"><a href="#cb15-43" aria-hidden="true" tabindex="-1"></a>ax.set_xticklabels(x_ticks)</span>
+<span id="cb15-44"><a href="#cb15-44" aria-hidden="true" tabindex="-1"></a>ax.set_yticklabels(y_ticks, rotation<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb15-45"><a href="#cb15-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-46"><a href="#cb15-46" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb15-47"><a href="#cb15-47" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="AD561_Assignment4_BdeGouw_files/figure-html/cell-12-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The stress map reveals that the FTX’s systems fails across the vast majority on conditions simulated. The green area - which represents solvency - is confined to a relatively small, narrow band across the left hand side. We see it widen slightly as the withdrawal demand increases. It remains green where the withdrawal demand stays below approximately 20%, and the asset haircuts are minimal.</p>
+<p>The most notable nonlinear observation occurs near the 20% withdrawal threshold. Rather than a gradual transition, there is a sharp boundary where the system crosses from marginally solvent to deeply insolvent, within a very narrow range of withdrawal demands. This is very telling of a confidence-driven run dynamic… once withdrawals surpass a critical threshold, the system does not slowly degrade, rather it collpases.</p>
+<p>The withdrawal demand is the clearly the dominant varaible. As we move horizontally across the map, the color transitions from green to red very rapidly and consistently across all haircit levels. This confirms that rising withdrawal demand is the primary driver of the collapse. The asset haircut, while it does contribute to the deterioration in a more secondary role, even at 0% haircit, the system becomes insolvent once withdrawal demand exceeds approximately 35%.</p>
+<p>I was surprised that the danger zone for FTX was not just hypothetical, it was actually operating close to it at all times. This meant that even a modest and coordinated withdrawal demand was enough to trigger a collapse of the system under almst any market condition.</p>
+</section>
+<section id="monte-carlo-simulation" class="level2">
+<h2 class="anchored" data-anchor-id="monte-carlo-simulation">Monte Carlo Simulation</h2>
+<div id="cell-24" class="cell" data-outputid="02784f00-c2f9-4211-cfc1-f5bd534efbfc">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">42</span>)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>n_simulations <span class="op">=</span> <span class="dv">10_000</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Uncertain Variables ───────────────────────────────────────</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>sim_withdrawal <span class="op">=</span> np.random.uniform(<span class="fl">0.1</span>, <span class="fl">1.0</span>,  n_simulations)  <span class="co"># 10% to 100% withdrawal demand</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>sim_haircut    <span class="op">=</span> np.random.uniform(<span class="fl">0.0</span>, <span class="fl">0.8</span>,  n_simulations)  <span class="co"># 0%  to 80%  asset haircut</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Compute WCR For Each Simulation ──────────────────────────</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>sim_usable     <span class="op">=</span> total_usable_normal <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> sim_haircut)</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>sim_payables   <span class="op">=</span> customer_payables   <span class="op">*</span> sim_withdrawal</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>sim_wcr        <span class="op">=</span> sim_usable <span class="op">/</span> sim_payables</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Failure Definition ────────────────────────────────────────</span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>sim_failed         <span class="op">=</span> sim_wcr <span class="op">&lt;</span> <span class="fl">1.0</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>failure_probability <span class="op">=</span> sim_failed.mean()</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Output ────────────────────────────────────────────────────</span></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"="</span> <span class="op">*</span> <span class="dv">50</span>)</span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"MONTE CARLO SIMULATION RESULTS"</span>)</span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"="</span> <span class="op">*</span> <span class="dv">50</span>)</span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Total Simulations:       </span><span class="sc">{</span>n_simulations<span class="sc">:,}</span><span class="ss">"</span>)</span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Failed Scenarios:        </span><span class="sc">{</span>sim_failed<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">:,}</span><span class="ss">"</span>)</span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Failure Probability:     </span><span class="sc">{</span>failure_probability<span class="sc">:.2%}</span><span class="ss">"</span>)</span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Mean WCR:                </span><span class="sc">{</span>sim_wcr<span class="sc">.</span>mean()<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Median WCR:              </span><span class="sc">{</span>np<span class="sc">.</span>median(sim_wcr)<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"WCR 5th Percentile:      </span><span class="sc">{</span>np<span class="sc">.</span>percentile(sim_wcr, <span class="dv">5</span>)<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"WCR 95th Percentile:     </span><span class="sc">{</span>np<span class="sc">.</span>percentile(sim_wcr, <span class="dv">95</span>)<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Distribution Plot ─────────────────────────────────────────</span></span>
+<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span>
+<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a>ax.hist(sim_wcr, bins<span class="op">=</span><span class="dv">100</span>, color<span class="op">=</span><span class="st">'#5b9bd5'</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="fl">0.3</span>, alpha<span class="op">=</span><span class="fl">0.85</span>)</span>
+<span id="cb16-33"><a href="#cb16-33" aria-hidden="true" tabindex="-1"></a>ax.axvline(x<span class="op">=</span><span class="fl">1.0</span>,            color<span class="op">=</span><span class="st">'green'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, linewidth<span class="op">=</span><span class="fl">1.5</span>, label<span class="op">=</span><span class="st">'Solvency Threshold (1.0)'</span>)</span>
+<span id="cb16-34"><a href="#cb16-34" aria-hidden="true" tabindex="-1"></a>ax.axvline(x<span class="op">=</span>sim_wcr.mean(), color<span class="op">=</span><span class="st">'orange'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, linewidth<span class="op">=</span><span class="fl">1.5</span>, label<span class="op">=</span><span class="ss">f'Mean WCR (</span><span class="sc">{</span>sim_wcr<span class="sc">.</span>mean()<span class="sc">:.4f}</span><span class="ss">)'</span>)</span>
+<span id="cb16-35"><a href="#cb16-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-36"><a href="#cb16-36" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">'Monte Carlo Simulation – WCR Distribution (10,000 Scenarios)'</span>, fontsize<span class="op">=</span><span class="dv">13</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb16-37"><a href="#cb16-37" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'Withdrawal Coverage Ratio (WCR)'</span>)</span>
+<span id="cb16-38"><a href="#cb16-38" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'Frequency'</span>)</span>
+<span id="cb16-39"><a href="#cb16-39" aria-hidden="true" tabindex="-1"></a>ax.legend()</span>
+<span id="cb16-40"><a href="#cb16-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-41"><a href="#cb16-41" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb16-42"><a href="#cb16-42" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>==================================================
+MONTE CARLO SIMULATION RESULTS
+==================================================
+
+Total Simulations:       10,000
+Failed Scenarios:        7,743
+Failure Probability:     77.43%
+Mean WCR:                0.7843
+Median WCR:              0.5626
+WCR 5th Percentile:      0.1837
+WCR 95th Percentile:     2.2272</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="AD561_Assignment4_BdeGouw_files/figure-html/cell-13-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Over the 10,000 simulations scenarios ran, FTX failed in 7,743 of them, representing a failure probability of 77.43%. This means the system collapses in roughly 3 out of every 4 possible situations, which is not a systems operating near the fragility, but rather one that is structurally predisposed to failure under almost any realistic set of conditions.</p>
+<p>The system usuaally collapses… survival is more likely an exception rather than a rule. The mean WCR of 0.78 sits well below the solvency thresholdhold of 1.0, and the median of 0.56 suggests that in a typical scenario, FTX can only cover a little more than half of its customer obligations.</p>
+<p>Failure of the systems is driven by common cases. The histogram shows that it is heavily concentrated below the solvency threshold, meaning insolvency is the most frequent outcome across the distribution - not a tail risk reserved for catastrophic conditions. The 5th percentile WCR pf 0.18, represents the most severe outcomes, but even the median scenario results in deep insolvency.</p>
+<p>The right tail of the distribution, where the WCR exceeds 1.0, represents cases where customers demand very little of their funds back, not cases where FTX has sufficient assets. FTX’s apparent stability was entirely dependent on customer inaction, meaning the fragility was not hidden deep within stress scenarios, but present in ordinary ones, concealed only by the assumption that customers would never simulatneously demand their money back.</p>
+</section>
+</section>
+<section id="part-4-breaking-point-analysis" class="level1">
+<h1>Part 4: Breaking Point Analysis</h1>
+<div id="cell-27" class="cell" data-outputid="0f836ecf-ba75-4be7-fbc8-9d014f0a0f6c">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Variable Range ────────────────────────────────────────────</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>withdrawal_range <span class="op">=</span> np.linspace(<span class="fl">0.01</span>, <span class="fl">1.0</span>, <span class="dv">1000</span>)  <span class="co"># 1% to 100% withdrawal demand</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Compute WCR Across Range ──────────────────────────────────</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>wcr_values        <span class="op">=</span> total_usable_normal   <span class="op">/</span> (customer_payables <span class="op">*</span> withdrawal_range)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>wcr_values_stress <span class="op">=</span> total_usable_stressed <span class="op">/</span> (customer_payables <span class="op">*</span> withdrawal_range)</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Identify Breaking Points ──────────────────────────────────</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>breaking_point_normal  <span class="op">=</span> withdrawal_range[np.argmax(wcr_values        <span class="op">&lt;</span> <span class="fl">1.0</span>)]</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>breaking_point_stress  <span class="op">=</span> withdrawal_range[np.argmax(wcr_values_stress <span class="op">&lt;</span> <span class="fl">1.0</span>)]</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Output Table ──────────────────────────────────────────────</span></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"="</span> <span class="op">*</span> <span class="dv">55</span>)</span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"PART 4 – BREAKING POINT ANALYSIS"</span>)</span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"="</span> <span class="op">*</span> <span class="dv">55</span>)</span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="sc">{</span><span class="st">'Scenario'</span><span class="sc">:&lt;30}</span><span class="ss"> </span><span class="sc">{</span><span class="st">'Breaking Point'</span><span class="sc">:&gt;15}</span><span class="ss">"</span>)</span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"-"</span> <span class="op">*</span> <span class="dv">55</span>)</span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span><span class="st">'Normal Conditions'</span><span class="sc">:&lt;30}</span><span class="ss"> </span><span class="sc">{</span>breaking_point_normal<span class="sc">:&gt;14.2%}</span><span class="ss">"</span>)</span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span><span class="st">'Stressed Conditions'</span><span class="sc">:&lt;30}</span><span class="ss"> </span><span class="sc">{</span>breaking_point_stress<span class="sc">:&gt;14.2%}</span><span class="ss">"</span>)</span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Current Withdrawal Demand (Base): 100%"</span>)</span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Normal  Breaking Point:           </span><span class="sc">{</span>breaking_point_normal<span class="sc">:.2%}</span><span class="ss">"</span>)</span>
+<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Stressed Breaking Point:          </span><span class="sc">{</span>breaking_point_stress<span class="sc">:.2%}</span><span class="ss">"</span>)</span>
+<span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Excess Demand Beyond Breaking Point (Normal):   </span><span class="sc">{</span><span class="fl">1.0</span> <span class="op">-</span> breaking_point_normal<span class="sc">:.2%}</span><span class="ss">"</span>)</span>
+<span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Excess Demand Beyond Breaking Point (Stressed): </span><span class="sc">{</span><span class="fl">1.0</span> <span class="op">-</span> breaking_point_stress<span class="sc">:.2%}</span><span class="ss">"</span>)</span>
+<span id="cb18-25"><a href="#cb18-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-26"><a href="#cb18-26" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Plot ──────────────────────────────────────────────────────</span></span>
+<span id="cb18-27"><a href="#cb18-27" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">11</span>, <span class="dv">6</span>))</span>
+<span id="cb18-28"><a href="#cb18-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a>ax.plot(withdrawal_range <span class="op">*</span> <span class="dv">100</span>, wcr_values,        color<span class="op">=</span><span class="st">'#5b9bd5'</span>, linewidth<span class="op">=</span><span class="dv">2</span>,    label<span class="op">=</span><span class="st">'WCR (Normal)'</span>)</span>
+<span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a>ax.plot(withdrawal_range <span class="op">*</span> <span class="dv">100</span>, wcr_values_stress, color<span class="op">=</span><span class="st">'#d9534f'</span>, linewidth<span class="op">=</span><span class="dv">2</span>,    label<span class="op">=</span><span class="st">'WCR (Stressed)'</span>)</span>
+<span id="cb18-31"><a href="#cb18-31" aria-hidden="true" tabindex="-1"></a>ax.axhline(y<span class="op">=</span><span class="fl">1.0</span>,                                  color<span class="op">=</span><span class="st">'green'</span>,   linestyle<span class="op">=</span><span class="st">'--'</span>, linewidth<span class="op">=</span><span class="fl">1.5</span>, label<span class="op">=</span><span class="st">'Solvency Threshold (1.0)'</span>)</span>
+<span id="cb18-32"><a href="#cb18-32" aria-hidden="true" tabindex="-1"></a>ax.axvline(x<span class="op">=</span>breaking_point_normal  <span class="op">*</span> <span class="dv">100</span>,         color<span class="op">=</span><span class="st">'#5b9bd5'</span>, linestyle<span class="op">=</span><span class="st">':'</span>,  linewidth<span class="op">=</span><span class="fl">1.5</span>, label<span class="op">=</span><span class="ss">f'Normal Breaking Point (</span><span class="sc">{</span>breaking_point_normal<span class="sc">:.2%}</span><span class="ss">)'</span>)</span>
+<span id="cb18-33"><a href="#cb18-33" aria-hidden="true" tabindex="-1"></a>ax.axvline(x<span class="op">=</span>breaking_point_stress  <span class="op">*</span> <span class="dv">100</span>,         color<span class="op">=</span><span class="st">'#d9534f'</span>, linestyle<span class="op">=</span><span class="st">':'</span>,  linewidth<span class="op">=</span><span class="fl">1.5</span>, label<span class="op">=</span><span class="ss">f'Stressed Breaking Point (</span><span class="sc">{</span>breaking_point_stress<span class="sc">:.2%}</span><span class="ss">)'</span>)</span>
+<span id="cb18-34"><a href="#cb18-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-35"><a href="#cb18-35" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">'Breaking Point Analysis – WCR vs Withdrawal Demand'</span>, fontsize<span class="op">=</span><span class="dv">13</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb18-36"><a href="#cb18-36" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'Withdrawal Demand (%)'</span>)</span>
+<span id="cb18-37"><a href="#cb18-37" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'Withdrawal Coverage Ratio (WCR)'</span>)</span>
+<span id="cb18-38"><a href="#cb18-38" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="dv">0</span>, <span class="dv">3</span>)</span>
+<span id="cb18-39"><a href="#cb18-39" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="dv">0</span>, <span class="dv">100</span>)</span>
+<span id="cb18-40"><a href="#cb18-40" aria-hidden="true" tabindex="-1"></a>ax.legend(fontsize<span class="op">=</span><span class="dv">9</span>)</span>
+<span id="cb18-41"><a href="#cb18-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-42"><a href="#cb18-42" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb18-43"><a href="#cb18-43" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>=======================================================
+PART 4 – BREAKING POINT ANALYSIS
+=======================================================
+
+Scenario                        Breaking Point
+-------------------------------------------------------
+Normal Conditions                      51.05%
+Stressed Conditions                    44.50%
+
+Current Withdrawal Demand (Base): 100%
+Normal  Breaking Point:           51.05%
+Stressed Breaking Point:          44.50%
+
+Excess Demand Beyond Breaking Point (Normal):   48.95%
+Excess Demand Beyond Breaking Point (Stressed): 55.50%</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="AD561_Assignment4_BdeGouw_files/figure-html/cell-14-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The breaking point under normal conditions occurs at a withdrawal demand of 51.05%, meaning FTX becomes insolvent once just over half of its customers demand their funds simultaneously. Under stressed conditions, this falls further to 44.50%, as the additional asset haircut reduces the usable asset base and pushes the system into insolvency even sooner.</p>
+<p>The curver declines steeply at low withdrawal levels and flattens as demand approaches 100%, which is characteristic of a hyperbolic relationship rather than a linear one. This means the system is most sensitive to early increases in withdrawal demand - small increases near the breaking point produce disproportionately large drops in the WCR, indicating abrupt rather than gradual failure.</p>
+<p>This is perhaps the most concerning finding within the analysis. FTX’s baseline withdrawal demand is effectively 1005 in a run scenario, meaning it operates at nearly double its breaking point at all times. Even under normal conditions, the system would need customers to collectively demand less than half of their funds to remain solvent. There is no buffer, no margin of safety amd no realitic path to solvency under genuine withdrawal pressure, the breaking point is not a distant boundary, but rather one that is crossed the moment customer confidence begins to erode.</p>
+</section>
+<section id="final-section-reflection" class="level1">
+<h1>Final Section: Reflection</h1>
+<p>The biggest source of fragility in the FTX case was the disconnect betweeen what the balance sheet appeared to show and what they actually had available to meet customer obligations. On the surface, FTX held roughly $17 billion in total assets - a figure that could reasonably suggest a well-capitalized institution. However, once usability constraints, stress haircuts and affiliate linkages were applued, that figure collapsed to just $4.54 billion under normal conditions, and $3.96 billion under stress. The largest individual assets - $5.10 billion in loans to related parties and $3.41 billion in FTT tokens - contributed virtually nothing to withdrawal coverage, yet dominated the balance sheet.</p>
+<p>Before running this analysis, the system would not have appeared immediatelty insolvent. The raw data presents a large, diversified asset base across seven categories, which creates a superficial impression of financial depth. It is only one the fragility metrics are constructed and the usability constraints are applied, that we begin to see the true picture.</p>
+<p>What changed across the multiple scenarios was the confirmation that this is not just a borderline case. The stress map showsed that solvency required withdrawal demand to stay below 20%, which is an unrealistically low threshold. The Monte Carlo simulation returned a 77.43% failure probability across the 10,000 simulations. The breaking point analysis revealed that FTX was operatings nearly double its solvency threshold at all times. Taken together, these findings show that FTX’s stability was never real - it was a function of customer inaction, sustained by opacity and unrealistic confidence.</p>
+<p>If for some reason, the US were to find itself governed by a Dutch-born, New Zealand-raised president… there is no way I would pardon Sam Bankman-Fried. There are a few main reasons as to why I came to this conclusion. Firstly, based on my brief research, there were over 1 million people impacted by his fraud, with losses of over $8 billion stolen from FTX customers and $1.7 billion lost by FTX investors. If he were to be pardoned, this effectively would excuse his actions and ignore the suffering and loses faced by those involved. Secondly, Bankman-Fried deliberately concealed the liquidity mismatch from customers and regulators for many years. This was not due to negligence or poor judgement, this was intentional fraud and therefore should be punishable. Finally, I believe that if he were to be pardoned then this would severly weaken the deterrent effect of financial regulations and perhaps open the door for further fraud to be seen as excusable. If the US wants to build stronger and more robust legislation and rules around financial acitivity, then they must remain firm in their prosecution of indivduals such as Bankman-Fried.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/bdegouw\.github\.io\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

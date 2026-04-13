@@ -104,10 +104,6 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="./cloud_analytics.html">
  <span class="dropdown-text">Cloud Analytics</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="./businessanalytics_foundations.html">
- <span class="dropdown-text">Business Analytics Foundations</span></a>
-  </li>  
     </ul>
   </li>
   <li class="nav-item">
@@ -165,13 +161,12 @@ main.content {
   max-width: 1200px !important;
 }
 .gallery {
-  column-count: 3;
-  column-gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
   margin-top: 1.5rem;
 }
 .gallery-item {
-  break-inside: avoid;
-  margin-bottom: 16px;
   overflow: hidden;
   border-radius: 14px;
 }
@@ -191,12 +186,12 @@ main.content {
 }
 @media (max-width: 1000px) {
   .gallery {
-    column-count: 2;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 768px) {
   .gallery {
-    column-count: 1;
+    grid-template-columns: 1fr;
   }
 }
 </style>
@@ -716,7 +711,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","loop":false,"openEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
