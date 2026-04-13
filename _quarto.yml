@@ -3,18 +3,6 @@ project:
   resources:
     - documents/**
     - photos/**
-  render:
-    - index.qmd
-    - professionalsummary.qmd
-    - classes.qmd
-    - marketing_analytics.qmd
-    - financial_analytics.qmd
-    - cloud_analytics.qmd
-    - businessanalytics_foundations.qmd
-    - blog.qmd
-    - gallery.qmd
-    - side_projects.qmd
-    - contact.qmd
 
 website:
   title: "<img src='photos/bdglogo.png' style='height:22px; margin-right:8px;'> Bowen de Gouw"

@@ -1,9 +1,10 @@
 ---
 title: "Bayside Property Analysis - AD 571 Assignment 1"
-output:
-  pdf_document: default
-  html_document: default
+format:
+  html: default
 date: "2025-07-08"
+execute:
+  eval: false
 ---
 
 ```{r}
