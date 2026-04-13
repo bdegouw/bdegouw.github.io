@@ -9,11 +9,3 @@ listing:
 Please enjoy some of my blog posts below. I will be adding to this section over time as I write about topics that interest me, share insights from my academic and professional journey, and reflect on various experiences. Stay tuned for updates, and feel free to reach out if you have any questions or would like to discuss any of the topics I cover!
 
  ---
-
-  <div style="text-align: center; font-style: italic; margin-top: 40px;">
-  <strong>
-    <a href="https://www.linkedin.com/in/bowen-de-gouw" target="_blank">LinkedIn</a> ·
-    <a href="https://github.com/bdegouw" target="_blank">GitHub</a> ·
-    <a href="mailto:bdegouw@bu.edu">Email</a>
-  </strong>
-</div>
