@@ -1,11 +1,9 @@
 ---
-title: "First Trial Blog Post"
-description: "This is my first trial blog post on my personal website."
+title: "Rowing and the Corporate World: What the Boat Teaches Us About Teamwork"
+description: "Rowing is a sport that exemplifies teamwork, and its principles can be applied to the corporate world. This article explores how synchronization, communication, resilience, and leadership in rowing can teach us valuable lessons about effective teamwork in business."
 author: "Bowen de Gouw"
 date: 13-04-2026
 ---
-
-## Rowing and the Corporate World: What the Boat Teaches Us About Teamwork
 
 Rowing is often seen as a sport of strength and endurance, but at its core, it is one of the purest demonstrations of teamwork. In a rowing crew, individual talent matters far less than collective synchronization. Every stroke, every breath, and every moment of timing must align perfectly for the boat to move efficiently. This simple but powerful principle offers profound lessons for teamwork in the corporate world.
 
