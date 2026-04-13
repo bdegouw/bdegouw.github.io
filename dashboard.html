@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Gallery –  Bowen de Gouw</title>
+<title>SPY Market Dashboard –  Bowen de Gouw</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -36,9 +70,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -111,11 +142,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./gallery.html" aria-current="page"> 
+    <a class="nav-link" href="./gallery.html"> 
 <span class="menu-text">Photo Gallery</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./dashboard.html"> 
+    <a class="nav-link active" href="./dashboard.html" aria-current="page"> 
 <span class="menu-text">Market Dashboard</span></a>
   </li>  
   <li class="nav-item">
@@ -137,18 +168,36 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#load-data" id="toc-load-data" class="nav-link active" data-scroll-target="#load-data">📦 Load data</a></li>
+  <li><a href="#compute-metrics" id="toc-compute-metrics" class="nav-link" data-scroll-target="#compute-metrics">💰 Compute metrics</a></li>
+  <li><a href="#market-snapshot" id="toc-market-snapshot" class="nav-link" data-scroll-target="#market-snapshot">📊 Market Snapshot</a>
+  <ul class="collapse">
+  <li><a href="#current-price" id="toc-current-price" class="nav-link" data-scroll-target="#current-price">Current Price</a></li>
+  <li><a href="#y-return" id="toc-y-return" class="nav-link" data-scroll-target="#y-return">1Y Return (%)</a></li>
+  <li><a href="#w-high" id="toc-w-high" class="nav-link" data-scroll-target="#w-high">52W High</a></li>
+  <li><a href="#w-low" id="toc-w-low" class="nav-link" data-scroll-target="#w-low">52W Low</a></li>
+  </ul></li>
+  <li><a href="#spy-price-chart-1y" id="toc-spy-price-chart-1y" class="nav-link" data-scroll-target="#spy-price-chart-1y">📈 SPY Price Chart (1Y)</a></li>
+  <li><a href="#daily-returns-distribution" id="toc-daily-returns-distribution" class="nav-link" data-scroll-target="#daily-returns-distribution">📉 Daily Returns Distribution</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Gallery</h1>
+<h1 class="title">SPY Market Dashboard</h1>
 </div>
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -160,124 +209,77 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<style>
-main.content {
-  max-width: 1200px !important;
-}
-.gallery {
-  column-count: 3;
-  column-gap: 16px;
-  margin-top: 1.5rem;
-}
-.gallery-item {
-  break-inside: avoid;
-  margin-bottom: 16px;
-  overflow: hidden;
-  border-radius: 14px;
-}
-.gallery-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 14px;
-  transition: transform 0.35s ease;
-}
-.gallery-item:hover img {
-  transform: scale(1.03);
-}
-@media (max-width: 1000px) {
-  .gallery {
-    column-count: 2;
-  }
-}
-@media (max-width: 768px) {
-  .gallery {
-    column-count: 1;
-  }
-}
-</style>
-<div class="gallery">
-<div class="gallery-item">
-<p><a href="photos/IMG_4250.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_4250.jpeg" class="img-fluid"></a></p>
-</div>
-<div class="gallery-item">
-<p><a href="photos/IMG_1657.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_1657.jpeg" class="img-fluid"></a></p>
-</div>
-<div class="gallery-item">
-<p><a href="photos/IMG_0677.JPG" class="lightbox" data-gallery="gallery"><img src="photos/IMG_0677.JPG" class="img-fluid"></a></p>
-</div>
-<div class="gallery-item">
-<p><a href="photos/IMG_2778.JPG" class="lightbox" data-gallery="gallery"><img src="photos/IMG_2778.JPG" class="img-fluid"></a></p>
-</div>
-<div class="gallery-item">
-<p><a href="photos/5beez.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/5beez.jpeg" class="img-fluid"></a></p>
-</div>
-<div class="gallery-item">
-<p><a href="photos/IMG_1827.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_1827.jpeg" class="img-fluid"></a></p>
-</div>
-<div class="gallery-item">
-<p><a href="photos/IMG_4910.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_4910.jpeg" class="img-fluid"></a></p>
-</div>
-<div class="gallery-item">
-<p><a href="photos/IMG_1270.JPG" class="lightbox" data-gallery="gallery"><img src="photos/IMG_1270.JPG" class="img-fluid"></a></p>
-</div>
-<div class="gallery-item">
-<p><a href="photos/IMG_6679.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_6679.jpeg" class="img-fluid"></a></p>
-</div>
-<div class="gallery-item">
-<p><a href="photos/IMG_0602.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_0602.jpeg" class="img-fluid"></a></p>
-</div>
-<div class="gallery-item">
-<p><a href="photos/gradpic.jpg" class="lightbox" data-gallery="gallery"><img src="photos/gradpic.jpg" class="img-fluid"></a></p>
-</div>
-<div class="gallery-item">
-<p><a href="photos/IMG_1535.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_1535.jpeg" class="img-fluid"></a></p>
-</div>
-<div class="gallery-item">
-<p><a href="photos/IMG_2664.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_2664.jpeg" class="img-fluid"></a></p>
-</div>
-<div class="gallery-item">
-<p><a href="photos/IMG_4769.JPG" class="lightbox" data-gallery="gallery"><img src="photos/IMG_4769.JPG" class="img-fluid"></a></p>
-</div>
-<div class="gallery-item">
-<p><a href="photos/IMG_1292.JPG" class="lightbox" data-gallery="gallery"><img src="photos/IMG_1292.JPG" class="img-fluid"></a></p>
-</div>
-<div class="gallery-item">
-<p><a href="photos/IMG_7505.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_7505.jpeg" class="img-fluid"></a></p>
-</div>
-<div class="gallery-item">
-<p><a href="photos/IMG_1658.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_1658.jpeg" class="img-fluid"></a></p>
-</div>
-<div class="gallery-item">
-<p><a href="photos/IMG_5891.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_5891.jpeg" class="img-fluid"></a></p>
-</div>
-<div class="gallery-item">
-<p><a href="photos/IMG_0047.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_0047.jpeg" class="img-fluid"></a></p>
-</div>
-<div class="gallery-item">
-<p><a href="photos/IMG_1401.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_1401.jpeg" class="img-fluid"></a></p>
-</div>
-<div class="gallery-item">
-<p><a href="photos/IMG_2783.JPG" class="lightbox" data-gallery="gallery"><img src="photos/IMG_2783.JPG" class="img-fluid"></a></p>
-</div>
-<div class="gallery-item">
-<p><a href="photos/IMG_4725.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_4725.jpeg" class="img-fluid"></a></p>
-</div>
-<div class="gallery-item">
-<p><a href="photos/IMG_1621.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_1621.jpeg" class="img-fluid"></a></p>
-</div>
-<div class="gallery-item">
-<p><a href="photos/IMG_0427.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_0427.jpeg" class="img-fluid"></a></p>
-</div>
-<div class="gallery-item">
-<p><a href="photos/trainingimage.jpg" class="lightbox" data-gallery="gallery"><img src="photos/trainingimage.jpg" class="img-fluid"></a></p>
-</div>
-<div class="gallery-item">
-<p><a href="photos/IMG_5410.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_5410.jpeg" class="img-fluid"></a></p>
-</div>
-</div>
+<section id="load-data" class="level2">
+<h2 class="anchored" data-anchor-id="load-data">📦 Load data</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> yfinance <span class="im">as</span> yf</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>ticker <span class="op">=</span> <span class="st">"SPY"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> yf.Ticker(ticker).history(period<span class="op">=</span><span class="st">"1y"</span>).reset_index()</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+<section id="compute-metrics" class="level2">
+<h2 class="anchored" data-anchor-id="compute-metrics">💰 Compute metrics</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>latest_price <span class="op">=</span> df[<span class="st">"Close"</span>].iloc[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>start_price <span class="op">=</span> df[<span class="st">"Close"</span>].iloc[<span class="dv">0</span>]</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>change_pct <span class="op">=</span> ((latest_price <span class="op">-</span> start_price) <span class="op">/</span> start_price) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>high_52w <span class="op">=</span> df[<span class="st">"Close"</span>].<span class="bu">max</span>()</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>low_52w <span class="op">=</span> df[<span class="st">"Close"</span>].<span class="bu">min</span>()</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>latest_price, change_pct, high_52w, low_52w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+<section id="market-snapshot" class="level2">
+<h2 class="anchored" data-anchor-id="market-snapshot">📊 Market Snapshot</h2>
+<section id="current-price" class="level3">
+<h3 class="anchored" data-anchor-id="current-price">Current Price</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>latest_price</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="y-return" class="level3">
+<h3 class="anchored" data-anchor-id="y-return">1Y Return (%)</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>change_pct</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="w-high" class="level3">
+<h3 class="anchored" data-anchor-id="w-high">52W High</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>high_52w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="w-low" class="level3">
+<h3 class="anchored" data-anchor-id="w-low">52W Low</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>low_52w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+</section>
+<section id="spy-price-chart-1y" class="level2">
+<h2 class="anchored" data-anchor-id="spy-price-chart-1y">📈 SPY Price Chart (1Y)</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.line(</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    df,</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">"Date"</span>,</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span><span class="st">"Close"</span>,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="st">"S&amp;P 500 Proxy (SPY) — 1 Year Performance"</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+<section id="daily-returns-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="daily-returns-distribution">📉 Daily Returns Distribution</h2>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"Daily Return"</span>] <span class="op">=</span> df[<span class="st">"Close"</span>].pct_change()</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>fig2 <span class="op">=</span> px.histogram(</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    df,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">"Daily Return"</span>,</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="st">"SPY Daily Returns Distribution"</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>fig2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -701,38 +703,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","loop":false,"openEffect":"zoom","closeEffect":"zoom"});
-(function() {
-  let previousOnload = window.onload;
-  window.onload = () => {
-    if (previousOnload) {
-      previousOnload();
-    }
-    lightboxQuarto.on('slide_before_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      const href = trigger.getAttribute('href');
-      if (href !== null) {
-        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-        if (imgEl !== null) {
-          const srcAttr = imgEl.getAttribute("src");
-          if (srcAttr && srcAttr.startsWith("data:")) {
-            slideConfig.href = srcAttr;
-          }
-        }
-      } 
-    });
-  
-    lightboxQuarto.on('slide_after_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(slideNode);
-      }
-    });
-  
-  };
-  
-})();
-          </script>
 
 
 
