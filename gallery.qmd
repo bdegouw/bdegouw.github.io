@@ -12,14 +12,17 @@ main.content {
   max-width: 1200px !important;
 }
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  column-count: 3;
+  column-gap: 16px;
   margin-top: 1.5rem;
 }
 .gallery-item {
+  break-inside: avoid;
+  margin-bottom: 16px;
   overflow: hidden;
   border-radius: 14px;
+  background: #f3f4f6;
+  min-height: 180px;
 }
 .gallery-item img {
   width: 100%;
@@ -37,19 +40,19 @@ main.content {
 }
 @media (max-width: 1000px) {
   .gallery {
-    grid-template-columns: repeat(2, 1fr);
+    column-count: 2;
   }
 }
 @media (max-width: 768px) {
   .gallery {
-    grid-template-columns: 1fr;
+    column-count: 1;
   }
 }
 </style>
 
 <div class="gallery">
 <div class="gallery-item">
-![](photos/IMG_4250.jpeg){.lightbox group="gallery" loading="lazy"}
+![](photos/IMG_4250.jpeg){.lightbox group="gallery" loading="eager"}
 </div>
 <div class="gallery-item">
 ![](photos/IMG_1657.jpeg){.lightbox group="gallery" loading="lazy"}
@@ -133,8 +136,12 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".gallery-item img").forEach((img) => {
     if (img.complete) {
       img.classList.add("loaded");
+      img.parentElement.style.minHeight = "auto";
     } else {
-      img.addEventListener("load", () => img.classList.add("loaded"));
+      img.addEventListener("load", () => {
+        img.classList.add("loaded");
+        img.parentElement.style.minHeight = "auto";
+      });
     }
   });
 });
