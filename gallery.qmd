@@ -6,25 +6,21 @@ format:
     toc: false
     page-layout: full
 ---
-
 <style>
 main.content {
   max-width: 1200px !important;
 }
-
 .gallery {
   column-count: 3;
   column-gap: 16px;
   margin-top: 1.5rem;
 }
-
 .gallery-item {
   break-inside: avoid;
   margin-bottom: 16px;
   overflow: hidden;
   border-radius: 14px;
 }
-
 .gallery-item img {
   width: 100%;
   height: auto;
@@ -32,100 +28,94 @@ main.content {
   border-radius: 14px;
   transition: transform 0.35s ease;
 }
-
 .gallery-item:hover img {
   transform: scale(1.03);
 }
-
 @media (max-width: 1000px) {
   .gallery {
     column-count: 2;
   }
 }
-
 @media (max-width: 768px) {
   .gallery {
     column-count: 1;
   }
 }
 </style>
-
 <div class="gallery">
-
-<div class="gallery-item">
-![](photos/IMG_5891.jpeg){.lightbox group="gallery"}
-</div>
-
-<div class="gallery-item">
-![](photos/gradpic.jpg){.lightbox group="gallery"}
-</div>
-
-<div class="gallery-item">
-![](photos/IMG_1270.JPG){.lightbox group="gallery"}
-</div>
-
-<div class="gallery-item">
-![](photos/5beez.jpeg){.lightbox group="gallery"}
-</div>
-
-<div class="gallery-item">
-![](photos/IMG_1658.jpeg){.lightbox group="gallery"}
-</div>
-
 <div class="gallery-item">
 ![](photos/IMG_4250.jpeg){.lightbox group="gallery"}
 </div>
-
-<div class="gallery-item">
-![](photos/trainingimage.jpg){.lightbox group="gallery"}
-</div>
-
-<div class="gallery-item">
-![](photos/IMG_1401.jpeg){.lightbox group="gallery"}
-</div>
-
-<div class="gallery-item">
-![](photos/IMG_7505.jpeg){.lightbox group="gallery"}
-</div>
-
-<div class="gallery-item">
-![](photos/bdglogo.png){.lightbox group="gallery"}
-</div>
-
-<div class="gallery-item">
-![](photos/IMG_0427.jpeg){.lightbox group="gallery"}
-</div>
-
-<div class="gallery-item">
-![](photos/IMG_2664.jpeg){.lightbox group="gallery"}
-</div>
-
-<div class="gallery-item">
-![](photos/IMG_1292.JPG){.lightbox group="gallery"}
-</div>
-
-<div class="gallery-item">
-![](photos/IMG_4725.jpeg){.lightbox group="gallery"}
-</div>
-
-<div class="gallery-item">
-![](photos/IMG_1621.jpeg){.lightbox group="gallery"}
-</div>
-
-<div class="gallery-item">
-![](photos/IMG_1827.jpeg){.lightbox group="gallery"}
-</div>
-
-<div class="gallery-item">
-![](photos/IMG_0677.JPG){.lightbox group="gallery"}
-</div>
-
 <div class="gallery-item">
 ![](photos/IMG_1657.jpeg){.lightbox group="gallery"}
 </div>
-
 <div class="gallery-item">
-![](photos/IMG_0602 (1).jpeg){.lightbox group="gallery"}
+![](photos/IMG_0677.JPG){.lightbox group="gallery"}
 </div>
-
+<div class="gallery-item">
+![](photos/IMG_2778.JPG){.lightbox group="gallery"}
+</div>
+<div class="gallery-item">
+![](photos/5beez.jpeg){.lightbox group="gallery"}
+</div>
+<div class="gallery-item">
+![](photos/IMG_1827.jpeg){.lightbox group="gallery"}
+</div>
+<div class="gallery-item">
+![](photos/IMG_4910.jpeg){.lightbox group="gallery"}
+</div>
+<div class="gallery-item">
+![](photos/IMG_1270.JPG){.lightbox group="gallery"}
+</div>
+<div class="gallery-item">
+![](photos/IMG_6679.jpeg){.lightbox group="gallery"}
+</div>
+<div class="gallery-item">
+![](photos/IMG_0602.jpeg){.lightbox group="gallery"}
+</div>
+<div class="gallery-item">
+![](photos/gradpic.jpg){.lightbox group="gallery"}
+</div>
+<div class="gallery-item">
+![](photos/IMG_1535.jpeg){.lightbox group="gallery"}
+</div>
+<div class="gallery-item">
+![](photos/IMG_2664.jpeg){.lightbox group="gallery"}
+</div>
+<div class="gallery-item">
+![](photos/IMG_4769.JPG){.lightbox group="gallery"}
+</div>
+<div class="gallery-item">
+![](photos/IMG_1292.JPG){.lightbox group="gallery"}
+</div>
+<div class="gallery-item">
+![](photos/IMG_7505.jpeg){.lightbox group="gallery"}
+</div>
+<div class="gallery-item">
+![](photos/IMG_1658.jpeg){.lightbox group="gallery"}
+</div>
+<div class="gallery-item">
+![](photos/IMG_5891.jpeg){.lightbox group="gallery"}
+</div>
+<div class="gallery-item">
+![](photos/IMG_0047.jpeg){.lightbox group="gallery"}
+</div>
+<div class="gallery-item">
+![](photos/IMG_1401.jpeg){.lightbox group="gallery"}
+</div>
+<div class="gallery-item">
+![](photos/IMG_2783.JPG){.lightbox group="gallery"}
+</div>
+<div class="gallery-item">
+![](photos/IMG_4725.jpeg){.lightbox group="gallery"}
+</div>
+<div class="gallery-item">
+![](photos/IMG_1621.jpeg){.lightbox group="gallery"}
+</div>
+<div class="gallery-item">
+![](photos/IMG_0427.jpeg){.lightbox group="gallery"}
+</div>
+<div class="gallery-item">
+![](photos/trainingimage.jpg){.lightbox group="gallery"}
+</div>
 </div>
