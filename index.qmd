@@ -1,11 +1,16 @@
 ---
 image: "photos/headshot.bfla.jpeg"
+
 format:
   html:
     theme: journal
     toc: false
+    include-in-header:
+      text: |
+        <meta property="og:image" content="https://bdegouw.github.io/photos/bdglogo.png?v=2">
+        <meta property="og:title" content="Bowen de Gouw">
+        <meta property="og:description" content="Personal Portfolio">
 ---
-
 <div style="text-align: center; margin-top: 30px;">
   <h1>Bowen de Gouw's Website</h1>
   <img src="photos/headshot.bfla.jpeg" alt="Bowen de Gouw" style="width:180px; border-radius: 50%; margin-top:15px;">
