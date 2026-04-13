@@ -1,9 +1,0 @@
----
-title: "Business Analytics Foundations Assignments"
-listing:
-  contents: ad571_coursework
-  type: grid
-  fields: [title, image]
----
-This page contains my assignments for the Business Analytics Foundations course (AD571) at Boston University. 
----
