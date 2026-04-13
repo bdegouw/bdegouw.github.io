@@ -176,7 +176,11 @@ main.content {
   height: auto;
   display: block;
   border-radius: 14px;
-  transition: transform 0.35s ease;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  opacity: 0;
+}
+.gallery-item img.loaded {
+  opacity: 1;
 }
 .gallery-item:hover img {
   transform: scale(1.03);
@@ -194,84 +198,95 @@ main.content {
 </style>
 <div class="gallery">
 <div class="gallery-item">
-<p><a href="photos/IMG_4250.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_4250.jpeg" class="img-fluid"></a></p>
+<p><a href="photos/IMG_4250.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_4250.jpeg" class="img-fluid" loading="lazy"></a></p>
 </div>
 <div class="gallery-item">
-<p><a href="photos/IMG_1657.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_1657.jpeg" class="img-fluid"></a></p>
+<p><a href="photos/IMG_1657.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_1657.jpeg" class="img-fluid" loading="lazy"></a></p>
 </div>
 <div class="gallery-item">
-<p><a href="photos/IMG_0677.JPG" class="lightbox" data-gallery="gallery"><img src="photos/IMG_0677.JPG" class="img-fluid"></a></p>
+<p><a href="photos/IMG_0677.JPG" class="lightbox" data-gallery="gallery"><img src="photos/IMG_0677.JPG" class="img-fluid" loading="lazy"></a></p>
 </div>
 <div class="gallery-item">
-<p><a href="photos/IMG_2778.JPG" class="lightbox" data-gallery="gallery"><img src="photos/IMG_2778.JPG" class="img-fluid"></a></p>
+<p><a href="photos/IMG_2778.JPG" class="lightbox" data-gallery="gallery"><img src="photos/IMG_2778.JPG" class="img-fluid" loading="lazy"></a></p>
 </div>
 <div class="gallery-item">
-<p><a href="photos/5beez.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/5beez.jpeg" class="img-fluid"></a></p>
+<p><a href="photos/5beez.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/5beez.jpeg" class="img-fluid" loading="lazy"></a></p>
 </div>
 <div class="gallery-item">
-<p><a href="photos/IMG_1827.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_1827.jpeg" class="img-fluid"></a></p>
+<p><a href="photos/IMG_1827.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_1827.jpeg" class="img-fluid" loading="lazy"></a></p>
 </div>
 <div class="gallery-item">
-<p><a href="photos/IMG_4910.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_4910.jpeg" class="img-fluid"></a></p>
+<p><a href="photos/IMG_4910.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_4910.jpeg" class="img-fluid" loading="lazy"></a></p>
 </div>
 <div class="gallery-item">
-<p><a href="photos/IMG_1270.JPG" class="lightbox" data-gallery="gallery"><img src="photos/IMG_1270.JPG" class="img-fluid"></a></p>
+<p><a href="photos/IMG_1270.JPG" class="lightbox" data-gallery="gallery"><img src="photos/IMG_1270.JPG" class="img-fluid" loading="lazy"></a></p>
 </div>
 <div class="gallery-item">
-<p><a href="photos/IMG_6679.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_6679.jpeg" class="img-fluid"></a></p>
+<p><a href="photos/IMG_6679.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_6679.jpeg" class="img-fluid" loading="lazy"></a></p>
 </div>
 <div class="gallery-item">
-<p><a href="photos/IMG_0602.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_0602.jpeg" class="img-fluid"></a></p>
+<p><a href="photos/IMG_0602.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_0602.jpeg" class="img-fluid" loading="lazy"></a></p>
 </div>
 <div class="gallery-item">
-<p><a href="photos/gradpic.jpg" class="lightbox" data-gallery="gallery"><img src="photos/gradpic.jpg" class="img-fluid"></a></p>
+<p><a href="photos/gradpic.jpg" class="lightbox" data-gallery="gallery"><img src="photos/gradpic.jpg" class="img-fluid" loading="lazy"></a></p>
 </div>
 <div class="gallery-item">
-<p><a href="photos/IMG_1535.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_1535.jpeg" class="img-fluid"></a></p>
+<p><a href="photos/IMG_1535.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_1535.jpeg" class="img-fluid" loading="lazy"></a></p>
 </div>
 <div class="gallery-item">
-<p><a href="photos/IMG_2664.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_2664.jpeg" class="img-fluid"></a></p>
+<p><a href="photos/IMG_2664.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_2664.jpeg" class="img-fluid" loading="lazy"></a></p>
 </div>
 <div class="gallery-item">
-<p><a href="photos/IMG_4769.JPG" class="lightbox" data-gallery="gallery"><img src="photos/IMG_4769.JPG" class="img-fluid"></a></p>
+<p><a href="photos/IMG_4769.JPG" class="lightbox" data-gallery="gallery"><img src="photos/IMG_4769.JPG" class="img-fluid" loading="lazy"></a></p>
 </div>
 <div class="gallery-item">
-<p><a href="photos/IMG_1292.JPG" class="lightbox" data-gallery="gallery"><img src="photos/IMG_1292.JPG" class="img-fluid"></a></p>
+<p><a href="photos/IMG_1292.JPG" class="lightbox" data-gallery="gallery"><img src="photos/IMG_1292.JPG" class="img-fluid" loading="lazy"></a></p>
 </div>
 <div class="gallery-item">
-<p><a href="photos/IMG_7505.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_7505.jpeg" class="img-fluid"></a></p>
+<p><a href="photos/IMG_7505.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_7505.jpeg" class="img-fluid" loading="lazy"></a></p>
 </div>
 <div class="gallery-item">
-<p><a href="photos/IMG_1658.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_1658.jpeg" class="img-fluid"></a></p>
+<p><a href="photos/IMG_1658.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_1658.jpeg" class="img-fluid" loading="lazy"></a></p>
 </div>
 <div class="gallery-item">
-<p><a href="photos/IMG_5891.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_5891.jpeg" class="img-fluid"></a></p>
+<p><a href="photos/IMG_5891.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_5891.jpeg" class="img-fluid" loading="lazy"></a></p>
 </div>
 <div class="gallery-item">
-<p><a href="photos/IMG_0047.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_0047.jpeg" class="img-fluid"></a></p>
+<p><a href="photos/IMG_0047.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_0047.jpeg" class="img-fluid" loading="lazy"></a></p>
 </div>
 <div class="gallery-item">
-<p><a href="photos/IMG_1401.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_1401.jpeg" class="img-fluid"></a></p>
+<p><a href="photos/IMG_1401.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_1401.jpeg" class="img-fluid" loading="lazy"></a></p>
 </div>
 <div class="gallery-item">
-<p><a href="photos/IMG_2783.JPG" class="lightbox" data-gallery="gallery"><img src="photos/IMG_2783.JPG" class="img-fluid"></a></p>
+<p><a href="photos/IMG_2783.JPG" class="lightbox" data-gallery="gallery"><img src="photos/IMG_2783.JPG" class="img-fluid" loading="lazy"></a></p>
 </div>
 <div class="gallery-item">
-<p><a href="photos/IMG_4725.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_4725.jpeg" class="img-fluid"></a></p>
+<p><a href="photos/IMG_4725.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_4725.jpeg" class="img-fluid" loading="lazy"></a></p>
 </div>
 <div class="gallery-item">
-<p><a href="photos/IMG_1621.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_1621.jpeg" class="img-fluid"></a></p>
+<p><a href="photos/IMG_1621.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_1621.jpeg" class="img-fluid" loading="lazy"></a></p>
 </div>
 <div class="gallery-item">
-<p><a href="photos/IMG_0427.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_0427.jpeg" class="img-fluid"></a></p>
+<p><a href="photos/IMG_0427.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_0427.jpeg" class="img-fluid" loading="lazy"></a></p>
 </div>
 <div class="gallery-item">
-<p><a href="photos/trainingimage.jpg" class="lightbox" data-gallery="gallery"><img src="photos/trainingimage.jpg" class="img-fluid"></a></p>
+<p><a href="photos/trainingimage.jpg" class="lightbox" data-gallery="gallery"><img src="photos/trainingimage.jpg" class="img-fluid" loading="lazy"></a></p>
 </div>
 <div class="gallery-item">
-<p><a href="photos/IMG_5410.jpeg.jpg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_5410.jpeg.jpg" class="img-fluid"></a></p>
+<p><a href="photos/IMG_5410.jpeg" class="lightbox" data-gallery="gallery"><img src="photos/IMG_5410.jpeg" class="img-fluid" loading="lazy"></a></p>
 </div>
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".gallery-item img").forEach((img) => {
+    if (img.complete) {
+      img.classList.add("loaded");
+    } else {
+      img.addEventListener("load", () => img.classList.add("loaded"));
+    }
+  });
+});
+</script>
 
 
 
@@ -697,7 +712,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"selector":".lightbox","openEffect":"zoom","descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","selector":".lightbox","loop":false});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
