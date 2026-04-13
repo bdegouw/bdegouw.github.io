@@ -118,4 +118,7 @@ main.content {
 <div class="gallery-item">
 ![](photos/trainingimage.jpg){.lightbox group="gallery"}
 </div>
+<div class="gallery-item">
+![](photos/IMG_5410.jpeg.jpg){.lightbox group="gallery"}
+</div>
 </div>
